@@ -41,3 +41,5 @@ export const signup = user => dispatch => {
         dispatch(receiveCurrentUser(payload))
     })
 };
+
+// payload is what is sent back from json.  

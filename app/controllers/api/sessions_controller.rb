@@ -7,7 +7,7 @@ class Api::SessionsController < ApplicationController
             render json: { message: "Incorrect username or password"}
         else
             login!(@user)
-            render :show
+            render "api/users/show"
         end
     end
 

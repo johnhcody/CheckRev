@@ -8,7 +8,7 @@ class Api::UsersController < ApplicationController
             # debugger
             login!(@user)
             # debugger
-            render "api/users/show"
+            render :show
             # debugger
         else
             # debugger
