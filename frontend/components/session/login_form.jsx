@@ -4,7 +4,7 @@ import { Link, Redirect } from 'react-router-dom';
 class LoginForm extends React.Component {
     constructor(props) {
         super(props);
-        debugger
+        // debugger
         this.handleSubmit = this.handleSubmit.bind(this);
         this.state = {
             email: '',
@@ -16,7 +16,7 @@ class LoginForm extends React.Component {
         const { login } = this.props;
         e.preventDefault(e);
         const user = Object.assign({}, this.state);
-        debugger
+        // debugger
         login(user);
         return <Redirect to={'/'} />
     }
