@@ -3,10 +3,9 @@ import LoginForm from './login_form';
 import { login } from '../../actions/session_actions'
 
 const mSTP = state => {
-    debugger
+    // debugger
     return {
         errors: Object.values(state),
-        redirect: '/'
     }
 }
 

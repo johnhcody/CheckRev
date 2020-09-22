@@ -9,7 +9,7 @@ class Greeting extends React.Component {
 
     render() {
         const { currentUser, logout} = this.props;
-        debugger
+        // debugger
         if (currentUser) {
             return(
                 <div>
