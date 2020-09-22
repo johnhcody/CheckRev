@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import SessionForm from './session_form';
+import LoginForm from './login_form';
 import { login } from '../../actions/session_actions'
 
 const mSTP = state => {
@@ -7,8 +7,7 @@ const mSTP = state => {
         errors: Object.values(state),
         formType: 'login',
         formText: 'Log In',
-        linkTarget: '/signup',
-        linkText: 'Sign Up'
+        linkTarget: '/signup'
     }
 }
 
@@ -19,4 +18,4 @@ const mDTP = dispatch => {
 }
 
 
-export default connect(mSTP, mDTP)(SessionForm);
+export default connect(mSTP, mDTP)(LoginForm);

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import SessionForm from './session_form';
+import SessionForm from './signup_form';
 import { signup } from '../../actions/session_actions'
 
 const mSTP = state => {
@@ -7,8 +7,14 @@ const mSTP = state => {
         errors: Object.values(state),
         formType: 'signup',
         formText: 'Sign Up',
-        linkTarget: '/login',
-        linkText: 'Log In'
+        user: {
+            firstName: 'First Name',
+            lastName: 'Last Name',
+            email: 'Email',
+            password: 'Password',
+            zipcode: 'Zip Code',
+            birthdate: 'birthday goes here'
+        }
     }
 }
 
