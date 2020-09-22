@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -18,22 +18,19 @@ class SessionForm extends React.Component {
     }
 
     update(field) {
-        e => this.setState({[field]: e.target.value})
-    }
-    
-    formText() {
-        (this.props.formType === 'signup') ? 'Sign Up' : 'Log In'
-    }
-
-    linkTarget() {
-        (this.props.formType === 'signup') ? '/login' : '/signup'
+        return (e) => {
+            this.setState({ [field]: e.currentTarget.value })
+        }
     }
 
     render() {
-        const { formtype } = this.props;
+        // debugger
+        const { formType, formText, linkTarget, linkText } = this.props;
+        // debugger
         return (
+            <div>
             <form onSubmit={this.handleSubmit}>
-                <h3>{this.formText} Form</h3>
+                <h3>{formText} Form</h3>
                 <label>Email
                     <input type="text" 
                     value={this.state.email}
@@ -44,8 +41,10 @@ class SessionForm extends React.Component {
                     value={this.state.password}
                     onChange={this.update('password')}/>
                 </label>
-        <button value={formType}>{this.formText}</button>
+        <button value={formType}>{formText}</button>
             </form>
+        <Link to={linkTarget}>{linkText}</Link>
+            </div>
         )
     }
 }

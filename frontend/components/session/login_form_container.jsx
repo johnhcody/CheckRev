@@ -4,8 +4,11 @@ import { login } from '../../actions/session_actions'
 
 const mSTP = state => {
     return {
-        errors: Object.values(state.errors),
-        formType: 'login'
+        errors: Object.values(state),
+        formType: 'login',
+        formText: 'Log In',
+        linkTarget: '/signup',
+        linkText: 'Sign Up'
     }
 }
 
