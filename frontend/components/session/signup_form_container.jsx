@@ -14,7 +14,8 @@ const mSTP = state => {
             password: 'Password',
             zipcode: 'Zip Code',
             birthdate: 'birthday goes here'
-        }
+        },
+        empty: ''
     }
 }
 

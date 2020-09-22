@@ -2,14 +2,14 @@ import { connect } from 'react-redux';
 import Splash from './splash'
 
 const mSTP = state => {
-    debugger
+    // debugger
     return {
     
     }
 }
 
 const mDTP = dispatch => {
-    debugger
+    // debugger
     return {
         
     }

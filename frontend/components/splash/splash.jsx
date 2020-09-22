@@ -9,7 +9,7 @@ class Splash extends React.Component {
 
     
     render() {
-        debugger
+        // debugger
         return(
             <div>
                 <p>SPLASH!</p>
