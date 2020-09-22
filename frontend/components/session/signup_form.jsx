@@ -60,7 +60,7 @@ class SessionForm extends React.Component {
                     </label>
         <button value={formType}>Sign Up</button>
             </form>
-        <Link to={'/login'}>Log In</Link>
+        <Link to='/login'>Log In</Link>
             </div>
         )
     }

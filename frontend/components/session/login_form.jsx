@@ -1,9 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 class LoginForm extends React.Component {
     constructor(props) {
         super(props);
+        debugger
         this.handleSubmit = this.handleSubmit.bind(this);
         this.state = {
             email: '',
@@ -12,9 +13,12 @@ class LoginForm extends React.Component {
     }
 
     handleSubmit(e) {
+        const { login } = this.props;
         e.preventDefault(e);
         const user = Object.assign({}, this.state);
-        this.props.processForm(user);
+        debugger
+        login(user);
+        return <Redirect to={'/'} />
     }
 
     update(field) {
@@ -25,22 +29,10 @@ class LoginForm extends React.Component {
 
     render() {
         // debugger
-        const { formType, formText, linkTarget, linkText, firstName, lastName, email, password, zipcode, birthdate } = this.props;
-        // debugger
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <h3>{formText} Form</h3>
-                    <label>First Name
-                    <input type="text"
-                            value={this.state.firstName}
-                            onChange={this.update('email')} />
-                    </label>
-                    <label>Last Name
-                    <input type="text"
-                            value={this.state.lastName}
-                            onChange={this.update('email')} />
-                    </label>
+                    <h3>Log In Form</h3>
                     <label>Email
                     <input type="text"
                             value={this.state.email}
@@ -51,14 +43,9 @@ class LoginForm extends React.Component {
                             value={this.state.password}
                             onChange={this.update('password')} />
                     </label>
-                    <label>Zip Code
-                    <input type="text"
-                            value={this.state.zipcode}
-                            onChange={this.update('zipcode')} />
-                    </label>
-                    <button value={formType}>{formText}</button>
+                    <button>Log In</button>
                 </form>
-                <Link to={linkTarget}>Sign Up</Link>
+                <Link to='/signup'>Sign Up</Link>
             </div>
         )
     }

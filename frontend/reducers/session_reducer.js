@@ -11,6 +11,7 @@ export default function sessionReducer(state = _nullState, action) {
     switch (action.type) {
         case RECEIVE_CURRENT_USER:
             newState['id'] = action.user.id;
+            newState['redirect'] = '/'
             return newState;
         case LOGOUT_CURRENT_USER:
             return _nullState

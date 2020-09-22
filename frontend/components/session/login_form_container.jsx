@@ -3,17 +3,16 @@ import LoginForm from './login_form';
 import { login } from '../../actions/session_actions'
 
 const mSTP = state => {
+    debugger
     return {
         errors: Object.values(state),
-        formType: 'login',
-        formText: 'Log In',
-        linkTarget: '/signup'
+        redirect: '/'
     }
 }
 
 const mDTP = dispatch => {
     return {
-        processForm: (user) => dispatch(login(user))
+        login: (user) => dispatch(login(user))
     }
 }
 
