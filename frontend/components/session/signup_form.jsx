@@ -38,25 +38,27 @@ class SessionForm extends React.Component {
 
     render() {
         debugger
-        const { formType, formText } = this.props;
         return (
             <div>
             <form onSubmit={this.handleSubmit}>
-                <h3>{formText} Form</h3>
+                <h3>Join the CheckRev Community</h3>
                     <label>First Name
                     <input type="text"
                             value={this.state.firstName}
+                            placeholder="First Name"
                             onChange={this.update('firstName')}
                             />
                     </label>
                     <label>Last Name
                     <input type="text"
                             value={this.state.lastName}
+                            placeholder="Last Name"
                             onChange={this.update('lastName')} />
                     </label>
                     <label>Email
                     <input type="text"
                             value={this.state.email}
+                            placeholder="Email address"
                             onChange={this.update('email')} />
                     </label>
                     <label>Password
@@ -67,14 +69,16 @@ class SessionForm extends React.Component {
                     <label>Zip Code
                     <input type="text"
                             value={this.state.zipcode}
+                            placeholder="Zip Code"
                             onChange={this.update('zipcode')} />
                     </label>
                     <label>Birthday
                     <input type="text"
                             value={this.state.birthdate}
+                            placeholder="MM/YY/YYY"
                             onChange={this.update('birthdate')} />
                     </label>
-        <button value={formType}>Sign Up</button>
+                <button>Sign Up</button>
                 {this.handleErrors()}
             </form>
             <br/>

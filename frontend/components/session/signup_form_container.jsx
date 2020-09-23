@@ -6,15 +6,13 @@ const mSTP = state => {
     debugger
     return {
         errors: state.errors.session,
-        formType: 'signup',
-        formText: 'Sign Up',
         user: {
-            firstName: 'First Name',
-            lastName: 'Last Name',
-            email: 'Email',
-            password: 'Password',
-            zipcode: 'Zip Code',
-            birthdate: 'birthday goes here'
+            firstName: '',
+            lastName: '',
+            email: '',
+            password: '',
+            zipcode: '',
+            birthdate: ''
         },
         empty: '',
     }

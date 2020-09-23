@@ -21,8 +21,9 @@ class Greeting extends React.Component {
             return(
                 <div>
                     <span className="span-button">
-                        <button className="signup login-signup" color><Link to='/signup' style={{ textDecoration: 'none', color: 'white' }}>Sign Up</Link></button>
-                        <button className="login login-signup"><Link to='/login' style={{ textDecoration: 'none', color: 'white' }}>Log In</Link></button>
+                        <Link to='/signup' style={{ textDecoration: 'none', color: 'white' }}><button className="signup greeting" color>Sign Up</button></Link>
+                        <Link to='/login' style={{ textDecoration: 'none', color: 'white' }}><button className="login greeting">Log In</button></Link>
+                        <Link to='#' style={{ textDecoration: 'none', color: 'white' }}><button className="review greeting">Write a Review</button></Link>
                     </span>
                 </div>
             )
