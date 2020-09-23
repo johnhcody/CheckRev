@@ -23,12 +23,17 @@ class LoginForm extends React.Component {
         return <Redirect to={'/'} />
     }
 
+    componentWillUnmount() {
+        this.props.clearErrors();
+    }
+
+
     handleErrors() {
         debugger
         return(
             <ul>
                 {this.props.errors.map((error, idx) => {
-                    <li key={idx}>{error}</li>
+                    return <li key={idx}>{error}</li>
                 })}
             </ul>
         )
@@ -57,7 +62,7 @@ class LoginForm extends React.Component {
                                 onChange={this.update('password')} />
                         </label>
                         <button>Log In</button>
-            <div>{this.handleErrors()}</div>
+                        {this.handleErrors()}
                     </form>
                     <Link to='/signup'>Sign Up</Link>
                 </div>

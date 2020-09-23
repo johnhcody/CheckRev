@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
 import SessionForm from './signup_form';
-import { signup } from '../../actions/session_actions'
+import { signup, clearErrors } from '../../actions/session_actions'
 
 const mSTP = state => {
     debugger
     return {
-        errors: Object.values(state.errors),
+        errors: state.errors.session,
         formType: 'signup',
         formText: 'Sign Up',
         user: {
@@ -16,13 +16,14 @@ const mSTP = state => {
             zipcode: 'Zip Code',
             birthdate: 'birthday goes here'
         },
-        empty: ''
+        empty: '',
     }
 }
 
 const mDTP = dispatch => {
     return {
-        processForm: (user) => dispatch(signup(user))
+        processForm: (user) => dispatch(signup(user)), 
+        clearErrors: () => dispatch(clearErrors())
     }
 }
 

@@ -10,9 +10,12 @@ class SessionForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault(e);
-        this.handleErrors();
         const user = Object.assign({}, this.state);
         this.props.processForm(user);
+    }
+
+    componentWillUnmount() {
+        this.props.clearErrors();
     }
 
     update(field) {
@@ -21,28 +24,21 @@ class SessionForm extends React.Component {
         }
     }
 
+
     handleErrors() {
         debugger
-        if (this.props.errors) {
-            const errors = this.props.errors;
-            return (
-                <ul>
-                    {
-                        errors.map((error,idx) => {
-                        return <li key={idx}>{error}</li>
-                        })
-                    }
-                </ul>
-            )
-        } else {
-            return null;
-        }
+        return (
+            <ul>
+                {this.props.errors.map((error, idx) => {
+                    return <li key={idx}>{error}</li>
+                })}
+            </ul>
+        )
     }
 
     render() {
-        // debugger
+        debugger
         const { formType, formText } = this.props;
-        console.log(this.props)
         return (
             <div>
             <form onSubmit={this.handleSubmit}>
@@ -79,7 +75,9 @@ class SessionForm extends React.Component {
                             onChange={this.update('birthdate')} />
                     </label>
         <button value={formType}>Sign Up</button>
+                {this.handleErrors()}
             </form>
+            <br/>
         <Link to='/login'>Log In</Link>
             </div>
         )
