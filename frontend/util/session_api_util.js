@@ -1,9 +1,15 @@
 export const login = (user) => {
-    // debugger
+    debugger
     return $.ajax({
         method: "POST",
         url: "/api/session",
-        data: { user }
+        data: {
+            user: {
+                email: user.email,
+                password: user.password,
+                errors: user.errors
+            }
+        }
     })
 }
 
@@ -27,7 +33,8 @@ export const signup = (user) => {
                 email: user.email,
                 password: user.password,
                 zipcode: user.zipcode,
-                birthdate: user.birthdate
+                birthdate: user.birthdate,
+                errors: user.errors
             }
          }
     })

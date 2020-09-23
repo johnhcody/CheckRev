@@ -2,16 +2,15 @@ class Api::UsersController < ApplicationController
     
     def create
         @user = User.new(user_params)
-        #@user = User.new(user_params)
-        # debugger
-        if @user.save!
+        debugger
+        if @user.save
             # debugger
             login!(@user)
             # debugger
             render :show
             # debugger
         else
-            # debugger
+            debugger
             render json: @user.errors.full_messages, status: 401
         end
     end

@@ -5,7 +5,7 @@ import { login } from '../../actions/session_actions'
 const mSTP = state => {
     debugger
     return {
-        errors: Object.values(state),
+        errors: Object.values(state.errors.session)
     }
 }
 

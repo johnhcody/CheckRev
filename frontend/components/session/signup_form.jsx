@@ -10,6 +10,7 @@ class SessionForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault(e);
+        this.handleErrors();
         const user = Object.assign({}, this.state);
         this.props.processForm(user);
     }
@@ -20,10 +21,28 @@ class SessionForm extends React.Component {
         }
     }
 
+    handleErrors() {
+        debugger
+        if (this.props.errors) {
+            const errors = this.props.errors;
+            return (
+                <ul>
+                    {
+                        errors.map((error,idx) => {
+                        return <li key={idx}>{error}</li>
+                        })
+                    }
+                </ul>
+            )
+        } else {
+            return null;
+        }
+    }
+
     render() {
         // debugger
         const { formType, formText } = this.props;
-        // debugger
+        console.log(this.props)
         return (
             <div>
             <form onSubmit={this.handleSubmit}>
