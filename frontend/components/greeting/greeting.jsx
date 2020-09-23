@@ -20,8 +20,10 @@ class Greeting extends React.Component {
         } else {
             return(
                 <div>
-                    <button className="signup login-signup"><Link to='/signup'>Sign Up</Link></button>
-                    <button className="login login-signup"><Link to='/login'>Log In</Link></button>
+                    <span className="span-button">
+                        <button className="signup login-signup" color><Link to='/signup' style={{ textDecoration: 'none', color: 'white' }}>Sign Up</Link></button>
+                        <button className="login login-signup"><Link to='/login' style={{ textDecoration: 'none', color: 'white' }}>Log In</Link></button>
+                    </span>
                 </div>
             )
         }

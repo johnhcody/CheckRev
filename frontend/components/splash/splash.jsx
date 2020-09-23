@@ -1,6 +1,6 @@
 import React from 'react';
-import GreetingContainer from '../greeting/greeting_container'
-
+import GreetingContainer from '../greeting/greeting_container';
+import Logo from './logo';
 
 class Splash extends React.Component {
     constructor(props) {
@@ -12,10 +12,8 @@ class Splash extends React.Component {
         // debugger
         return(
             <div className="splash-parent">
-                <span className="splash-span">
-                    <p>SPLASH!</p>
                     <GreetingContainer />
-                </span>
+                    <Logo />
             </div>
         )
     }

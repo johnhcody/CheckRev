@@ -1,29 +1,56 @@
+$gray: #5e5e5e;
+$green: #67917A;
+$black: #170409;
+$olive: #B8AF03;
+$sand: #CCBF82;
+$red: #E33258;
+
+
+
 .splash-parent {
+    display: flex;
     position: relative;
-    background: image-url("pexels-elevate-1267320.jpg");
+    background: image-url("chef-background.jpg");
     background-size: cover;
     min-height: 500px;
 }
 
 
 .login-signup {
+    background-color: Transparent;
     position: absolute;
     padding: 5px;
     margin: 10px;
     min-height: 25px;
-    top: 20px;
+    border-radius: 5px;
+    font-size: 1EM;
+    border: 3px solid white;
 }
 
+.logo {
+    background: image-url("logo.png");
+    min-width: 400px;
+    z-index: 1;
+    position: relative;
+}
 
+.logo-container {
+    position: relative;
+    min-width: 500px;
+    min-height: 400px;
+}
 .login {
-    right: 110px;
+    right: 105px;
+    border: none;
+    top: 22px;
+}
 
+.login:hover {
+    border-bottom: 3px solid white;
+    border-radius: 0px;
 }
 
 .signup {
     right: 20px;
-}
-
-span {
-     color: red;
+    top: 20px;
 }

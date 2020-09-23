@@ -17,6 +17,7 @@
     "webpack-cli": "^3.2.1"
   },
   "devDependencies": {
+    "file-loader": "^6.1.0",
     "redux-devtools-extension": "^2.13.8"
   },
   "engines": {
