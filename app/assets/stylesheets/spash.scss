@@ -1,0 +1,29 @@
+.splash-parent {
+    position: relative;
+    background: image-url("pexels-elevate-1267320.jpg");
+    background-size: cover;
+    min-height: 500px;
+}
+
+
+.login-signup {
+    position: absolute;
+    padding: 5px;
+    margin: 10px;
+    min-height: 25px;
+    top: 20px;
+}
+
+
+.login {
+    right: 110px;
+
+}
+
+.signup {
+    right: 20px;
+}
+
+span {
+     color: red;
+}

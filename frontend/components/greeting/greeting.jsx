@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 
 class Greeting extends React.Component {
@@ -20,8 +20,8 @@ class Greeting extends React.Component {
         } else {
             return(
                 <div>
-                    <Link to='/login'>Log In</Link>
-                    <Link to='/signup'>Sign Up</Link>
+                    <button className="signup login-signup"><Link to='/signup'>Sign Up</Link></button>
+                    <button className="login login-signup"><Link to='/login'>Log In</Link></button>
                 </div>
             )
         }

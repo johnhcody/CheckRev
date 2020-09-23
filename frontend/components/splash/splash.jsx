@@ -11,9 +11,11 @@ class Splash extends React.Component {
     render() {
         // debugger
         return(
-            <div>
-                <p>SPLASH!</p>
-                <GreetingContainer />
+            <div className="splash-parent">
+                <span className="splash-span">
+                    <p>SPLASH!</p>
+                    <GreetingContainer />
+                </span>
             </div>
         )
     }
