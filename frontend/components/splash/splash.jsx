@@ -14,10 +14,15 @@ class Splash extends React.Component {
         return(
             <div className="splash-parent"                  
                 style={{ backgroundImage: `url(${window.chef})` }}>
+                    <div className="wrap-me">
                     <GreetingContainer />
-                    <img className="logo" src={window.logo} />
+                    <div className="logo-wrapper">
+                    <img src={window.logo} />
+                    </div>
                     <SearchBar />
+                    <br/>
                     <SearchIcons />
+                    </div>
             </div>
         )
     }

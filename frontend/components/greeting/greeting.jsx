@@ -34,7 +34,7 @@ class Greeting extends React.Component {
             )
         } else {
             return (
-                <div>
+                <div >
                     <span className="span-button">
                         <Link to='/signup' style={{ textDecoration: 'none', color: 'white' }}><button className="signup greeting" color>Sign Up</button></Link>
                         <Link to='/login' style={{ textDecoration: 'none', color: 'white' }}><button className="login greeting">Log In</button></Link>

@@ -8,9 +8,13 @@ class SearchIcons extends React.Component {
 
     render() {
         const utensils = <FontAwesomeIcon icon="utensils" />
+        const home = <FontAwesomeIcon icon="home" />
+        const bell = <FontAwesomeIcon icon="concierge-bell" />
         return (
             <div className="icons-parent">
-                <p>{utensils}</p>
+                <a href="#" className="icon-rest">{utensils} Restaurants</a>
+                <a href="#" className="icon-prof">{bell} Professional Services</a>
+                <a href="#" className="icon-rest">{home} Home Services</a>
             </div>
         )
     }
