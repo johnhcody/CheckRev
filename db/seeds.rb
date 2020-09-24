@@ -5,3 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+guest = User.create({id: 5, first_name: 'Guest', last_name: 'User', email: 'danny@devito.com', zipcode: '89039', password: 'password', })
+
+
+#  id              :bigint           not null, primary key
+#  first_name      :string           not null
+#  last_name       :string           not null
+#  email           :string           not null
+#  zipcode         :integer          not null
+#  password_digest :string           not null
+#  session_token   :string           not null
+#  birthdate       :datetime
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
