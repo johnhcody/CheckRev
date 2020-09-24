@@ -7,7 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-guest = User.create({id: 5, first_name: 'Guest', last_name: 'User', email: 'danny@devito.com', zipcode: '89039', password: 'password', birthdate: '05/04/1990', created_at: '24/09/2020', updated_at: '24/09/2020'})
+guest = User.create({ 
+                    first_name: 'Guest', 
+                    last_name: 'User', 
+                    email: 'danny@devito.com', 
+                    zipcode: '89039', 
+                    password: 'password', 
+                    birthdate: '05/04/1990', 
+                    })
 
 
 #  id              :bigint           not null, primary key
