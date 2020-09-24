@@ -34,7 +34,7 @@ class LoginForm extends React.Component {
         return(
             <ul>
                 {this.props.errors.map((error, idx) => {
-                    return <li key={idx}>{error}</li>
+                    return <li className="login-form-container-error" key={idx}>{error}</li>
                 })}
             </ul>
         )
@@ -50,23 +50,33 @@ class LoginForm extends React.Component {
         debugger
             return (
                 <div>
-                    <NavBar />
-                    <form onSubmit={this.handleSubmit}>
-                        <h3>Log In Form</h3>
-                        <label>Email
-                        <input type="text"
-                                value={this.state.email}
-                                onChange={this.update('email')} />
-                        </label>
-                        <label>Password
-                        <input type="password"
-                                value={this.state.password}
-                                onChange={this.update('password')} />
-                        </label>
-                        <button>Log In</button>
-                        {this.handleErrors()}
-                    </form>
-                    <Link to='/signup'>Sign Up</Link>
+                <NavBar />
+                <div className="login-form-container">
+                        <div className="login-form-container-inputs">
+                        <form onSubmit={this.handleSubmit} className="login-form">
+                            <h3>Log In to CheckRev</h3>
+                            <br/>
+                            <label>
+                            <input type="text"
+                                    placeholder="Email"
+                                    value={this.state.email}
+                                    onChange={this.update('email')} />
+                            </label>
+                            <br/>
+                            <label>
+                            <input type="password"
+                                    placeholder="Password"
+                                    value={this.state.password}
+                                    onChange={this.update('password')} />
+                            </label>
+                            <br/>
+                            <button>Log In</button>
+                            {this.handleErrors()}
+                        <br/>
+                                <p>Are you not yet on CheckRev? You can sign up <Link to='/signup' style={{ textDecoration: 'none', color: '#E33258' }}>here</Link></p>
+                        </form>
+                        </div>
+                </div>
                 </div>
             )
         

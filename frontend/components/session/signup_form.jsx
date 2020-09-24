@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import NavBar from '../navbar/navbar'
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -40,6 +41,7 @@ class SessionForm extends React.Component {
         debugger
         return (
             <div>
+            <NavBar />
             <form onSubmit={this.handleSubmit}>
                 <h3>Join the CheckRev Community</h3>
                     <label>First Name

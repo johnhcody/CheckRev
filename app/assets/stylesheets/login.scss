@@ -6,6 +6,24 @@ $sand: #CCBF82;
 $red: #E33258;
 
 
+.login-form-container {
+    display: flex;
+    position: absolute;
+    top: 150px;
+    font-family: sans-serif;
+    color: $red;
+    font-size: 1.5EM;
+}
+
+.login-form-container h3 {
+    font-weight: 700;
+    padding-left: 210px;
+}
+
+.login-form-container li {
+    padding-left: 140px;
+}
+
 .navbar-parent ul {
     display: flex;
     background-color: #67917A;
@@ -15,4 +33,46 @@ $red: #E33258;
 .navbar-logo {
     display: flex;
     max-height: 80px;
+}
+
+
+.login-form-container input[type=text] {
+    width: 500px;
+    padding: 12px 20px;
+    margin: 10px 70px;
+    border: 1px solid $gray;
+    border-radius: 5px;
+    font-size: .7EM;
+    box-sizing: border-box;
+    background-color: #E8F0FE;
+
+}
+
+.login-form-container input[type=password] {
+    width: 500px;
+    padding: 12px 20px;
+    margin: 10px 70px;
+    border: 1px solid $gray;
+    border-radius: 5px;
+    font-size: .7EM;
+    box-sizing: border-box;
+    background-color: #E8F0FE;
+}
+
+.login-form-container button {
+    width: 500px;
+    padding: 12px 20px;
+    margin: 10px 70px;
+    border: 1px solid $gray;
+    border-radius: 5px;
+    background-color: $red;
+    font-size: .8EM;
+    font-weight: 600;
+}
+
+.login-form-container p {
+    color: #5e5e5e;
+    font-size: .7EM;
+    text-decoration: none;
+    padding-left: 120px;
 }
