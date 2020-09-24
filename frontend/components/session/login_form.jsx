@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
+import NavBar from '../navbar/navbar';
 
 class LoginForm extends React.Component {
     constructor(props) {
@@ -49,6 +50,7 @@ class LoginForm extends React.Component {
         debugger
             return (
                 <div>
+                    <NavBar />
                     <form onSubmit={this.handleSubmit}>
                         <h3>Log In Form</h3>
                         <label>Email

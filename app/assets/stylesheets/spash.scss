@@ -10,7 +10,7 @@ $red: #E33258;
 .splash-parent {
     display: flex;
     position: relative;
-    background: image-url("chef-background.jpg");
+    // background: image-url("chef-background.jpg");
     background-size: cover;
     min-height: 500px;
     justify-content: center;
@@ -70,4 +70,9 @@ $red: #E33258;
     display: flex;
     align-self: center;
     max-width: 300px;
+}
+
+.chef-backgroud {
+    max-height: 2560px;
+    max-width: 1600px;
 }

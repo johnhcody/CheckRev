@@ -7,9 +7,11 @@ class Splash extends React.Component {
     }
 
     
+    
     render() {
         return(
-            <div className="splash-parent">
+            <div className="splash-parent"                  
+                style={{ backgroundImage: `url(${window.chef})` }}>
                     <GreetingContainer />
                     <img className="logo" src={window.logo} />
             </div>

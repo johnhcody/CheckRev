@@ -1,0 +1,18 @@
+$gray: #5e5e5e;
+$green: #67917A;
+$black: #170409;
+$olive: #B8AF03;
+$sand: #CCBF82;
+$red: #E33258;
+
+
+.navbar-parent ul {
+    display: flex;
+    background-color: #67917A;
+    justify-content: center;
+}
+
+.navbar-logo {
+    display: flex;
+    max-height: 80px;
+}
