@@ -15,23 +15,19 @@ class Greeting extends React.Component {
 
 
     loginDemo() {
-        debugger
         const user = Object.assign({}, this.state);
-        debugger
         user['email'] = 'danny@devito.com';
         user['password'] = 'password';
-        debugger
         this.props.login(user);
         return <Redirect to={'/'} />
     }
 
     render() {
         const { currentUser, logout } = this.props;
-        debugger
         if (currentUser) {
             return (
                 <div>
-                    <p className="user greeting">Hello, {currentUser.firstName}</p>
+                    <p className="user greeting">Hello,  {currentUser.firstName}</p>
                     <button onClick={logout} className="logout greeting">Log Out</button>
                     <Link to='#' style={{ textDecoration: 'none', color: 'white' }}><button className="review greeting">Write a Review</button></Link>
                 </div>
