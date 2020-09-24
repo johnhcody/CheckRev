@@ -16,7 +16,7 @@ class Greeting extends React.Component {
 
     loginDemo() {
         const user = Object.assign({}, this.state);
-        user['email'] = 'guest@guest.com';
+        user['email'] = 'danny@devito.com';
         user['password'] = 'password';
         this.props.login(user);
         return <Redirect to={'/'} />
