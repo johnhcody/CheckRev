@@ -29,7 +29,7 @@ class SessionForm extends React.Component {
     handleErrors() {
         debugger
         return (
-            <ul>
+            <ul className="signup-form-container-error">
                 {this.props.errors.map((error, idx) => {
                     return <li key={idx}>{error}</li>
                 })}
@@ -42,39 +42,42 @@ class SessionForm extends React.Component {
         return (
             <div>
             <NavBar />
+            <div className="form-container">
             <form onSubmit={this.handleSubmit}>
-                <h3>Join the CheckRev Community</h3>
-                    <label>First Name
+                <h2>Join the CheckRev Community</h2>
+                    <br/>
+                    <label>
                     <input type="text"
                             value={this.state.firstName}
                             placeholder="First Name"
                             onChange={this.update('firstName')}
                             />
                     </label>
-                    <label>Last Name
+                    <label>
                     <input type="text"
                             value={this.state.lastName}
                             placeholder="Last Name"
                             onChange={this.update('lastName')} />
                     </label>
-                    <label>Email
+                    <label>
                     <input type="text"
                             value={this.state.email}
                             placeholder="Email address"
                             onChange={this.update('email')} />
                     </label>
-                    <label>Password
+                    <label>
                     <input type="password"
                             value={this.state.password}
-                            onChange={this.update('password')} />
+                            onChange={this.update('password')}
+                            placeholder="Password" />
                     </label>
-                    <label>Zip Code
+                    <label>
                     <input type="text"
                             value={this.state.zipcode}
                             placeholder="Zip Code"
                             onChange={this.update('zipcode')} />
                     </label>
-                    <label>Birthday
+                    <label>
                     <input type="text"
                             value={this.state.birthdate}
                             placeholder="MM/YY/YYY"
@@ -82,9 +85,11 @@ class SessionForm extends React.Component {
                     </label>
                 <button>Sign Up</button>
                 {this.handleErrors()}
+                <br/>
+                <p>You already have a CheckRev account?!? <Link to='/login' style={{ textDecoration: 'none', color: '#E33258' }}>Log In!</Link></p>
             </form>
+            </div>
             <br/>
-        <Link to='/login'>Log In</Link>
             </div>
         )
     }

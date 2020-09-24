@@ -16,6 +16,7 @@ class Greeting extends React.Component {
                 <div>
                     <p>Hello, {currentUser.firstName}</p>
                     <button onClick={logout}>Log Out</button>
+                    <Link to='#' style={{ textDecoration: 'none', color: 'white' }}><button className="review greeting">Write a Review</button></Link>
                 </div>
             )
         } else {

@@ -34,7 +34,7 @@ class LoginForm extends React.Component {
         return(
             <ul>
                 {this.props.errors.map((error, idx) => {
-                    return <li className="login-form-container-error" key={idx}>{error}</li>
+                    return <li className="form-container-error" key={idx}>{error}</li>
                 })}
             </ul>
         )
@@ -51,9 +51,9 @@ class LoginForm extends React.Component {
             return (
                 <div>
                 <NavBar />
-                <div className="login-form-container">
-                        <div className="login-form-container-inputs">
-                        <form onSubmit={this.handleSubmit} className="login-form">
+                <div className="form-container">
+                        <div>
+                        <form onSubmit={this.handleSubmit}>
                             <h3>Log In to CheckRev</h3>
                             <br/>
                             <label>
@@ -73,7 +73,7 @@ class LoginForm extends React.Component {
                             <button>Log In</button>
                             {this.handleErrors()}
                         <br/>
-                                <p>Are you not yet on CheckRev? You can sign up <Link to='/signup' style={{ textDecoration: 'none', color: '#E33258' }}>here</Link></p>
+                                <p>Don't have CheckRev account? You can sign up <Link to='/signup' style={{ textDecoration: 'none', color: '#E33258' }}>here</Link></p>
                         </form>
                         </div>
                 </div>

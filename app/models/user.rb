@@ -15,14 +15,16 @@
 #
 class User < ApplicationRecord
 
-    validates :first_name, presence: { message: "Please input your first name" }
-    validates :email, presence: { message: "Please input your first name" }
-    validates :zipcode, presence: { message: "Please input your first name" }
-    validates :password_digest, :session_token, presence: true
+    validates :first_name, presence: { message: " - Please input your first name" }
+    validates :last_name, presence: { message: " - Please input your last name" }
+    validates :email, presence: { message: " - Please input your email" }
     validates :password, length: { 
         minimum: 6,
-        message: "Please make sure your password is at least 6 characters long",
+        message: " - Please make sure your password is at least 6 characters long",
         allow_nil: true } 
+    validates :zipcode, presence: { message: " - Please input your last name" }
+    validates :birthdate, presence: { message: " - Please input your birthday" }
+    validates :password_digest, :session_token, presence: true
 
     after_initialize :ensure_session_token
 
