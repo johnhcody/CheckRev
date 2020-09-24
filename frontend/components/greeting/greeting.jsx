@@ -31,8 +31,8 @@ class Greeting extends React.Component {
         if (currentUser) {
             return (
                 <div>
-                    <p>Hello, {currentUser.firstName}</p>
-                    <button onClick={logout}>Log Out</button>
+                    <p className="user greeting">Hello, {currentUser.firstName}</p>
+                    <button onClick={logout} className="logout greeting">Log Out</button>
                     <Link to='#' style={{ textDecoration: 'none', color: 'white' }}><button className="review greeting">Write a Review</button></Link>
                 </div>
             )
