@@ -1,6 +1,7 @@
 import React from 'react';
 import GreetingContainer from '../greeting/greeting_container';
 import SearchBar from '../search/searchbar';
+import SearchIcons from '../search/search_icons';
 
 class Splash extends React.Component {
     constructor(props) {
@@ -16,6 +17,7 @@ class Splash extends React.Component {
                     <GreetingContainer />
                     <img className="logo" src={window.logo} />
                     <SearchBar />
+                    <SearchIcons />
             </div>
         )
     }

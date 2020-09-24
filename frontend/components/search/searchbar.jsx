@@ -8,7 +8,7 @@ class Searchbar extends React.Component {
 
 
     render() {
-        const element = <FontAwesomeIcon icon="search" />
+        const magnifyingGlass = <FontAwesomeIcon icon="search" />
         return (
             <form className="search-parent">
                 <div className="search-child">
@@ -19,7 +19,7 @@ class Searchbar extends React.Component {
                         <input className="search search-location" type="search" placeholder="Times Square, NY" />
                     </label>
                 </div>
-                        <button className="search-button" type="submit">{element}</button>
+                        <button className="search-button" type="submit">{magnifyingGlass}</button>
             </form>
         )
     }
