@@ -5,7 +5,6 @@ import NavBar from '../navbar/navbar';
 class LoginForm extends React.Component {
     constructor(props) {
         super(props);
-        // debugger
         this.handleSubmit = this.handleSubmit.bind(this);
         this.state = {
             email: '',
@@ -16,10 +15,7 @@ class LoginForm extends React.Component {
     handleSubmit(e) {
         const { login } = this.props;
         e.preventDefault(e);
-        debugger
-        // this.handleErrors();
         const user = Object.assign({}, this.state);
-        debugger
         login(user);
         return <Redirect to={'/'} />
     }
@@ -30,7 +26,6 @@ class LoginForm extends React.Component {
 
 
     handleErrors() {
-        debugger
         return(
             <ul>
                 {this.props.errors.map((error, idx) => {
@@ -47,7 +42,6 @@ class LoginForm extends React.Component {
     }
 
     render() {
-        debugger
             return (
                 <div>
                 <NavBar />

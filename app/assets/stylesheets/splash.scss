@@ -53,6 +53,31 @@ $red: #E33258;
     top: 20px;
 }
 
+.demo {
+    right: 225px;
+    border: none;
+    top: 23px;
+}
+
+.user {
+    right: 124px;
+    font-family: sans-serif;
+    top: 24px;
+    border: none;
+    font-weight: 400;
+}
+
+.logout {
+    right: 20px;
+    top: 20px;
+}
+
+
+.demo:hover {
+    border-bottom: 3px solid white;
+    border-radius: 0px;
+}
+
 .signup:hover {
     background-color: white;
     border: 3px solid white;

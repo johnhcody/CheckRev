@@ -3,7 +3,6 @@ import SessionForm from './signup_form';
 import { signup, clearErrors } from '../../actions/session_actions'
 
 const mSTP = state => {
-    debugger
     return {
         errors: state.errors.session,
         user: {

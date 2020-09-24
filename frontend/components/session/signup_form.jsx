@@ -27,7 +27,6 @@ class SessionForm extends React.Component {
 
 
     handleErrors() {
-        debugger
         return (
             <ul className="signup-form-container-error">
                 {this.props.errors.map((error, idx) => {
@@ -38,7 +37,6 @@ class SessionForm extends React.Component {
     }
 
     render() {
-        debugger
         return (
             <div>
             <NavBar />

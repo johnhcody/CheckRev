@@ -5,10 +5,10 @@ const sessionErrorsReducer = (state = [], action) => {
     Object.freeze(state)
     let newState = state.slice();
     switch (action.type) {
-        case RECEIVE_CURRENT_USER:    
+        case RECEIVE_CURRENT_USER: 
             newState = [];
             return newState;
-        case RECEIVE_ERRORS:    
+        case RECEIVE_ERRORS:
             newState = action.errors;
             return newState;
         case CLEAR_ERRORS:

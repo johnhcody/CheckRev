@@ -1,17 +1,17 @@
 import { connect } from 'react-redux';
 import Greeting from './greeting'
-import { logout } from '../../actions/session_actions'
+import { login, logout } from '../../actions/session_actions'
 
 const mSTP = (state) => {
     const currentUser = state.entities.users[state.session.id]
-    // debugger
     return {
         currentUser,
     }
 };
 
 const mDTP = dispatch => ({
-    logout: () => dispatch(logout())
+    logout: () => dispatch(logout()),
+    login: (user) => dispatch(login(user)) 
 });
 
 export default connect(mSTP, mDTP)(Greeting);
