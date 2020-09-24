@@ -49,6 +49,26 @@ $red: #E33258;
     box-sizing: border-box;
     background-color: #E8F0FE;
 }
+.form-container input[type=number] {
+    width: 500px;
+    padding: 12px 20px;
+    margin: 10px 70px;
+    border: 1px solid $gray;
+    border-radius: 5px;
+    font-size: .7EM;
+    box-sizing: border-box;
+    background-color: #E8F0FE;
+}
+.form-container input[type=datetime] {
+    width: 500px;
+    padding: 12px 20px;
+    margin: 10px 70px;
+    border: 1px solid $gray;
+    border-radius: 5px;
+    font-size: .7EM;
+    box-sizing: border-box;
+    background-color: #E8F0FE;
+}
 
 .form-container input[type=password] {
     width: 500px;

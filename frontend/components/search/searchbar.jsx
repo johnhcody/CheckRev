@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 class Searchbar extends React.Component {
     constructor(props) {
@@ -8,10 +8,19 @@ class Searchbar extends React.Component {
 
 
     render() {
+        const element = <FontAwesomeIcon icon="search" />
         return (
-            <label>Search Here
-                <input type="search" placeholder="Search for Businesses" />
-            </label>
+            <div className="search-parent">
+                <div className="search-child">
+                    <label className="search search-type">Find
+                        <input type="search" placeholder="plumbers, delivery, takeout" />
+                    </label>
+                    <label>Near
+                        <input className="search search-location" type="search" placeholder="Times Square, NY" />
+                        <button type="submit">{element}</button>
+                    </label>
+                </div>
+            </div>
         )
     }
 }

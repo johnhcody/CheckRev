@@ -32,7 +32,7 @@ $red: #E33258;
 
 
 .login {
-    right: 140px;
+    right: 250px;
     border: none;
     top: 23px;
 }
@@ -49,18 +49,20 @@ $red: #E33258;
 
 
 .signup {
-    right: 20px;
+    right: 130px;
     top: 20px;
+    outline: none;
 }
 
 .demo {
-    right: 225px;
+    right: 335px;
     border: none;
     top: 23px;
+    outline: none;
 }
 
 .user {
-    right: 124px;
+    right: 234px;
     font-family: sans-serif;
     top: 24px;
     border: none;
@@ -68,10 +70,17 @@ $red: #E33258;
 }
 
 .logout {
-    right: 20px;
+    right: 130px;
     top: 20px;
+    outline: none;
 }
 
+.logout:hover {
+    background-color: $red;
+    border: 3px solid $red;
+    color: white;
+    transition: 0.3s;
+}
 
 .demo:hover {
     border-bottom: 3px solid white;
@@ -82,12 +91,14 @@ $red: #E33258;
     background-color: white;
     border: 3px solid white;
     color: black;
+    transition: 0.3s;
 }
 
 .review {
     left: 20px;
     border: none;
     top: 23px;
+    outline: none;
 }
 
 
@@ -100,4 +111,30 @@ $red: #E33258;
 .chef-backgroud {
     max-height: 2560px;
     max-width: 1600px;
+}
+
+.search-parent {
+    display: flex;
+    position: absolute;
+    padding: 20px;
+    margin: 10px;
+    background-color: #FEFEFE;
+    max-height: 21px;
+    top: 373px;
+    align-self: center;
+    font-family: sans-serif;
+    border-radius: 5px;
+}
+.search-child input {
+    background-color: #FEFEFE;
+    border: none;
+    color: #5e5e5e;
+    min-width: 300px;
+    font-size: 1.0EM;
+    padding-left: 15px;
+    outline: none;
+}
+.search-child {
+    display: flex;
+    position: relative;
 }
