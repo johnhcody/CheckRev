@@ -4,13 +4,15 @@ const _nullState = {
     id: null
 };
 
-export default function sessionReducer(state = _nullState, action) {
+const sessionReducer = (state = _nullState, action) => {
     Object.freeze(state);
     let newState = Object.assign({}, state);
 
     switch (action.type) {
         case RECEIVE_CURRENT_USER:
-            newState['id'] = action.user.id;
+            // debugger
+            newState['id'] = action.currentUser.id;
+            newState['currentUser'] = action.currentUser;
             return newState;
         case LOGOUT_CURRENT_USER:
             return _nullState
@@ -18,3 +20,5 @@ export default function sessionReducer(state = _nullState, action) {
             return state;
     }
 }
+
+export default sessionReducer;

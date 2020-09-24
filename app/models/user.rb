@@ -15,10 +15,20 @@
 #
 class User < ApplicationRecord
 
-    validates :first_name, :last_name, :email, :zipcode, :password_digest, :session_token, presence: true
-    validates :password, length: { minimum: 6 }, allow_nil: true
+    validates :first_name, presence: { message: " - Please input your first name" }
+    validates :last_name, presence: { message: " - Please input your last name" }
+    validates :email, presence: { message: " - Please input your email" }
+    validates :password, length: { 
+        minimum: 6,
+        message: " - Please make sure your password is at least 6 characters long",
+        allow_nil: true } 
+    validates :zipcode, presence: { message: " - Please input your last name" }
+    validates :birthdate, presence: { message: " - Please input your birthday" }
+    validates :password_digest, :session_token, presence: true
 
     after_initialize :ensure_session_token
+
+    attr_reader :password
 
     def self.find_by_credentials(email, password)
         user = User.find_by(email: email)
@@ -39,7 +49,7 @@ class User < ApplicationRecord
     end
 
     def reset_session_token!
-        self.session_token = SecureRandom.urlsafe__base64(16)
+        self.session_token = SecureRandom.urlsafe_base64(16)
         self.save!
         self.session_token
     end

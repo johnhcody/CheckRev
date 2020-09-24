@@ -1,0 +1,92 @@
+$gray: #5e5e5e;
+$green: #67917A;
+$black: #170409;
+$olive: #B8AF03;
+$sand: #CCBF82;
+$red: #E33258;
+
+.navbar-parent ul {
+    display: flex;
+    background-color: #67917A;
+    justify-content: center;
+}
+
+.navbar-logo {
+    display: flex;
+    max-height: 80px;
+    padding-top: 10px;
+}
+
+.form-container {
+    display: flex;
+    position: absolute;
+    top: 150px;
+    font-family: sans-serif;
+    color: $red;
+    font-size: 1.5EM;
+}
+
+.form-container h2 {
+    font-weight: 700;
+    padding-left: 150px;
+}
+.form-container h3 {
+    font-weight: 700;
+    padding-left: 210px;
+}
+
+.form-container li {
+    padding-left: 140px;
+}
+
+.form-container input[type=text] {
+    width: 500px;
+    padding: 12px 20px;
+    margin: 10px 70px;
+    border: 1px solid $gray;
+    border-radius: 5px;
+    font-size: .7EM;
+    box-sizing: border-box;
+    background-color: #E8F0FE;
+
+}
+
+.form-container input[type=password] {
+    width: 500px;
+    padding: 12px 20px;
+    margin: 10px 70px;
+    border: 1px solid $gray;
+    border-radius: 5px;
+    font-size: .7EM;
+    box-sizing: border-box;
+    background-color: #E8F0FE;
+}
+
+.form-container button {
+    width: 500px;
+    padding: 12px 20px;
+    margin: 10px 70px;
+    border: 1px solid $gray;
+    border-radius: 5px;
+    background-color: $red;
+    font-size: .8EM;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.form-container button:hover {
+    background-color: #ed5a7a;
+}
+
+.form-container p {
+    color: #5e5e5e;
+    font-size: .7EM;
+    text-decoration: none;
+    padding-left: 120px;
+}
+
+.signup-form-container-error li {
+    padding-left: 71px;
+    padding-top: 5px;
+    font-size: 0.9EM;
+}
