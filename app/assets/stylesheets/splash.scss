@@ -19,7 +19,7 @@ $red: #E33258;
 
 .greeting {
     background-color: Transparent;
-    // position: absolute;
+    position: absolute;
     padding: 5px;
     margin: 10px;
     min-height: 25px;
@@ -32,7 +32,7 @@ $red: #E33258;
 
 
 .login {
-    right: 250px;
+    right: 200px;
     border: none;
     top: 23px;
 }
@@ -49,13 +49,13 @@ $red: #E33258;
 
 
 .signup {
-    right: 130px;
+    right: 80px;
     top: 20px;
     outline: none;
 }
 
 .demo {
-    right: 335px;
+    right: 285px;
     border: none;
     top: 23px;
     outline: none;
@@ -111,6 +111,7 @@ $red: #E33258;
 .logo-wrapper img {
     max-height: 165px;
     max-width: 200px;
+    padding-top: 100px;
 }
 
 
@@ -160,8 +161,6 @@ $red: #E33258;
     padding-left: 5px;
 }
 
-
-
 .search-button {
     background-color: #E33258;
     outline: none;
@@ -169,6 +168,7 @@ $red: #E33258;
     border-radius: 0px 5px 5px 0px;
     font-size: 1.2em;
     border: none;
+    color: white;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -176,6 +176,7 @@ $red: #E33258;
 .search-button:hover {
     background-color: #c12847;
     transition: 0.3s;
+    color: white;
 }
 
 
@@ -192,4 +193,51 @@ $red: #E33258;
     font-weight: 700;
     font-family: sans-serif;
     text-decoration: none;
+}
+
+
+
+
+
+
+
+.business-cat-container-parent {
+    display: flex;
+    justify-content: center;
+    width: 1000px;
+}
+
+.heading-title {
+    width: 1000px;
+}
+
+.heading-title h3 {
+    font-family: sans-serif;
+    font-weight: 700;
+    color: $red;
+}
+
+.bus-cards-container {
+    display: flex;
+    justify-content: center;
+    width: 900px
+}
+
+.bus-card {
+    width:250px;
+    height: 350px;
+}
+
+
+.bus-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.bus-card img {
+    width: 100%
+}
+
+.bus-container {
+    padding: 20px 20px;
 }
