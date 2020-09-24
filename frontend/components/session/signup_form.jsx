@@ -70,13 +70,13 @@ class SessionForm extends React.Component {
                             placeholder="Password" />
                     </label>
                     <label>
-                    <input type="text"
+                    <input type="number"
                             value={this.state.zipcode}
                             placeholder="Zip Code"
                             onChange={this.update('zipcode')} />
                     </label>
                     <label>
-                    <input type="text"
+                    <input type="datetime"
                             value={this.state.birthdate}
                             placeholder="MM/YY/YYY"
                             onChange={this.update('birthdate')} />
