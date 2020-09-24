@@ -116,25 +116,47 @@ $red: #E33258;
 .search-parent {
     display: flex;
     position: absolute;
-    padding: 20px;
     margin: 10px;
     background-color: #FEFEFE;
-    max-height: 21px;
     top: 373px;
-    align-self: center;
     font-family: sans-serif;
     border-radius: 5px;
+    box-sizing: border-box;
 }
-.search-child input {
+.search-child input[type=search] {
+    margin-left: 10px;
     background-color: #FEFEFE;
     border: none;
     color: #5e5e5e;
     min-width: 300px;
     font-size: 1.0EM;
-    padding-left: 15px;
+    padding-left: 28px;
+    padding-bottom: none;
     outline: none;
+    float: lleft;
+    padding: 11px;
 }
 .search-child {
     display: flex;
     position: relative;
+}
+
+.search-child label {
+    padding-left: 5px;
+}
+
+.search-button {
+    background-color: #E33258;
+    outline: none;
+    text-transform: none;
+    border-radius: 0px 5px 5px 0px;
+    font-size: 1.2em;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.search-button:hover {
+    background-color: #c12847;
+    transition: 0.3s;
 }

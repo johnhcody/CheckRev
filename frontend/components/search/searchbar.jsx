@@ -10,17 +10,17 @@ class Searchbar extends React.Component {
     render() {
         const element = <FontAwesomeIcon icon="search" />
         return (
-            <div className="search-parent">
+            <form className="search-parent">
                 <div className="search-child">
-                    <label className="search search-type">Find
+                    <label className="search search-type">  Find
                         <input type="search" placeholder="plumbers, delivery, takeout" />
                     </label>
                     <label>Near
                         <input className="search search-location" type="search" placeholder="Times Square, NY" />
-                        <button type="submit">{element}</button>
                     </label>
                 </div>
-            </div>
+                        <button className="search-button" type="submit">{element}</button>
+            </form>
         )
     }
 }
