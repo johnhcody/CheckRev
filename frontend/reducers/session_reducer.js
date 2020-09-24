@@ -5,12 +5,13 @@ const _nullState = {
 };
 
 const sessionReducer = (state = _nullState, action) => {
+    debugger
     Object.freeze(state);
     let newState = Object.assign({}, state);
 
     switch (action.type) {
         case RECEIVE_CURRENT_USER:
-            // debugger
+            debugger
             newState['id'] = action.currentUser.id;
             newState['currentUser'] = action.currentUser;
             return newState;
