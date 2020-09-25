@@ -581,17 +581,12 @@ $darkblue: #5165db;
             padding-bottom: 2px;
             padding-top: 30px;
     }
-    p {
-        padding-top: 8px;
-        padding-left: 7px;
-        font-family: sans-serif;
-        font-weight: 500;
-        color: #5e5e5e;
-        width: 100%;
-    }
     a {
         text-decoration-line: none;
         color: #5e5e5e;
+        &:hover {
+            border-bottom: 1px solid #5e5e5e;
+        }
      }
 }
 
