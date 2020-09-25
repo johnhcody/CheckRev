@@ -9,7 +9,7 @@ class BusinessCategories extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="div-me">
                 <div className="rev-title">
                     <h2>Find Great Businesses</h2>
                 </div>

@@ -7,7 +7,7 @@ class BusinessByCategory extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="div-me">
                 <div className="bus-by-cat-title">
                     <h2>See Businesses by Category</h2>
                 </div>

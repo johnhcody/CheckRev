@@ -14,6 +14,8 @@ $darkblue: #5165db;
     // position: ;
     background: image-url("background.png");
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     width: 1000;
     height: 600px;
     justify-content: center;
@@ -208,6 +210,7 @@ $darkblue: #5165db;
     justify-content: center;
     width: 1000px;
     height: 278px;
+    margin: 0 auto;
     background-color: $lightgray;
 
 }
@@ -218,15 +221,16 @@ $darkblue: #5165db;
     width: 1000px;
     height: 100px;
     background-color: $lightgray;
+    margin: 0 auto;
+    h2 {
+        font-family: sans-serif;
+        font-weight: 900;
+        color: #E33258;
+        padding: 30px;
+        font-size: 1.7em;
+    }
 }
 
-.rev-title h2 {
-    font-family: sans-serif;
-    font-weight: 900;
-    color: #E33258;
-    padding: 30px;
-    font-size: 1.7em;
-}
 
 .bus-cards-container {
     display: flex;
@@ -331,6 +335,7 @@ $darkblue: #5165db;
     justify-content: center;
     width: 1000px;
     height: 50px;
+    margin: 0 auto;
     background-color: white;
     h2 {
         font-family: sans-serif;
@@ -345,6 +350,7 @@ $darkblue: #5165db;
     display: flex;
     justify-content: center;
     width: 1000px;
+    margin: 0 auto;
 }
 
 
@@ -422,6 +428,7 @@ $darkblue: #5165db;
     width: 1000px;
     height: 50px;
     background-color: white;
+    margin: 0 auto;
     a {
         font-family: sans-serif;
         font-weight: 600;
@@ -436,6 +443,11 @@ $darkblue: #5165db;
 
 
 // Business by Category
+
+.div-me {
+    margin: 0 auto;
+    background-color: $lightgray;
+}
 
 .bus-by-cat-title {
     display: flex;
@@ -456,6 +468,7 @@ $darkblue: #5165db;
     display: flex;
     justify-content: center;
     width: 1000px;
+    margin: 0 auto;
     background-color: $lightgray;
 }
 

@@ -40,7 +40,9 @@ class SessionForm extends React.Component {
         return (
             <div>
             <NavBar />
+            <div classNmae="form-wrap-all">
             <div className="form-container">
+                <div>
             <form onSubmit={this.handleSubmit}>
                 <div className="login-title">
                 <h2>Join the CheckRev Community</h2>
@@ -83,13 +85,20 @@ class SessionForm extends React.Component {
                             placeholder="MM/YY/YYY"
                             onChange={this.update('birthdate')} />
                     </label>
+                    <br/>
                 <button>Sign Up</button>
                 {this.handleErrors()}
                 <br/>
+                <div className="form-footer">
                 <p>You already have a CheckRev account?!? <Link to='/login' style={{ textDecoration: 'none', color: '#E33258' }}>Log In!</Link></p>
+                </div>
             </form>
             </div>
-            <br/>
+            </div>
+                    <div className="red-carpet">
+                        <img src={window.redCarpet} />
+                    </div>
+            </div>
             </div>
         )
     }
