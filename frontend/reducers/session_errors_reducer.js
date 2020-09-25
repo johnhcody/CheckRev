@@ -4,6 +4,7 @@ import { RECEIVE_CURRENT_USER, RECEIVE_ERRORS, CLEAR_ERRORS } from '../actions/s
 const sessionErrorsReducer = (state = [], action) => {
     Object.freeze(state)
     let newState = state.slice();
+    debugger
     switch (action.type) {
         case RECEIVE_CURRENT_USER: 
             newState = [];

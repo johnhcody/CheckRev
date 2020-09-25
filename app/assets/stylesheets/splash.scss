@@ -37,8 +37,9 @@ $darkblue: #5165db;
 
 
 .login {
-    right: 200px;
+    right: 400px;
     border: none;
+    outline: none;
     top: 23px;
 }
 
@@ -54,20 +55,21 @@ $darkblue: #5165db;
 
 
 .signup {
-    right: 80px;
+    right: 280px;
     top: 20px;
     outline: none;
+    outline: 0;
 }
 
 .demo {
-    right: 285px;
+    right: 485px;
     border: none;
     top: 23px;
     outline: none;
 }
 
 .user {
-    right: 234px;
+    right: 434px;
     font-family: sans-serif;
     top: 24px;
     border: none;
@@ -75,7 +77,7 @@ $darkblue: #5165db;
 }
 
 .logout {
-    right: 130px;
+    right: 430px;
     top: 20px;
     outline: none;
 }
@@ -100,7 +102,7 @@ $darkblue: #5165db;
 }
 
 .review {
-    left: 20px;
+    left: 266px;
     border: none;
     top: 23px;
     outline: none;

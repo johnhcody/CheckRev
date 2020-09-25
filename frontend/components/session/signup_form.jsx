@@ -36,17 +36,26 @@ class SessionForm extends React.Component {
         )
     }
 
+
+
+
+
+
+
+
+
+// original 
     render() {
         return (
             <div>
             <NavBar />
-            <div classNmae="form-wrap-all">
+            <div className="form-wrap-all">
             <div className="form-container">
                 <div>
             <form onSubmit={this.handleSubmit}>
-                <div className="login-title">
-                <h2>Join the CheckRev Community</h2>
-                </div>
+                                <div className="signup-title">
+                                    <h2>Sign Up for CheckRev</h2>
+                                </div>
                     <br/>
                     <label>
                     <input type="text"
@@ -90,12 +99,12 @@ class SessionForm extends React.Component {
                 {this.handleErrors()}
                 <br/>
                 <div className="form-footer">
-                <p>You already have a CheckRev account?!? <Link to='/login' style={{ textDecoration: 'none', color: '#E33258' }}>Log In!</Link></p>
+                <h4>You already have a CheckRev account?!? <Link to='/login' style={{ textDecoration: 'none', color: '#E33258' }}>Log In!</Link></h4>
                 </div>
             </form>
             </div>
             </div>
-                    <div className="red-carpet">
+                    <div className="red-carpet-sign">
                         <img src={window.redCarpet} />
                     </div>
             </div>
