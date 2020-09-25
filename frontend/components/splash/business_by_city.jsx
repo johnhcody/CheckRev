@@ -10,7 +10,7 @@ class BusinessByCity extends React.Component {
         return (
             <div className="bus-by-city">
                 <div>
-            <div className="bus-by-city-title">
+            <div className="large-title">
                 <div>
                     <h2>Search by City</h2>
                 </div>

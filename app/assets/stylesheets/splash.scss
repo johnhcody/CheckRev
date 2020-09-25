@@ -5,6 +5,7 @@ $olive: #B8AF03;
 $sand: #CCBF82;
 $red: #E33258;
 $lightgray: #f2f2f2;
+$darkblue: #5165db;
 
 
 
@@ -284,7 +285,7 @@ $lightgray: #f2f2f2;
     width: 1000;
 }
 
-.bus-by-city-title {
+.large-title {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -498,9 +499,9 @@ $lightgray: #f2f2f2;
         text-decoration-line: none;
     }
     &:hover {
-        border: 0.5px solid $lightgray;
+        border: 0.5px solid $darkblue;
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-        transition: 0.3s;
+        transition: 0.1s;
         p {
             color: $green;
         }

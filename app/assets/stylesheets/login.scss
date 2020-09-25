@@ -17,19 +17,31 @@ $red: #E33258;
     padding-top: 10px;
 }
 
-.form-container {
+.form-wrap-all {
     display: flex;
-    position: absolute;
-    top: 150px;
-    font-family: sans-serif;
-    color: $red;
-    font-size: 1.5EM;
+    justify-content: center;
+    width: 1000px;
 }
 
-.form-container h2 {
-    font-weight: 700;
-    padding-left: 150px;
+.login-title {
+    display: flex;
+    justify-content: center;
+    h2 {
+        font-size: 1.5EM;
+    }
 }
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    top: 150px;
+    width: 500px;
+    padding-top: 100px;
+    font-weight: 700;
+    font-family: sans-serif;
+    color: #E33258;
+}
+
 .form-container h3 {
     font-weight: 700;
     padding-left: 210px;
@@ -40,55 +52,55 @@ $red: #E33258;
 }
 
 .form-container input[type=text] {
-    width: 500px;
+    width: 300px;
     padding: 12px 20px;
     margin: 10px 70px;
     border: 1px solid $gray;
     border-radius: 5px;
-    font-size: .7EM;
+    font-size: 1.0EM;
     box-sizing: border-box;
     background-color: #E8F0FE;
 }
 .form-container input[type=number] {
-    width: 500px;
+    width: 300px;
     padding: 12px 20px;
     margin: 10px 70px;
     border: 1px solid $gray;
     border-radius: 5px;
-    font-size: .7EM;
+    font-size: 1.0EM;
     box-sizing: border-box;
     background-color: #E8F0FE;
 }
 .form-container input[type=datetime] {
-    width: 500px;
+    width: 300px;
     padding: 12px 20px;
     margin: 10px 70px;
     border: 1px solid $gray;
     border-radius: 5px;
-    font-size: .7EM;
+    font-size: 1.0EM;
     box-sizing: border-box;
     background-color: #E8F0FE;
 }
 
 .form-container input[type=password] {
-    width: 500px;
+    width: 300px;
     padding: 12px 20px;
     margin: 10px 70px;
     border: 1px solid $gray;
     border-radius: 5px;
-    font-size: .7EM;
+    font-size: 1.0EM;
     box-sizing: border-box;
     background-color: #E8F0FE;
 }
 
 .form-container button {
-    width: 500px;
+    width: 300px;
     padding: 12px 20px;
     margin: 10px 70px;
     border: 1px solid $gray;
     border-radius: 5px;
     background-color: $red;
-    font-size: .8EM;
+    font-size: 1.0EM;
     font-weight: 600;
     transition: 0.3s;
 }
@@ -97,15 +109,22 @@ $red: #E33258;
     background-color: #ed5a7a;
 }
 
-.form-container p {
-    color: #5e5e5e;
-    font-size: .7EM;
-    text-decoration: none;
-    padding-left: 120px;
-}
-
 .signup-form-container-error li {
     padding-left: 71px;
     padding-top: 5px;
     font-size: 0.9EM;
+}
+
+.form-footer {
+    display: flex;
+    justify-content: center;
+    color: #5e5e5e;
+    font-size: .9EM;
+    text-decoration: none;
+}
+
+.red-carpet img {
+    height: 300px;
+    width: 300px;
+    padding-top: 100px;
 }

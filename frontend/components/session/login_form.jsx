@@ -45,10 +45,13 @@ class LoginForm extends React.Component {
             return (
                 <div>
                 <NavBar />
-                <div className="form-container">
+                <div className="form-wrap-all">
+                    <div className="form-container">
                         <div>
                         <form onSubmit={this.handleSubmit}>
-                            <h3>Log In to CheckRev</h3>
+                            <div className="login-title">
+                            <h2>Log In to CheckRev</h2>
+                            </div>
                             <br/>
                             <label>
                             <input type="text"
@@ -67,9 +70,15 @@ class LoginForm extends React.Component {
                             <button>Log In</button>
                             {this.handleErrors()}
                         <br/>
-                                <p>Don't have CheckRev account? You can sign up <Link to='/signup' style={{ textDecoration: 'none', color: '#E33258' }}>here</Link></p>
+                        <div className="form-footer">
+                            <p>Don't have CheckRev account? You can sign up <Link to='/signup' style={{ textDecoration: 'none', color: '#E33258' }}>here</Link></p>
+                        </div>
                         </form>
                         </div>
+                    </div>
+                    <div className="red-carpet">
+                        <img src={window.redCarpet} />
+                    </div>
                 </div>
                 </div>
             )

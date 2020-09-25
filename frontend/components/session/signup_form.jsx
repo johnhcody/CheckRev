@@ -42,7 +42,9 @@ class SessionForm extends React.Component {
             <NavBar />
             <div className="form-container">
             <form onSubmit={this.handleSubmit}>
+                <div className="login-title">
                 <h2>Join the CheckRev Community</h2>
+                </div>
                     <br/>
                     <label>
                     <input type="text"
