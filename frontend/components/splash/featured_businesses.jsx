@@ -12,7 +12,7 @@ class FeaturedBusinesses extends React.Component {
         const utensils = <FontAwesomeIcon icon="utensils" />
         return (
         <div>
-            <div className="featured-rev-title">
+            <div className="featured-bus-title">
                 <h2>Featured Businesses</h2>
             </div>
             <div className="featured-business-cat-container-parent">
@@ -84,6 +84,9 @@ class FeaturedBusinesses extends React.Component {
                             </div>
                         </div>
                 </div>
+            </div>
+            <div className="featured-bus-footer">
+                <p><a href="#">See all businesses</a></p>
             </div>
         </div>
         )

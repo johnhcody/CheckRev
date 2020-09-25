@@ -5,6 +5,7 @@ import SearchIcons from '../search/search_icons';
 import BusinessCategoriesContainer from './business_categories_container';
 import BusinessByCityContainer from './business_by_city_container';
 import FeaturedBusinessesContainer from './featured_businesses_container';
+import BusinessByCategoryContainer from './business_by_category_container';
 
 class Splash extends React.Component {
     constructor(props) {
@@ -31,6 +32,7 @@ class Splash extends React.Component {
                     <BusinessCategoriesContainer />
                     <BusinessByCityContainer />
                     <FeaturedBusinessesContainer />
+                    <BusinessByCategoryContainer />
             </div>
         )
     }

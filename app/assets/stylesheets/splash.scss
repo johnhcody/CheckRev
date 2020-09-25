@@ -4,6 +4,7 @@ $black: #170409;
 $olive: #B8AF03;
 $sand: #CCBF82;
 $red: #E33258;
+$lightgray: #f2f2f2;
 
 
 
@@ -206,7 +207,7 @@ $red: #E33258;
     justify-content: center;
     width: 1000px;
     height: 278px;
-    background-color: #ede6e6;
+    background-color: $lightgray;
 
 }
 
@@ -215,7 +216,7 @@ $red: #E33258;
     justify-content: center;
     width: 1000px;
     height: 100px;
-    background-color: #ede6e6;
+    background-color: $lightgray;
 }
 
 .rev-title h2 {
@@ -324,13 +325,7 @@ $red: #E33258;
 
 //  featured businesses section
 
-.featured-business-cat-container-parent {
-    display: flex;
-    justify-content: center;
-    width: 1000px;
-}
-
-.featured-rev-title {
+.featured-bus-title {
     display: flex;
     justify-content: center;
     width: 1000px;
@@ -345,14 +340,21 @@ $red: #E33258;
     }
 }
 
+.featured-business-cat-container-parent {
+    display: flex;
+    justify-content: center;
+    width: 1000px;
+}
+
+
 .featured-bus-cards-container {
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 345px;
+    height: 310px;
     padding: 14px;
     margin: 4px;
-    background-color: blue
+    // background-color: blue
     a {
         text-decoration-line: none;
     }
@@ -411,3 +413,102 @@ $red: #E33258;
         width: 100%;
     }
 }
+
+
+.featured-bus-footer {
+    display: flex;
+    justify-content: center;
+    width: 1000px;
+    height: 50px;
+    background-color: white;
+    a {
+        font-family: sans-serif;
+        font-weight: 600;
+        font-size: 0.9em;
+        color: $green;
+        text-decoration-line: none;
+        &:hover {
+            border-bottom: 2px solid $green;
+        }
+    }
+}
+
+
+// Business by Category
+
+.bus-by-cat-title {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    background-color: $lightgray;
+    h2 {
+       font-family: sans-serif;
+        font-weight: 900;
+        color: #E33258;
+        padding: 30px;
+        font-size: 2.1em; 
+    }
+}
+
+.bus-by-cat-container-parent {
+    display: flex;
+    justify-content: center;
+    width: 1000px;
+    background-color: $lightgray;
+}
+
+.bus-by-cat-card-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 250px;
+    padding: 14px;
+    margin: 4px;
+    background-color: blue
+    a {
+        text-decoration-line: none;
+    }
+}
+
+.bus-by-cat-card {
+    display: flex; 
+    justify-content: center;
+    width: 258px;
+    height: 200px;
+    background-color: white;
+    border: 0.5px solid lightgray;
+    border-radius: 5px;
+    margin: 21px;
+    img {
+        width: 80%;
+        padding-left: 10%;
+        padding-right: 10%;
+        height: 80%;
+        border-radius: 5px 5px 0px 0px;
+    }
+    a {
+        text-decoration-line: none;
+    }
+    p {
+        padding-top: 10px;
+        font-family: sans-serif;
+        font-weight: 600;
+        color: black;
+        text-decoration-line: none;
+    }
+    &:hover {
+        border: 0.5px solid $lightgray;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        p {
+            color: $green;
+        }
+    }
+}
+
+.bus-by-cat-text {
+    display: flex;
+    justify-content: center;
+}
+
