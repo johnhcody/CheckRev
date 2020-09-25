@@ -95,3 +95,15 @@ class FeaturedBusinesses extends React.Component {
 
 export default FeaturedBusinesses;
 
+
+
+function BusinessCard() {
+
+    // receive an array from props
+    // map the elements of the to the correspond
+    // run a test similar to guest user... 
+    // the values 
+    return (
+        <div>hello form business card</div>
+    )
+}

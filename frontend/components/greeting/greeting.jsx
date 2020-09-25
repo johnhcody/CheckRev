@@ -29,18 +29,24 @@ class Greeting extends React.Component {
                 <div>
                     <p className="user greeting">Hello,  {currentUser.firstName}</p>
                     <button onClick={logout} className="logout greeting">Log Out</button>
+                    <div className="session-link">
                     <Link to='#' style={{ textDecoration: 'none', color: 'white' }}><button className="review greeting">Write a Review</button></Link>
+                    </div>
                 </div>
             )
         } else {
             return (
                 <div >
-                    <span className="span-button">
-                        <Link to='/signup' style={{ textDecoration: 'none', color: 'white' }}><button className="signup greeting" color>Sign Up</button></Link>
-                        <Link to='/login' style={{ textDecoration: 'none', color: 'white' }}><button className="login greeting">Log In</button></Link>
-                        <button className="demo greeting" onClick={this.loginDemo}>Demo</button>
-                        <Link to='#' style={{ textDecoration: 'none', color: 'white' }}><button className="review greeting">Write a Review</button></Link>
-                    </span>
+                    <div className="span-button">
+                        <div className="review-link">
+                        <Link to='#' ><button>Write a Review</button></Link>
+                        </div>
+                        <div className="session-link">
+                        <button onClick={this.loginDemo}>Demo</button>
+                        <Link to='/login'><button>Log In</button></Link>
+                        <Link to='/signup'><button id="sign-up">Sign Up</button></Link>
+                        </div>
+                    </div>
                 </div>
             )
         }

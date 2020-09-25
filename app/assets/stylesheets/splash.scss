@@ -24,7 +24,6 @@ $darkblue: #5165db;
 
 .greeting {
     background-color: Transparent;
-    position: absolute;
     padding: 5px;
     margin: 10px;
     min-height: 25px;
@@ -33,6 +32,67 @@ $darkblue: #5165db;
     border: 3px solid white;
     font-weight: 300;
     color: white;
+}
+
+.span-button {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.review-link {
+    justify-content: flex-start;
+    button {
+        padding-top: 50px;
+        background-color: transparent;
+        padding: 5px;
+        margin-top: 45px;
+        min-height: 25px;
+        border: none;
+        font-size: 1.3EM;
+        color: white;
+        outline: none;
+        &:hover {
+            border-bottom: 4px solid white;
+        }
+    }
+}
+
+
+.session-link {
+    justify-content: flex-end;
+    button {
+        padding-top: 50px;
+        background-color: transparent;
+        margin-right: 29px;
+        min-height: 25px;
+        border: none;
+        font-size: 1.3EM;
+        color: white;
+        outline: none;
+        &:hover {
+            border-bottom: 4px solid white;
+        }
+    }
+}
+
+
+#sign-up {
+    background-color: Transparent;
+    padding: 5px;
+    margin: 10px;
+    min-height: 25px;
+    border-radius: 5px;
+    font-size: 1.2EM;
+    border: 3px solid white;
+    font-weight: 300;
+    color: white;
+    &:hover {
+        background-color: white;
+        border: 3px solid white;
+        color: black;
+        transition: 0.3s;
+    }
 }
 
 
@@ -51,35 +111,6 @@ $darkblue: #5165db;
 .review:hover {
     border-bottom: 3px solid white;
     border-radius: 0px;
-}
-
-
-.signup {
-    right: 280px;
-    top: 20px;
-    outline: none;
-    outline: 0;
-}
-
-.demo {
-    right: 485px;
-    border: none;
-    top: 23px;
-    outline: none;
-}
-
-.user {
-    right: 334px;
-    font-family: sans-serif;
-    top: 24px;
-    border: none;
-    font-weight: 400;
-}
-
-.logout {
-    right: 230px;
-    top: 20px;
-    outline: none;
 }
 
 .logout:hover {
@@ -102,7 +133,6 @@ $darkblue: #5165db;
 }
 
 .review {
-    left: 266px;
     border: none;
     top: 23px;
     outline: none;
@@ -113,14 +143,12 @@ $darkblue: #5165db;
     justify-content: center;
     max-width: 100%;
     height: 312px;
+    img {
+        max-height: 158px;
+        max-width: 200px;
+        padding-top: 66px;
+    }
 }
-
-.logo-wrapper img {
-    max-height: 165px;
-    max-width: 200px;
-    padding-top: 100px;
-}
-
 
 .chef-backgroud {
     max-height: 2560px;
@@ -150,13 +178,11 @@ $darkblue: #5165db;
     background-color: #FEFEFE;
     border: none;
     color: #5e5e5e;
-    min-width: 300px;
-    max-width: 300px;
+    min-width: 400px;
     font-size: 1.0EM;
     padding-left: 28px;
     padding-bottom: none;
     outline: none;
-    float: lleft;
     padding: 11px;
 }
 .search-child {
@@ -165,7 +191,7 @@ $darkblue: #5165db;
 }
 
 .search-child label {
-    padding-left: 5px;
+    padding-left: 11px;
 }
 
 .search-button {
@@ -189,8 +215,9 @@ $darkblue: #5165db;
 
 .icons-parent {
     display: flex;
-    justify-content: center;
-    max-height: 50px
+    justify-content: space-evenly;
+    max-height: 50px;
+    margin-top: 24px;
 }
 
 .icons-parent a {
