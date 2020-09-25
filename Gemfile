@@ -42,7 +42,6 @@ group :development, :test do
   gem 'pry-rails'
   gem 'annotate'
   gem 'bourbon'
-  gem 'bcrypt'
 end
 
 group :development do

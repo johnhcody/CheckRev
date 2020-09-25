@@ -94,3 +94,4 @@ class FeaturedBusinesses extends React.Component {
 }
 
 export default FeaturedBusinesses;
+

@@ -91,7 +91,7 @@ class SessionForm extends React.Component {
                     <label>
                     <input type="datetime"
                             value={this.state.birthdate}
-                            placeholder="MM/YY/YYY"
+                            placeholder="MM/DD/YYYY"
                             onChange={this.update('birthdate')} />
                     </label>
                     <br/>
