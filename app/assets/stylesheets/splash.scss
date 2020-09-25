@@ -574,7 +574,8 @@ $darkblue: #5165db;
     color: #5e5e5e;
     width: 100%;
     }
-    li:first-child {
+    header {
+            font-family: sans-serif;
             color: $red;
             font-weight: 700;
             padding-bottom: 2px;
@@ -590,6 +591,7 @@ $darkblue: #5165db;
     }
     a {
         text-decoration-line: none;
+        color: #5e5e5e;
      }
 }
 

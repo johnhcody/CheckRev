@@ -7,7 +7,7 @@ function Footer() {
         <div className="footer-list">
         <div className="list-1">
         <ul>
-            <li>Languages</li>
+            <header>Languages</header>
             <li>Javascript</li>
             <li>Ruby</li>
             <li>Python</li>
@@ -17,15 +17,15 @@ function Footer() {
         </div>
         <div className="list-1">
         <ul>
-            <li>Contact</li>
-            <li>GitHub</li>
-            <li>LinkedIn</li>           
+            <header>Contact</header>
+            <li><a href="https://github.com/johnhcody">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/johnhcody/">LinkedIn</a></li>     
             <li>Email: john.haner.cody@gmail.com</li>
         </ul>
         </div>
         <div className="list-2">
         <ul>
-            <li>Skills</li>
+            <header>Skills</header>
             <li>Commited</li>
             <li>Hard Working</li>
             <li>Positive</li>
