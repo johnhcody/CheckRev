@@ -20,7 +20,7 @@ $red: #E33258;
 
 .greeting {
     background-color: Transparent;
-    // position: absolute;
+    position: absolute;
     padding: 5px;
     margin: 10px;
     min-height: 25px;
@@ -106,7 +106,7 @@ $red: #E33258;
     display: flex;
     justify-content: center;
     max-width: 100%;
-    height: 400px;
+    height: 312px;
 }
 
 .logo-wrapper img {
@@ -193,26 +193,21 @@ $red: #E33258;
     font-size: 1em;
     font-weight: 700;
     font-family: sans-serif;
-    text-decoration: none;
+    text-decoration-line: none;
+    &:hover {
+        border-bottom: 3px solid white;
+    }
 }
 
-.icons-parent a:hover {
-    border-bottom: 3px solid white;
-}
-
-
-
-
-
-
-
+// business categories
 
 .business-cat-container-parent {
     display: flex;
     justify-content: center;
     width: 1000px;
-    height: 600px;
+    height: 278px;
     background-color: #ede6e6;
+
 }
 
 .rev-title {
@@ -228,13 +223,16 @@ $red: #E33258;
     font-weight: 900;
     color: #E33258;
     padding: 30px;
-    font-size: 2.1em;
+    font-size: 1.7em;
 }
 
 .bus-cards-container {
     display: flex;
     justify-content: center;
-    width: 900px
+    width: 900px;
+    a {
+        text-decoration-line: none;
+    }
 }
 
 .bus-card {
@@ -242,33 +240,174 @@ $red: #E33258;
     height: 230px;
     background-color: white;
     border-radius: 5px;
+    &:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        h3 {
+            color: $green;
+        }
+    }
 }
 
-
-.bus-card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-}
 
 .bus-card img {
     width: 100%;
     height: 80%;
     border-radius: 5px 5px 0px 0px;
-
 }
 
 .bus-container {
     display: flex;
     justify-content: center;
+    h3 {
+        padding-top: 10px;
+        font-family: sans-serif;
+        font-weight: 600;
+        color: black;
+        text-decoration-line: none;
+    }
 }
 
-.bus-container h3 {
-    padding-top: 10px;
-    font-family: sans-serif;
-    font-weight: 600;
-    text-decoration: none;
-}
+// attempt to fix weird css bug, tried to put it on application.html.erb
 
 .bigbox {
     width: 1000px;
+}
+
+// businesses by city section
+
+
+.bus-by-city {
+    display: flex;
+    justify-content: center;
+    width: 1000;
+}
+
+.bus-by-city-title {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    h2 {
+       font-family: sans-serif;
+        font-weight: 900;
+        color: #E33258;
+        padding: 30px;
+        font-size: 2.1em; 
+    }
+}
+
+
+.bus-by-city-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 70px;
+    background-color: white;;
+    a {
+        color: #5e5e5e;
+    font-weight: 500;
+    font-size: 1EM;
+    padding: 20px;
+    font-family: sans-serif;
+    text-decoration-line: none;
+    font-family: sans-serif;
+    text-decoration-line: none;
+    border-bottom: 1px solid $gray;
+        &:hover {
+            border-bottom: 4px solid $red;
+        }
+    }
+}
+
+
+//  featured businesses section
+
+.featured-business-cat-container-parent {
+    display: flex;
+    justify-content: center;
+    width: 1000px;
+}
+
+.featured-rev-title {
+    display: flex;
+    justify-content: center;
+    width: 1000px;
+    height: 100px;
+    background-color: white;
+    h2 {
+        font-family: sans-serif;
+        font-weight: 900;
+        color: #E33258;
+        padding: 30px;
+        font-size: 1.7em;
+    }
+}
+
+.featured-bus-cards-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 345px;
+    padding: 14px;
+    margin: 4px;
+    background-color: blue
+    a {
+        text-decoration-line: none;
+    }
+}
+
+.featured-bus-card {
+    width: 280px;
+    height: 301px;
+    background-color: white;
+    border: 0.5px solid lightgray;
+    border-radius: 5px;
+    margin: 5px;
+    img {
+        width: 100%;
+        height: 55%;
+        border-radius: 5px 5px 0px 0px;
+    }
+    h1 {
+        padding-top: 10px;
+        padding-left: 7px;
+        font-family: sans-serif;
+        font-weight: 600;
+        color: $green;
+        text-decoration-line: none;
+        width: 100%;
+        a {
+            color: $green;
+            text-decoration-line: none;
+            &:hover {
+                border-bottom: 2px solid $green;
+            }
+        }
+    }
+    h2 {
+        padding-top: 8px;
+        padding-left: 7px;
+        font-family: sans-serif;
+        font-weight: 400;
+        color: $gray;
+        width: 100%;
+    }
+    h3 {
+        padding-top: 8px;
+        padding-left: 7px;
+        font-family: sans-serif;
+        font-weight: 500;
+        color: $gray;
+        width: 100%;
+    }
+    h4 {
+        padding-top: 8px;
+        padding-left: 7px;
+        font-family: sans-serif;
+        font-weight: 500;
+        color: $red;
+        width: 100%;
+    }
 }
