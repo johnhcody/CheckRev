@@ -24,6 +24,36 @@ class BusinessCategories extends React.Component {
                     </div>
                 </a>
                 </div>
+                <div className="bus-cards-container">
+                <a href="#">
+                    <div className="bus-card">
+                        <img src={window.construction} />
+                        <div className="bus-container">
+                            <h3>Construction</h3>
+                        </div>
+                    </div>
+                </a>
+                </div>
+                <div className="bus-cards-container">
+                <a href="#">
+                    <div className="bus-card">
+                        <img src={window.construction} />
+                        <div className="bus-container">
+                            <h3>Construction</h3>
+                        </div>
+                    </div>
+                </a>
+                </div>
+                <div className="bus-cards-container">
+                <a href="#">
+                    <div className="bus-card">
+                        <img src={window.construction} />
+                        <div className="bus-container">
+                            <h3>Construction</h3>
+                        </div>
+                    </div>
+                </a>
+                </div>
             </div>
             </div>
         )
