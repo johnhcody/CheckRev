@@ -39,6 +39,50 @@ class FeaturedBusinesses extends React.Component {
                             </h4>
                         </div>
                     </div>
+                        <div className="featured-bus-card">
+                            <a href="#" >
+                                <img src={window.construction} />
+                            </a>
+                            <div>
+                                <h1>
+                                    <a href="#">Speedy Auto Repair</a>
+                                </h1>
+                                <h2>
+                                    {utensils}{utensils}{utensils} 10 reviews
+                            </h2>
+                                <h3>
+                                    business type
+                            </h3>
+                                <h3>
+                                    location
+                            </h3>
+                                <h4>
+                                    amenities
+                            </h4>
+                            </div>
+                        </div>
+                        <div className="featured-bus-card">
+                            <a href="#" >
+                                <img src={window.construction} />
+                            </a>
+                            <div>
+                                <h1>
+                                    <a href="#">Speedy Auto Repair</a>
+                                </h1>
+                                <h2>
+                                    {utensils}{utensils}{utensils} 10 reviews
+                            </h2>
+                                <h3>
+                                    business type
+                            </h3>
+                                <h3>
+                                    location
+                            </h3>
+                                <h4>
+                                    amenities
+                            </h4>
+                            </div>
+                        </div>
                 </div>
             </div>
         </div>

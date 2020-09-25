@@ -334,14 +334,14 @@ $red: #E33258;
     display: flex;
     justify-content: center;
     width: 1000px;
-    height: 100px;
+    height: 50px;
     background-color: white;
     h2 {
         font-family: sans-serif;
-        font-weight: 900;
+        font-weight: 600;
         color: #E33258;
         padding: 30px;
-        font-size: 1.7em;
+        font-size: 1.4em;
     }
 }
 
@@ -364,7 +364,7 @@ $red: #E33258;
     background-color: white;
     border: 0.5px solid lightgray;
     border-radius: 5px;
-    margin: 5px;
+    margin: 10px;
     img {
         width: 100%;
         height: 55%;
