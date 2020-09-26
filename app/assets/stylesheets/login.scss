@@ -192,17 +192,15 @@
     justify-content: center;
     min-height: 50px;
     width: 100%;
+    margin-top: 20px;
     ul > li {
         display: flex;
         justify-content: flex-start;
         background-color: #FCD6D3;
         font-family: sans-serif;
         color: $gray;
-        height: 100%;
         width: 800px;
-        margin-top: 20px;
-        padding: 13px;
-        padding-top: 15px;
+        padding: 8px;
         margin-left: 39px;
     }
 }
