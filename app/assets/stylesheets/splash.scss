@@ -38,6 +38,7 @@ $darkblue: #5165db;
     display: flex;
     justify-content: space-between;
     height: 80px;
+    
 }
 
 .review-link {
@@ -77,6 +78,19 @@ $darkblue: #5165db;
 }
 
 
+#guest {
+    padding-top: 50px;
+    background-color: transparent;
+    padding: 5px;
+    margin-top: 45px;
+    min-height: 25px;
+    border: none;
+    font-size: 1.3EM;
+    color: white;
+    outline: none;
+    padding-left: 500px;
+}
+
 #sign-up {
     background-color: Transparent;
     padding: 5px;
@@ -113,11 +127,28 @@ $darkblue: #5165db;
     border-radius: 0px;
 }
 
-.logout:hover {
-    background-color: $red;
-    border: 3px solid $red;
-    color: white;
-    transition: 0.3s;
+
+
+.logout {
+    margin-top: 32px;
+    button {
+        background-color: Transparent;
+        padding: 5px;
+        margin: 10px;
+        min-height: 25px;
+        border-radius: 5px;
+        font-size: 1.2EM;
+        border: 3px solid white;
+        font-weight: 300;
+        color: white;
+        outline: none;
+        &:hover {
+            background-color: $red;
+            border: 3px solid $red;
+            color: black;
+            transition: 0.3s;
+        }
+    }
 }
 
 .demo:hover {

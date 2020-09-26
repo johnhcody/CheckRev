@@ -27,10 +27,15 @@ class Greeting extends React.Component {
         if (currentUser) {
             return (
                 <div>
-                    <p className="user greeting">Hello,  {currentUser.firstName}</p>
-                    <button onClick={logout} className="logout greeting">Log Out</button>
-                    <div className="session-link">
-                    <Link to='#' style={{ textDecoration: 'none', color: 'white' }}><button className="review greeting">Write a Review</button></Link>
+                    <div className="span-button">
+                        <div className="review-link">
+                            <Link to='#'><button>Write a Review</button></Link>
+                        </div>
+                    <div className="session-link"></div>
+                        <button id="guest">Hello,  {currentUser.firstName}</button>
+                        <div className="logout">
+                        <button onClick={logout} >Log Out</button>
+                        </div>
                     </div>
                 </div>
             )

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import NavBar from '../navbar/navbar'
+import NavBar from '../navbar/navbar';
+import Copyright from '../splash/copyright';
+import Footer from '../splash/footer';
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -108,6 +110,8 @@ class SessionForm extends React.Component {
                         <img src={window.redCarpet} />
                     </div>
             </div>
+                <Footer />
+                <Copyright />
             </div>
         )
     }

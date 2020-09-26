@@ -25,11 +25,45 @@ $red: #E33258;
     padding-top: 50px;
 }
 
-.login-title {
+
+.login-form-text {
     display: flex;
     justify-content: center;
+    height: 80px;
+    width: 100%;
+}
+
+.login-title {
+    width: 100%;
+}
+
+.login-sub-text {
+    width: 100%;
+}
+
+.login-form-text {
+    display: flex;
+    justify-content: center;
+    width: 100%;
     h2 {
         font-size: 1.5EM;
+        color: $red;
+        font-size: 1.3em;
+        width: 1000%;
+    }
+    h3 {
+        font-family: sans-serif;
+        font-weight: 800;
+        color: #5e5e5e;
+        width: 100%;
+        font-size: 0.9em;
+    }
+    h4 {
+        font-family: sans-serif;
+        font-weight: 500;
+        color: #5e5e5e;
+        width: 100%;
+        font-size: 0.9em;
     }
 }
 
@@ -57,7 +91,7 @@ $red: #E33258;
     border-radius: 5px;
     font-size: 1.0EM;
     box-sizing: border-box;
-    background-color: #E8F0FE;
+    background-color: white;
 }
 .form-container input[type=number] {
     width: 300px;
@@ -67,7 +101,7 @@ $red: #E33258;
     border-radius: 5px;
     font-size: 1.0EM;
     box-sizing: border-box;
-    background-color: #E8F0FE;
+    background-color: white;
 }
 .form-container input[type=datetime] {
     width: 300px;
@@ -77,7 +111,7 @@ $red: #E33258;
     border-radius: 5px;
     font-size: 1.0EM;
     box-sizing: border-box;
-    background-color: #E8F0FE;
+    background-color: white;;
 }
 
 .form-container input[type=password] {
@@ -88,7 +122,7 @@ $red: #E33258;
     border-radius: 5px;
     font-size: 1.0EM;
     box-sizing: border-box;
-    background-color: #E8F0FE;
+    background-color: white;;
 }
 
 .form-container button {

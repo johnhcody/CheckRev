@@ -44,17 +44,26 @@ class LoginForm extends React.Component {
     }
 
     render() {
-            return (
-                <div>
-                <NavBar />
+        return (
+            <div>
+            <NavBar />
                 <div className="form-wrap-all">
                     <div className="form-container">
                         <div>
                         <form onSubmit={this.handleSubmit}>
+                            <div className="login-form-text">
                             <div className="login-title">
                             <h2>Log In to CheckRev</h2>
                             </div>
-                            <br/>
+                            <div>
+                                <div className="login-sub-text">
+                                <h3>New to CheckRev?<Link to='/signup'>Sign Up!</Link></h3>
+                                </div>
+                            </div>
+                            <div>
+                                <h4>By continuing you agree to CheckRev's non-existant terms and conditions</h4>
+                            </div>
+                            </div>
                             <label>
                             <input type="text"
                                     placeholder="Email"
@@ -84,6 +93,7 @@ class LoginForm extends React.Component {
                 </div>
                 <Footer />
                 <Copyright />
+
                 </div>
             )
         
