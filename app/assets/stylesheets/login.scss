@@ -41,11 +41,11 @@
         width: 100%;
         padding: 5px;
     }
-    h3 {
+    p {
         display: flex;
         justify-content: center;
         font-family: sans-serif;
-        font-weight: 800;
+        font-weight: 500;
         color: #5e5e5e;
         width: 100%;
         font-size: 0.9em;
@@ -191,6 +191,12 @@
         font-size: .8em;
         font-weight: 500;
         margin-left: 60px;
+        padding-top: 9px;
+    }
+    p {
+        font-size: .9em;
+        font-weight: 500;
+        margin-left: 20px;
         padding-top: 9px;
     }
 }

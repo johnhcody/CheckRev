@@ -57,7 +57,7 @@ class LoginForm extends React.Component {
                         <div>
                             <div className="login-form-text">
                                 <h2>Log In to CheckRev</h2>
-                                <h3>New to CheckRev? <Link to='/signup'>Sign Up!</Link></h3>
+                                <p>New to CheckRev? <Link to='/signup'> Sign Up!</Link></p>
                             </div>
                                     <form onSubmit={this.handleSubmit}>
                             <label>
