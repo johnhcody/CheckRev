@@ -27,7 +27,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
-
+gem 'bcrypt'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -42,7 +42,6 @@ group :development, :test do
   gem 'pry-rails'
   gem 'annotate'
   gem 'bourbon'
-  gem 'bcrypt'
 end
 
 group :development do
