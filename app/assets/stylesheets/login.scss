@@ -22,6 +22,7 @@ $red: #E33258;
     justify-content: center;
     width: 1000px;
     margin: 0 auto;
+    padding-top: 50px;
 }
 
 .login-title {
@@ -41,6 +42,7 @@ $red: #E33258;
     font-weight: 700;
     font-family: sans-serif;
     color: #E33258;
+    margin-right: 41px;
 }
 
 .form-container li {
@@ -125,22 +127,22 @@ $red: #E33258;
     display: flex;
     justify-content: center;
     color: #5e5e5e;
-    font-size: .9EM;
     text-decoration: none;
     h4 {
         padding-right: 56px;
+        font-size: .8em;
     }
 }
 
 .red-carpet img {
     height: 300px;
     width: 300px;
-    padding-top: 100px;
+    padding-top: 20px;
 }
 
 .red-carpet-sign img {
     height: 300px;
     width: 300px;
-    padding-top: 307px;
-    padding-left: 59px;
+    padding-top: 20px;
+
 }

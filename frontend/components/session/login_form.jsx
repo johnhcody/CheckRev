@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import NavBar from '../navbar/navbar';
+import Copyright from '../splash/copyright';
+import Footer from '../splash/footer';
 
 class LoginForm extends React.Component {
     constructor(props) {
@@ -80,6 +82,8 @@ class LoginForm extends React.Component {
                         <img src={window.redCarpet} />
                     </div>
                 </div>
+                <Footer />
+                <Copyright />
                 </div>
             )
         

@@ -8,6 +8,7 @@ import FeaturedBusinessesContainer from './featured_businesses_container';
 import BusinessByCategoryContainer from './business_by_category_container';
 import Footer from './footer';
 import Copyright from './copyright';
+import SocialMedia from './social_media';
 
 
 class Splash extends React.Component {
@@ -36,6 +37,7 @@ class Splash extends React.Component {
                     <BusinessByCityContainer />
                     <FeaturedBusinessesContainer />
                     <BusinessByCategoryContainer />
+                    <SocialMedia />
                     <Footer />
                     <Copyright />
             </div>
