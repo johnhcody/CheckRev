@@ -47,7 +47,7 @@
         color: white;
         outline: none;
         &:hover {
-            border-bottom: 4px solid white;
+            border-bottom: 2px solid white;
         }
     }
 }
@@ -91,7 +91,7 @@
     margin: 10px;
     min-height: 25px;
     border-radius: 5px;
-    border: 3px solid white;
+    border: 2px solid white;
     font-weight: 300;
     color: white;
     &:hover {
@@ -111,7 +111,7 @@
 }
 
 .login:hover {
-    border-bottom: 3px solid white;
+    border-bottom: 2px solid white;
     border-radius: 0px;
 }
 
@@ -131,13 +131,13 @@
         min-height: 25px;
         border-radius: 5px;
         font-size: 1.1EM;
-        border: 3px solid white;
+        border: 2px solid white;
         font-weight: 300;
         color: white;
         outline: none;
         &:hover {
             background-color: $red;
-            border: 3px solid $red;
+            border: 2px solid $red;
             color: black;
             transition: 0.3s;
         }
@@ -513,7 +513,7 @@
         font-weight: 900;
         color: #E33258;
         padding: 30px;
-        font-size: 2.1em; 
+        font-size: 1.4em; 
     }
 }
 
