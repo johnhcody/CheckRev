@@ -30,7 +30,7 @@ class SessionForm extends React.Component {
 
     handleErrors() {
         return (
-            <ul className="signup-form-container-error">
+            <ul>
                 {this.props.errors.map((error, idx) => {
                     return <li key={idx}>{error}</li>
                 })}
@@ -51,6 +51,11 @@ class SessionForm extends React.Component {
         return (
             <div>
             <NavBar />
+                <div className="handle-errors-wrapper">
+                    <div className="handle-errors">
+                        {this.handleErrors()}
+                    </div>
+                </div>
             <div className="form-wrap-all">
             <div className="form-container">
                 <div>
@@ -98,7 +103,6 @@ class SessionForm extends React.Component {
                     </label>
                     <br/>
                 <button>Sign Up</button>
-                {this.handleErrors()}
                 <br/>
                 <div className="form-footer">
                 <h4>You already have a CheckRev account?!? <Link to='/login' style={{ textDecoration: 'none', color: '#E33258' }}>Log In!</Link></h4>
