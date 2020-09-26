@@ -5,7 +5,7 @@ $olive: #B8AF03;
 $sand: #CCBF82;
 $red: #E33258;
 $lightgray: #f2f2f2;
-$darkblue: #5165db;
+$darkblue: #20598e;
 
 
 
@@ -50,7 +50,7 @@ $darkblue: #5165db;
         margin-top: 45px;
         min-height: 25px;
         border: none;
-        font-size: 1.3EM;
+        font-size: 1.1EM;
         color: white;
         outline: none;
         &:hover {
@@ -64,15 +64,16 @@ $darkblue: #5165db;
     justify-content: flex-end;
     button {
         padding-top: 50px;
+        padding-bottom: 5px;
         background-color: transparent;
         margin-right: 29px;
         min-height: 25px;
         border: none;
-        font-size: 1.3EM;
+        font-size: 1.1EM;
         color: white;
         outline: none;
         &:hover {
-            border-bottom: 4px solid white;
+            border-bottom: 2px solid white;
         }
     }
 }
@@ -85,7 +86,7 @@ $darkblue: #5165db;
     margin-top: 45px;
     min-height: 25px;
     border: none;
-    font-size: 1.3EM;
+    font-size: 1.1EM;
     color: white;
     outline: none;
     padding-left: 500px;
@@ -97,7 +98,6 @@ $darkblue: #5165db;
     margin: 10px;
     min-height: 25px;
     border-radius: 5px;
-    font-size: 1.2EM;
     border: 3px solid white;
     font-weight: 300;
     color: white;
@@ -123,7 +123,7 @@ $darkblue: #5165db;
 }
 
 .review:hover {
-    border-bottom: 3px solid white;
+    border-bottom: 2px solid white;
     border-radius: 0px;
 }
 
@@ -137,7 +137,7 @@ $darkblue: #5165db;
         margin: 10px;
         min-height: 25px;
         border-radius: 5px;
-        font-size: 1.2EM;
+        font-size: 1.1EM;
         border: 3px solid white;
         font-weight: 300;
         color: white;
@@ -175,9 +175,9 @@ $darkblue: #5165db;
     max-width: 100%;
     height: 312px;
     img {
-        max-height: 158px;
-        max-width: 200px;
-        padding-top: 66px;
+        max-height: 120px;
+        max-width: 240px;
+        padding-top: 118px;
     }
 }
 
@@ -189,9 +189,8 @@ $darkblue: #5165db;
 .search-parent {
     display: flex;
     // position: absolute;
-    margin: 10px;
+    margin: -26px;
     background-color: #FEFEFE;
-    top: 373px;
     // width:100%;
     font-family: sans-serif;
     border-radius: 5px;
@@ -223,6 +222,7 @@ $darkblue: #5165db;
 
 .search-child label {
     padding-left: 11px;
+    font-weight: 600;
 }
 
 .search-button {
@@ -284,10 +284,10 @@ $darkblue: #5165db;
     margin: 0 auto;
     h2 {
         font-family: sans-serif;
-        font-weight: 900;
+        font-weight: 700;
         color: #E33258;
         padding: 30px;
-        font-size: 1.7em;
+        font-size: 1.4em;
     }
 }
 
@@ -357,10 +357,10 @@ $darkblue: #5165db;
     background-color: white;
     h2 {
        font-family: sans-serif;
-        font-weight: 900;
+        font-weight: 700;
         color: #E33258;
-        padding: 30px;
-        font-size: 2.1em; 
+        padding: 40px;
+        font-size: 1.4em; 
     }
 }
 
@@ -369,13 +369,13 @@ $darkblue: #5165db;
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 70px;
+    height: 49px;
     background-color: white;;
     a {
         color: #5e5e5e;
     font-weight: 500;
     font-size: 1EM;
-    padding: 20px;
+    padding: 16px;
     font-family: sans-serif;
     text-decoration-line: none;
     font-family: sans-serif;
@@ -401,8 +401,8 @@ $darkblue: #5165db;
         font-family: sans-serif;
         font-weight: 600;
         color: #E33258;
-        padding: 30px;
-        font-size: 1.4em;
+        padding: 40px;
+        font-size: 1.0em;
     }
 }
 
@@ -491,8 +491,8 @@ $darkblue: #5165db;
     margin: 0 auto;
     a {
         font-family: sans-serif;
-        font-weight: 600;
-        font-size: 0.9em;
+        font-weight: 500;
+        font-size: 15px;
         color: $green;
         text-decoration-line: none;
         &:hover {
@@ -589,6 +589,8 @@ $darkblue: #5165db;
 .footer-container {
     display: flex;
     justify-content: center;
+    background-color: $lightgray;
+    border-top: 0.5px solid lightgray;
 }
 
 
@@ -597,13 +599,12 @@ $darkblue: #5165db;
     justify-content: space-around;
     width: 1000px;
     height: 200px;
-    margin-top: 100px;
+    margin-top: 5px;
     li {
     padding-top: 8px;
-    padding-left: 7px;
     font-family: sans-serif;
     font-weight: 500;
-    color: #5e5e5e;
+    color: #20598e;
     width: 100%;
     }
     header {
@@ -615,7 +616,7 @@ $darkblue: #5165db;
     }
     a {
         text-decoration-line: none;
-        color: #5e5e5e;
+        color: #20598e;
         &:hover {
             border-bottom: 1px solid #5e5e5e;
         }
@@ -627,6 +628,7 @@ $darkblue: #5165db;
     display: flex;
     justify-content: center;
     height: 20px;
+    background-color: $lightgray;
     p {
     padding-top: 0px;
     padding-left: 7px;
@@ -654,10 +656,10 @@ $darkblue: #5165db;
     margin: 0 auto;
     h2 {
         font-family: sans-serif;
-        font-weight: 900;
+        font-weight: 700;
         color: #E33258;
         padding: 30px;
-        font-size: 1.7em;
+        font-size: 1.4em;
     }
 }
 
@@ -669,6 +671,7 @@ $darkblue: #5165db;
     height: 278px;
     margin: 0 auto;
     background-color: white;
+    padding-bottom: 22px;
 
 }
 
@@ -679,7 +682,7 @@ $darkblue: #5165db;
     height: 230px;
     background-color: white;
     border-radius: 5px;
-    border: 0.5px solid #b2abab;
+    border: 0.5px solid lightgray;
     &:hover {
         border: 0.5px solid $darkblue;
         transition: 0.1s;
@@ -688,10 +691,10 @@ $darkblue: #5165db;
         }
     }
     img {
-        width: 98%;
-        height: 89%;
+        width: 80%;
+        height: 80%;
         border-radius: 5px 5px 0px 0px;
-
+        padding-left: 23px;
     }
 }
 
