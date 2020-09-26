@@ -3,7 +3,9 @@ $green: #67917A;
 $black: #170409;
 $olive: #B8AF03;
 $sand: #CCBF82;
-$red: #E33258;
+$red: #D32323;
+$lightgray: #f2f2f2;
+$darkblue: #20598e;
 
 .navbar-parent ul {
     display: flex;
@@ -25,14 +27,6 @@ $red: #E33258;
     padding-top: 50px;
 }
 
-
-.login-form-text {
-    display: flex;
-    justify-content: center;
-    height: 80px;
-    width: 100%;
-}
-
 .login-title {
     width: 100%;
 }
@@ -42,14 +36,17 @@ $red: #E33258;
 }
 
 .login-form-text {
+    margin-left: 70px;
     display: flex;
-    justify-content: center;
-    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
     h2 {
         font-size: 1.5EM;
         color: $red;
         font-size: 1.3em;
-        width: 1000%;
+        width: 100%;
+        padding: 5px;
     }
     h3 {
         font-family: sans-serif;
@@ -57,6 +54,7 @@ $red: #E33258;
         color: #5e5e5e;
         width: 100%;
         font-size: 0.9em;
+        padding: 5px;
     }
     h4 {
         font-family: sans-serif;
@@ -64,6 +62,11 @@ $red: #E33258;
         color: #5e5e5e;
         width: 100%;
         font-size: 0.9em;
+        padding: 5px;
+    }
+    a {
+        text-decoration-line: none;
+        color: $darkblue;
     }
 }
 
