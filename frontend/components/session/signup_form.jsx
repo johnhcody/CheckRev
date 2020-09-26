@@ -38,14 +38,49 @@ class SessionForm extends React.Component {
         )
     }
 
+    handleFocus1() {
+        document.getElementById('signin-fname').style.backgroundColor = '#cbcbed';
+    }
 
+    handleBlur1() {
+        document.getElementById('signin-fname').style.backgroundColor = 'white';
+    }
+    handleFocus2() {
+        document.getElementById('signin-lname').style.backgroundColor = '#cbcbed';
+    }
 
+    handleBlur2() {
+        document.getElementById('signin-lname').style.backgroundColor = 'white';
+    }
 
+    handleFocus3() {
+        document.getElementById('signin-email').style.backgroundColor = '#cbcbed';
+    }
 
+    handleBlur3() {
+        document.getElementById('signin-email').style.backgroundColor = 'white';
+    }
+    handleFocus4() {
+        document.getElementById('signin-pass').style.backgroundColor = '#cbcbed';
+    }
 
+    handleBlur4() {
+        document.getElementById('signin-pass').style.backgroundColor = 'white';
+    }
+    handleFocus5() {
+        document.getElementById('signin-zip').style.backgroundColor = '#cbcbed';
+    }
 
+    handleBlur5() {
+        document.getElementById('signin-zip').style.backgroundColor = 'white';
+    }
+    handleFocus6() {
+        document.getElementById('signin-bday').style.backgroundColor = '#cbcbed';
+    }
 
-
+    handleBlur6() {
+        document.getElementById('signin-bday').style.backgroundColor = 'white';
+    }
 // original 
     render() {
         return (
@@ -66,32 +101,47 @@ class SessionForm extends React.Component {
                                 </div>
                     <br/>
                     <div className="name-wrapper">
-                        <input id="name" type="text"
+                        <input id="signin-fname" type="text"
                             value={this.state.firstName}
                             placeholder="First Name"
                             onChange={this.update('firstName')}
-                            />
-                        <input id="name" type="text"
+                            onFocus={this.handleFocus1}
+                            onBlur={this.handleBlur1}/>
+                        <input id="signin-lname" type="text"
                             value={this.state.lastName}
                             placeholder="Last Name"
-                            onChange={this.update('lastName')} />
+                            onChange={this.update('lastName')}
+                            onFocus={this.handleFocus2}
+                            onBlur={this.handleBlur2}/>
                     </div>
-                    <input type="text"
+                    <input  id="signin-email"
+                            type="text"
                             value={this.state.email}
                             placeholder="Email address"
-                            onChange={this.update('email')} />
-                    <input type="password"
+                            onChange={this.update('email')}
+                            onFocus={this.handleFocus3}
+                            onBlur={this.handleBlur3} />
+                    <input  id="signin-pass"
+                            type="password"
                             value={this.state.password}
                             onChange={this.update('password')}
-                            placeholder="Password" />
-                    <input type="number"
+                            placeholder="Password" 
+                            onFocus={this.handleFocus4}
+                            onBlur={this.handleBlur4}/>
+                    <input  id="signin-zip"
+                            type="number"
                             value={this.state.zipcode}
                             placeholder="Zip Code"
-                            onChange={this.update('zipcode')} />
-                    <input type="datetime"
+                            onChange={this.update('zipcode')} 
+                            onFocus={this.handleFocus5}
+                            onBlur={this.handleBlur5}/>
+                    <input  id="signin-bday"
+                            type="datetime"
                             value={this.state.birthdate}
                             placeholder="MM/DD/YYYY"
-                            onChange={this.update('birthdate')} />
+                            onChange={this.update('birthdate')}
+                            onFocus={this.handleFocus6}
+                            onBlur={this.handleBlur6} />
                 <button>Sign Up</button>
                 <div className="form-footer">
                 <h4>Already on CheckRev? <Link to='/login' style={{ textDecoration: 'none', color: '#E33258' }}>Log In!</Link></h4>

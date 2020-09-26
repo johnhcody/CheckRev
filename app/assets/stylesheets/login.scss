@@ -106,7 +106,7 @@
 }
 
 
-.form-container input[type=text] {
+@mixin form-input-field {
     width: 300px;
     padding: 5px 10px;
     margin: 5px 70px;
@@ -115,38 +115,48 @@
     font-size: 1.0EM;
     box-sizing: border-box;
     background-color: white;
-}
-.form-container input[type=number] {
-    width: 300px;
-    padding: 5px 10px;
-    margin: 5px 70px;
-    border: 1px solid $gray;
-    border-radius: 5px;
-    font-size: 1.0EM;
-    box-sizing: border-box;
-    background-color: white;
-}
-.form-container input[type=datetime] {
-    width: 300px;
-    padding: 5px 10px;
-    margin: 5px 70px;
-    border: 1px solid $gray;
-    border-radius: 5px;
-    font-size: 1.0EM;
-    box-sizing: border-box;
-    background-color: white;;
 }
 
-.form-container input[type=password] {
-    width: 300px;
+@mixin signin-name {
+    width: 140px;
     padding: 5px 10px;
-    margin: 5px 70px;
+    margin: 5px 10px;
     border: 1px solid $gray;
     border-radius: 5px;
     font-size: 1.0EM;
     box-sizing: border-box;
-    background-color: white;;
+    background-color: white;
 }
+
+#login-email {
+    @include form-input-field;
+}
+
+#login-pass {
+    @include form-input-field;
+}
+#signin-email {
+     @include form-input-field;
+}
+#signin-pass {
+     @include form-input-field;
+}
+#signin-zip {
+     @include form-input-field;
+}
+#signin-bday {
+     @include form-input-field;
+}
+
+#signin-fname {
+    @include signin-name;
+}
+
+#signin-lname {
+    @include signin-name;
+}
+
+
 
 .form-container button {
     width: 300px;
