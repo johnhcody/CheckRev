@@ -62,6 +62,7 @@ class SessionForm extends React.Component {
             <form onSubmit={this.handleSubmit}>
                                 <div className="signup-title">
                                     <h2>Sign Up for CheckRev</h2>
+                                    <h3>Discover New Businesses</h3>
                                 </div>
                     <br/>
                     <div className="name-wrapper">
