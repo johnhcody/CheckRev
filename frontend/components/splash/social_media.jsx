@@ -9,6 +9,7 @@ function SocialMedia() {
             </div>
             <div className="social-media-container-parent">
                 <div className="social-media-container">
+                    <a href="https://github.com/johnhcody">
                     <div className="social-media-card">
                         <a href="#" >
                             <div className="media-container">
@@ -17,8 +18,10 @@ function SocialMedia() {
                             <img src={window.github} />
                         </a>
                     </div>
+                    </a>
                 </div>
                 <div className="social-media-container">
+                    <a href="https://www.linkedin.com/in/johnhcody/">
                         <div className="social-media-card">
                     <a href="#" >
                             <div className="media-container">
@@ -27,6 +30,7 @@ function SocialMedia() {
                             <img src={window.linkedin} />
                     </a>
                         </div>
+                    </a>
                 </div>
             </div>
         </div>
