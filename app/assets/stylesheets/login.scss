@@ -88,6 +88,24 @@
     padding-left: 140px;
 }
 
+.name-wrapper {
+    width: 300px;
+
+    display: flex;
+    margin-left: 60px;
+    #name {
+        width: 140px;
+        padding: 5px 10px;
+        margin: 5px 10px;
+        border: 1px solid $gray;
+        border-radius: 5px;
+        font-size: 1.0EM;
+        box-sizing: border-box;
+        background-color: white;
+    } 
+}
+
+
 .form-container input[type=text] {
     width: 300px;
     padding: 5px 10px;
@@ -162,9 +180,11 @@
     justify-content: center;
     color: #5e5e5e;
     text-decoration: none;
-    p {
+    h4 {
         font-size: .8em;
-        margin-right: 60px;
+        font-weight: 500;
+        margin-left: 60px;
+        padding-top: 9px;
     }
 }
 
@@ -172,6 +192,7 @@
     height: 300px;
     width: 300px;
     padding-top: 20px;
+    margin-right: 20px;
 }
 
 .red-carpet-sign img {

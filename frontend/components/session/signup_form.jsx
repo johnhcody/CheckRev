@@ -64,48 +64,36 @@ class SessionForm extends React.Component {
                                     <h2>Sign Up for CheckRev</h2>
                                 </div>
                     <br/>
-                    <label>
-                    <input type="text"
+                    <div className="name-wrapper">
+                        <input id="name" type="text"
                             value={this.state.firstName}
                             placeholder="First Name"
                             onChange={this.update('firstName')}
                             />
-                    </label>
-                    <label>
-                    <input type="text"
+                        <input id="name" type="text"
                             value={this.state.lastName}
                             placeholder="Last Name"
                             onChange={this.update('lastName')} />
-                    </label>
-                    <label>
+                    </div>
                     <input type="text"
                             value={this.state.email}
                             placeholder="Email address"
                             onChange={this.update('email')} />
-                    </label>
-                    <label>
                     <input type="password"
                             value={this.state.password}
                             onChange={this.update('password')}
                             placeholder="Password" />
-                    </label>
-                    <label>
                     <input type="number"
                             value={this.state.zipcode}
                             placeholder="Zip Code"
                             onChange={this.update('zipcode')} />
-                    </label>
-                    <label>
                     <input type="datetime"
                             value={this.state.birthdate}
                             placeholder="MM/DD/YYYY"
                             onChange={this.update('birthdate')} />
-                    </label>
-                    <br/>
                 <button>Sign Up</button>
-                <br/>
                 <div className="form-footer">
-                <h4>You already have a CheckRev account?!? <Link to='/login' style={{ textDecoration: 'none', color: '#E33258' }}>Log In!</Link></h4>
+                <h4>Already on CheckRev? <Link to='/login' style={{ textDecoration: 'none', color: '#E33258' }}>Log In!</Link></h4>
                 </div>
             </form>
             </div>
