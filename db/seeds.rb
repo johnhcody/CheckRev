@@ -8,22 +8,24 @@
 
 
 test = User.create({ 
-                    first_name: 'Guest', 
-                    last_name: 'User', 
-                    email: 'danny@devito.com', 
-                    zipcode: '89039', 
-                    password: 'password', 
-                    birthdate: '05/04/1990', 
-                    })
+     first_name: 'Guest', 
+     last_name: 'User', 
+     email: 'danny@devito.com', 
+     zipcode: '89039', 
+     password: 'password', 
+     birthdate: '05/04/1990', 
+     })
 
 
-#  id              :bigint           not null, primary key
-#  first_name      :string           not null
-#  last_name       :string           not null
-#  email           :string           not null
-#  zipcode         :integer          not null
-#  password_digest :string           not null
-#  session_token   :string           not null
-#  birthdate       :datetime
-#  created_at      :datetime         not null
-#  updated_at      :datetime         not null
+bus = Business.create({
+    name: 'jc web dev', 
+    address_1: '193 county st', 
+    address_2: 'unit 4', 
+    city: 'chiang mai', 
+    state: 'MA', zipcode: 89384, 
+    longitude: 40.7128, 
+    latitude: 74.0060, 
+    web_address: 'jhc.com', 
+    phone_number: '684938279', 
+    business_type: 'Web Development', 
+    business_category: 'Professional Services'})
