@@ -667,11 +667,13 @@
 .social-media-card {
     display: flex;
     justify-content: center;
-    width: 457px;
-    height: 230px;
+    flex-direction: column;
+    align-content: center;
     background-color: white;
     border-radius: 5px;
     border: 0.5px solid lightgray;
+    padding-right: 100px;
+    padding-left: 100px;
     &:hover {
         border: 0.5px solid $darkblue;
         transition: 0.1s;
@@ -680,10 +682,8 @@
         }
     }
     img {
-        width: 80%;
-        height: 80%;
+        width: 192px;
         border-radius: 5px 5px 0px 0px;
-        padding-left: 23px;
     }
 }
 

@@ -11,24 +11,20 @@ function SocialMedia() {
                 <div className="social-media-container">
                     <a href="https://github.com/johnhcody">
                     <div className="social-media-card">
-                        <a href="#" >
                             <div className="media-container">
                         <h3>Github</h3>
                             </div>
                             <img src={window.github} />
-                        </a>
                     </div>
                     </a>
                 </div>
                 <div className="social-media-container">
                     <a href="https://www.linkedin.com/in/johnhcody/">
                         <div className="social-media-card">
-                    <a href="#" >
                             <div className="media-container">
                                 <h3>LinkedIn</h3>
                             </div>
                             <img src={window.linkedin} />
-                    </a>
                         </div>
                     </a>
                 </div>
