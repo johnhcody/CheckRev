@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.destroy_all
+
 
 test = User.create({ 
      first_name: 'Guest', 
@@ -16,6 +18,7 @@ test = User.create({
      birthdate: '05/04/1990', 
      })
 
+Business.destroy_all
 
 bus = Business.create({
     name: 'jc web dev', 
