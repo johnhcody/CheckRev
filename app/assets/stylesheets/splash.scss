@@ -170,7 +170,7 @@
     img {
         max-height: 120px;
         max-width: 240px;
-        padding-top: 118px;
+        padding-top: 99px;
     }
 }
 
@@ -182,7 +182,8 @@
 .search-parent {
     display: flex;
     // position: absolute;
-    margin: -26px;
+    margin: -74px 0px 0px 0px;
+
     background-color: #FEFEFE;
     // width:100%;
     font-family: sans-serif;
@@ -241,7 +242,6 @@
     display: flex;
     justify-content: space-evenly;
     max-height: 50px;
-    margin-top: 24px;
 }
 
 .icons-parent a {
