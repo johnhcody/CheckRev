@@ -1,4 +1,5 @@
 import React from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 class BusinessReviewCards extends React.Component {
     constructor(props) {
@@ -7,19 +8,21 @@ class BusinessReviewCards extends React.Component {
 
 
     render() {
+        //debugger
+        const { name, totalReviews, type, location, amenities } = this.props.business
+        const utensils = <FontAwesomeIcon icon="utensils" />
         return (
-            <div>
-                <div className="large-title">
-                    <h2>Recent Reviews</h2>
+            <div className="featured-bus-card">
+                <a href="#" >
+                    <img src={window.construction} />
+                </a>
+                <div>
+                    <h1><a href="#">{name}</a></h1>
+                    <h2>{utensils}{utensils}{utensils} {totalReviews}</h2>
+                    <h3>{type}</h3>
+                    <h3>{location}</h3>
+                    <h4>{amenities}</h4>
                 </div>
-                <div className="review-card-container-parent">
-                    <div className="review-card-container">
-                        <div className="review-card">
-                            
-                        </div>
-                    </div>
-                </div>
-
             </div>
         )
     }

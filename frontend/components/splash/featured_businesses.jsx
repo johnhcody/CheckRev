@@ -1,5 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import BusinessReviewCards from './business_reviews_cards';
+
 
 class FeaturedBusinesses extends React.Component {
     constructor(props) {
@@ -20,68 +22,32 @@ class FeaturedBusinesses extends React.Component {
                         <div className="featured-bus-card">
                             <a href="#" >
                                 <img src={window.construction} />
+                                <h1>Speedy Auto Repair</h1>
+                                <h2>{utensils}{utensils}{utensils} 10 reviews</h2>
+                                <h3>Business type</h3>
+                                <h3>location</h3>
+                                <h4>amenities</h4>
                             </a>
-                            <div>
-                                <h1>
-                                    <a href="#">Speedy Auto Repair</a>
-                                </h1>
-                                <h2>
-                                    {utensils}{utensils}{utensils} 10 reviews
-                            </h2>
-                                <h3>
-                                    business type
-                            </h3>
-                                <h3>
-                                    location
-                            </h3>
-                                <h4>
-                                    amenities
-                            </h4> 
-                            </div>
                         </div>
                         <div className="featured-bus-card">
                             <a href="#" >
                                 <img src={window.construction} />
+                                <h1>Speedy Auto Repair</h1>
+                                <h2>{utensils}{utensils}{utensils} 10 reviews</h2>
+                                <h3>Business type</h3>
+                                <h3>location</h3>
+                                <h4>amenities</h4>
                             </a>
-                            <div>
-                                <h1>
-                                    <a href="#">Speedy Auto Repair</a>
-                                </h1>
-                                <h2>
-                                    {utensils}{utensils}{utensils} 10 reviews
-                            </h2>
-                                <h3>
-                                    business type
-                            </h3>
-                                <h3>
-                                    location
-                            </h3>
-                                <h4>
-                                    amenities
-                            </h4>
-                            </div>
                         </div>
                         <div className="featured-bus-card">
                             <a href="#" >
                                 <img src={window.construction} />
+                                <h1>Speedy Auto Repair</h1>
+                                <h2>{utensils}{utensils}{utensils} 10 reviews</h2>
+                                <h3>Business type</h3>
+                                <h3>location</h3>
+                                <h4>amenities</h4>
                             </a>
-                            <div>
-                                <h1>
-                                    <a href="#">Speedy Auto Repair</a>
-                                </h1>
-                                <h2>
-                                    {utensils}{utensils}{utensils} 10 reviews
-                            </h2>
-                                <h3>
-                                    business type
-                            </h3>
-                                <h3>
-                                    location
-                            </h3>
-                                <h4>
-                                    amenities
-                            </h4>
-                            </div>
                         </div>
                     </div>
                 </div>

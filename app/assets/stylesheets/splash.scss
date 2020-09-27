@@ -439,13 +439,10 @@
         font-weight: 600;
         color: $green;
         text-decoration-line: none;
-        width: 100%;
-        a {
-            color: $green;
-            text-decoration-line: none;
+        color: $green;
             &:hover {
-                border-bottom: 2px solid $green;
-            }
+            text-underline-position: below;
+            text-decoration-line: underline;
         }
     }
     h2 {
