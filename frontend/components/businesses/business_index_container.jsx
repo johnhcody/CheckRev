@@ -1,18 +1,18 @@
 import { connect } from 'react-redux';
-import { fetchBusiness } from '../../util/business_api_util';
+import { fetchBusinesses } from '../../util/business_api_util';
 import BusinessIndex from './business_index'
 
 const mSTP = state => {
-    //debugger
+    debugger
     return {
-        businesses: Object.values(state.businesses)
+        businesses: Object.values(state.entities.businesses)
     }
 }
 
 const mDTP = dispatch => {
-    //debugger
+    debugger
     return {
-        fetchBusinesses: () => dispatch(fetchBusiness())
+        fetchBusinesses: () => dispatch(fetchBusinesses())
     }
 }
 
