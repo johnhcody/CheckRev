@@ -43,21 +43,6 @@ class LoginForm extends React.Component {
         }
     }
 
-    handleFocus1() {
-        document.getElementById('login-email').style.backgroundColor = '#cbcbed';
-    }
-
-    handleBlur1() {
-        document.getElementById('login-email').style.backgroundColor = 'white';
-    }
-    handleFocus2() {
-        document.getElementById('login-pass').style.backgroundColor = '#cbcbed';
-    }
-
-    handleBlur2() {
-        document.getElementById('login-pass').style.backgroundColor = 'white';
-    }
-
     render() {
         return (
             <div>
@@ -77,13 +62,12 @@ class LoginForm extends React.Component {
                             </div>
                                     <form onSubmit={this.handleSubmit}>
                             <label>
-                            <input  type="text"
-                                    id="login-email"
+                            <input  id="login-email"
+                                    type="text"
                                     placeholder="Email"
                                     value={this.state.email}
                                     onChange={this.update('email')}
-                                    onFocus={this.handleFocus1}
-                                    onBlur={this.handleBlur1} />
+                                     />
                             </label>
 
                             <label>
@@ -92,8 +76,7 @@ class LoginForm extends React.Component {
                                     placeholder="Password"
                                     value={this.state.password}
                                     onChange={this.update('password')}
-                                    onFocus={this.handleFocus2}
-                                    onBlur={this.handleBlur2} />
+                                     />
                             </label>
 
                             <button>Log In</button>

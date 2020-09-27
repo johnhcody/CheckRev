@@ -26,6 +26,59 @@
 }
 
 
+#login-email {
+    @include form-input-field;
+    &:focus {
+        background-color: #c7d7ea;
+    }
+}
+
+#login-pass {
+    @include form-input-field;
+    &:focus {
+        background-color: #c7d7ea;
+    }
+}
+#signin-email {
+     @include form-input-field;
+     &:focus {
+        background-color: #c7d7ea;
+    }
+}
+#signin-pass {
+     @include form-input-field;
+     &:focus {
+        background-color: #c7d7ea;
+    }
+}
+#signin-zip {
+     @include form-input-field;
+     &:focus {
+        background-color: #c7d7ea;
+    }
+}
+#signin-bday {
+     @include form-input-field;
+     &:focus {
+        background-color: #c7d7ea;
+    }
+}
+
+#signin-fname {
+    @include signin-name;
+    &:focus {
+        background-color: #c7d7ea;
+    }
+}
+
+#signin-lname {
+    @include signin-name;
+    &:focus {
+        background-color: #c7d7ea;
+    }
+}
+
+
 .login-form-text {
     margin-right: 61px;
     display: flex;

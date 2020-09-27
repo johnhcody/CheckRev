@@ -17,6 +17,4 @@ class Api::BusinessesController < ApplicationController
         render :show
     end
 
-
-
 end
