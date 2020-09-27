@@ -96,7 +96,7 @@
     color: white;
     &:hover {
         background-color: white;
-        border: 3px solid white;
+        border: 2px solid white;
         color: black;
         transition: 0.3s;
     }
@@ -138,7 +138,7 @@
         &:hover {
             background-color: $red;
             border: 2px solid $red;
-            color: black;
+            color: white;
             transition: 0.3s;
         }
     }
