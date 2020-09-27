@@ -27,11 +27,11 @@
 
 
 .login-form-text {
-    margin-left: 70px;
+    margin-right: 61px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 300px;
+    justify-content: center;
     h2 {
         display: flex;
         justify-content: center;
@@ -39,6 +39,17 @@
         color: $red;
         font-size: 1.3em;
         width: 100%;
+        padding: 5px;
+        padding-bottom: 10px;
+    }
+    h4 {
+        display: flex;
+        justify-content: center;
+        font-family: sans-serif;
+        font-weight: 600;
+        color: #5e5e5e;
+        width: 100%;
+        font-size: 0.9em;
         padding: 5px;
     }
     p {
@@ -53,22 +64,11 @@
         display: flex;
         justify-content: center;
         padding-bottom: 8px;
-        padding-bottom: 8px;
-    }
-    h4 {
-        display: flex;
-        justify-content: center;
-        font-family: sans-serif;
-        font-weight: 500;
-        color: #5e5e5e;
-        width: 100%;
-        font-size: 0.9em;
-        padding: 5px;
     }
     a {
         text-decoration: none;
         color: $darkblue;
-
+        padding-left: 3px;
     }
 }
 
@@ -105,56 +105,6 @@
     } 
 }
 
-
-@mixin form-input-field {
-    width: 300px;
-    padding: 5px 10px;
-    margin: 5px 70px;
-    border: 1px solid $gray;
-    border-radius: 5px;
-    font-size: 1.0EM;
-    box-sizing: border-box;
-    background-color: white;
-}
-
-@mixin signin-name {
-    width: 140px;
-    padding: 5px 10px;
-    margin: 5px 10px;
-    border: 1px solid $gray;
-    border-radius: 5px;
-    font-size: 1.0EM;
-    box-sizing: border-box;
-    background-color: white;
-}
-
-#login-email {
-    @include form-input-field;
-}
-
-#login-pass {
-    @include form-input-field;
-}
-#signin-email {
-     @include form-input-field;
-}
-#signin-pass {
-     @include form-input-field;
-}
-#signin-zip {
-     @include form-input-field;
-}
-#signin-bday {
-     @include form-input-field;
-}
-
-#signin-fname {
-    @include signin-name;
-}
-
-#signin-lname {
-    @include signin-name;
-}
 
 
 

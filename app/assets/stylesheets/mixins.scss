@@ -1,0 +1,50 @@
+@mixin form-input-field {
+    width: 300px;
+    padding: 5px 10px;
+    margin: 5px 70px;
+    border: 1px solid $gray;
+    border-radius: 5px;
+    font-size: 1.0EM;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+@mixin signin-name {
+    width: 140px;
+    padding: 5px 10px;
+    margin: 5px 10px;
+    border: 1px solid $gray;
+    border-radius: 5px;
+    font-size: 1.0EM;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+#login-email {
+    @include form-input-field;
+}
+
+#login-pass {
+    @include form-input-field;
+}
+#signin-email {
+     @include form-input-field;
+}
+#signin-pass {
+     @include form-input-field;
+}
+#signin-zip {
+     @include form-input-field;
+}
+#signin-bday {
+     @include form-input-field;
+}
+
+#signin-fname {
+    @include signin-name;
+}
+
+#signin-lname {
+    @include signin-name;
+}
+
