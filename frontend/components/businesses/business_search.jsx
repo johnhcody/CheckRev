@@ -8,7 +8,9 @@ class BusinessSearch extends React.Component {
 
     render() {
         return (
-            <h1>Hello from searchbar</h1>
+            <div className="search-placeholder">
+                <h1>Hello from searchbar</h1>
+            </div>
         )
     }
 }

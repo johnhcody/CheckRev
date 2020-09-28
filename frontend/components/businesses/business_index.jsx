@@ -24,30 +24,57 @@ class BusinessIndex extends React.Component {
         } else {
 
             return (
-            <div>
+                <div>
                 <BusinessSearch />
-                <div className="bus-index-item-wrapper">
-                {
-                    this.props.businesses.map(business => {                        
-                        return <BusinessIndexItem 
-                            address1={business.address1}
-                            address2={business.address2}
-                            businessCategory={business.businessCategory}
-                            businessType={business.businessType}
-                            city={business.city}
-                            name={business.name}
-                            phoneNumber={business.phoneNumber}
-                            webAddress={business.webAddress}
-                            zipcode={business.zipcode}
-                            photoUrl={business.photoUrl}
-                            key={business.id}
-                        />
-                    })
-                }
+            <div>
+                <div className="bus-idx-wrapper">
+                    <div className="filter-placeholder">
+                    </div>
+                        <div className="bus-item-wrapper">
+                        {
+                            this.props.businesses.map(business => {                        
+                                return <BusinessIndexItem 
+                                address1={business.address1}
+                                address2={business.address2}
+                                businessCategory={business.businessCategory}
+                                businessType={business.businessType}
+                                city={business.city}
+                                name={business.name}
+                                phoneNumber={business.phoneNumber}
+                                webAddress={business.webAddress}
+                                zipcode={business.zipcode}
+                                photoUrl={business.photoUrl}
+                                key={business.id}
+                                />
+                            })
+                        }
+                        </div>
+                    <div className="map-placeholder">
+                    </div>
                 </div>
-                <Footer />
-                <Copyright />
             </div>
+                <div className="footer-placeholder">
+                    <ul className="bus-idx-footer">
+                        <li>things</li>
+                        <li>things</li>
+                        <li>things</li>
+                        <li>things</li>
+                    </ul>
+                    <ul className="bus-idx-footer">
+                        <li>things</li>
+                        <li>things</li>
+                        <li>things</li>
+                        <li>things</li>
+                    </ul>
+                    <ul className="bus-idx-footer">
+                        <li>things</li>
+                        <li>things</li>
+                        <li>things</li>
+                        <li>things</li>
+                    </ul>
+                </div>
+                <Copyright />
+                </div>
             )
         }
     }

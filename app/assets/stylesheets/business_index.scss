@@ -1,0 +1,94 @@
+
+.search-placeholder {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    background-color: turquoise;
+}
+
+.bus-idx-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    background-color: yellow;
+}
+
+.map-placeholder {
+    display: flex;
+    justify-content: flex-end;
+    background-color: blue;
+    height: 800px;
+    min-width: 300px;
+    flex-grow: 2;
+}
+
+.filter-placeholder {
+    display: flex;
+    justify-content: flex-start;
+    background-color: purple;
+    height: 800px;
+    min-width: 280px;
+}   
+
+.bus-item-wrapper {
+    display: flex;
+    justify-content: center;
+    min-width: 700px;
+    max-width: 880px;
+    background-color: pink;
+}
+
+.footer-placeholder {
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    max-width: 1160px;
+}
+
+//  container for index item
+
+.bus-item-container {
+    display: flex;
+    justify-content: center;
+    height: 277px;
+    width: 90%;
+    border: 3px solid red;
+    margin-top: 20px;
+    border-radius: 3px;
+}
+
+.bus-photo {
+    img {
+        height: 200px;
+        width: 200px;
+        /* border-radius: 0px; */
+        border: 2px solid black;
+        margin: 20px;
+        border-radius: 10px
+    }
+}
+
+.bus-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    h1 {
+        width: 50%;
+    }
+    h2 {
+        width: 50%;
+    }
+}
+
+// .bus-contact {
+
+// }
+
+// .bus-review {
+
+// }
+
+// .bus-box-bottom {
+
+// }
+

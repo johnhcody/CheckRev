@@ -1,7 +1,5 @@
 @businesses.each do |business|
-    debugger
-    json.set! business.id do 
-        debugger
+       json.set! business.id do 
         json.partial! 'business', business: business
         json.photoUrl rails_blob_url(business.photo)
     end
