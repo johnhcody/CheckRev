@@ -89,29 +89,33 @@
 
 .map-placeholder {
     display: flex;
-    justify-content: flex-end;
+    position: fixed;
+    right: 0;
+    top: 100px;
     background-color: blue;
     height: 800px;
-    min-width: 300px;
+    min-width: 440px;
     flex-grow: 2;
 }
 
 .filter-placeholder {
     display: flex;
     justify-content: flex-start;
+    position: fixed;
+    top: 100px;
     background-color: purple;
     height: 800px;
+    z-index: 0;
     min-width: 280px;
 }   
 
 .bus-item-wrapper {
     display: flex;
     justify-content: center;
-    min-width: 700px;
-    max-width: 880px;
+    width: 825px;
     background-color: white;
     height: 2000px;
-    padding: 100px;
+    padding: 120px 6px 5px 321px;
 }
 
 .footer-placeholder {
@@ -266,6 +270,9 @@
     font-size: 17px;
     color: black;
     margin: 0px 14px 0px 0px;
+    &:hover {
+        background-color: $lightgray;
+    }
 }
 
 .bus-review {
