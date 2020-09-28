@@ -9,6 +9,6 @@ export const fetchBusinesses = () => {
 export const fetchBusiness = (businessId) => {
     return $.ajax({
         method: 'GET',
-        ulr: `api/businesses/${businessId}`
+        url: `api/businesses/${businessId}`
     })
 }

@@ -13,18 +13,12 @@ export const receiveBusinesses = (businesses) => {
 };
 
 
-export const receiveBusiness = (business) => {
-    return {
-        type: RECEIVE_BUSINESS,
-        business
-    }
-};
-
 export const fetchBusinesses = () => dispatch => {
     debugger
-    return BusinessUtil.fetchBusinesses().then(businesses => dispatch(receiveBusinesses(businesses)))
+    return BusinessUtil.fetchBusinesses().then(businesses => {
+        debugger
+        return dispatch(receiveBusinesses(businesses))
+        
+    })
 }
 
-export const fetchBusiness = (business) => dispatch => {
-    return BusinessUtil.fetchBusiness(business).then(business => dispatch(receiveBusiness(business)))
-}

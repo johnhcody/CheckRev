@@ -1,6 +1,7 @@
 class Api::BusinessesController < ApplicationController
 
     def index 
+        debugger
         @businesses = Business.all
         render :index
     end
