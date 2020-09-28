@@ -14,8 +14,8 @@ class BusinessSearch extends React.Component {
                 <div class="bus-nav-logo">
                     <img src={window.logo} alt=""/>
                 </div>
-                <form className="search-parent">
-                    <div className="search-child">
+                <form className="bus-search-parent">
+                    <div className="bus-search-child">
                         <label className="search search-type">  Find
                         <input type="search" placeholder="plumbers, delivery, takeout" />
                         </label>
@@ -23,7 +23,7 @@ class BusinessSearch extends React.Component {
                         <input className="search search-location" type="search" placeholder="Times Square, NY" />
                         </label>
                     </div>
-                    <button className="search-button" type="submit">{magnifyingGlass}</button>
+                    <button className="bus-search-button" type="submit">{magnifyingGlass}</button>
                 </form>
             </div>
         )
