@@ -1,4 +1,7 @@
 .bus-nav-searchbar {
+    position: fixed;
+    height: 57px;
+    background-color: white;
     display: flex;
     justify-content: initial;
     align-items: center;
@@ -108,6 +111,7 @@
     max-width: 880px;
     background-color: white;
     height: 2000px;
+    padding: 100px;
 }
 
 .footer-placeholder {
@@ -123,7 +127,7 @@
     display: flex;
     justify-content: center;
     height: 263px;
-    width: 90%;
+    width: 100%;
     border: 1px solid $lightgray;
     margin-top: 20px;
     border-radius: 7px;
@@ -168,7 +172,7 @@
     flex-direction: column;
     justify-content: flex-end;
     height: 80px;
-    width: 350px;
+    width: 431px;
     font-family: sans-serif;
     padding-top: 7px;
     h1 {
