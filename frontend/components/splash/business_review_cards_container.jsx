@@ -1,15 +1,15 @@
 import { connect } from 'react-redux';
-import BusinessReviewsCards from './business_reviews_cards';
+import BusinessReviewsCards from './business_review_cards';
 
 const mSTP = state => {
-    //debugger
+    debugger
     return {
         business: {
             name: 'Speedy Auto Repair',
             totalReviews: 12,
             type: 'Auto',
             location: 'Boston',
-            amentities: "fast, efficient, good value"
+            amenities: "fast, efficient, good value"
         }
     }
 }

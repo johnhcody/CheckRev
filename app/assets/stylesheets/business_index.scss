@@ -1,3 +1,9 @@
+.bus-nav-searchbar {
+
+}
+
+
+
 
 .search-placeholder {
     display: flex;
@@ -68,17 +74,54 @@
     }
 }
 
-.bus-description {
+.bus-text {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+}
+
+
+.bus-description {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 80px;
+    width: 550px;
+}
+
+// if you are trying to change spacing between lines, remember .bus-descript
+
+.left-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    height: 80px;
+    width: 225px;
     h1 {
-        width: 50%;
+        width: 100%;
     }
     h2 {
-        width: 50%;
+        width: 100%;
+    }
+    h3 {
+        width: 100%;
+    }
+    h4 {
+        width: 100%;
     }
 }
+
+.right-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    height: 80%;
+    width: 225px;
+    h4 {
+        width: 100%
+    }
+}
+
+
+
+
 
 // .bus-contact {
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import BusinessReviewCards from './business_reviews_cards';
+import BusinessReviewCard from './business_review_cards'
 
 
 class FeaturedBusinesses extends React.Component {

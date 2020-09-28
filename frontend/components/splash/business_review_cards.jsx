@@ -8,20 +8,20 @@ class BusinessReviewCards extends React.Component {
 
 
     render() {
-        //debugger
-        const { name, totalReviews, type, location, amenities } = this.props.business
+        debugger
+        const { business } = this.props;
         const utensils = <FontAwesomeIcon icon="utensils" />
         return (
             <div className="featured-bus-card">
-                <a href="#" >
-                    <img src={window.construction} />
-                </a>
                 <div>
-                    <h1><a href="#">{name}</a></h1>
-                    <h2>{utensils}{utensils}{utensils} {totalReviews}</h2>
-                    <h3>{type}</h3>
-                    <h3>{location}</h3>
-                    <h4>{amenities}</h4>
+                    <img src={window.construction} />
+                    <a href="#" >
+                    <h1>{business.name}</h1>
+                    <h2>{utensils}{utensils}{utensils} {business.totalReviews} reviews</h2>
+                    <h3>{business.type}</h3>
+                    <h3>{business.location}</h3>
+                    <h4>{business.amenities}</h4>
+                </a>
                 </div>
             </div>
         )
