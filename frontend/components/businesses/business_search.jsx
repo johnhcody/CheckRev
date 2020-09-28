@@ -1,5 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import IndexGreeting from './index_greeting'
 
 class BusinessSearch extends React.Component {
     constructor(props) {
@@ -16,15 +17,16 @@ class BusinessSearch extends React.Component {
                 </div>
                 <form className="bus-search-parent">
                     <div className="bus-search-child">
-                        <label className="search search-type">  Find
+                        <label className="search search-type">
                         <input type="search" placeholder="plumbers, delivery, takeout" />
                         </label>
-                        <label>Near
+                        <label id="divider">|
                         <input className="search search-location" type="search" placeholder="Times Square, NY" />
                         </label>
                     </div>
                     <button className="bus-search-button" type="submit">{magnifyingGlass}</button>
                 </form>
+                <IndexGreeting />
             </div>
         )
     }

@@ -1,28 +1,27 @@
 .bus-nav-searchbar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 20px;
+    display: flex;
+    justify-content: initial;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
   img {
-      align-self: flex-end;
-      height: 58px;
-      width: 70px;
+    height: 58px;
+    width: 70px;
+    padding-right: 100px;
+    padding-left: 20px;
   }
 }
 
-
-
 .bus-search-parent {
     display: flex;
-    // position: absolute;
-    margin: -74px 0px 0px 0px;
-
+    margin: 0px 0px 0px 0px;
     background-color: #FEFEFE;
-    // width:100%;
     font-family: sans-serif;
     border-radius: 5px;
     box-sizing: border-box;
+    height: 46px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    
 }
 .bus-search-wrapper{
     position: flex;
@@ -32,25 +31,27 @@
     // width: 100%;
 }
 .bus-search-child input[type=search] {
-    margin-left: 10px;
+    margin-left: 2px;
     background-color: #FEFEFE;
     border: none;
     color: #5e5e5e;
-    min-width: 400px;
+    min-width: 368px;
     font-size: 1.0EM;
-    padding-left: 28px;
+    padding-left: 0px;
     padding-bottom: none;
     outline: none;
+    overflow: hidden;
     padding: 11px;
 }
 .bus-search-child {
     display: flex;
     position: block;
+    overflow: hidden;
 }
 
 .bus-search-child label {
-    padding-left: 11px;
     font-weight: 600;
+    font-size: 16px
 }
 
 .bus-search-button {
@@ -230,6 +231,59 @@
 
 }
 
+// bus-greeting
+
+.bus-greeting-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-content: baseline;
+    width: 17%;
+    padding-left: 162px;
+}
+
+
+.bus-signup {
+    background-color: #D32323;
+    height: 47px;
+    width: 89px;
+    border-radius: 5px;
+    border: 2px solid #D32323;
+    font-size: 17px;
+    color: white;
+}
+
+.bus-login {
+    background-color: transparent;
+    border: 1px solid #5e5e5e;
+    padding: 0px 0px 0px 0px;
+    height: 47px;
+    width: 89px;
+    border-radius: 5px;
+    font-size: 17px;
+    color: black;
+    margin: 0px 14px 0px 0px;
+}
+
+.bus-review {
+    background-color: transparent;
+    padding: 5px;
+    min-height: 25px;
+    min-width: 120px;
+    border: none;
+    font-size: 15px;
+    color: black;
+    outline: none;
+    margin: 0px 14px 0px 0px;
+}
+
+#divider {
+    font-size: large;
+    color: $lightgray;
+    font-family: fantasy;
+
+}
+
+
 
 // .bus-contact {
 
@@ -242,4 +296,7 @@
 // .bus-box-bottom {
 
 // }
+
+
+
 
