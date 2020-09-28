@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class BusinessSearch extends React.Component {
     constructor(props) {
@@ -7,9 +7,24 @@ class BusinessSearch extends React.Component {
     }
 
     render() {
+        const magnifyingGlass = <FontAwesomeIcon icon="search" />
+        const utensils = <FontAwesomeIcon icon="utensils" />
         return (
-            <div className="search-placeholder">
-                <h1>Hello from searchbar</h1>
+            <div className="bus-nav-searchbar">
+                <div class="bus-nav-logo">
+                    <img src={window.logo} alt=""/>
+                </div>
+                <form className="search-parent">
+                    <div className="search-child">
+                        <label className="search search-type">  Find
+                        <input type="search" placeholder="plumbers, delivery, takeout" />
+                        </label>
+                        <label>Near
+                        <input className="search search-location" type="search" placeholder="Times Square, NY" />
+                        </label>
+                    </div>
+                    <button className="search-button" type="submit">{magnifyingGlass}</button>
+                </form>
             </div>
         )
     }

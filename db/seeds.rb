@@ -79,7 +79,7 @@ bus5 = Business.create({
     city: 'San Francisco', 
     state: 'CA', zipcode: 85001, 
     longitude: 37.7749, 
-    latitude: 122.4194°, 
+    latitude: 122.4194, 
     web_address: 'jhc.com', 
     phone_number: '684-938-4279', 
     business_type: 'Web Development', 

@@ -11,12 +11,10 @@ class BusinessIndex extends React.Component {
     }
 
     componentDidMount() {
-        debugger
         this.props.fetchBusinesses()
     }
 
     render() {
-        debugger
         const { address1, address2, businessCategory, businessType, city, name, phoneNumber, webAddress, zipcode } = this.props.businesses;
         if (!this.props.businesses) {
             
