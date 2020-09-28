@@ -17,33 +17,38 @@ class BusinessIndex extends React.Component {
 
     render() {
         debugger
-        const { businesses } = this.props;
         const { address1, address2, businessCategory, businessType, city, name, phoneNumber, webAddress, zipcode } = this.props.businesses;
-        return (
-        <div>
-            <BusinessSearch />
-            <div className="bus-index-item-wrapper">
-            {
-                businesses.map(business => (
-                    <BusinessIndexItem 
-                        address1={address1}
-                        address2={address2}
-                        businessCategory={businessCategory}
-                        businessType={businessType}
-                        city={city}
-                        name={name}
-                        phoneNumber={phoneNumber}
-                        webAddress={webAddress}
-                        zipcode={zipcode}
-                        key={business.id}
-                    />
-                ))
-            }
+        if (!this.props.businesses) {
+            
+            return null;
+        } else {
+
+            return (
+            <div>
+                <BusinessSearch />
+                <div className="bus-index-item-wrapper">
+                {
+                    this.props.businesses.map(business => {                        
+                        return <BusinessIndexItem 
+                            address1={business.address1}
+                            address2={business.address2}
+                            businessCategory={business.businessCategory}
+                            businessType={business.businessType}
+                            city={business.city}
+                            name={business.name}
+                            phoneNumber={business.phoneNumber}
+                            webAddress={business.webAddress}
+                            zipcode={business.zipcode}
+                            key={business.id}
+                        />
+                    })
+                }
+                </div>
+                <Footer />
+                <Copyright />
             </div>
-            <Footer />
-            <Copyright />
-        </div>
-        )
+            )
+        }
     }
 }
 

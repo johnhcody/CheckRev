@@ -4,7 +4,6 @@ import React from 'react';
 const PostIndexItem = props => {
     debugger
     return (
-            //const { address1, address2, businessCategory, businessType, city, name, phoneNumber, webAddress, zipcode } = this.props;
             <div className="bus-item-container">
                 <div className="bus-photo">
                     <img src="#" alt="#"/>

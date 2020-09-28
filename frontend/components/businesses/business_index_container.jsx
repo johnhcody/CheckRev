@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchBusinesses } from '../../util/business_api_util';
+import { fetchBusinesses } from '../../actions/business_actions';
 import BusinessIndex from './business_index'
 
 const mSTP = state => {
@@ -12,7 +12,7 @@ const mSTP = state => {
 const mDTP = dispatch => {
     debugger
     return {
-        fetchBusinesses: (businesses) => dispatch(fetchBusinesses(businesses))
+        fetchBusinesses: () => dispatch(fetchBusinesses())
     }
 }
 

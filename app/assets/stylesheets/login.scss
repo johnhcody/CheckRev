@@ -18,7 +18,7 @@
     width: 1000px;
     margin: 0 auto;
     padding-top: 50px;
-    height: 800px;
+    height: 500px;
 }
 
 .login-title {
@@ -65,14 +65,28 @@
 }
 
 #signin-fname {
-    @include signin-name;
+    width: 140px;
+    padding: 4px 0px 5px 5px;
+    margin: 5px 10px 5px 10px;
+    border: 1px solid #5e5e5e;
+    border-radius: 5px;
+    font-size: 1.0EM;
+    box-sizing: border-box;
+    background-color: white;;
     &:focus {
         background-color: #c7d7ea;
     }
 }
 
 #signin-lname {
-    @include signin-name;
+    width: 150px;
+    padding: 5px 10px;
+    margin: 5px 0px 5px 0px;
+    border: 1px solid #5e5e5e;
+    border-radius: 5px;
+    font-size: 1.0EM;
+    box-sizing: border-box;
+    background-color: white;
     &:focus {
         background-color: #c7d7ea;
     }
