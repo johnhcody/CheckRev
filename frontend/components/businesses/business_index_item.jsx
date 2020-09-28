@@ -6,7 +6,7 @@ const PostIndexItem = props => {
     return (
             <div className="bus-item-container">
                 <div className="bus-photo">
-                    <img src="#" alt="#"/>
+                    <img src={props.photoUrl} alt="#"/>
                     <div className="bus-description">
                             <h1>{props.name}</h1>
                             <h2>G G G G G</h2>

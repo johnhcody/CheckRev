@@ -39,6 +39,7 @@ class BusinessIndex extends React.Component {
                             phoneNumber={business.phoneNumber}
                             webAddress={business.webAddress}
                             zipcode={business.zipcode}
+                            photoUrl={business.photoUrl}
                             key={business.id}
                         />
                     })
