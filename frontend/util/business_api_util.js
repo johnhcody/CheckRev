@@ -1,5 +1,4 @@
 export const fetchBusinesses = () => {
-    debugger
     return $.ajax({
         method: 'GET',
         url: '/api/businesses',

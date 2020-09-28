@@ -2,7 +2,6 @@ import { connect } from 'react-redux';
 import BusinessReviewsCards from './business_review_cards';
 
 const mSTP = state => {
-    debugger
     return {
         business: {
             name: 'Speedy Auto Repair',

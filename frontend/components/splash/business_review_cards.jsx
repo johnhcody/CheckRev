@@ -8,7 +8,6 @@ class BusinessReviewCards extends React.Component {
 
 
     render() {
-        debugger
         const { business } = this.props;
         const utensils = <FontAwesomeIcon icon="utensils" />
         return (
