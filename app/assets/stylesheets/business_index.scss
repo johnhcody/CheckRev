@@ -98,16 +98,48 @@
     flex-grow: 2;
 }
 
-.filter-placeholder {
+.filter-wrapper {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
     position: fixed;
     top: 100px;
-    background-color: purple;
+    background-color: lightcoral;
     height: 800px;
     z-index: 0;
     min-width: 280px;
-}   
+}
+
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+}
+
+.dollar-filter-wrapper {
+    display: flex;
+    justify-content: center;
+    input {
+        visibility:hidden;
+        opacity: 0;
+        height: 3px;
+        width: 3px;
+        &:checked {
+            background-color: gray;
+        }
+    }
+    label {
+        &:hover {
+            background-color: $lightgray
+        }
+        &:checked {
+            background-color: gray;
+        }
+    }
+}
+
+
+
+
 
 .bus-item-wrapper {
     display: flex;

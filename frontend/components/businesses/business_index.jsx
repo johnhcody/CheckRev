@@ -3,6 +3,7 @@ import Footer from '../splash/footer';
 import Copyright from '../splash/copyright';
 import BusinessSearch from './business_search';
 import BusinessIndexItem from './business_index_item';
+import BusinessFilters from './business_filters'
 
 
 class BusinessIndex extends React.Component {
@@ -26,8 +27,7 @@ class BusinessIndex extends React.Component {
                 <BusinessSearch />
             <div>
                 <div className="bus-idx-wrapper">
-                    <div className="filter-placeholder">
-                    </div>
+                    <BusinessFilters />
                         <div className="bus-item-wrapper">
                         {
                             this.props.businesses.map(business => {                        
