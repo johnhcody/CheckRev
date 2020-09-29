@@ -9,24 +9,24 @@ class TypeFilter extends React.Component {
     render() {
         const check = <FontAwesomeIcon icon="check" />
         return (
-            <div className="category-container">
+            <div className="type-container">
                 <div className="cat-button-container">
-                <div>
                     <button>{check}</button> <h2>Accountants</h2>
                 </div>
                 <div className="cat-button-container">
-                    <button>√</button> <h2>Insurance</h2>
+                    <button>{check}</button> <h2>Insurance</h2>
                 </div>
                 <div className="cat-button-container">
-                    <button>√</button> <h2>Cleaning</h2>
+                    <button>{check}</button> <h2>Cleaning</h2>
                 </div>
+                <div className="cat-button-container">
                 <button>{check}</button> <h2>Web Design</h2>
                 </div>
                 <div className="cat-button-container">
-                    <button>√</button> <h2>Landscaping</h2>
+                    <button>{check}</button> <h2>Landscaping</h2>
                 </div>
                 <div className="cat-button-container">
-                    <button>√</button> <h2>Construction</h2>
+                    <button>{check}</button> <h2>Construction</h2>
                 </div>
             </div>
         )

@@ -23,7 +23,7 @@
     border-radius: 5px;
     box-sizing: border-box;
     height: 46px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     
 }
 .bus-search-wrapper{
@@ -41,20 +41,18 @@
     min-width: 368px;
     font-size: 1.0EM;
     padding-left: 0px;
-    padding-bottom: none;
     outline: none;
     overflow: hidden;
     padding: 11px;
 }
 .bus-search-child {
     display: flex;
-    position: block;
     overflow: hidden;
 }
 
 .bus-search-child label {
     font-weight: 600;
-    font-size: 16px
+    font-size: 16px;
 }
 
 .bus-search-button {
@@ -75,8 +73,36 @@
     color: white;
 }
 
+.icons-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
 
+.search-and-icons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
 
+.bus-icons-parent {
+    display: flex;
+    justify-content: flex-start;
+    min-height: 50px;
+    width: 100%;
+    padding-top: 10px;
+    a {
+        margin: 0px 0px 0px 20px;
+        color: purple;
+        font-weight: 700;
+        font-family: sans-serif;
+        text-decoration-line: none;
+        &:hover {
+            border-bottom: 3px solid white;
+        }
+    }
+
+}
 
 
 
@@ -183,10 +209,35 @@
 }
 
 
+.filter-wrapper {
+    display: flex;
+    flex-direction: columna;
+}
+
 .category-container {
     display: flex;
     flex-direction: column;
     min-height: 97px;
+    background-color: white;
+    margin-left: 45px;
+    max-width: 192px;
+    border-bottom: 1px solid gray;
+    font-family: sans-serif;
+    margin-top: 20px;
+    input {
+    }
+    label {
+        font-size: 1d3px
+    }
+    h1 {
+        font-size:15px;
+    }
+}
+
+.type-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
     background-color: white;
     margin-left: 45px;
     max-width: 192px;

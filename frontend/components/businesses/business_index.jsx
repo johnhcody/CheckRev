@@ -8,7 +8,7 @@ import PriceFilters from './price_filters'
 import CategoryFilter from './category_filter';
 import BusinessIndexFooter from './business_index_footer';
 import TypeFilter from './type_filter';
-
+import BusinessIcons from './business_icons';
 
 class BusinessIndex extends React.Component {
     constructor(props) {
@@ -30,10 +30,11 @@ class BusinessIndex extends React.Component {
             return (
                 <div>
                 <BusinessSearch />
+                
             <div>
                 <div className="bus-idx-wrapper">
                     <PriceFilters />
-                    {/* <CategoryFilter /> */}
+                    
                         <div className="bus-item-wrapper">
                         {
                             this.props.businesses.map(business => {  

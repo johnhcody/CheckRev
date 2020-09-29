@@ -6,7 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-CITIES = ["New York", "Boston", "San Francisco", "St. Louis", "Phoenix", "Chicago", "St. Louis"]
+CITIES = ["New York", "Boston", "San Francisco", "St. Louis", "Phoenix", "Chicago"]
+
+BUSINESS_CAT = ["Professional Services", "Restaurants", "Home Services"]
+
+
 
 
 User.destroy_all
@@ -77,7 +81,7 @@ bus4 = Business.create({
     web_address: 'jhc.com', 
     phone_number: '684-938-4279', 
     business_type: 'Web Development', 
-    business_category: 'Professional Services'})
+    business_category: BUSINESS_CAT.sample})
 bus4.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
 
 
@@ -85,8 +89,9 @@ bus5 = Business.create({
     name: 'jc web dev', 
     address_1: '193 county st', 
     address_2: 'unit 4', 
-    city: 'San Francisco', 
-    state: 'CA', zipcode: 85001, 
+    city: 'Lakeville', 
+    state: 'MA', 
+    zipcode: 85001, 
     longitude: 37.7749, 
     latitude: 122.4194, 
     web_address: 'jhc.com', 
@@ -110,21 +115,99 @@ bus6 = Business.create({
     business_category: 'Restauant'})
 bus6.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
 
-
-
-bus7 = Business.create({
+bos_bus = Business.create({
     name: Faker::Restaurant.name,
-    address_1: rand(1..999) + Faker::Address.street_name, 
+    address_1: rand(1..999).to_s + Faker::Address.street_name, 
+    address_2: Faker::Address.secondary_address, 
+    city: 'San Francisco', 
+    state: 'CA', 
+    zipcode: Faker::Number.number(digits: 5), 
+    longitude: 42.6289 + rand(-10.00..10.00),
+    latitude: 78.7377 + rand(-10.00..10.00), 
+    web_address: 'www.' + Faker::Restaurant.name + '.com', 
+    phone_number: Faker::PhoneNumber.cell_phone, 
+    business_type: 'Restaurant' ,
+    business_category: BUSINESS_CAT.sample})
+    bos_bus.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
+    
+chi_bus = Business.create({
+    name: Faker::Restaurant.name,
+    address_1: rand(1..999).to_s + Faker::Address.street_name, 
+    address_2: Faker::Address.secondary_address, 
+    city: 'San Francisco', 
+    state: 'CA', 
+    zipcode: Faker::Number.number(digits: 5), 
+    longitude: 41.8781 + rand(-10.00..10.00),
+    latitude: 87.6298 + rand(-10.00..10.00), 
+    web_address: 'www.' + Faker::Restaurant.name + '.com', 
+    phone_number: Faker::PhoneNumber.cell_phone, 
+    business_type: 'Restaurant' ,
+    business_category: BUSINESS_CAT.sample})
+    chi_bus.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
+        
+        
+ny_bus = Business.create({
+    name: Faker::Restaurant.name,
+    address_1: rand(1..999).to_s + Faker::Address.street_name, 
+    address_2: Faker::Address.secondary_address, 
+    city: 'San Francisco', 
+    state: 'CA', 
+    zipcode: Faker::Number.number(digits: 5), 
+    longitude: 40.7128 + rand(-10.00..10.00),
+    latitude: 74.0060 + rand(-10.00..10.00), 
+    web_address: 'www.' + Faker::Restaurant.name + '.com', 
+    phone_number: Faker::PhoneNumber.cell_phone, 
+    business_type: 'Restaurant' ,
+    business_category: BUSINESS_CAT.sample})
+    ny_bus.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
+            
+            
+            
+phx_bus = Business.create({
+    name: Faker::Restaurant.name,
+    address_1: rand(1..999).to_s + Faker::Address.street_name, 
+    address_2: Faker::Address.secondary_address, 
+    city: 'San Francisco', 
+    state: 'CA', 
+    zipcode: Faker::Number.number(digits: 5), 
+    longitude: 33.4484 + rand(-10.00..10.00),
+    latitude: 112.0740 + rand(-10.00..10.00), 
+    web_address: 'www.' + Faker::Restaurant.name + '.com', 
+    phone_number: Faker::PhoneNumber.cell_phone, 
+    business_type: 'Restaurant' ,
+    business_category: BUSINESS_CAT.sample})
+    phx_bus.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
+                
+                
+                
+sf_bus = Business.create({
+    name: Faker::Restaurant.name,
+    address_1: rand(1..999).to_s + Faker::Address.street_name, 
     address_2: Faker::Address.secondary_address, 
     city: 'Pheonix', 
     state: 'AZ', 
-    zipcode: 89384, 
+    zipcode: Faker::Number.number(digits: 5), 
     longitude: 33.4484 + rand(-10.00..10.00),
     latitude: 74.0060 + rand(-10.00..10.00), 
     web_address: 'www.' + Faker::Restaurant.name + '.com', 
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Restaurant' ,
-    business_category: 'Restauant'})
-
-    
-bus7.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
+    business_category: BUSINESS_CAT.sample})
+    sf_bus.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
+                    
+stl_bus = Business.create({
+    name: Faker::Restaurant.name,
+    address_1: rand(1..999).to_s + Faker::Address.street_name, 
+    address_2: Faker::Address.secondary_address, 
+    city: 'Pheonix', 
+    state: 'AZ', 
+    zipcode: Faker::Number.number(digits: 5), 
+    longitude: 38.6270 + rand(-10.00..10.00),
+    latitude: 90.1994 + rand(-10.00..10.00), 
+    web_address: 'www.' + Faker::Restaurant.name + '.com', 
+    phone_number: Faker::PhoneNumber.cell_phone, 
+    business_type: 'Restaurant' ,
+    business_category: BUSINESS_CAT.sample})
+    stl_bus.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
+                        
+                        

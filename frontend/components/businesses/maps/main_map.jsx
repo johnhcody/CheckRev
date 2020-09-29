@@ -8,7 +8,7 @@ class MainMap extends React.Component {
     componentDidMount() {
         debugger
         const mapOptions = {
-            center: { lat: 37.7758, lng: -122.435 }, // this is SF
+            center: { lat: 122.4194, lng: 37.7749 },
             zoom: 13
         };
 
