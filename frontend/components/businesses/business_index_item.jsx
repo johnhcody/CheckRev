@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-const PostIndexItem = props => {
+const BusinessIndexItem = props => {
     const utensils = <FontAwesomeIcon icon="utensils" />
     return (
             <div className="bus-item-container">
@@ -35,4 +35,4 @@ const PostIndexItem = props => {
 
 
 
-export default PostIndexItem;
+export default BusinessIndexItem;

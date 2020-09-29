@@ -12,7 +12,7 @@ class BusinessSearch extends React.Component {
         const utensils = <FontAwesomeIcon icon="utensils" />
         return (
             <div className="bus-nav-searchbar">
-                <div class="bus-nav-logo">
+                <div className="bus-nav-logo">
                     <img src={window.logo} alt=""/>
                 </div>
                 <form className="bus-search-parent">

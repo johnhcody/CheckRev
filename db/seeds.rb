@@ -32,6 +32,7 @@ bus1 = Business.create({
     phone_number: '684938279', 
     business_type: 'Web Development', 
     business_category: 'Professional Services'})
+b.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
 
 bus2 = Business.create({
     name: 'Dave\'s Diner', 
@@ -46,6 +47,7 @@ bus2 = Business.create({
     business_type: 'Web Development', 
     business_category: 'Professional Services'})
 
+    b.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
 bus3 = Business.create({
     name: 'JC Web Development', 
     address_1: '193 county st', 
@@ -58,6 +60,7 @@ bus3 = Business.create({
     phone_number: '684-938-4279', 
     business_type: 'Web Development', 
     business_category: 'Professional Services'})
+b.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
 
 bus4 = Business.create({
     name: 'A+ Legal Service', 
@@ -71,6 +74,8 @@ bus4 = Business.create({
     phone_number: '684-938-4279', 
     business_type: 'Web Development', 
     business_category: 'Professional Services'})
+b.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
+
 
 bus5 = Business.create({
     name: 'jc web dev', 
@@ -84,6 +89,7 @@ bus5 = Business.create({
     phone_number: '684-938-4279', 
     business_type: 'Web Development', 
     business_category: 'Professional Services'})
+b.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
 
 bus6 = Business.create({
     name: 'Barry\'s Restaurant', 
@@ -98,3 +104,4 @@ bus6 = Business.create({
     phone_number: '684-938-4279', 
     business_type: 'Restaurant', 
     business_category: 'Restauant'})
+    b.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")

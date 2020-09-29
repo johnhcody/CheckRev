@@ -116,7 +116,7 @@
 
 .bus-item-wrapper {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     width: 825px;
     background-color: white;
     height: 2000px;

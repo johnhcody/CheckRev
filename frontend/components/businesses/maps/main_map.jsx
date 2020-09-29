@@ -1,4 +1,6 @@
-class MainhMap extends React.Component {
+import React from 'react';
+
+class MainMap extends React.Component {
     constructor(props) {
         super(props)
     }
