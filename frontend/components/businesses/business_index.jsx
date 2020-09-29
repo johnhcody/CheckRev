@@ -33,7 +33,6 @@ class BusinessIndex extends React.Component {
             <div>
                 <div className="bus-idx-wrapper">
                     <PriceFilters />
-                    <TypeFilter />
                     {/* <CategoryFilter /> */}
                         <div className="bus-item-wrapper">
                         {
