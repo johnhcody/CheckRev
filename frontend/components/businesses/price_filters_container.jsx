@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import PriceFilters from './price_filters'
+import MoreFIlters from './more_filters'
 
 const mSTP = state => {
     return {
@@ -9,9 +9,9 @@ const mSTP = state => {
 
 const mDTP = dispatch => {
     return {
-
+        
     }
 }
 
 
-export default connect(null, null)(PriceFilters);
+export default connect(null, null)(MoreFilters);

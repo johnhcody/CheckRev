@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-
+import ModalFilter from './more_filters'
 class TypeFilter extends React.Component {
     constructor(props) {
         super(props)
@@ -14,6 +14,7 @@ class TypeFilter extends React.Component {
             // }
             
             render() {
+                debugger
                     const check = <FontAwesomeIcon icon="check" />
         return (
             <div className="type-container">
@@ -35,8 +36,10 @@ class TypeFilter extends React.Component {
                 <div className="cat-button-container">
                     <button>{check}</button> <h2>Construction</h2>
                 </div>
-                <div className="see-more">
-                    <h2>See More</h2>
+                <div className="see-more-trigger">
+                    <button onClick={this.props.openModal}>
+                        See More
+                    </button>
                 </div>
             </div>
         )

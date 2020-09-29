@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-class Dropdown extends React.Component {
+class Dropdown1 extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -17,6 +17,7 @@ class Dropdown extends React.Component {
         const utensils = <FontAwesomeIcon icon="utensils" />
         const home = <FontAwesomeIcon icon="home" />
         const bell = <FontAwesomeIcon icon="concierge-bell" />
+        const chevron = <FontAwesomeIcon icon="fa-chevron-down" />
         return (
             <div>
                 <button className="drop-button" onFocus={this.whenFocusOrBlur} onBlur={this.whenFocusOrBlur}><a href="#" className="icon-prof">Professional Services {bell}</a>
@@ -43,4 +44,4 @@ class Dropdown extends React.Component {
     }
 }
 
-export default Dropdown;
+export default Dropdown1;

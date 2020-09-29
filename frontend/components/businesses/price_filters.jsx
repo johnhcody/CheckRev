@@ -1,6 +1,6 @@
 import React from 'react';
 import CategoryFilter from './category_filter';
-import TypeFilter from './type_filter';
+import TypeFilter from './type_filter_container';
 
 class PriceFilters extends React.Component {
     constructor(props) {

@@ -27,62 +27,62 @@ test = User.create({
 
 Business.destroy_all
 
-bus1 = Business.create({
-    name: 'JC Software Development', 
-    address_1: '193 county st', 
-    address_2: 'unit 4', 
-    city: 'New York', 
-    state: 'NY', zipcode: 89384, 
-    longitude: 40.7128, 
-    latitude: 74.0060, 
-    web_address: 'jhc.com', 
-    phone_number: '684938279', 
-    business_type: 'Web Development', 
-    business_category: 'Professional Services'})
-bus1.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
+# bus1 = Business.create({
+#     name: 'JC Software Development', 
+#     address_1: '193 county st', 
+#     address_2: 'unit 4', 
+#     city: 'New York', 
+#     state: 'NY', zipcode: 89384, 
+#     longitude: 40.7128, 
+#     latitude: 74.0060, 
+#     web_address: 'jhc.com', 
+#     phone_number: '684938279', 
+#     business_type: 'Web Development', 
+#     business_category: 'Professional Services'})
+# bus1.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
 
-bus2 = Business.create({
-    name: 'Dave\'s Diner', 
-    address_1: '57 Main St.', 
-    address_2: '', 
-    city: 'Brooklyn', 
-    state: 'NY', zipcode: 89384, 
-    longitude: 40.6782, 
-    latitude: 73.9442, 
-    web_address: 'jhc.com', 
-    phone_number: '684938279', 
-    business_type: 'Web Development', 
-    business_category: 'Professional Services'})
+# bus2 = Business.create({
+#     name: 'Dave\'s Diner', 
+#     address_1: '57 Main St.', 
+#     address_2: '', 
+#     city: 'Brooklyn', 
+#     state: 'NY', zipcode: 89384, 
+#     longitude: 40.6782, 
+#     latitude: 73.9442, 
+#     web_address: 'jhc.com', 
+#     phone_number: '684938279', 
+#     business_type: 'Web Development', 
+#     business_category: 'Professional Services'})
 
-bus2.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
+# bus2.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
 
-bus3 = Business.create({
-    name: 'JC Web Development', 
-    address_1: '193 county st', 
-    address_2: 'Unit 4', 
-    city: 'Boston', 
-    state: 'MA', zipcode: 02101, 
-    longitude: 42.6289, 
-    latitude: 78.7377, 
-    web_address: 'jhc.com', 
-    phone_number: '684-938-4279', 
-    business_type: 'Web Development', 
-    business_category: 'Professional Services'})
-bus3.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
+# bus3 = Business.create({
+#     name: 'JC Web Development', 
+#     address_1: '193 county st', 
+#     address_2: 'Unit 4', 
+#     city: 'Boston', 
+#     state: 'MA', zipcode: 02101, 
+#     longitude: 42.6289, 
+#     latitude: 78.7377, 
+#     web_address: 'jhc.com', 
+#     phone_number: '684-938-4279', 
+#     business_type: 'Web Development', 
+#     business_category: 'Professional Services'})
+# bus3.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
 
-bus4 = Business.create({
-    name: 'A+ Legal Service', 
-    address_1: '18 Elm St.', 
-    address_2: 'Second Floor', 
-    city: 'Chicago, IL', 
-    state: 'MA', zipcode: 89384, 
-    longitude: 41.8781, 
-    latitude: 87.6298, 
-    web_address: 'jhc.com', 
-    phone_number: '684-938-4279', 
-    business_type: 'Web Development', 
-    business_category: BUSINESS_CAT.sample})
-bus4.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
+# bus4 = Business.create({
+#     name: 'A+ Legal Service', 
+#     address_1: '18 Elm St.', 
+#     address_2: 'Second Floor', 
+#     city: 'Chicago, IL', 
+#     state: 'MA', zipcode: 89384, 
+#     longitude: 41.8781, 
+#     latitude: 87.6298, 
+#     web_address: 'jhc.com', 
+#     phone_number: '684-938-4279', 
+#     business_type: 'Web Development', 
+#     business_category: BUSINESS_CAT.sample})
+# bus4.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
 
 
 bus5 = Business.create({
