@@ -7,6 +7,7 @@ import MainMap from './maps/main_map';
 import PriceFilters from './price_filters'
 import CategoryFilter from './category_filter';
 import BusinessIndexFooter from './business_index_footer';
+import TypeFilter from './type_filter';
 
 
 class BusinessIndex extends React.Component {
@@ -32,6 +33,7 @@ class BusinessIndex extends React.Component {
             <div>
                 <div className="bus-idx-wrapper">
                     <PriceFilters />
+                    <TypeFilter />
                     {/* <CategoryFilter /> */}
                         <div className="bus-item-wrapper">
                         {
