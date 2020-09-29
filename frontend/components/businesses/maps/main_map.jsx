@@ -1,12 +1,11 @@
 import React from 'react';
-
+import { Map, GoogleApiWrapper } from 'google-maps-react';
 class MainMap extends React.Component {
     constructor(props) {
         super(props)
     }
 
     componentDidMount() {
-        debugger
         const mapOptions = {
             center: { lat: 122.4194, lng: 37.7749 },
             zoom: 13
@@ -18,9 +17,7 @@ class MainMap extends React.Component {
 
     render() {
         return (
-            <div className="map-container">
-                <div ref={map => this.mapNode = map}></div> 
-            </div>
+            <div id="map-wrapper" ref={map => this.mapNode = map}></div> 
             )
         }
 }
