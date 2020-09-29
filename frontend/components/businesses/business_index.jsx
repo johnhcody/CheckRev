@@ -4,7 +4,8 @@ import Copyright from '../splash/copyright';
 import BusinessSearch from './business_search';
 import BusinessIndexItem from './business_index_item';
 import MainMap from './maps/main_map';
-import PriceFilters from './price_filters';
+import PriceFilters from './price_filters'
+import CategoryFilter from './category_filter';
 
 
 class BusinessIndex extends React.Component {
@@ -30,6 +31,7 @@ class BusinessIndex extends React.Component {
             <div>
                 <div className="bus-idx-wrapper">
                     <PriceFilters />
+                    {/* <CategoryFilter /> */}
                         <div className="bus-item-wrapper">
                         {
                             this.props.businesses.map(business => {  

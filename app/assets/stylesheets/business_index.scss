@@ -140,7 +140,7 @@
         display: none;
         &:checked {
             color: $green;
-            background-color: $lightgray;
+            background-color: $gray;
         }
     }
     label {
@@ -181,6 +181,31 @@
     padding-left: 11px;
     padding-right: 13px;
 }
+
+
+.category-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100px;
+    background-color: pink;
+    margin-left: 45px;
+    max-width: 200px;
+    input {
+    }
+    label {
+        font-family: sans-serif;
+    }
+}
+
+
+.bus-checkmark {
+
+}
+
+
+
+
+
 
 .bus-item-wrapper {
     display: flex;
