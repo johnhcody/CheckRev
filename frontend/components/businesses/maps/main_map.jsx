@@ -1,5 +1,5 @@
 import React from 'react';
-import { Map, GoogleApiWrapper } from 'google-maps-react';
+
 class MainMap extends React.Component {
     constructor(props) {
         super(props)
