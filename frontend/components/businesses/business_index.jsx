@@ -6,6 +6,7 @@ import BusinessIndexItem from './business_index_item';
 import MainMap from './maps/main_map';
 import PriceFilters from './price_filters'
 import CategoryFilter from './category_filter';
+import BusinessIndexFooter from './business_index_footer';
 
 
 class BusinessIndex extends React.Component {
@@ -54,30 +55,10 @@ class BusinessIndex extends React.Component {
                         </div>
                     <div className="map-wrapper">
                         <MainMap />
+                </div>
                     </div>
-                </div>
             </div>
-                <div className="footer-placeholder">
-                    <ul className="bus-idx-footer">
-                        <li>things</li>
-                        <li>things</li>
-                        <li>things</li>
-                        <li>things</li>
-                    </ul>
-                    <ul className="bus-idx-footer">
-                        <li>things</li>
-                        <li>things</li>
-                        <li>things</li>
-                        <li>things</li>
-                    </ul>
-                    <ul className="bus-idx-footer">
-                        <li>things</li>
-                        <li>things</li>
-                        <li>things</li>
-                        <li>things</li>
-                    </ul>
-                </div>
-                <Copyright />
+                <BusinessIndexFooter />
                 </div>
             )
         }
