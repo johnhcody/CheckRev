@@ -51,23 +51,7 @@ class BusinessIndex extends React.Component {
                         }
                         </div>
                     <div className="map-wrapper">
-                        {
-                        this.props.businesses.map(business => {
-                            return <MainMap
-                                address1={business.address1}
-                                address2={business.address2}
-                                businessCategory={business.businessCategory}
-                                businessType={business.businessType}
-                                city={business.city}
-                                name={business.name}
-                                phoneNumber={business.phoneNumber}
-                                webAddress={business.webAddress}
-                                zipcode={business.zipcode}
-                                photoUrl={business.photoUrl}
-                                key={business.id}
-                            />
-                        })
-                        }
+                        <MainMap />
                     </div>
                 </div>
             </div>

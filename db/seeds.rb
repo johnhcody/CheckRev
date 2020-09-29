@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+CITIES = ["New York", "Boston", "San Francisco", "St. Louis", "Phoenix", "Chicago", "St. Louis"]
+
+
 User.destroy_all
 
 
@@ -32,7 +35,7 @@ bus1 = Business.create({
     phone_number: '684938279', 
     business_type: 'Web Development', 
     business_category: 'Professional Services'})
-b.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
+bus1.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
 
 bus2 = Business.create({
     name: 'Dave\'s Diner', 
@@ -47,7 +50,8 @@ bus2 = Business.create({
     business_type: 'Web Development', 
     business_category: 'Professional Services'})
 
-    b.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
+bus2.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
+
 bus3 = Business.create({
     name: 'JC Web Development', 
     address_1: '193 county st', 
@@ -60,7 +64,7 @@ bus3 = Business.create({
     phone_number: '684-938-4279', 
     business_type: 'Web Development', 
     business_category: 'Professional Services'})
-b.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
+bus3.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
 
 bus4 = Business.create({
     name: 'A+ Legal Service', 
@@ -74,7 +78,7 @@ bus4 = Business.create({
     phone_number: '684-938-4279', 
     business_type: 'Web Development', 
     business_category: 'Professional Services'})
-b.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
+bus4.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
 
 
 bus5 = Business.create({
@@ -89,7 +93,7 @@ bus5 = Business.create({
     phone_number: '684-938-4279', 
     business_type: 'Web Development', 
     business_category: 'Professional Services'})
-b.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
+bus5.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
 
 bus6 = Business.create({
     name: 'Barry\'s Restaurant', 
@@ -104,4 +108,23 @@ bus6 = Business.create({
     phone_number: '684-938-4279', 
     business_type: 'Restaurant', 
     business_category: 'Restauant'})
-    b.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
+bus6.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
+
+
+
+bus7 = Business.create({
+    name: Faker::Restaurant.name,
+    address_1: rand(1..999) + Faker::Address.street_name, 
+    address_2: Faker::Address.secondary_address, 
+    city: 'Pheonix', 
+    state: 'AZ', 
+    zipcode: 89384, 
+    longitude: 33.4484 + rand(-10.00..10.00),
+    latitude: 74.0060 + rand(-10.00..10.00), 
+    web_address: 'www.' + Faker::Restaurant.name + '.com', 
+    phone_number: Faker::PhoneNumber.cell_phone, 
+    business_type: 'Restaurant' ,
+    business_category: 'Restauant'})
+
+    
+bus7.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
