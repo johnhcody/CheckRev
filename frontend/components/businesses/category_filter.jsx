@@ -9,12 +9,16 @@ class CategoryFilter extends React.Component {
     render() {
 
         return (
-        <div className="filter-placeholder">
-            <h1>Category</h1>
-            <label htmlFor=""><input type="checkbox" name="" id="" />Restaurants</label>
-            <label htmlFor=""><input type="checkbox" name="" id="" />Home Services</label>
-            <label htmlFor=""><input type="checkbox" name="" id="" />Professional Services</label>
-        </div>
+            <div className="category-container">
+                <h1>Category</h1>
+                <label classname="check-container" >Restaurants<input type="checkbox" name="" /></label>
+                <label classname="check-container" >Home Services
+                        <input type="checkbox" name="" />
+                </label>
+                <label classname="check-container" >Professional Services
+                        <input type="checkbox" name="" />
+                </label>
+            </div>
         )
     }
 }

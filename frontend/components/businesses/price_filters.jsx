@@ -1,4 +1,5 @@
 import React from 'react';
+import CategoryFilter from './category_filter';
 
 class PriceFilters extends React.Component {
     constructor(props) {
@@ -17,16 +18,7 @@ class PriceFilters extends React.Component {
                     <label id="dol3" htmlFor="dol$$$"><input type="radio" name="$$$" id="dol$$$" />$$$</label>
                     <label id="dol4" htmlFor="dol$$$$"><input type="radio" name="$$$$" id="dol$$$$" />$$$$</label>
                 </div>
-                <div className="category-container">
-                        <h1>Category</h1>
-                    <label classname="check-container" >Restaurants<input type="checkbox" name="" /></label>
-                    <label classname="check-container" >Home Services
-                        <input type="checkbox" name="" />
-                    </label>
-                    <label classname="check-container" >Professional Services
-                        <input type="checkbox" name="" />
-                    </label>
-                </div>
+                <CategoryFilter />
             </div>
         )
     }
