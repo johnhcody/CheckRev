@@ -172,14 +172,14 @@
 }
 #dol3 {
     border-radius: 0px 0px 0px 0px;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
     border-right: none;
 }
 #dol4 {
     border-radius: 0px 15px 15px 0px;
-    padding-left: 11px;
-    padding-right: 13px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 
@@ -187,11 +187,12 @@
     display: flex;
     flex-direction: column;
     min-height: 97px;
-    background-color: pink;
+    background-color: white;
     margin-left: 45px;
-    max-width: 200px;
+    max-width: 192px;
     border-bottom: 1px solid gray;
     font-family: sans-serif;
+    margin-top: 20px;
     input {
     }
     label {
@@ -202,10 +203,21 @@
     }
 }
 
+.cat-button-container {
+    display: flex;
+    padding: 2px;
+    h2 {
+    color: #5e5e5e;
+    font-size: 14px;
+    font-weight: 400px;
+    margin: 5px 0px 0px 0px;
+    padding: 0px 0px 0px 10px;
+    }
+}
 
 .bus-footer-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     background-color: $lightgray;
     border-top: 0.5px solid lightgray;
 }

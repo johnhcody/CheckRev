@@ -8,9 +8,9 @@ import BusinessIndexContainer from './businesses/business_index_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_utils'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import { faCheckSquare, faCoffee, faSearch, faUtensils, faHome, faConciergeBell, faStar } from '@fortawesome/free-solid-svg-icons'
+import { faCheckSquare, faCoffee, faSearch, faUtensils, faHome, faConciergeBell, faStar, faCheck } from '@fortawesome/free-solid-svg-icons'
 
-library.add(fab, faCheckSquare, faCoffee, faSearch, faUtensils, faHome, faConciergeBell, faStar)
+library.add(fab, faCheckSquare, faCoffee, faSearch, faUtensils, faHome, faConciergeBell, faStar, faCheck)
 
 //Wrap ProtectedRoute around paths that are restricted from users who are not logged in.
 

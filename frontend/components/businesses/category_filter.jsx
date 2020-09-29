@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 class CategoryFilter extends React.Component {
     constructor(props) {
@@ -7,17 +7,18 @@ class CategoryFilter extends React.Component {
     }
 
     render() {
-
+        const check = <FontAwesomeIcon icon="check"/>
         return (
             <div className="category-container">
-                <h1>Category</h1>
-                <label classname="check-container" >Restaurants<input type="checkbox" name="" /></label>
-                <label classname="check-container" >Home Services
-                        <input type="checkbox" name="" />
-                </label>
-                <label classname="check-container" >Professional Services
-                        <input type="checkbox" name="" />
-                </label>
+               <div className="cat-button-container">
+                <button>√</button> <h2>Restaurants</h2>
+               </div>
+               <div className="cat-button-container">
+                    <button>√</button> <h2>Home Services</h2>
+               </div>
+               <div className="cat-button-container">
+                    <button>√</button> <h2>Professional Services</h2>
+               </div>
             </div>
         )
     }
