@@ -20,20 +20,20 @@ class Dropdown1 extends React.Component {
         const chevron = <FontAwesomeIcon icon="fa-chevron-down" />
         return (
             <div>
-                <button className="drop-button" onFocus={this.whenFocusOrBlur} onBlur={this.whenFocusOrBlur}><a href="#" className="icon-prof">Professional Services {bell}</a>
+                <button className="drop-button" onFocus={this.whenFocusOrBlur} onBlur={this.whenFocusOrBlur}><a href="#" className="icon-parent">More Services {bell}</a>
                     {this.state.show ? (
                         <div className="dropdown-wrapper">
                         <ul className="btn-ul" onClick={e => e.stopPropagation()}>
-                            <li><a href="#" className="icon-prof">Professional Services {bell}</a></li>
-                            <li><a href="#" className="icon-prof">Professional Services {bell}</a></li>
-                            <li><a href="#" className="icon-prof">Professional Services {bell}</a></li>
-                            <li><a href="#" className="icon-prof">Professional Services {bell}</a></li>
+                            <li><a href="#" className="icon-filter">Professional Services {bell}</a></li>
+                            <li><a href="#" className="icon-filter">Professional Services {bell}</a></li>
+                            <li><a href="#" className="icon-filter">Professional Services {bell}</a></li>
+                            <li><a href="#" className="icon-filter">Professional Services {bell}</a></li>
                         </ul>
                         <ul className="btn-ul" onClick={e => e.stopPropagation()}>
-                            <li><a href="#" className="icon-prof">Professional Services {bell}</a></li>
-                            <li><a href="#" className="icon-prof">Professional Services {bell}</a></li>
-                            <li><a href="#" className="icon-prof">Professional Services {bell}</a></li>
-                            <li><a href="#" className="icon-prof">Professional Services {bell}</a></li>
+                            <li><a href="#" className="icon-filter">Professional Services {bell}</a></li>
+                            <li><a href="#" className="icon-filter">Professional Services {bell}</a></li>
+                            <li><a href="#" className="icon-filter">Professional Services {bell}</a></li>
+                            <li><a href="#" className="icon-filter">Professional Services {bell}</a></li>
                         </ul>
                         </div>
 

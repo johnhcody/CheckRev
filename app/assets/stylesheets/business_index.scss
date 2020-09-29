@@ -120,10 +120,28 @@
     padding-top: 7px;
 }
 
+.icon-parent {
+    position: relative;
+    display: inline-block;
+}
+
+.drop-button {
+    position: absolute;
+    min-width: 180px;
+
+}
+
+.dropdown-wrapper {
+
+}
+
+.icon-filter {
+
+}
+
 .bus-idx-wrapper {
     display: flex;
     justify-content: flex-start;
-    background-color: yellow;
 }
 
 #map-wrapper {
@@ -306,15 +324,12 @@
 
 
 
-
-
-
 .bus-item-wrapper {
     display: flex;
     flex-direction: column;
     width: 825px;
     background-color: white;
-    height: 2000px;
+    height: 2500px;
     padding: 143px 6px 5px 321px;
 }
 
@@ -376,7 +391,6 @@
     flex-direction: column;
     justify-content: flex-end;
     height: 80px;
-    width: 431px;
     font-family: sans-serif;
     padding-top: 7px;
     h1 {
@@ -409,7 +423,7 @@
     justify-content: flex-end;
     height: 80%;
     flex-direction: column;
-    width: 100px;
+    width: 175px;
     align-items: flex-end;
     margin: -44px 0px 0px 0px;
     h4 {
