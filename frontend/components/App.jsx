@@ -9,9 +9,9 @@ import { AuthRoute, ProtectedRoute } from '../util/route_utils';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import Modal from './businesses/modal_container';
-import { faCheckSquare, faCoffee, faSearch, faUtensils, faHome, faConciergeBell, faStar, faCheck, faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { faCheckSquare, faCoffee, faSearch, faUtensils, faHome, faConciergeBell, faStar, faCheck, faChevronDown, faUser } from '@fortawesome/free-solid-svg-icons'
 
-library.add(fab, faCheckSquare, faCoffee, faSearch, faUtensils, faHome, faConciergeBell, faStar, faCheck, faChevronDown)
+library.add(fab, faCheckSquare, faCoffee, faSearch, faUtensils, faHome, faConciergeBell, faStar, faCheck, faChevronDown, faUser)
 
 //Wrap ProtectedRoute around paths that are restricted from users who are not logged in.
 

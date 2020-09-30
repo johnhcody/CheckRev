@@ -21,16 +21,18 @@ class GreetingDropdown extends React.Component {
     }
 
     render() {
+        const user = <FontAwesomeIcon icon="user" />
         const utensils = <FontAwesomeIcon icon="utensils" />
         const home = <FontAwesomeIcon icon="home" />
         const bell = <FontAwesomeIcon icon="concierge-bell" />
         const chevron = <FontAwesomeIcon icon="fa-chevron-down" />
         return (
             <div>
-                <button className="drop-button" onFocus={this.whenFocusOrBlur} onBlur={this.whenFocusOrBlur}><a className="user-dropdown">{bell}</a>
+                <button className="splash-drop-button" onFocus={this.whenFocusOrBlur} onBlur={this.whenFocusOrBlur}><a>{user}</a>
                     {this.state.show ? (
-                        <div className="dropdown-wrapper">
-                            <button className="btn-ul" onClick={this.handleClick}>Logout</button> 
+                        <div className="splash-dropdown-wrapper">
+                            <header>{user} {this.props.currentUser.firstName}</header>
+                            <a className="logout-button-splash" onClick={this.handleClick}>Logout</a>
                         </div>
                     ) : null}
                 </button>
