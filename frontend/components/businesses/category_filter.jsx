@@ -11,6 +11,7 @@ class CategoryFilter extends React.Component {
         const check = <FontAwesomeIcon icon="check"/>
         return (
             <div className="category-container">
+                <header>Category</header>
                <div className="cat-button-container">
                     <button></button> <h2>Restaurants</h2>
                </div>

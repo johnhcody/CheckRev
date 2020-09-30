@@ -11,6 +11,7 @@ class TypeFilter extends React.Component {
                     const check = <FontAwesomeIcon icon="check" />
         return (
             <div className="type-container">
+                <header>Type</header>
                 <div className="cat-button-container">
                     <button onClick={this.handleClick}></button> <h2>Accountants</h2>
                 </div>
