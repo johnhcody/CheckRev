@@ -5,6 +5,7 @@ class TypeFilter extends React.Component {
     constructor(props) {
         super(props)
         // this.handleClick = this.handleClick.bind(this)
+        // this.props.closeModal = this.props.closeModal.bind(this);
     }
             
             render() {

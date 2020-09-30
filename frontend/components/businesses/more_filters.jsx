@@ -8,7 +8,7 @@ const MoreFilters = (props) => {
             <ul>
                 <div className="modal-top-title">
                     <header>More Features</header>
-                    <button onClick={props.closeModal}>X</button>
+                    <button className="close-modal-button" onClick={props.closeModal}>X</button>
                 </div>
                     <div className="modal-category-container-wrapper">
                         <div className="modal-category-container">
