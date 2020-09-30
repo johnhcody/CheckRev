@@ -6,11 +6,10 @@ const businessesReducer = (state = {}, action) => {
     
     switch (action.type) {
         case RECEIVE_BUSINESSES:
-            
             return action.businesses;
         case RECEIVE_BUSINESS:
-            
-            newState[action.business.id] = action.business;
+            debugger
+            newState[action.businessId] = action.business;
             return newState;
         default:
             return state;

@@ -19,7 +19,7 @@ class Dropdown3 extends React.Component {
         const bell = <FontAwesomeIcon icon="concierge-bell" />
         return (
             <div>
-                <button className="drop-button" onFocus={this.whenFocusOrBlur} onBlur={this.whenFocusOrBlur}><a className="icon-parent">Professional Services {bell}</a>
+                <button className="drop-button" onFocus={this.whenFocusOrBlur} onBlur={this.whenFocusOrBlur}><a className="icon-parent">Home Services {bell}</a>
                     {this.state.show ? (
                         <div className="dropdown-wrapper">
                             <ul className="btn-ul" onClick={e => e.stopPropagation()}>

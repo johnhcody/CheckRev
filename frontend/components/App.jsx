@@ -9,6 +9,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_utils';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import Modal from './businesses/modal_container';
+import BusinessShowContainer from './business_show/business_show_container';
 import { faCheckSquare, faCoffee, faSearch, faUtensils, faHome, faConciergeBell, faStar, faCheck, faChevronDown, faUser } from '@fortawesome/free-solid-svg-icons'
 
 library.add(fab, faCheckSquare, faCoffee, faSearch, faUtensils, faHome, faConciergeBell, faStar, faCheck, faChevronDown, faUser)
@@ -23,6 +24,7 @@ const App = () => (
             <AuthRoute exact path='/login' component={LoginFormContainer} />
             <AuthRoute exact path='/signup' component={SignupFormContainer} />
             <Route exact path='/search' component={BusinessIndexContainer} />
+            <Route path='/businesses/:businessId' component={BusinessShowContainer} />
         </Switch>
     </div>
 );

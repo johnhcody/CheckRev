@@ -9,7 +9,7 @@ import { fetchBusiness, fetchBusinesses } from "./actions/business_actions";
 document.addEventListener('DOMContentLoaded', () => {
     const root = document.getElementById('root');
     let store;
-    debugger
+    { window.googleAPIKey }
     if (window.currentUser) {
         const preloadedState = {
             entities: {
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.dispatch = store.dispatch;
     window.getState = store.dispatch;
     window.fetchBusinesses = fetchBusinesses;
-    debugger
+    window.fetchBusiness = fetchBusiness;
 
     ReactDOM.render(<Root store={store}/>, root)
 })
