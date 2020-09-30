@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
+import GreetingDropdown from './greeting_dropdown';
 
 
 
@@ -32,9 +33,8 @@ class Greeting extends React.Component {
                             <Link to='#'><button>Write a Review</button></Link>
                         </div>
                     <div className="session-link"></div>
-                        <button id="guest">Hello,  {currentUser.firstName}</button>
                         <div className="logout">
-                        <button onClick={logout} >Log Out</button>
+                        <GreetingDropdown logout={this.props.logout} currentUser={this.props.currentUser}/>
                         </div>
                     </div>
                 </div>

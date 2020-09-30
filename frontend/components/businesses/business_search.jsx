@@ -1,5 +1,8 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import IndexGreeting from './index_greeting'
+import BusinessIcons from './business_icons';
+import { Link } from 'react-router-dom';
 
 class BusinessSearch extends React.Component {
     constructor(props) {
@@ -11,20 +14,25 @@ class BusinessSearch extends React.Component {
         const utensils = <FontAwesomeIcon icon="utensils" />
         return (
             <div className="bus-nav-searchbar">
-                <div class="bus-nav-logo">
-                    <img src={window.logo} alt=""/>
+                <div className="bus-nav-logo">
+                    <Link to="/"><img src={window.logo} alt="" /></Link>
                 </div>
-                <form className="bus-search-parent">
-                    <div className="bus-search-child">
-                        <label className="search search-type">  Find
-                        <input type="search" placeholder="plumbers, delivery, takeout" />
-                        </label>
-                        <label>Near
-                        <input className="search search-location" type="search" placeholder="Times Square, NY" />
-                        </label>
-                    </div>
-                    <button className="bus-search-button" type="submit">{magnifyingGlass}</button>
-                </form>
+                <div className="search-and-icons">
+                    <form className="bus-search-parent">
+                        <div className="bus-search-child">
+                            <label className="search search-type">
+                            <input type="search" placeholder="plumbers, delivery, takeout" />
+                            </label>
+                            <label id="divider">|
+                            <input className="search search-location" type="search" placeholder="Times Square, NY" />
+                            </label>
+                        </div>
+                        <button className="bus-search-button" type="submit">{magnifyingGlass}</button>
+                    </form>
+                    <BusinessIcons />
+
+                </div>
+                <IndexGreeting />
             </div>
         )
     }

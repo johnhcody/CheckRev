@@ -3,7 +3,12 @@ import Footer from '../splash/footer';
 import Copyright from '../splash/copyright';
 import BusinessSearch from './business_search';
 import BusinessIndexItem from './business_index_item';
-
+import MainMap from './maps/main_map';
+import PriceFilters from './price_filters'
+import CategoryFilter from './category_filter';
+import BusinessIndexFooter from './business_index_footer';
+import TypeFilter from './type_filter';
+import BusinessIcons from './business_icons';
 
 class BusinessIndex extends React.Component {
     constructor(props) {
@@ -15,22 +20,23 @@ class BusinessIndex extends React.Component {
     }
 
     render() {
+
         const { address1, address2, businessCategory, businessType, city, name, phoneNumber, webAddress, zipcode } = this.props.businesses;
         if (!this.props.businesses) {
             
             return null;
         } else {
-
             return (
                 <div>
                 <BusinessSearch />
+                
             <div>
                 <div className="bus-idx-wrapper">
-                    <div className="filter-placeholder">
-                    </div>
+                    <PriceFilters />
+                    
                         <div className="bus-item-wrapper">
                         {
-                            this.props.businesses.map(business => {                        
+                            this.props.businesses.map(business => {  
                                 return <BusinessIndexItem 
                                 address1={business.address1}
                                 address2={business.address2}
@@ -46,32 +52,12 @@ class BusinessIndex extends React.Component {
                                 />
                             })
                         }
-                        </div>
-                    <div className="map-placeholder">
+                        </div> 
+                        {/* tried putting a classname here and fixing position */}
+                        <MainMap businesses={this.props.businesses} />
                     </div>
-                </div>
             </div>
-                <div className="footer-placeholder">
-                    <ul className="bus-idx-footer">
-                        <li>things</li>
-                        <li>things</li>
-                        <li>things</li>
-                        <li>things</li>
-                    </ul>
-                    <ul className="bus-idx-footer">
-                        <li>things</li>
-                        <li>things</li>
-                        <li>things</li>
-                        <li>things</li>
-                    </ul>
-                    <ul className="bus-idx-footer">
-                        <li>things</li>
-                        <li>things</li>
-                        <li>things</li>
-                        <li>things</li>
-                    </ul>
-                </div>
-                <Copyright />
+                <BusinessIndexFooter />
                 </div>
             )
         }

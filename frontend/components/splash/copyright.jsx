@@ -10,4 +10,4 @@ function Copyright() {
     )
 }
 
-export default Copyright
+export default Copyright;
