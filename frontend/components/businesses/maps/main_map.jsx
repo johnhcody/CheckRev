@@ -17,12 +17,13 @@ class MainMap extends React.Component {
         
         this.map = new google.maps.Map(this.mapNode, mapOptions);
         this.MarkerManager = new MarkerManager(this.map);
-        //this.MarkerManager.updateMarkers(this.props.businesses);
+        this.MarkerManager.updateMarkers(this.props.businesses);
     }
     
     componentDidUpdate() {
+        debugger
         this.MarkerManager = new MarkerManager(this.map);
-        //this.MarkerManager.updateMarkers(this.props.businesses);
+        this.MarkerManager.updateMarkers(this.props.businesses);
     }
     render() {
         return (

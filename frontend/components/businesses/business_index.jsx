@@ -37,7 +37,6 @@ class BusinessIndex extends React.Component {
                         <div className="bus-item-wrapper">
                         {
                             this.props.businesses.map(business => {  
-                                debugger                      
                                 return <BusinessIndexItem 
                                 address1={business.address1}
                                 address2={business.address2}
@@ -55,7 +54,7 @@ class BusinessIndex extends React.Component {
                         }
                         </div>
                     <div className="map-wrapper">
-                        <MainMap />
+                        <MainMap businesses={this.props.businesses} />
                 </div>
                     </div>
             </div>

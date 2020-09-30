@@ -9,7 +9,6 @@ const mSTP = state => {
 }
 
 const mDTP = dispatch => {
-    debugger
     return {
         openModal: () => dispatch(openModal('see-more'))
     }
