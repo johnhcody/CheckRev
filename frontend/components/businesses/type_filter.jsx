@@ -6,12 +6,6 @@ class TypeFilter extends React.Component {
         super(props)
         // this.handleClick = this.handleClick.bind(this)
     }
-
-    // handleClick() {
-        //     return (
-            //         {check}
-            //     )
-            // }
             
             render() {
                     const check = <FontAwesomeIcon icon="check" />

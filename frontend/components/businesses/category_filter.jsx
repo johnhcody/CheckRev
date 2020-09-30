@@ -12,7 +12,7 @@ class CategoryFilter extends React.Component {
         return (
             <div className="category-container">
                <div className="cat-button-container">
-        <button></button> <h2>Restaurants</h2>
+                    <button></button> <h2>Restaurants</h2>
                </div>
                <div className="cat-button-container">
                     <button></button> <h2>Home Services</h2>
