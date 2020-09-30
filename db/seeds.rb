@@ -98,7 +98,7 @@ bus5 = Business.create({
     phone_number: '684-938-4279', 
     business_type: 'Web Development', 
     business_category: 'Professional Services'})
-bus5.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
+bus5.photo.attach(io: File.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/logo.png"), filename: "logo.png")
 
 bus6 = Business.create({
     name: 'Barry\'s Restaurant', 
@@ -113,7 +113,7 @@ bus6 = Business.create({
     phone_number: '684-938-4279', 
     business_type: 'Restaurant', 
     business_category: 'Restauant'})
-bus6.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
+bus6.photo.attach(io: File.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/logo.png"), filename: "logo.png")
 
 bos_bus = Business.create({
     name: Faker::Restaurant.name,
@@ -128,7 +128,7 @@ bos_bus = Business.create({
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Restaurant' ,
     business_category: BUSINESS_CAT.sample})
-    bos_bus.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
+    bos_bus.photo.attach(io: File.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/logo.png"), filename: "logo.png")
     
 chi_bus = Business.create({
     name: Faker::Restaurant.name,
@@ -143,7 +143,7 @@ chi_bus = Business.create({
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Restaurant' ,
     business_category: BUSINESS_CAT.sample})
-    chi_bus.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
+    chi_bus.photo.attach(io: File.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/logo.png"), filename: "logo.png")
         
         
 ny_bus = Business.create({
@@ -159,7 +159,7 @@ ny_bus = Business.create({
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Restaurant' ,
     business_category: BUSINESS_CAT.sample})
-    ny_bus.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
+    ny_bus.photo.attach(io: File.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/logo.png"), filename: "logo.png")
             
             
             
@@ -176,10 +176,9 @@ phx_bus = Business.create({
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Restaurant' ,
     business_category: BUSINESS_CAT.sample})
-    phx_bus.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
+    phx_bus.photo.attach(io: File.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/logo.png"), filename: "logo.png")
                 
-                
-                
+                    
 sf_bus = Business.create({
     name: Faker::Restaurant.name,
     address_1: rand(1..999).to_s + Faker::Address.street_name, 
@@ -193,7 +192,7 @@ sf_bus = Business.create({
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Restaurant' ,
     business_category: BUSINESS_CAT.sample})
-    sf_bus.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
+    sf_bus.photo.attach(io: File.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/logo.png"), filename: "logo.png")
                     
 stl_bus = Business.create({
     name: Faker::Restaurant.name,
@@ -208,6 +207,6 @@ stl_bus = Business.create({
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Restaurant' ,
     business_category: BUSINESS_CAT.sample})
-    stl_bus.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
+    stl_bus.photo.attach(io: File.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/logo.png"), filename: "logo.png")
                         
                         

@@ -131,11 +131,17 @@
     min-width: 135px;
 }
 
+.btn-ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .dropdown-wrapper {
     display: flex;
     position: absolute;
     border: 1px solid black;
-    justify-content: flex-start;
+    align-items: flex-start;
     background-color: white;
     flex-direction: row;
     padding-top: 5px;

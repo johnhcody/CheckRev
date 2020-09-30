@@ -1,7 +1,4 @@
 
-
-
-
 .splash-parent {
     display: flex;
     // position: ;
@@ -68,9 +65,9 @@
             padding: 4px;
         }
         a {
-            color: $green;
-            font-size: 13px;
-            padding: 4px;
+            color: black;
+            size: large;
+            padding: 0px;
         }
     }
 }
@@ -80,19 +77,24 @@
         height: 44px;
         width: 44px;
         background-color: white;
+        a {
+            size: large;
+            color: red;
+        }
 }
 
 .splash-dropdown-wrapper {
     display: flex;
     position: absolute;
     top: 90px;
-    right: 220px;
+    right: 270px;
     color: black;
     height: 100px;
     width: 160px;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid black;
+    align-items: flex-start;
+    border-radius: 4px;
     background-color: white;
     padding-top: 5px;
     border-radius: 3px;
@@ -105,11 +107,20 @@
         padding: 10px 5px 5px 5px;
         min-width: 60px;
     }
+    
+}
+
+.logout-button-splash {
+    color: $green;
+    font-size: 15px;
+    padding: 8px 8px 8px 8px;
+    margin: 8px 8px 8px 8px;
     a {
         color: $green;
     }
+    button {
+    }
 }
-
 
 .session-link {
     justify-content: flex-end;
