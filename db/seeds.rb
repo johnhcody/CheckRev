@@ -85,8 +85,8 @@ Business.destroy_all
 # bus4.photo.attach(io: File.open("/Users/rusticair-9/Desktop/coding/app_academy/CheckRev/CheckRev/app/assets/images/logo.png"), filename: "logo.png")
 
 
-bus5 = Business.create({
-    name: 'jc web dev', 
+bus5 = Business.create({ 
+    name: 'JC Web Dev', 
     address_1: '193 county st', 
     address_2: 'unit 4', 
     city: 'Lakeville', 
