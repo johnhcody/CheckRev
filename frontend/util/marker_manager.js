@@ -12,3 +12,5 @@ class MarkerManager {
         console.log("here is a business");
     }
 }
+
+export default MarkerManager;
