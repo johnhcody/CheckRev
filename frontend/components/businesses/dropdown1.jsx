@@ -20,20 +20,20 @@ class Dropdown1 extends React.Component {
         const chevron = <FontAwesomeIcon icon="fa-chevron-down" />
         return (
             <div>
-                <button className="drop-button" onFocus={this.whenFocusOrBlur} onBlur={this.whenFocusOrBlur}><a href="#" className="icon-parent">More Services {bell}</a>
+                <button className="drop-button" onFocus={this.whenFocusOrBlur} onBlur={this.whenFocusOrBlur}><a className="icon-parent">Restaurants {bell}</a>
                     {this.state.show ? (
                         <div className="dropdown-wrapper">
                         <ul className="btn-ul" onClick={e => e.stopPropagation()}>
-                            <li><a href="#" className="icon-filter">Professional Services {bell}</a></li>
-                            <li><a href="#" className="icon-filter">Professional Services {bell}</a></li>
-                            <li><a href="#" className="icon-filter">Professional Services {bell}</a></li>
-                            <li><a href="#" className="icon-filter">Professional Services {bell}</a></li>
+                            <li><a className="icon-filter">{bell} Japanese</a></li>
+                            <li><a className="icon-filter">{bell} Thai</a></li>
+                            <li><a className="icon-filter">{bell} Indian</a></li>
+                            <li><a className="icon-filter">{bell} Mexican</a></li>
                         </ul>
                         <ul className="btn-ul" onClick={e => e.stopPropagation()}>
-                            <li><a href="#" className="icon-filter">Professional Services {bell}</a></li>
-                            <li><a href="#" className="icon-filter">Professional Services {bell}</a></li>
-                            <li><a href="#" className="icon-filter">Professional Services {bell}</a></li>
-                            <li><a href="#" className="icon-filter">Professional Services {bell}</a></li>
+                            <li><a className="icon-filter">{bell} Italian</a></li>
+                            <li><a className="icon-filter">{bell} Home Cooking</a></li>
+                            <li><a className="icon-filter">{bell} Southern</a></li>
+                            <li><a className="icon-filter">{bell} Greek</a></li>
                         </ul>
                         </div>
 

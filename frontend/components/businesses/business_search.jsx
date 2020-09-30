@@ -2,6 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import IndexGreeting from './index_greeting'
 import BusinessIcons from './business_icons';
+import { Link } from 'react-router-dom';
 
 class BusinessSearch extends React.Component {
     constructor(props) {
@@ -14,7 +15,7 @@ class BusinessSearch extends React.Component {
         return (
             <div className="bus-nav-searchbar">
                 <div className="bus-nav-logo">
-                    <img src={window.logo} alt=""/>
+                    <Link to="/"><img src={window.logo} alt="" /></Link>
                 </div>
                 <div className="search-and-icons">
                     <form className="bus-search-parent">

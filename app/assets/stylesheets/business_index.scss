@@ -87,8 +87,9 @@
 
 .bus-icons-parent {
     display: flex;
-    justify-content: flex-start;
-    min-height: 50px;
+    flex-direction: row;
+    position: relative;
+    min-height: 34px;
     width: 100%;
     padding-top: 10px;
     a {
@@ -126,14 +127,24 @@
 }
 
 .drop-button {
-    position: absolute;
-    min-width: 180px;
+    min-width: 135px;
 
 }
 
 .dropdown-wrapper {
-
+    display: flex;
+    position: absolute;
+    justify-content: flex-start;
+    background-color: white;
+    flex-direction: row;
+    padding-top: 5px;
+    li {
+        padding: 10px 5px 5px 5px;
+        min-width: 60px;
+    }
 }
+
+
 
 .icon-filter {
 
