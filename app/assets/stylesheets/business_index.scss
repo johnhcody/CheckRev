@@ -183,8 +183,13 @@
     top: 130px;
     background-color: blue;
     height: 800px;
-    min-width: 440px;
+    width: 40px;
     flex-grow: 2;
+}
+
+.google-map-wrapper {
+    position: fixed;
+    right: 0;
 }
 
 .map-container {

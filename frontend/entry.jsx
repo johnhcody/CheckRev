@@ -9,6 +9,7 @@ import { fetchBusiness, fetchBusinesses } from "./actions/business_actions";
 document.addEventListener('DOMContentLoaded', () => {
     const root = document.getElementById('root');
     let store;
+    debugger
     if (window.currentUser) {
         const preloadedState = {
             entities: {
@@ -21,10 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         store = configureStore();
     }
-
     window.dispatch = store.dispatch;
     window.getState = store.dispatch;
     window.fetchBusinesses = fetchBusinesses;
+    debugger
 
     ReactDOM.render(<Root store={store}/>, root)
 })
