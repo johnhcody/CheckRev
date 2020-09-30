@@ -52,10 +52,9 @@ class BusinessIndex extends React.Component {
                                 />
                             })
                         }
-                        </div>
-                    <div className="map-wrapper">
+                        </div> 
+                        {/* tried putting a classname here and fixing position */}
                         <MainMap businesses={this.props.businesses} />
-                </div>
                     </div>
             </div>
                 <BusinessIndexFooter />
