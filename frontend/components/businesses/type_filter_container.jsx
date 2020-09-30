@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import TypeFilter from './type_filter';
-import { openModal } from '../../actions/modal_actions';
+import { openModal, closeModal } from '../../actions/modal_actions';
 
 const mSTP = state => {
     return {
@@ -10,7 +10,8 @@ const mSTP = state => {
 
 const mDTP = dispatch => {
     return {
-        openModal: () => dispatch(openModal('see-more'))
+        openModal: () => dispatch(openModal('see-more')),
+        closeModal: () => dispatch(closeModal())
     }
 }
 

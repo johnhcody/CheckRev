@@ -5,12 +5,12 @@ class Dropdown1 extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            show: false
+            show: true
         }
         this.whenFocusOrBlur = this.whenFocusOrBlur.bind(this);
     }
     whenFocusOrBlur(e) {
-        const newState = !this.state.show
+        const newState = this.state.show
         this.setState({ show: newState })
     }
     render() {

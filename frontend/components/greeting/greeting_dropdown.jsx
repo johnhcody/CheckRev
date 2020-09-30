@@ -32,7 +32,7 @@ class GreetingDropdown extends React.Component {
                     {this.state.show ? (
                         <div className="splash-dropdown-wrapper">
                             <header>{user} {this.props.currentUser.firstName}</header>
-                            <a className="logout-button-splash" onClick={this.handleClick}>Logout</a>
+                            <a id="logout-button-splash" onClick={this.handleClick}>Logout</a>
                         </div>
                     ) : null}
                 </button>
