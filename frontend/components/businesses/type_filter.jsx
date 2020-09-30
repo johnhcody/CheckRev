@@ -14,7 +14,6 @@ class TypeFilter extends React.Component {
             // }
             
             render() {
-                debugger
                     const check = <FontAwesomeIcon icon="check" />
         return (
             <div className="type-container">

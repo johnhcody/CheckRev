@@ -26,7 +26,6 @@ class BusinessIndex extends React.Component {
             
             return null;
         } else {
-            debugger
             return (
                 <div>
                 <BusinessSearch />
