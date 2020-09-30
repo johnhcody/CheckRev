@@ -19,22 +19,22 @@ class TypeFilter extends React.Component {
         return (
             <div className="type-container">
                 <div className="cat-button-container">
-                    <button onClick={this.handleClick}>{check}</button> <h2>Accountants</h2>
+                    <button onClick={this.handleClick}></button> <h2>Accountants</h2>
                 </div>
                 <div className="cat-button-container">
-                    <button>{check}</button> <h2>Insurance</h2>
+                    <button></button> <h2>Insurance</h2>
                 </div>
                 <div className="cat-button-container">
-                    <button>{check}</button> <h2>Cleaning</h2>
+                    <button></button> <h2>Cleaning</h2>
                 </div>
                 <div className="cat-button-container">
-                <button>{check}</button> <h2>Web Design</h2>
+                <button></button> <h2>Web Design</h2>
                 </div>
                 <div className="cat-button-container">
-                    <button>{check}</button> <h2>Landscaping</h2>
+                    <button></button> <h2>Landscaping</h2>
                 </div>
                 <div className="cat-button-container">
-                    <button>{check}</button> <h2>Construction</h2>
+                    <button></button> <h2>Construction</h2>
                 </div>
                 <div className="see-more-trigger">
                     <button onClick={this.props.openModal}>

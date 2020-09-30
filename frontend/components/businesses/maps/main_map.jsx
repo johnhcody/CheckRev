@@ -1,4 +1,6 @@
 import React from 'react';
+import MarkerManager from '../../../util/marker_manager';
+
 //import MapView from 'react-native-maps';
 
 
@@ -14,7 +16,11 @@ class MainMap extends React.Component {
         };
         
         this.map = new google.maps.Map(this.mapNode, mapOptions);
-
+        this.MarkerManager = new MarkerManager(this.map);
+    }
+    
+    componentDidUpdate() {
+        this.MarkerManager = new MarkerManager(this.map);
     }
     render() {
         return (
