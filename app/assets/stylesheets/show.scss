@@ -75,7 +75,9 @@
     padding-right: 35px;
 }
 .bus-show-right-wrapper {
-    min-width: 200px;
+    position: sticky;
+    top: 150px;
+    right: 0;
 }
 
 .bus-show-info {
