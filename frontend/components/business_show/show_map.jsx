@@ -26,9 +26,9 @@ class MainMap extends React.Component {
     }
     render() {
         return (
-            <div className="show-map-placeholder">
-                <div style={{ width: 315, height: 150 }} id="map-wrapper" ref={map => this.mapNode = map}></div>
-            </div>
+
+                <div style={{ width: 315, height: 150 }} ref={map => this.mapNode = map}></div>
+
         )
     }
 }
