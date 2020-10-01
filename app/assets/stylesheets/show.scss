@@ -96,3 +96,93 @@
         font-size: 14px;
     }
 }
+
+
+.hours-and-map {
+    display: flex;
+}
+
+.show-map-placeholder {
+    margin-top: 15px;
+    width: 315px;
+    height: 150px;
+    background-color: blue;
+}
+
+.location-and-hours {
+    h1 {
+        padding-top: 100px;
+        font-weight: 600;
+        font-family: sans-serif;
+    }
+}
+
+.bus-hours-info {
+    margin-top: 15px;
+    display: flex;
+    min-width: 178px;
+    margin-left: 20px;
+    padding: 4px;
+    header {
+        padding: 3px;
+        color: black;
+        font-family: sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        padding-right: 12px;
+    }
+    li {
+        padding: 3px;
+        font-family: sans-serif;
+        color: gray;
+        font-size: 14px;
+    }
+}
+
+.amenities-title {
+    display: flex;
+    flex-direction: column;
+    h1 {
+        padding-bottom: 11px;
+        font-size: 24px;
+        font-family: sans-serif;
+        font-weight: 600;
+        margin-top: 40px;
+    }
+}
+
+.icon-bus-show-rating {
+    display: flex;
+    color: gray;
+    a {
+        font-size: 25px;
+        padding: 5px 0px 5px 0px;
+    }
+    h2 {
+        padding-left: 0;
+        padding-top: 12px;
+        font-family: sans-serif;
+        margin-left: 17px;
+    }
+}
+
+.icon-bus-show-rating-left {
+    display: flex;
+    min-width: 350px;
+    a {
+
+    }
+    h2 {
+
+    }
+}
+
+.icon-bus-show-rating-right {
+    display: flex;
+    a {
+
+    }
+    h2 {
+        
+    }
+}

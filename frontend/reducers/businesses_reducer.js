@@ -9,7 +9,7 @@ const businessesReducer = (state = {}, action) => {
             return action.businesses;
         case RECEIVE_BUSINESS:
             debugger
-            newState[action.businessId] = action.business;
+            newState[action.business.id] = action.business;
             return newState;
         default:
             return state;
