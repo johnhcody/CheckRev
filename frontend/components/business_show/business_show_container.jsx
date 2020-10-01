@@ -4,14 +4,12 @@ import { connect } from 'react-redux';
 
 
 const mSTP = (state, ownProps) => {
-    debugger
     return {
         business: state.entities.businesses[ownProps.match.params.businessId]
     }
 };
 
 const mDTP = dispatch => {
-    debugger
     return {
         fetchBusiness: businessId => dispatch(fetchBusiness(businessId))
     }

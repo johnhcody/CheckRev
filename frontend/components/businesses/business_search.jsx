@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import IndexGreeting from './index_greeting'
+import IndexGreetingContainer from './index_greeting_container';
 import BusinessIcons from './business_icons';
 import { Link } from 'react-router-dom';
 
@@ -32,7 +32,7 @@ class BusinessSearch extends React.Component {
                     <BusinessIcons />
 
                 </div>
-                <IndexGreeting />
+                <IndexGreetingContainer />
             </div>
         )
     }

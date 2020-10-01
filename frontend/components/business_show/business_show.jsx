@@ -15,22 +15,19 @@ import Copyright from '../splash/copyright';
 class BusinessShow extends React.Component {
     constructor(props) {
         super(props)
-        debugger
     }
 
     componentDidMount() {
-        debugger
         console.log(this.props)
         console.log(this.props.match.params.businessId)
         this.props.fetchBusiness(this.props.match.params.businessId);
     }
     
     render() {
-        debugger
         if (!this.props.business) {
             return null;
         } else {
-            debugger
+
         return (
         <div>
             <BusinessSearch />

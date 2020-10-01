@@ -22,7 +22,7 @@ class MainMap extends React.Component {
     componentDidUpdate() {
 
         this.MarkerManager = new MarkerManager(this.map);
-        this.MarkerManager.updateMarkers(this.props.businesses);
+        this.MarkerManager.createMarkerfromBusiness(this.props.business);
     }
     render() {
         return (

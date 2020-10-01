@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link} from 'react-router-dom';
+import GreetingDropdown from '../greeting/greeting_dropdown';
 
 
 class IndexGreeting extends React.Component {
@@ -8,7 +9,7 @@ class IndexGreeting extends React.Component {
     }
 
     render() {
-        debugger
+
         if (this.props.currentUser) {
             return (
                 <div>
@@ -16,13 +17,14 @@ class IndexGreeting extends React.Component {
                         <div className="review-link">
                             <Link to='#'><button>Write a Review</button></Link>
                         </div>
-                        <div className="logout">
+                        <div className="idx-logout">
                             <GreetingDropdown logout={this.props.logout} currentUser={this.props.currentUser} />
                         </div>
                     </div>
                 </div>
             )
         } else {
+
         return (
             <div className="bus-greeting-buttons">
                 <button className="bus-review">Write a Review</button>

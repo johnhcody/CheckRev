@@ -12,7 +12,6 @@ export const receiveBusinesses = (businesses) => {
 };
 
 export const receiveBusiness = (business) => {
-    debugger
     return {
         type: RECEIVE_BUSINESS,
         business
@@ -20,7 +19,6 @@ export const receiveBusiness = (business) => {
 }
 
 export const fetchBusiness = id => dispatch => {
-    debugger
     return BusinessUtil.fetchBusiness(id).then(business => {
         return dispatch(receiveBusiness(business))
     })
