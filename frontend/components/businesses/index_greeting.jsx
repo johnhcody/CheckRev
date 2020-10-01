@@ -8,7 +8,7 @@ class IndexGreeting extends React.Component {
     }
 
     render() {
-
+        debugger
         if (this.props.currentUser) {
             return (
                 <div>
@@ -16,7 +16,6 @@ class IndexGreeting extends React.Component {
                         <div className="review-link">
                             <Link to='#'><button>Write a Review</button></Link>
                         </div>
-                        <div className="session-link"></div>
                         <div className="logout">
                             <GreetingDropdown logout={this.props.logout} currentUser={this.props.currentUser} />
                         </div>

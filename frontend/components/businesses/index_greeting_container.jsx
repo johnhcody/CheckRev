@@ -3,6 +3,7 @@ import Greeting from './greeting'
 import { login, logout } from '../../actions/session_actions'
 
 const mSTP = (state) => {
+    debugger
     const currentUser = state.entities.users[state.session.id]
     return {
         currentUser,
