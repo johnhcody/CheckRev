@@ -35,6 +35,7 @@ gem "aws-sdk-s3"
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'figaro'
 
+gem 'faker'
 
 
 group :development, :test do
@@ -45,7 +46,6 @@ group :development, :test do
   gem 'pry-rails'
   gem 'annotate'
   gem 'bourbon'
-  gem 'faker'
 end
 
 group :development do

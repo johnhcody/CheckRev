@@ -10,6 +10,7 @@ const mSTP = state => {
 }
 
 const mDTP = dispatch => {
+    debugger
     return {
         openModel: () => dispatch(openModel('see-more')),
         closeModal: () => dispatch(closeModal())
