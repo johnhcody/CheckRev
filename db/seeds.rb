@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require 'open-uri'
+require 'faker'
 
 CITIES = ["New York", "Boston", "San Francisco", "St. Louis", "Phoenix", "Chicago"]
 
@@ -61,64 +62,101 @@ bus2 = Business.create({
     business_category: 'Restauant'})
 bus2.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/logo.png"), filename: "logo.png")
 
-bus3 = Business.create({ 
-    name: 'Debugger Demolition', 
-    address_1: '193 county st', 
-    address_2: 'unit 4', 
-    city: 'Lakeville', 
-    state: 'MA', 
-    zipcode: 85001, 
-    longitude: -70.9723, 
-    latitude: 41.81051, 
-    web_address: 'jhc.com', 
-    phone_number: '684-938-4279', 
-    business_type: 'Web Development', 
-    business_category: 'Professional Services'})
-bus3.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/logo.png"), filename: "logo.png")
 
-bus4 = Business.create({
-    name: 'Barry\'s Restaurant', 
-    address_1: '193 county st', 
-    address_2: 'unit 4', 
+bos_bus = Business.create({
+    name: Faker::Restaurant.name,
+    address_1: rand(1..999).to_s + Faker::Address.street_name, 
+    address_2: Faker::Address.secondary_address, 
+    city: 'Boston', 
+    state: 'MA', 
+    zipcode: Faker::Number.number(digits: 5), 
+    longitude: -71.0677 + rand(-2.00..2.00),
+    latitude: 42.3565 + rand(-2.00..2.00), 
+    web_address: 'www.' + Faker::Restaurant.name + '.com', 
+    phone_number: Faker::PhoneNumber.cell_phone, 
+    business_type: 'Restaurant' ,
+    business_category: BUSINESS_CAT.sample})
+    bos_bus.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/logo.png"), filename: "logo.png")
+    
+chi_bus = Business.create({
+    name: Faker::Restaurant.name,
+    address_1: rand(1..999).to_s + Faker::Address.street_name, 
+    address_2: Faker::Address.secondary_address, 
+    city: 'Chicago', 
+    state: 'IL', 
+    zipcode: Faker::Number.number(digits: 5), 
+    longitude: 41.8593 + rand(-2.00..2.00),
+    latitude: -87.6298 + rand(-2.00..2.00), 
+    web_address: 'www.' + Faker::Restaurant.name + '.com', 
+    phone_number: Faker::PhoneNumber.cell_phone, 
+    business_type: 'Restaurant' ,
+    business_category: BUSINESS_CAT.sample})
+    chi_bus.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/logo.png"), filename: "logo.png")
+        
+        
+ny_bus = Business.create({
+    name: Faker::Restaurant.name,
+    address_1: rand(1..999).to_s + Faker::Address.street_name, 
+    address_2: Faker::Address.secondary_address, 
+    city: 'New York', 
+    state: 'NY', 
+    zipcode: Faker::Number.number(digits: 5), 
+    longitude: -87.687 + rand(-2.00..2.00),
+    latitude: 41.8593 + rand(-2.00..2.00), 
+    web_address: 'www.' + Faker::Restaurant.name + '.com', 
+    phone_number: Faker::PhoneNumber.cell_phone, 
+    business_type: 'Restaurant' ,
+    business_category: BUSINESS_CAT.sample})
+    ny_bus.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/logo.png"), filename: "logo.png")
+            
+            
+            
+phx_bus = Business.create({
+    name: Faker::Restaurant.name,
+    address_1: rand(1..999).to_s + Faker::Address.street_name, 
+    address_2: Faker::Address.secondary_address, 
+    city: 'San Francisco', 
+    state: 'CA', 
+    zipcode: Faker::Number.number(digits: 5), 
+    longitude: -112.1127 + rand(-2.00..2.00),
+    latitude: 33.4474 + rand(-2.00..2.00), 
+    web_address: 'www.' + Faker::Restaurant.name + '.com', 
+    phone_number: Faker::PhoneNumber.cell_phone, 
+    business_type: 'Restaurant' ,
+    business_category: BUSINESS_CAT.sample})
+    phx_bus.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/logo.png"), filename: "logo.png")
+                
+                    
+sf_bus = Business.create({
+    name: Faker::Restaurant.name,
+    address_1: rand(1..999).to_s + Faker::Address.street_name, 
+    address_2: Faker::Address.secondary_address, 
     city: 'Pheonix', 
     state: 'AZ', 
-    zipcode: 89384, 
-    longitude: -112.0773, 
-    latitude: 74.0053, 
-    web_address: 'jhc.com', 
-    phone_number: '684-938-4279', 
-    business_type: 'Restaurant', 
-    business_category: 'Restauant'})
-bus4.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/logo.png"), filename: "logo.png")
-
-bus5 = Business.create({ 
-    name: 'Speedy Auto Care', 
-    address_1: '193 county st', 
-    address_2: 'unit 4', 
-    city: 'Lakeville', 
-    state: 'MA', 
-    zipcode: 85001, 
-    longitude: -70.9745, 
-    latitude: 41.81017, 
-    web_address: 'jhc.com', 
-    phone_number: '684-938-4279', 
-    business_type: 'Web Development', 
-    business_category: 'Professional Services'})
-bus5.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/logo.png"), filename: "logo.png")
-
-bus6 = Business.create({
-    name: 'The Best Restaurant', 
-    address_1: '193 county st', 
-    address_2: 'Unit 4', 
+    zipcode: Faker::Number.number(digits: 5), 
+    longitude: -122.4398 + rand(-2.00..2.00),
+    latitude: 37.7555 + rand(-2.00..2.00), 
+    web_address: 'www.' + Faker::Restaurant.name + '.com', 
+    phone_number: Faker::PhoneNumber.cell_phone, 
+    business_type: 'Restaurant' ,
+    business_category: BUSINESS_CAT.sample})
+    sf_bus.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/logo.png"), filename: "logo.png")
+                    
+stl_bus = Business.create({
+    name: Faker::Restaurant.name,
+    address_1: rand(1..999).to_s + Faker::Address.street_name, 
+    address_2: Faker::Address.secondary_address, 
     city: 'Pheonix', 
     state: 'AZ', 
-    zipcode: 89384, 
-    longitude: -112.0771, 
-    latitude: 74.0055, 
-    web_address: 'jhc.com', 
-    phone_number: '684-938-4279', 
-    business_type: 'Restaurant', 
-    business_category: 'Restauant'})
-bus6.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/logo.png"), filename: "logo.png")
+    zipcode: Faker::Number.number(digits: 5), 
+    longitude: -90.2087 + rand(-2.00..2.00),
+    latitude: 38.6147 + rand(-2.00..2.00), 
+    web_address: 'www.' + Faker::Restaurant.name + '.com', 
+    phone_number: Faker::PhoneNumber.cell_phone, 
+    business_type: 'Restaurant' ,
+    business_category: BUSINESS_CAT.sample})
+    stl_bus.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/logo.png"), filename: "logo.png")
+                        
+                
 
 
