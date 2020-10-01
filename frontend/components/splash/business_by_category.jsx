@@ -16,7 +16,7 @@ class BusinessByCategory extends React.Component {
                 <div className="bus-by-cat-card-container">
                     <div className="bus-by-cat-card">
                         <Link to={`/search`} style={{ textDecoration: "none" }}>
-                        <a href="#">
+                        <a>
                             <img src={window.pro} />
                             <div className="bus-by-cat-text">
                         <p>Professional Services</p>
@@ -26,7 +26,7 @@ class BusinessByCategory extends React.Component {
                     </div>
                     <div className="bus-by-cat-card">
                         <Link to={`/search`} style={{ textDecoration: "none" }}>
-                        <a href="#">
+                        <a>
                             <img src={window.rest} />
                                 <div className="bus-by-cat-text">
                             <p>Restaurants</p>
@@ -36,7 +36,7 @@ class BusinessByCategory extends React.Component {
                     </div>
                     <div className="bus-by-cat-card">
                         <Link to={`/search`} style={{ textDecoration: "none" }}>
-                            <a href="#">
+                            <a>
                                 <img src={window.home} />
                                 <div className="bus-by-cat-text">
                                 <p>Home Services</p>

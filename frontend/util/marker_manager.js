@@ -10,7 +10,6 @@ class MarkerManager {
         businesses.forEach(business => busObj[business.id] = business);
 
 
-        console.log("here is a business");
 
         businesses.forEach(business => {
             if (!this.markers[business.id]) {
