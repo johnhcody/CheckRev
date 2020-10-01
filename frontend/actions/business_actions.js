@@ -11,11 +11,11 @@ export const receiveBusinesses = (businesses) => {
     }
 };
 
-export const receiveBusiness = (businessId) => {
+export const receiveBusiness = (business) => {
     debugger
     return {
         type: RECEIVE_BUSINESS,
-        businessId
+        business
     }
 }
 

@@ -20,11 +20,7 @@
         font-size: 51px;
         font-weight: bold;
     }
-    h2 {
-        font-size: 25px;
-        padding: 5px 0px 5px 0px;
-        color: #D32323;
-    }
+    
     h3 {
         padding: 5px 0px 5px 1px;
         color: gray;
@@ -37,8 +33,36 @@
         font-family: sans-serif;
         font-size: 16px;
     }
+    button {
+        margin-top: 20px;
+        padding: 11px;
+        background-color: #D32323;
+        height: 47px;
+        width: 165px;
+        font-weight: 600;
+        border-radius: 5px;
+        border: 2px solid #D32323;
+        font-size: 15px;
+        color: white;
+        outline: none;
+    }
 }
 
+.bus-show-rating {
+    display: flex;
+    flex-direction: row;
+    a {
+        font-size: 25px;
+        padding: 5px 0px 5px 0px;
+        color: #D32323;
+    }
+    h2 {
+        padding-left: 40px;
+        color: gray;
+        padding-top: 12px;
+        font-family: sans-serif;
+    }
+}
 
 .bus-show-body-wrapper {
     display: flex;
