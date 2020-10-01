@@ -4,8 +4,7 @@ import ShowImages from './show_images';
 import BusinessShowCard from './business_show_card';
 import BusinessShowInfo from './business_show_info';
 import HoursAndLocation from './hours_location';
-import ShowMap from './business_show_map';
-import ShowMapPlaceHolder from './show_map_placeholder';
+import ShowMap from './show_map';
 import BusinessHours from './business_hours';
 import Amenities from './amenities';
 import ReviewProfile from './review_profile';
@@ -52,7 +51,10 @@ class BusinessShow extends React.Component {
                             photoUrl={this.props.business.photoUrl}/>
                         <HoursAndLocation />
                     <div className="hours-and-map">
-                        <ShowMapPlaceHolder />
+                        <ShowMap 
+                        business={this.props.business}
+                        lat={this.props.business.latitude}
+                        lng={this.props.business.longitude}/>
                         <BusinessHours/>
                     </div>
                     <Amenities />

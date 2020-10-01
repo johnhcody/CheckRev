@@ -5,9 +5,6 @@ class MarkerManager {
     }
 
 
-
-
-
     updateMarkers(businesses) {
         let busObj = {};
         businesses.forEach(business => busObj[business.id] = business);
@@ -22,6 +19,7 @@ class MarkerManager {
             }
         })
     }
+
 
     createMarkerfromBusiness(business) {
         const position = new google.maps.LatLng(business.latitude, business.longitude);

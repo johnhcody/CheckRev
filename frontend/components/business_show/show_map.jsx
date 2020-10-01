@@ -2,8 +2,7 @@ import React from 'react';
 import MarkerManager from '../../util/marker_manager';
 
 
-
-class ShowMap extends React.Component {
+class MainMap extends React.Component {
     constructor(props) {
         super(props)
     }
@@ -11,13 +10,13 @@ class ShowMap extends React.Component {
     componentDidMount() {
 
         const mapOptions = {
-            center: { lat: 41.8459, lng: -70.9495 },
-            zoom: 10
+            center: { lat: this.props.lat, lng: this.props.lng },
+            zoom: 15
         };
 
         this.map = new google.maps.Map(this.mapNode, mapOptions);
         this.MarkerManager = new MarkerManager(this.map);
-        this.MarkerManager.updateMarkers(this.props.businesses);
+        this.MarkerManager.createMarkerfromBusiness(this.props.business);
     }
 
     componentDidUpdate() {
@@ -27,12 +26,12 @@ class ShowMap extends React.Component {
     }
     render() {
         return (
-            <div className="show-map-wrapper">
-                <div id="show-map-container" ref={map => this.mapNode = map}></div>
+            <div className="show-map-placeholder">
+                <div style={{ width: 315, height: 150 }} id="map-wrapper" ref={map => this.mapNode = map}></div>
             </div>
         )
     }
 }
 
 
-export default ShowMap;
+export default MainMap;
