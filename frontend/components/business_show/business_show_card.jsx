@@ -7,7 +7,7 @@ const BusinessShowCard = props => {
     const star = <FontAwesomeIcon icon={['fas', 'star']} />
     return (
         <div className="bus-show-text">
-            <h1>Dave's Diner</h1>
+            <h1>{props.name}</h1>
             <div>
                 <div className="bus-show-rating">
                     <a>{star} {star} {star} {star} {star} </a> 

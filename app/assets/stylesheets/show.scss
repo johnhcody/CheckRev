@@ -114,6 +114,7 @@
         padding-top: 100px;
         font-weight: 600;
         font-family: sans-serif;
+        font-size: 18px;
     }
 }
 
@@ -144,7 +145,7 @@
     flex-direction: column;
     h1 {
         padding-bottom: 11px;
-        font-size: 24px;
+        font-size: 18px;
         font-family: sans-serif;
         font-weight: 600;
         margin-top: 40px;
@@ -185,4 +186,82 @@
     h2 {
         
     }
+}
+
+.review-header header {
+    padding-top: 40px;
+    font-size: 19px;
+    font-family: sans-serif;
+    font-weight: 600;
+
+}
+
+.review-wrapper {
+    display: flex;
+    margin-top: 25px;
+}
+
+
+.review-user-wrapper {
+    display: flex;
+    align-items: flex-start;
+    font-family: sans-serif;
+    min-width: 260px;
+    padding-top: 6px;
+    a {
+        color: gray;
+        font-size: 34px;
+        padding: 4px 8px 4px 8px;
+        border-radius: 5px;
+        background-color: lightgray;
+    }
+    h1 {
+        color: #67917A;
+        padding: 0px 0px 4px 8px;
+        margin-top: -3px;
+    }
+    h2 {
+        padding: 3px 0px 4px 8px;
+        font-size: 13px;
+        font-weight: 600;
+    }
+    h3 {
+        padding: 3px 0px 4px 8px;
+        font-size: 13px;
+        color: gray;
+    }
+}
+
+.review-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 445px;
+    p {
+        font-family: sans-serif;
+        color: gray;
+        font-size: 14px;
+        line-height: 19px;
+        font-weight: 400;
+    }
+}
+
+.review-text-header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 6px;
+    a {
+        color: red;
+    }
+    h2 {
+        font-family: sans-serif;
+        font-size: 13px;
+        padding-left: 10px;
+        color: gray;
+    }
+    
+}
+
+.show-padding {
+    height: 500px;
+    width: 100%;
 }
