@@ -79,7 +79,10 @@ class BusinessShow extends React.Component {
                     </div>
                 </div>
                 <div className="bus-show-right-wrapper">
-                   <BusinessShowInfo />
+                   <BusinessShowInfo 
+                    phoneNumber={this.props.business.phoneNumber}
+                    webAddress={this.props.business.webAddress}
+                   />
                 </div>
             </div>
             <div className="show-padding">

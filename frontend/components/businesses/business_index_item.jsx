@@ -1,11 +1,12 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { Link } from 'react-router-dom'
 
 const BusinessIndexItem = props => {
     const utensils = <FontAwesomeIcon icon="utensils" />
     return (
-            <div className="bus-item-container">
-
+        <Link to={`/businesses/${props.id}`} style={{textDecoration: "none"}}><div className="bus-item-container">
+            
                 <div className="bus-photo">
                     <img src={props.photoUrl} alt="#"/>
                 </div>  
@@ -28,7 +29,7 @@ const BusinessIndexItem = props => {
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc fermentum sed sem vel elementum. Maecenas vitae porttitor nibh. Sed ante libero, commodo vel ipsum vitae, suscipit sollicitudin felis. Duis vitae tellus in.</p>
                     </div>
                 </div>
-            </div>
+            </div></Link>
     )
 }
 

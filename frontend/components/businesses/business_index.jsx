@@ -38,6 +38,7 @@ class BusinessIndex extends React.Component {
                         {
                             this.props.businesses.map(business => {  
                                 return <BusinessIndexItem 
+                                id={business.id}
                                 address1={business.address1}
                                 address2={business.address2}
                                 businessCategory={business.businessCategory}
