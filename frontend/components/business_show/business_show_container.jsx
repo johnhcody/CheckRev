@@ -11,8 +11,9 @@ const mSTP = (state, ownProps) => {
 };
 
 const mDTP = dispatch => {
+    debugger
     return {
-        fetchBusiness: businessId => dispatach(fetchBusiness(businessId))
+        fetchBusiness: businessId => dispatch(fetchBusiness(businessId))
     }
 }
 

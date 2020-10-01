@@ -1,14 +1,27 @@
 import React from 'react';
+import BusinessSearch from '../businesses/business_search';
+import ShowImages from './show_images';
+import BusinessShowCard from './business_show_card';
 
 class BusinessShow extends React.Component {
     constructor(props) {
         super(props)
     }
 
+    componentDidMount() {
+        debugger
+        this.props.fetchBusiness(this.props.match.params.postId);
+    }
+
     render() {
+        debugger
         return (
         <div>
-            <h1>hello from show page</h1>
+            <BusinessSearch />
+            <ShowImages />
+            <div className="bus-show-card-wraper">
+
+            </div>
         </div>
         )
     }

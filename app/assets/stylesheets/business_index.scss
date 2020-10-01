@@ -1,12 +1,13 @@
 .bus-nav-searchbar {
+    margin-bottom: 0px;
     position: fixed;
-    height: 57px;
+    height: 113px;
     background-color: white;
     display: flex;
     justify-content: initial;
     align-items: center;
     width: 100%;
-    padding: 20px;
+    padding: 2px 0px 14px 0px;
   img {
     height: 58px;
     width: 70px;
@@ -20,7 +21,7 @@
     margin: 0px 0px 0px 0px;
     background-color: #FEFEFE;
     font-family: sans-serif;
-    border-radius: 5px;
+    border-radius: 2px;
     box-sizing: border-box;
     height: 46px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -82,7 +83,7 @@
 .search-and-icons {
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 35px;
 }
 
 .bus-icons-parent {

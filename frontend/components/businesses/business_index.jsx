@@ -53,7 +53,6 @@ class BusinessIndex extends React.Component {
                             })
                         }
                         </div> 
-                        {/* tried putting a classname here and fixing position */}
                         <MainMap businesses={this.props.businesses} />
                     </div>
             </div>

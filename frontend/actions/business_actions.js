@@ -12,19 +12,19 @@ export const receiveBusinesses = (businesses) => {
 };
 
 export const receiveBusiness = (businessId) => {
+    debugger
     return {
         type: RECEIVE_BUSINESS,
         businessId
     }
 }
 
-
-
-export const fetchBusiness = id => dispatch => (
-    BusinessUtil.fetchBusiness(id).then(payload => (
-        dispatch(receiveBusiness(payload))
-    ))
-);
+export const fetchBusiness = id => dispatch => {
+    debugger
+    return BusinessUtil.fetchBusiness(id).then(business => {
+        return dispatch(receiveBusiness(business))
+    })
+}
 
 
 
