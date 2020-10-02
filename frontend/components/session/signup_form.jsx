@@ -96,7 +96,7 @@ class SessionForm extends React.Component {
                              />
                 <button>Sign Up</button>
                 <div className="form-footer">
-                <h4>Already on CheckRev? <Link to='/login' style={{ textDecoration: 'none', color: '#E33258' }}>Log In!</Link></h4>
+                                    <h4>Already on CheckRev? <Link to='/login' style={{ textDecoration: 'none', color: '#D32323' }}>Log In!</Link></h4>
                 </div>
             </form>
             </div>

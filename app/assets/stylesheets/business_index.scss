@@ -58,7 +58,7 @@
 }
 
 .bus-search-button {
-    background-color: #E33258;
+    background-color: $red;
     outline: none;
     text-transform: none;
     border-radius: 0px 5px 5px 0px;
@@ -415,7 +415,6 @@
     img {
     height: 200px;
     width: 200px;
-    border: 2px solid black;
     margin: 28px 0px 0px 25px;
     border-radius: 3px;
     }

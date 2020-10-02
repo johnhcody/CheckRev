@@ -45,7 +45,7 @@ bus1 = Business.create({
     phone_number: '684-938-4279', 
     business_type: 'Web Development', 
     business_category: 'Professional Services'})
-bus1.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/logo.png"), filename: "logo.png")
+bus1.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/rest1-daria.png"), filename: "logo.png")
 
 bus2 = Business.create({
     name: 'Dave\'s Diner', 
@@ -60,7 +60,7 @@ bus2 = Business.create({
     phone_number: '684-938-4279', 
     business_type: 'Restaurant', 
     business_category: 'Restauant'})
-bus2.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/logo.png"), filename: "logo.png")
+bus2.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/rest2-nastyasensei.png"), filename: "logo.png")
 
 
 bos_bus = Business.create({
@@ -76,7 +76,7 @@ bos_bus = Business.create({
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Restaurant' ,
     business_category: BUSINESS_CAT.sample})
-    bos_bus.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/logo.png"), filename: "logo.png")
+    bos_bus.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/rest3-chevanon.png"), filename: "logo.png")
     
 chi_bus = Business.create({
     name: Faker::Restaurant.name,
@@ -91,7 +91,7 @@ chi_bus = Business.create({
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Restaurant' ,
     business_category: BUSINESS_CAT.sample})
-    chi_bus.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/logo.png"), filename: "logo.png")
+    chi_bus.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/rest4-jeshoots.png"), filename: "logo.png")
         
         
 ny_bus = Business.create({
@@ -107,7 +107,7 @@ ny_bus = Business.create({
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Restaurant' ,
     business_category: BUSINESS_CAT.sample})
-    ny_bus.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/logo.png"), filename: "logo.png")
+    ny_bus.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/rest5-kaboompics.png"), filename: "logo.png")
             
             
             
@@ -124,7 +124,7 @@ phx_bus = Business.create({
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Restaurant' ,
     business_category: BUSINESS_CAT.sample})
-    phx_bus.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/logo.png"), filename: "logo.png")
+    phx_bus.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/rest6-pixabay.png"), filename: "logo.png")
                 
                     
 sf_bus = Business.create({
@@ -140,7 +140,7 @@ sf_bus = Business.create({
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Restaurant' ,
     business_category: BUSINESS_CAT.sample})
-    sf_bus.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/logo.png"), filename: "logo.png")
+    sf_bus.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/rest7-burak.png"), filename: "logo.png")
                     
 stl_bus = Business.create({
     name: Faker::Restaurant.name,
@@ -155,7 +155,7 @@ stl_bus = Business.create({
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Restaurant' ,
     business_category: BUSINESS_CAT.sample})
-    stl_bus.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/logo.png"), filename: "logo.png")
+    stl_bus.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/rest8-quang-nguyen-vinh.png"), filename: "logo.png")
                         
                 
 

@@ -271,7 +271,7 @@
 }
 
 .search-button {
-    background-color: #E33258;
+    background-color: $red;
     outline: none;
     text-transform: none;
     border-radius: 0px 5px 5px 0px;
@@ -330,7 +330,7 @@
     h2 {
         font-family: sans-serif;
         font-weight: 700;
-        color: #E33258;
+        color: $red;
         padding: 30px;
         font-size: 1.4em;
     }
@@ -403,7 +403,7 @@
     h2 {
        font-family: sans-serif;
         font-weight: 700;
-        color: #E33258;
+        color: $red;
         padding: 40px;
         font-size: 1.4em; 
     }
@@ -445,7 +445,7 @@
     h2 {
         font-family: sans-serif;
         font-weight: 600;
-        color: #E33258;
+        color: $red;
         padding: 40px;
         font-size: 1.0em;
     }
@@ -559,7 +559,7 @@
     h2 {
        font-family: sans-serif;
         font-weight: 900;
-        color: #E33258;
+        color: $red;
         padding: 30px;
         font-size: 1.4em; 
     }
@@ -698,7 +698,7 @@
     h2 {
         font-family: sans-serif;
         font-weight: 700;
-        color: #E33258;
+        color: $red;
         padding: 30px;
         font-size: 1.4em;
     }

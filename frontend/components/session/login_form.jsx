@@ -83,7 +83,7 @@ class LoginForm extends React.Component {
                             
 
                         <div className="form-footer">
-                            <p>No account? You can sign up <Link to='/signup' style={{ textDecoration: 'none', color: '#E33258' }}>here</Link></p>
+                                    <p>No account? You can sign up <Link to='/signup' style={{ textDecoration: 'none', color: '#D32323' }}>here</Link></p>
                         </div>
                         </form>
                         </div>
