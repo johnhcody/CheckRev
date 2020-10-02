@@ -33,7 +33,7 @@ Business.destroy_all
 
 
 bus1 = Business.create({ 
-    name: 'JC Web Dev', 
+    name: 'JC\'s Kitchen', 
     address_1: '193 county st', 
     address_2: 'unit 4', 
     city: 'Lakeville', 
@@ -72,7 +72,7 @@ bos_bus = Business.create({
     zipcode: Faker::Number.number(digits: 5), 
     longitude: -71.0677 + rand(-2.00..2.00),
     latitude: 42.3565 + rand(-2.00..2.00), 
-    web_address: 'www.' + Faker::Restaurant.name + '.com', 
+    web_address: 'www.' + Faker::Restaurant.name.split(' ').join('') + '.com', 
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Restaurant' ,
     business_category: BUSINESS_CAT.sample})
@@ -87,7 +87,7 @@ chi_bus = Business.create({
     zipcode: Faker::Number.number(digits: 5), 
     longitude: 41.8593 + rand(-2.00..2.00),
     latitude: -87.6298 + rand(-2.00..2.00), 
-    web_address: 'www.' + Faker::Restaurant.name + '.com', 
+    web_address: 'www.' + Faker::Restaurant.name.split(' ').join('') + '.com', 
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Restaurant' ,
     business_category: BUSINESS_CAT.sample})
@@ -103,7 +103,7 @@ ny_bus = Business.create({
     zipcode: Faker::Number.number(digits: 5), 
     longitude: -87.687 + rand(-2.00..2.00),
     latitude: 41.8593 + rand(-2.00..2.00), 
-    web_address: 'www.' + Faker::Restaurant.name + '.com', 
+    web_address: 'www.' + Faker::Restaurant.name.split(' ').join('') + '.com',
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Restaurant' ,
     business_category: BUSINESS_CAT.sample})
@@ -120,7 +120,7 @@ phx_bus = Business.create({
     zipcode: Faker::Number.number(digits: 5), 
     longitude: -112.1127 + rand(-2.00..2.00),
     latitude: 33.4474 + rand(-2.00..2.00), 
-    web_address: 'www.' + Faker::Restaurant.name + '.com', 
+    web_address: 'www.' + Faker::Restaurant.name.split(' ').join('') + '.com', 
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Restaurant' ,
     business_category: BUSINESS_CAT.sample})
@@ -136,7 +136,7 @@ sf_bus = Business.create({
     zipcode: Faker::Number.number(digits: 5), 
     longitude: -122.4398 + rand(-2.00..2.00),
     latitude: 37.7555 + rand(-2.00..2.00), 
-    web_address: 'www.' + Faker::Restaurant.name + '.com', 
+    web_address: 'www.' + Faker::Restaurant.name.split(' ').join('') + '.com',
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Restaurant' ,
     business_category: BUSINESS_CAT.sample})
@@ -151,7 +151,7 @@ stl_bus = Business.create({
     zipcode: Faker::Number.number(digits: 5), 
     longitude: -90.2087 + rand(-2.00..2.00),
     latitude: 38.6147 + rand(-2.00..2.00), 
-    web_address: 'www.' + Faker::Restaurant.name + '.com', 
+    web_address: 'www.' + Faker::Restaurant.name.split(' ').join('') + '.com', 
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Restaurant' ,
     business_category: BUSINESS_CAT.sample})
