@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 
 const BusinessIndexItem = props => {
     const utensils = <FontAwesomeIcon icon="utensils" />
+    const star = <FontAwesomeIcon icon={['fas', 'star']} />
     return (
         <Link to={`/businesses/${props.id}`} style={{textDecoration: "none"}}><div className="bus-item-container">
             
@@ -14,7 +15,7 @@ const BusinessIndexItem = props => {
                     <div className="bus-description">
                         <div className="left-wrapper">
                             <h1>{props.name}</h1>
-                            <h2>{utensils}{utensils}{utensils}{utensils}{utensils} 10 Reviews</h2>
+                            <h2>{star}{star}{star}{star}{star} 10 Reviews</h2>
                             <h3>amenities, amenities, amenities</h3>
                             <h4>delivery takeout outdoor seating</h4>
                         </div>

@@ -24,4 +24,9 @@ class Business < ApplicationRecord
 
     has_one_attached :photo
 
+    def self.in_bounds(bounds)
+        
+
+    end
+
 end

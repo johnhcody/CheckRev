@@ -9,7 +9,8 @@ function Modal({ modal, closeModal }) {
     let component;
     switch (modal) {
         case 'see-more':
-            component = <MoreFilters  /> 
+            debugger
+            component = <MoreFilters closeModal={closeModal} /> 
             break;
         default:
             return null;
