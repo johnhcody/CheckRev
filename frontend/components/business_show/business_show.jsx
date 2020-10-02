@@ -49,8 +49,8 @@ class BusinessShow extends React.Component {
                     <div className="hours-and-map">
                         <ShowMap 
                         business={this.props.business}
-                        lat={this.props.business.latitude}
-                        lng={this.props.business.longitude}/>
+                        lat={this.props.business.lat}
+                        lng={this.props.business.lng}/>
                         <BusinessHours/>
                     </div>
                     <Amenities />
