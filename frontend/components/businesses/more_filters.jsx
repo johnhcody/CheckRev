@@ -21,7 +21,7 @@ class MoreFilters extends React.Component {
                 <ul>
                     <div className="modal-top-title">
                         <header>More Features</header>
-                        <button className="close-modal-button" onClick={this.handleClick}>X</button>
+                        <button className="close-modal-button" onClick={this.props.closeModal}>X</button>
                     </div>
                         <div className="modal-category-container-wrapper">
                             <div className="modal-category-container">
