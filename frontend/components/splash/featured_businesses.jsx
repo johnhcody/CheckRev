@@ -23,7 +23,7 @@ class FeaturedBusinesses extends React.Component {
                             <a href="#" >
                                 <img src={window.construction} />
                                 <h1>Speedy Auto Repair</h1>
-                                <h2>{utensils}{utensils}{utensils} 10 reviews</h2>
+                                <h2>{solidStar}{solidStar}{solidStar} 10 reviews</h2>
                                 <h3>Business type</h3>
                                 <h3>location</h3>
                                 <h4>amenities</h4>
@@ -32,8 +32,8 @@ class FeaturedBusinesses extends React.Component {
                         <div className="featured-bus-card">
                             <a href="#" >
                                 <img src={window.construction} />
-                                <h1>Speedy Auto Repair</h1>
-                                <h2>{utensils}{utensils}{utensils} 10 reviews</h2>
+                                <h1>Creative Construction</h1>
+                                <h2>{solidStar}{solidStar}{solidStar} 10 reviews</h2>
                                 <h3>Business type</h3>
                                 <h3>location</h3>
                                 <h4>amenities</h4>
@@ -42,8 +42,8 @@ class FeaturedBusinesses extends React.Component {
                         <div className="featured-bus-card">
                             <a href="#" >
                                 <img src={window.construction} />
-                                <h1>Speedy Auto Repair</h1>
-                                <h2>{utensils}{utensils}{utensils} 10 reviews</h2>
+                                <h1>Subprime Lenders</h1>
+                                <h2>{solidStar}{solidStar}{solidStar} 10 reviews</h2>
                                 <h3>Business type</h3>
                                 <h3>location</h3>
                                 <h4>amenities</h4>

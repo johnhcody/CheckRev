@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_02_131703) do
+ActiveRecord::Schema.define(version: 2020_10_27_071922) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,27 @@ ActiveRecord::Schema.define(version: 2020_10_02_131703) do
     t.index ["lat"], name: "index_businesses_on_lat"
     t.index ["lng"], name: "index_businesses_on_lng"
     t.index ["name"], name: "index_businesses_on_name"
+  end
+
+  create_table "hours", force: :cascade do |t|
+    t.integer "business_id", null: false
+    t.datetime "sun_open"
+    t.datetime "sun_close"
+    t.datetime "mon_open"
+    t.datetime "mon_close"
+    t.datetime "tues_open"
+    t.datetime "tues_close"
+    t.datetime "wed_open"
+    t.datetime "wed_close"
+    t.datetime "thur_open"
+    t.datetime "thur_close"
+    t.datetime "fri_open"
+    t.datetime "fri_close"
+    t.datetime "sat_open"
+    t.datetime "sat_close"
+    t.string "notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "reviews", force: :cascade do |t|
