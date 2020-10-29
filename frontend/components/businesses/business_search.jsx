@@ -21,7 +21,7 @@ class BusinessSearch extends React.Component {
                     <form className="bus-search-parent">
                         <div className="bus-search-child">
                             <label className="search search-type">
-                            <input type="search" placeholder="plumbers, delivery, takeout" />
+                            <input id="filler" type="search" placeholder="plumbers, delivery, takeout" />
                             </label>
                             <label id="divider">|
                             <input className="search search-location" type="search" placeholder="Times Square, NY" />

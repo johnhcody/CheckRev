@@ -13,7 +13,7 @@ class Searchbar extends React.Component {
             <form className="search-parent">
                 <div className="search-child">
                     <label className="search search-type">  Find
-                        <input type="search" placeholder="plumbers, delivery, takeout" />
+                        <input id="filler" type="search" placeholder="plumbers, delivery, takeout" />
                     </label>
                     <label>Near
                         <input className="search search-location" type="search" placeholder="Times Square, NY" />
