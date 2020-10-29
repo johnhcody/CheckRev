@@ -154,7 +154,16 @@ ny_bus4 = Business.create({
     business_category: BUSINESS_CAT.sample})
     ny_bus4.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/rest5-kaboompics.png"), filename: "logo.png")
             
-            
+
+Review.destroy_all
+
+review_1 = Review.create({
+    business_id: Business.first.id,
+    body: "I love this place!",
+    price_rating: 5,
+    rating: 5,
+    author_id: User.first.id
+})
             
 # phx_bus = Business.create({
 #     name: Faker::Restaurant.name,

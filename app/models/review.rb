@@ -9,22 +9,28 @@
 #  rating       :integer
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
+#  author_id    :integer          not null
 #
 class Review < ApplicationRecord
 
-    validates :body, presence: { message: " - All Reviews must have text"}
-    validates :price_rating, presence: { message: " - Let people know what you thought of the price"}
+    #validates :body, presence: { message: " - All Reviews must have text"}
+    #validates :price_rating, presence: { message: " - Let people know what you thought of the price"}
     # validates_inclusion_of :price_rating, :in => 1..5, :message => "Price Ratings must be between 1 and 5"
-    validates_numericality_of :price_rating, value: {
-        greater_than: 0,
-        less_than: 6, 
-        message: "Price Ratings must be between 1 and 5" }
+    #validates_numericality_of :price_rating, value: {
+        # greater_than: 0,
+        # less_than: 6, 
+        # message: "Price Ratings must be between 1 and 5" }
     
-    has_one_attached :photo
+    #has_one_attached :photo
 
     belongs_to :business,
     primary_key: :id,
     foreign_key: :business_id,
     class_name: :Review
+
+    belongs_to :author,
+    primary_key: :id,
+    foreign_key: :author_id,
+    class_name: :User
 
 end

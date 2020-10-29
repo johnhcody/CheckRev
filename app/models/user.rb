@@ -27,6 +27,11 @@ class User < ApplicationRecord
     validates :birthdate, presence: { message: " - Please input your birthday (MM/DD/YYYY)" }
     validates :password_digest, :session_token, presence: true
 
+
+    has_many :reviews,
+    foreign_key: :author_id,
+    class_name: :Review
+
     after_initialize :ensure_session_token
 
     attr_reader :password
