@@ -27,7 +27,7 @@ function Amenities() {
                     <h2>Live Music</h2>
                 </div>
                 <div className="icon-bus-show-rating-right">
-                    <a>{bone}</a>
+                    <a>{wifi}</a>
                     <h2>Free Wifi</h2>
                 </div>
             </div>
