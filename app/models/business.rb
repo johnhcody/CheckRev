@@ -24,6 +24,11 @@ class Business < ApplicationRecord
 
     has_one_attached :photo
 
+    has_many :reviews,
+    primary_key: :id,
+    foreign_key: :business_id,
+    class_name: :Review
+
     def self.in_bounds(bounds)
         
 
