@@ -5,7 +5,7 @@ import reviewsReducer from './reviews_reducers';
 
 const entitiesReducer = combineReducers({
     users: usersReducer,
-    businesses: businessesReducer,
+    businesses: businessesReducer, 
     reviews: reviewsReducer
 });
 

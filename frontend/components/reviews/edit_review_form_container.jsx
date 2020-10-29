@@ -1,7 +1,6 @@
 import { connect } from 'react-redux';
 import ReviewForm from './review_form';
 import { fetchReview, updateReview } from '../../actions/review_actions';
-import { fetchReviews } from '../../util/review_api_util';
 
 const mSTP = (state, ownProps) => {
     return {
@@ -12,7 +11,7 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = dispatch => {
     return {
-        fetchReview: reviewId => dispatch(fetchReviews(reviewId)),
+        fetchReview: reviewId => dispatch(fetchReview(reviewId)),
         action: review => dispatch(updateReview(review))
     }
 }

@@ -13,3 +13,5 @@ const mDTP = dispatch => {
         action: review => dispatch(createReview(review))
     }
 }
+
+export default connect(mSTP, mDTP)(ReviewForm)

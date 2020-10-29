@@ -1,3 +1,3 @@
 json.key_format! camelize: :lower
 
-json.extract! business, :id, :business_id, :body, :price_rating, :rating
+json.extract! review, :id, :review_id, :body, :price_rating, :rating
