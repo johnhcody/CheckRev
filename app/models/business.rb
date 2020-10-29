@@ -29,6 +29,11 @@ class Business < ApplicationRecord
     foreign_key: :business_id,
     class_name: :Review
 
+    has_one :business_hours,
+    primary_key: :id,
+    foreign_key: :business_id,
+    class_name: :Hour
+
     def self.in_bounds(bounds)
         
 

@@ -7,6 +7,10 @@
 #                           POST   /api/session(.:format)                                                                   api/sessions#create {:format=>:json}
 #            api_businesses GET    /api/businesses(.:format)                                                                api/businesses#index {:format=>:json}
 #              api_business GET    /api/businesses/:id(.:format)                                                            api/businesses#show {:format=>:json}
+#               api_reviews GET    /api/reviews(.:format)                                                                   api/reviews#index {:format=>:json}
+#                           POST   /api/reviews(.:format)                                                                   api/reviews#create {:format=>:json}
+#                api_review GET    /api/reviews/:id(.:format)                                                               api/reviews#show {:format=>:json}
+#                           DELETE /api/reviews/:id(.:format)                                                               api/reviews#destroy {:format=>:json}
 #        rails_service_blob GET    /rails/active_storage/blobs/:signed_id/*filename(.:format)                               active_storage/blobs#show
 # rails_blob_representation GET    /rails/active_storage/representations/:signed_blob_id/:variation_key/*filename(.:format) active_storage/representations#show
 #        rails_disk_service GET    /rails/active_storage/disk/:encoded_key/*filename(.:format)                              active_storage/disk#show
