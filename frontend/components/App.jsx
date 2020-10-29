@@ -26,7 +26,7 @@ const App = () => (
             <AuthRoute exact path='/login' component={LoginFormContainer} />
             <AuthRoute exact path='/signup' component={SignupFormContainer} />
             <Route exact path='/search' component={BusinessIndexContainer} />
-            <Route path='/businesses/:businessId' component={BusinessShowContainer} />
+            <Route exact path='/businesses/:businessId' component={BusinessShowContainer} />
             <Route exact path='/businesses/:businessId/review-new' component={CreateReviewFormContainer} />
             <Route path='/businesses/:reviewId/review-edit' component={EditReviewFormContainer} />
         </Switch>
