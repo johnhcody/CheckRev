@@ -5,12 +5,12 @@
 #  id                :bigint           not null, primary key
 #  name              :string           not null
 #  address_1         :string           not null
-#  address_2         :string           not null
+#  address_2         :string
 #  city              :string           not null
 #  state             :string           not null
 #  zipcode           :integer          not null
-#  longitude         :float            not null
-#  latitude          :float            not null
+#  lng               :float            not null
+#  lat               :float            not null
 #  web_address       :string
 #  phone_number      :string
 #  business_type     :string
