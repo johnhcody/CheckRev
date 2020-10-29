@@ -20,6 +20,8 @@ class Review < ApplicationRecord
         less_than: 6, 
         message: "Price Ratings must be between 1 and 5" }
     
+    has_one_attached :photo
+
     belongs_to :business,
     primary_key: :id,
     foreign_key: :business_id,
