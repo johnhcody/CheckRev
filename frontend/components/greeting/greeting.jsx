@@ -26,7 +26,6 @@ class Greeting extends React.Component {
     render() {
         const { currentUser, logout } = this.props;
         if (currentUser) {
-            debugger
             return (
                 <div>
                     <div className="span-button">
@@ -41,7 +40,6 @@ class Greeting extends React.Component {
                 </div>
             )
         } else {
-            debugger
             return (
                 <div >
                     <div className="span-button">

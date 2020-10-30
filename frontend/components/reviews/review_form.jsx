@@ -4,26 +4,43 @@ import React from 'react';
 class ReviewForm extends React.Component {
     constructor(props) {
         super(props);
-        // this.state = this.props.review;
+        this.state = {
+            ready: false,
+            body: this.props.body,
+            busId: null,
+                    }
 
         // this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleSubmit(e) {
-        e.preventDefault();
-        this.props.action(this.state);
+    componentDidMount() {
+        const locArr = window.location.href.split('/');
+        const strId = locArr[locArr.length - 2];
+        const busId = parseInt(strId);
+        this.props.fetchBusinesses()
+        this.setState({
+            busId: [busId]
+        });
+        debugger
     }
 
-    update(field) {
-        return e => this.setState({ [field]: e.currentTarget.value })
-    }
+    // handleSubmit(e) {
+    //     e.preventDefault();
+    //     this.props.action(this.state);
+    // }
+
+    // update(field) {
+    //     return e => this.setState({ [field]: e.currentTarget.value })
+    // }
 
     render() {
-        return (
-            <div>
-                <h1>I am the Review Form</h1>
-            </div>
-        )
+        const business = this.props.allBusinesses[parseInt(window.location.href.split('/')[window.location.href.split('/').length - 2])]
+        debugger
+            return (
+                <div>
+                    <h1>I am the Review Form for {business.name}</h1>
+                </div>
+            )
     }
 }
 
