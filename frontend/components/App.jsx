@@ -10,7 +10,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import Modal from './businesses/modal_container';
 import BusinessShowContainer from './business_show/business_show_container';
-import CreateReviewFormContainer from './reviews/create_review_form_container';
+import Review from './reviews/review';
 import EditReviewFormContainer from './reviews/edit_review_form_container';
 import { faCheckSquare, faCoffee, faSearch, faUtensils, faHome, faConciergeBell, faStar, faCheck, faChevronDown, faUser, faWifi, faBone, faMusic, faCarrot  } from '@fortawesome/free-solid-svg-icons'
 
@@ -27,7 +27,7 @@ const App = () => (
             <AuthRoute exact path='/signup' component={SignupFormContainer} />
             <Route exact path='/search' component={BusinessIndexContainer} />
             <Route exact path='/businesses/:businessId' component={BusinessShowContainer} />
-            <Route exact path='/businesses/:businessId/review-new' component={CreateReviewFormContainer} />
+            <Route exact path='/businesses/:businessId/review-new' component={Review} />
             <Route path='/businesses/:reviewId/review-edit' component={EditReviewFormContainer} />
         </Switch>
     </div>

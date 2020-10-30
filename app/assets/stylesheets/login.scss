@@ -1,15 +1,14 @@
 
 
-.navbar-parent ul {
+.navbar-parent{
+    height: 64px;
     display: flex;
-    background-color: #67917A;
+    background-color: $red;
     justify-content: center;
-}
-
-.navbar-logo {
-    display: flex;
-    max-height: 80px;
-    padding-top: 10px;
+    img {
+        max-height: 77px;
+        margin: -2px 0px 0px 0px 0px;
+    }
 }
 
 .form-wrap-all {

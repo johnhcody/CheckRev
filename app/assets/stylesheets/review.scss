@@ -1,0 +1,16 @@
+.review-navbar-parent {
+    height: 64px;
+    display: flex;
+    background-color: $red;
+    justify-content: space-around;
+    img {
+        max-height: 77px;
+    }
+}
+
+.review-greeting-wrapper {
+    margin-top: -23px;
+    #signup {
+        background-color: blue;
+    }
+}

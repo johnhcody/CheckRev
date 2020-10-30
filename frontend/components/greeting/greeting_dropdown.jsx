@@ -22,10 +22,6 @@ class GreetingDropdown extends React.Component {
 
     render() {
         const user = <FontAwesomeIcon icon="user" />
-        const utensils = <FontAwesomeIcon icon="utensils" />
-        const home = <FontAwesomeIcon icon="home" />
-        const bell = <FontAwesomeIcon icon="concierge-bell" />
-        const chevron = <FontAwesomeIcon icon="fa-chevron-down" />
         return (
             <div>
                 <button className="splash-drop-button" onFocus={this.whenFocusOrBlur} onBlur={this.whenFocusOrBlur}><a>{user}</a>

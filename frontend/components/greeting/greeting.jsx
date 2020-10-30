@@ -26,11 +26,12 @@ class Greeting extends React.Component {
     render() {
         const { currentUser, logout } = this.props;
         if (currentUser) {
+            debugger
             return (
                 <div>
                     <div className="span-button">
                         <div className="review-link">
-                            <Link to='#'><button>Write a Review</button></Link>
+                            {window.location.href.includes('businesses') || window.location.href.includes('search') ? null : <Link to='#' ><button>Write a Review</button></Link>}
                         </div>
                     <div className="session-link"></div>
                         <div className="logout">
@@ -40,11 +41,12 @@ class Greeting extends React.Component {
                 </div>
             )
         } else {
+            debugger
             return (
                 <div >
                     <div className="span-button">
                         <div className="review-link">
-                        <Link to='#' ><button>Write a Review</button></Link>
+                            {window.location.href.includes('businesses') || window.location.href.includes('search') ? null : <Link to='#' ><button>Write a Review</button></Link>}
                         </div>
                         <div className="session-link">
                         <button onClick={this.loginDemo}>Demo</button>
