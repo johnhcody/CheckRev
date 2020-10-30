@@ -14,14 +14,7 @@ class ReviewForm extends React.Component {
     }
 
     componentDidMount() {
-        const locArr = window.location.href.split('/');
-        const strId = locArr[locArr.length - 2];
-        const busId = parseInt(strId);
         this.props.fetchBusinesses()
-        this.setState({
-            busId: [busId]
-        });
-        debugger
     }
 
     // handleSubmit(e) {
@@ -37,8 +30,10 @@ class ReviewForm extends React.Component {
         const business = this.props.allBusinesses[parseInt(window.location.href.split('/')[window.location.href.split('/').length - 2])]
         debugger
             return (
-                <div>
-                    <h1>I am the Review Form for {business.name}</h1>
+                <div className="review-form-wrapper">
+                    <div className="review-form">
+                        <h1>{business.name}</h1>
+                    </div>
                 </div>
             )
     }

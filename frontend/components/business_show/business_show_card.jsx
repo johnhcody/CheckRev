@@ -1,10 +1,12 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 
 
 
 const BusinessShowCard = props => {
     const star = <FontAwesomeIcon icon={['fas', 'star']} />
+    debugger
     return (
         <div className="bus-show-text">
             <h1>{props.name}</h1>
@@ -18,7 +20,7 @@ const BusinessShowCard = props => {
             </div>
             <h3>$$$</h3>
             <h4>10:00 AM - 7:00 PM</h4>
-            <button> {star} Write a Review</button>
+            <Link to={`/businesses/${props.id}/review-new`}><button> {star} Write a Review</button></Link> 
         </div>
     )
 }

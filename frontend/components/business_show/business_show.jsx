@@ -34,6 +34,7 @@ class BusinessShow extends React.Component {
             <div className="bus-show-body-wrapper">
                 <div className="bus-show-left-wrapper">
                         <BusinessShowCard 
+                            id={this.props.business.id}
                             name={this.props.business.name}
                             address1={this.props.business.address1}
                             address2={this.props.business.address2}
