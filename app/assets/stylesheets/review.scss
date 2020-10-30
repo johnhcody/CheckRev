@@ -30,7 +30,24 @@
     }
     .rating-placeholder {
         width: 100%;
-        height: 100px;
+        height: 76px;
+        display: flex;
+        margin: 0px 0px 0px 18px;
+        justify-content: flex-start;
+        i {
+            color: $red;
+            font-size: 20px;
+            padding: 26px 6px 0px 0px;
+        }
+        .fa-star {
+            &::before {
+                content: "\f005";
+                background-color: $red;
+                border: 6px solid $red;
+                border-radius: 6px;
+                color: white;
+            }
+        }
     }
     h1 {
         font-family: Poppins, Helvetica Neue,Helvetica,Arial,sans-serif;
@@ -43,16 +60,19 @@
         display: flex;
         justify-content: center;
         textarea {
-            min-width: 95%;
+            min-width: 94%;
             min-height: 240px;
             border: none;
             resize: none;
             font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
             font-size: 16px;
             line-height: 22px;
-            color: #bab6b6;
+            color: $gray;
             outline: none;
             overflow: auto;
+            &::placeholder {
+                color: #bab6b6;
+            }
         }
     }
     button {

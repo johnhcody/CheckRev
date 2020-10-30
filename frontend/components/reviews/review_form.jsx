@@ -60,9 +60,11 @@ class ReviewForm extends React.Component {
                         <h1>{business.name}</h1>
                         <form onSubmit={this.handleSubmit}>
                             <div className="rating-and-text-wrapper">
-                                <div className="rating-placeholder"></div>
+                                <div className="rating-placeholder">
+                                    <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i>
+                                </div>
                                 <div className="textarea-wrapper">
-                                    <textarea name="" id=""></textarea>
+                                    <textarea name="" id="" placeholder="Love that all the staff are wearing masks and gloves, it makes me feel that they’re prioritizing health and safety. Unfortunately when I got home I noticed they gave me the wrong size. I understand things are difficult with COVID and that many businesses are short staffed, even if this means I have to go back..."></textarea>
                                 </div>
                             </div>
                             <button>Post Review</button>
