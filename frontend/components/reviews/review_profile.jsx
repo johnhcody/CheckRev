@@ -1,8 +1,9 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-function ReviewProfile() {
+function ReviewProfile(props) {
     const user = <FontAwesomeIcon icon="user" />
+    debugger
     return (
         <div className="review-user-wrapper">
             <div className="user-img">

@@ -11,7 +11,7 @@ import ReviewProfile from '../reviews/review_profile';
 import ReviewText from '../reviews/review_text';
 import Footer from '../splash/footer';
 import Copyright from '../splash/copyright';
-//import ReviewIndex from '../reviews/review_index';
+import ReviewIndex from '../reviews/review_index';
 
 class BusinessShow extends React.Component {
     constructor(props) {
@@ -56,7 +56,11 @@ class BusinessShow extends React.Component {
                         <BusinessHours/>
                     </div>
                     <Amenities />
-                    <div className="review-header">
+                    <ReviewIndex 
+                        reviews={this.props.business.reviews}
+                        allUsers={this.props.allUsers}
+                    />
+                    {/* <div className="review-header">
                         <header>Recent Reviews</header> 
                     </div> 
                     <div className="review-wrapper">
@@ -74,7 +78,7 @@ class BusinessShow extends React.Component {
                     <div className="review-wrapper">
                         <ReviewProfile />
                         <ReviewText />
-                    </div>
+                    </div> */}
                 </div>
                 <div className="bus-show-right-wrapper">
                    <BusinessShowInfo 
