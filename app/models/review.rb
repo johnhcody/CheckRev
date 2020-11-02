@@ -14,10 +14,10 @@
 class Review < ApplicationRecord
 
     validates :body, presence: { message: " - All Reviews must have text"}
-    validates_numericality_of :price_rating, value: {
+    validates_numericality_of :rating, value: {
         greater_than: 0,
         less_than: 6, 
-        message: "Price Ratings must be between 1 and 5" }
+        message: "Ratings must be between 1 and 5" }
     
     has_one_attached :photo
 

@@ -160,7 +160,6 @@ Review.destroy_all
 review_1 = Review.create({
     business_id: Business.first.id,
     body: "I love this place!",
-    price_rating: 5,
     rating: 5,
     author_id: User.first.id
 })

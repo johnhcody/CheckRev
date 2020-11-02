@@ -1,4 +1,5 @@
 import React from 'react';
+import { Redirect, withRouter, useHistory } from 'react-router-dom';
 
 
 class ReviewForm extends React.Component {
@@ -8,7 +9,8 @@ class ReviewForm extends React.Component {
             body: this.props.body,
             rating: 5,
             businessId: this.props.busId,
-            authorId: this.props.currentUser.id
+            authorId: this.props.currentUser.id,
+            ready: false
                     }
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -23,6 +25,9 @@ class ReviewForm extends React.Component {
         debugger
         e.preventDefault();
         this.props.action(this.state);
+        this.setState({ready: true})
+        debugger
+        
     }
 
     handleChange(field) {
@@ -55,9 +60,11 @@ class ReviewForm extends React.Component {
     }
 
     render() {
-        // const business = this.props.allBusinesses[parseInt(window.location.href.split('/')[window.location.href.split('/').length - 2])]
+        const redirectToShow = this.state.ready;
+        if (redirectToShow) {
+            return <Redirect to={`/businesses/${this.props.busId}`} />
+        }
         const business = this.props.business[0]
-        debugger
             if (this.props.business.length === 0) {
                 return null;
             } else {
@@ -83,4 +90,4 @@ class ReviewForm extends React.Component {
     }
 }
 
-export default ReviewForm;
+export default withRouter(ReviewForm);
