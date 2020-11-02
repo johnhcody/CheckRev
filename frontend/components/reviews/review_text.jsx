@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ReviewProfile from './review_profile';
+import { formatDate } from '../../util/date_utils';
 
 function ReviewText(props) {
     debugger
@@ -29,7 +30,7 @@ function ReviewText(props) {
         <div className="review-text-wrapper">
             <div className="review-text-header">
                 {renderRating(props.review.rating)}
-                <h2>{props.review.created_at}</h2>
+                <h2>{formatDate(props.review.created_at)}</h2>
             </div>
             <p>{props.review.body}</p>
         </div>
