@@ -3,15 +3,15 @@ import FeaturedBusinesses from './featured_businesses';
 
 const mSTP = state => {
     return {
-
+        businesses: Object.values(state.entities.businesses)
     }
 }
 
 const mDTP = dispatch => {
     return {
-
+        fetchBusinesses: () => dispatch(fetchBusinesses())
     }
 }
 
 
-export default connect(null, null)(FeaturedBusinesses);
+export default connect(mSTP, mDTP)(FeaturedBusinesses);

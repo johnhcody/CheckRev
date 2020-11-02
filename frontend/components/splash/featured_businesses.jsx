@@ -8,10 +8,15 @@ class FeaturedBusinesses extends React.Component {
         super(props)
     }
 
+    componentDidMount() {
+        this.props.fetchBusinesses()
+    }
+
     render() {
         const solidStar = <FontAwesomeIcon icon={["fas", "star"]} />
         const regStar = <FontAwesomeIcon icon={["far", "star"]} />
         const utensils = <FontAwesomeIcon icon="utensils" />
+        debugger
         return (
             <div>
                 <div className="featured-bus-title">
