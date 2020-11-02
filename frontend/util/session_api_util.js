@@ -22,9 +22,14 @@ export const logout = () => {
 export const signup = (user) => {
     fetch(`http://ZiptasticAPI.com/${user.zipcode}`)
         .then(response => response.json())
-        .then(data => console.log(data));
-    debugger
-    return $.ajax({
+        .then(data => user['data'] = data);
+
+        console.log('user')
+        console.log(user)
+        console.log('data')
+        console.log(data)
+
+    setTimeout( () => $.ajax({
         method: "POST",
         url: "/api/users",
         data: { 
@@ -36,8 +41,11 @@ export const signup = (user) => {
                 password: user.password,
                 zipcode: user.zipcode,
                 birthdate: user.birthdate,
-                errors: user.errors
+                errors: user.errors,
+                state: user.data.state,
+                city: user.data.city.charAt(0) + user.data.city.slice(1).toLowerCase()
             }
          }
-    })
+    }), 2000);
+    
 }

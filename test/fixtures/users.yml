@@ -12,6 +12,8 @@
 #  birthdate       :datetime
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  state           :string
+#  city            :string
 #
 
 # This model initially had no columns defined. If you add columns to the
