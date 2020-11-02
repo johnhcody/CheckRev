@@ -24,10 +24,9 @@ class BusinessShow extends React.Component {
     }
     
     render() {
-        if (!this.props.business) {
+        if (!this.props.business || !this.props.allUsers) {
             return null;
         } else {
-            debugger
         return (
         <div>
             <BusinessSearch />
@@ -60,25 +59,6 @@ class BusinessShow extends React.Component {
                         reviews={this.props.business.reviews}
                         allUsers={this.props.allUsers}
                     />
-                    {/* <div className="review-header">
-                        <header>Recent Reviews</header> 
-                    </div> 
-                    <div className="review-wrapper">
-                        <ReviewProfile />
-                        <ReviewText />
-                    </div>
-                    <div className="review-wrapper">
-                        <ReviewProfile />
-                        <ReviewText />
-                    </div>
-                    <div className="review-wrapper">
-                        <ReviewProfile />
-                        <ReviewText />
-                    </div>
-                    <div className="review-wrapper">
-                        <ReviewProfile />
-                        <ReviewText />
-                    </div> */}
                 </div>
                 <div className="bus-show-right-wrapper">
                    <BusinessShowInfo 

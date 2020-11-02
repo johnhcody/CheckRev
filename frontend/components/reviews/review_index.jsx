@@ -14,7 +14,10 @@ class ReviewIndex extends React.Component {
 
     render() {
         debugger
-        return (
+        if (typeof this.props.allUsers === 'undefined' || typeof this.props.reviews === 'undefined') {
+            return null
+        } else {
+            return (
             <div>
             <div className="review-header">
                 <header>Recent Reviews</header>
@@ -24,12 +27,14 @@ class ReviewIndex extends React.Component {
                     //this.renderProfile(review)
                     return <ReviewText 
                     review={review}
-                    author={this.props.allUsers[review.authorId]}
+                    key={review.id}
+                    author={this.props.allUsers[review.author_id]}
                     />
                 })
             }
             </div>
-        )
+        )}
+        
     }
 }
 

@@ -4,7 +4,6 @@ import ReviewProfile from './review_profile';
 import { formatDate } from '../../util/date_utils';
 
 function ReviewText(props) {
-    debugger
     
     function renderRating(rating) {
         const star = <FontAwesomeIcon icon={['fas', 'star']} />
@@ -23,7 +22,7 @@ function ReviewText(props) {
                 break;
         }
     }
-
+    debugger
     return (
     <div className="review-text-and-profile-wrapper">
         <ReviewProfile author={props.author}/>

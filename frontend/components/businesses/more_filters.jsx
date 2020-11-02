@@ -9,7 +9,6 @@ class MoreFilters extends React.Component {
     }
 
     handleClick() {
-        debugger
         return () => {
             this.props.closeModal()
         }

@@ -1,9 +1,7 @@
 class Api::ReviewsController < ApplicationController
 
      def index 
-        debugger
         @reviews = Review.all.where(business_id: params[:business_id])
-        debugger
     end
     
     def show
