@@ -1,5 +1,6 @@
 import { fetchBusiness } from '../../actions/business_actions';
 import { fetchReviews } from '../../actions/review_actions';
+import { fetchUsers } from '../../actions/user_actions';
 import BusinessShow from './business_show';
 import { connect } from 'react-redux';
 
@@ -15,7 +16,8 @@ const mSTP = (state, ownProps) => {
 const mDTP = dispatch => {
     return {
         fetchBusiness: businessId => dispatch(fetchBusiness(businessId)),
-        fetchReviews: () => dispatch(fetchReviews())
+        fetchReviews: () => dispatch(fetchReviews()),
+        fetchUsers: () => dispatch(fetchUsers())
     }
 }
 
