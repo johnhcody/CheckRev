@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import BusinessReviewCard from './business_review_cards'
 import FeaturedBusineesItem from './featured_business_item';
-
+import { Link } from 'react-router-dom';
 
 class FeaturedBusinesses extends React.Component {
     constructor(props) {
@@ -19,7 +19,6 @@ class FeaturedBusinesses extends React.Component {
         const utensils = <FontAwesomeIcon icon="utensils" />
         const numBusinesses = 3;
         const featuredItems = this.props.businesses.slice(0, numBusinesses)
-        debugger
         return (
             <div>
                 <div className="featured-bus-title">
@@ -36,12 +35,13 @@ class FeaturedBusinesses extends React.Component {
                         type={business.businessType}
                         city={business.city}
                         photoUrl={business.photoUrl}
+                        state={business.state}
                         />
                     })}
                     </div>
                 </div>
                 <div className="featured-bus-footer">
-                    <p><a href="#">See all businesses</a></p>
+                    <Link to={'search/'}>See all businesseses</Link>
                 </div>
             </div>
         )

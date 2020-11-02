@@ -484,7 +484,7 @@
     margin: 10px;
     img {
         width: 100%;
-        height: 55%;
+        height: 64%;
         border-radius: 5px 5px 0px 0px;
     }
     h1 {
@@ -540,7 +540,7 @@
         color: $green;
         text-decoration-line: none;
         &:hover {
-            border-bottom: 2px solid $green;
+            text-decoration-line: underline;
         }
     }
 }
