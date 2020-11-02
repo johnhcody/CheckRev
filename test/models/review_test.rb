@@ -5,7 +5,7 @@
 #  id           :bigint           not null, primary key
 #  business_id  :integer          not null
 #  body         :text             not null
-#  price_rating :integer          not null
+#  price_rating :integer
 #  rating       :integer
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null

@@ -5,13 +5,13 @@ class ReviewForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            ready: false,
             body: this.props.body,
-            busId: '',
-            rating: "0"
+            rating: 5,
+            businessId: this.props.busId,
+            authorId: this.props.currentUser.id
                     }
-        
-        // this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     componentDidMount() {
@@ -71,7 +71,7 @@ class ReviewForm extends React.Component {
                                         <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i>
                                     </div>
                                     <div className="textarea-wrapper">
-                                        <textarea name="" id="" placeholder="Love that all the staff are wearing masks and gloves, it makes me feel that they’re prioritizing health and safety. Unfortunately when I got home I noticed they gave me the wrong size. I understand things are difficult with COVID and that many businesses are short staffed, even if this means I have to go back..."></textarea>
+                                        <textarea name="" id="" onChange={this.handleChange('body')} placeholder="Love that all the staff are wearing masks and gloves, it makes me feel that they’re prioritizing health and safety. Unfortunately when I got home I noticed they gave me the wrong size. I understand things are difficult with COVID and that many businesses are short staffed, even if this means I have to go back..."></textarea>
                                     </div>
                                 </div>
                                 <button>Post Review</button>

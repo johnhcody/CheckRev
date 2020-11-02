@@ -7,12 +7,13 @@ const mSTP = (state, ownProps) => {
     const locArr = window.location.href.split('/');
     const strId = locArr[locArr.length - 2];
     const busId = parseInt(strId);
-    debugger
+    const currentUser = state.entities.users[state.session.id]
     return {
         formType: 'Write a Review',
         business: Object.values(state.entities.businesses),
         body: '',
-        busId
+        busId,
+        currentUser
     }
 }
 

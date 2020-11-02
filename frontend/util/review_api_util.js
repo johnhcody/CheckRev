@@ -10,19 +10,37 @@ export const fetchReview = reviewId => (
     })
 );
 
-export const createReview = review => (
-    $.ajax({
+export const createReview = review => {
+    debugger
+    return $.ajax({
         url: `api/reviews/`,
         method: 'POST',
-        data: { review }
+        data: {
+            review: {
+                id: review.id,
+                business_id: review.businessId,
+                rating: review.rating,
+                author_id: review.authorId,
+                body: review.body
+            }
+        }
     })
-);
+
+};
 
 export const updateReview = review => (
     $.ajax({
         url: `/api/reviews/${review.id}`,
         method: 'patch',
-        data: { review }
+        data: {
+            review: {
+                id: review.id,
+                business_id: review.businessId,
+                rating: rating,
+                author_id: authorId,
+                body: body
+            }
+        }
     })
 );
 
