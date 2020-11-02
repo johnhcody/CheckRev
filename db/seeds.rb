@@ -47,20 +47,20 @@ bus1 = Business.create({
     business_category: 'Professional Services'})
 bus1.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/rest1-daria.png"), filename: "logo.png")
 
-bus2 = Business.create({
-    name: 'Dave\'s Diner', 
-    address_1: '193 county st', 
-    address_2: 'unit 4', 
-    city: 'Pheonix', 
-    state: 'AZ', 
-    zipcode: 89384, 
-    lng: -112.0771, 
-    lat: 74.0063, 
-    web_address: 'jhc.com', 
-    phone_number: '684-938-4279', 
-    business_type: 'Restaurant', 
-    business_category: 'Restauant'})
-bus2.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/rest2-nastyasensei.png"), filename: "logo.png")
+# bus2 = Business.create({
+#     name: 'Dave\'s Diner', 
+#     address_1: '193 county st', 
+#     address_2: 'unit 4', 
+#     city: 'Pheonix', 
+#     state: 'AZ', 
+#     zipcode: 89384, 
+#     lng: -112.0771, 
+#     lat: 74.0063, 
+#     web_address: 'jhc.com', 
+#     phone_number: '684-938-4279', 
+#     business_type: 'Restaurant', 
+#     business_category: 'Restauant'})
+# bus2.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/rest2-nastyasensei.png"), filename: "logo.png")
 
 
 bos_bus = Business.create({
@@ -165,20 +165,20 @@ review_1 = Review.create({
     author_id: User.first.id
 })
             
-# phx_bus = Business.create({
-#     name: Faker::Restaurant.name,
-#     address_1: rand(1..999).to_s + Faker::Address.street_name, 
-#     address_2: Faker::Address.secondary_address, 
-#     city: 'San Francisco', 
-#     state: 'CA', 
-#     zipcode: Faker::Number.number(digits: 5), 
-#     lng: -112.1127 + rand(-2.00..2.00),
-#     lat: 33.4474 + rand(-2.00..2.00), 
-#     web_address: 'www.' + Faker::Restaurant.name.split(' ').join('') + '.com', 
-#     phone_number: Faker::PhoneNumber.cell_phone, 
-#     business_type: 'Restaurant' ,
-#     business_category: BUSINESS_CAT.sample})
-#     phx_bus.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/rest6-pixabay.png"), filename: "logo.png")
+phx_bus = Business.create({
+    name: Faker::Restaurant.name,
+    address_1: rand(1..999).to_s + Faker::Address.street_name, 
+    address_2: Faker::Address.secondary_address, 
+    city: 'San Francisco', 
+    state: 'CA', 
+    zipcode: Faker::Number.number(digits: 5), 
+    lng: -112.1127 + rand(-2.00..2.00),
+    lat: 33.4474 + rand(-2.00..2.00), 
+    web_address: 'www.' + Faker::Restaurant.name.split(' ').join('') + '.com', 
+    phone_number: Faker::PhoneNumber.cell_phone, 
+    business_type: 'Restaurant' ,
+    business_category: BUSINESS_CAT.sample})
+    phx_bus.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/rest6-pixabay.png"), filename: "logo.png")
                 
                     
 # sf_bus = Business.create({
