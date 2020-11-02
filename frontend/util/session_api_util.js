@@ -20,6 +20,10 @@ export const logout = () => {
 }
 
 export const signup = (user) => {
+    fetch(`http://ZiptasticAPI.com/${user.zipcode}`)
+        .then(response => response.json())
+        .then(data => console.log(data));
+    debugger
     return $.ajax({
         method: "POST",
         url: "/api/users",
