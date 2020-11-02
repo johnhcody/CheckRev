@@ -1,4 +1,4 @@
-import * as UserApiUtil from '../util/u'
+import * as UserApiUtil from '../util/user_api_util';
 
 
 export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
@@ -11,7 +11,7 @@ const receiveCurrentUser = (user) => {
     }
 }
 
-const receiveAllUsers = () => {
+const receiveAllUsers = (users) => {
     return {
         type: RECEIVE_ALL_USERS,
         users

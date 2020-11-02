@@ -9,7 +9,16 @@ class ReviewIndex extends React.Component {
     render() {
         debugger
         return (
-            null
+            <>
+            <div className="review-header">
+                <header>Recent Reviews</header>
+            </div>
+            {
+                this.props.reviews.map(review => {
+                    return <ReviewProfile />
+                })
+            }
+            </>
         )
     }
 }

@@ -2,7 +2,8 @@
 #
 #                    Prefix Verb   URI Pattern                                                                              Controller#Action
 #                      root GET    /                                                                                        static_pages#root
-#                 api_users POST   /api/users(.:format)                                                                     api/users#create {:format=>:json}
+#                 api_users GET    /api/users(.:format)                                                                     api/users#index {:format=>:json}
+#                           POST   /api/users(.:format)                                                                     api/users#create {:format=>:json}
 #               api_session DELETE /api/session(.:format)                                                                   api/sessions#destroy {:format=>:json}
 #                           POST   /api/session(.:format)                                                                   api/sessions#create {:format=>:json}
 #            api_businesses GET    /api/businesses(.:format)                                                                api/businesses#index {:format=>:json}
