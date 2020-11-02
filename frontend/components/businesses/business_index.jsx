@@ -49,6 +49,7 @@ class BusinessIndex extends React.Component {
                                 webAddress={business.webAddress}
                                 zipcode={business.zipcode}
                                 photoUrl={business.photoUrl}
+                                reviews={this.props.reviews}
                                 key={business.id}
                                 />
                             })

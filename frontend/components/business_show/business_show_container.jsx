@@ -5,9 +5,10 @@ import { connect } from 'react-redux';
 
 
 const mSTP = (state, ownProps) => {
-    debugger
     return {
-        business: state.entities.businesses[ownProps.match.params.businessId]
+        business: state.entities.businesses[ownProps.match.params.businessId],
+        allUsers: state.entities.users,
+        reviews: typeof state.entities.businesses[ownProps.match.params.businessId] === 'undefined' ? [] : Object.values(state.entities.businesses[ownProps.match.params.businessId].reviews)
     }
 };
 
