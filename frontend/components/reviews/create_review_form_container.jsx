@@ -10,15 +10,16 @@ const mSTP = (state, ownProps) => {
     debugger
     return {
         formType: 'Write a Review',
-        allBusinesses: state.entities.businesses,
-        body: ''
+        business: Object.values(state.entities.businesses),
+        body: '',
+        busId
     }
 }
 
 const mDTP = dispatch => {
     return {
         action: review => dispatch(createReview(review)),
-        fetchBusinesses: () => dispatch(fetchBusiness())
+        fetchBusiness: (businessId) => dispatch(fetchBusiness(businessId))
     }
 }
 
