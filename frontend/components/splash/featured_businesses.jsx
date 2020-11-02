@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import BusinessReviewCard from './business_review_cards'
+import FeaturedBusineesItem from './featured_business_item';
 
 
 class FeaturedBusinesses extends React.Component {
@@ -26,36 +27,17 @@ class FeaturedBusinesses extends React.Component {
                 </div>
                 <div className="featured-business-cat-container-parent">
                     <div className="featured-bus-cards-container">
-                        <div className="featured-bus-card">
-                            <a href="#" >
-                                <img src={window.construction} />
-                                <h1>Speedy Auto Repair</h1>
-                                <h2>{solidStar}{solidStar}{solidStar} 10 reviews</h2>
-                                <h3>Business type</h3>
-                                <h3>location</h3>
-                                <h4>amenities</h4>
-                            </a>
-                        </div>
-                        <div className="featured-bus-card">
-                            <a href="#" >
-                                <img src={window.construction} />
-                                <h1>Creative Construction</h1>
-                                <h2>{solidStar}{solidStar}{solidStar} 10 reviews</h2>
-                                <h3>Business type</h3>
-                                <h3>location</h3>
-                                <h4>amenities</h4>
-                            </a>
-                        </div>
-                        <div className="featured-bus-card">
-                            <a href="#" >
-                                <img src={window.construction} />
-                                <h1>Subprime Lenders</h1>
-                                <h2>{solidStar}{solidStar}{solidStar} 10 reviews</h2>
-                                <h3>Business type</h3>
-                                <h3>location</h3>
-                                <h4>amenities</h4>
-                            </a>
-                        </div>
+                    {featuredItems.map(business => {
+                        return <FeaturedBusineesItem 
+                        key={business.id}
+                        id={business.id}
+                        name={business.name}
+                        photo={business.photo}
+                        type={business.businessType}
+                        city={business.city}
+                        photoUrl={business.photoUrl}
+                        />
+                    })}
                     </div>
                 </div>
                 <div className="featured-bus-footer">
