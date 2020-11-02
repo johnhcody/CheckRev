@@ -16,6 +16,8 @@ class FeaturedBusinesses extends React.Component {
         const solidStar = <FontAwesomeIcon icon={["fas", "star"]} />
         const regStar = <FontAwesomeIcon icon={["far", "star"]} />
         const utensils = <FontAwesomeIcon icon="utensils" />
+        const numBusinesses = 3;
+        const featuredItems = this.props.businesses.slice(0, numBusinesses)
         debugger
         return (
             <div>
