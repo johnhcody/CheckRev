@@ -3,9 +3,10 @@ import { fetchBusinesses } from '../../actions/business_actions';
 import BusinessIndex from './business_index'
 
 const mSTP = state => {
-
+    debugger
     return {
-        businesses: Object.values(state.entities.businesses)
+        businesses: Object.values(state.entities.businesses),
+        reviews: Object.values(state.entities.businesses[ownProps.match.params.businessId].reviews)
     }
 }
 
