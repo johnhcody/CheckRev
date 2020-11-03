@@ -235,8 +235,12 @@
     }
     h4 {
         display: none;
+        padding: 3px 0px 4px 8px;
         font-size: 13px;
         color: gray;
+    }
+    .user-prof {
+        min-height: 75px;
     }
 }
 
