@@ -22,10 +22,12 @@ function ReviewText(props) {
                 break;
         }
     }
-    debugger
     return (
     <div className="review-text-and-profile-wrapper">
-        <ReviewProfile author={props.author}/>
+        <ReviewProfile 
+        author={props.author}
+        review={props.review}
+        currentUser={props.currentUser}/>
         <div className="review-text-wrapper">
             <div className="review-text-header">
                 {renderRating(props.review.rating)}

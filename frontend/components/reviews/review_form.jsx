@@ -30,7 +30,6 @@ class ReviewForm extends React.Component {
     }
 
     handleChange(field) {
-        debugger
         return e => this.setState({ [field]: e.currentTarget.value })
     }
 
@@ -38,7 +37,6 @@ class ReviewForm extends React.Component {
         
     renderRating() {
             
-            debugger
             switch (this.state.rating) {
                 case "0":   
                    return  <div className="radio-wrapper">
