@@ -42,10 +42,16 @@
         .fa-star {
             &::before {
                 content: "\f005";
-                background-color: $red;
-                border: 6px solid $red;
+                background-color: $gray;
+                border: 6px solid $gray;
                 border-radius: 6px;
                 color: white;
+            }
+            &:hover {
+                &::before {
+                    background-color: $red;
+                    border: 6px solid $red;
+                }
             }
         }
     }
@@ -101,6 +107,23 @@
     display: flex;
     justify-content: center;
     padding: 14px 0px 14px 0px;
+    img {
+        padding: 4px;
+        border: 1px solid transparent;
+        border-radius: 9px;
+        max-width: 27px;
+
+    }
+    p {
+        margin: 12px 0px 0px 10px;
+        font-family: sans-serif;
+        color: $black;
+    }
+    #default-text {
+        p {
+            color: #bab6b6;
+        }
+    }
 }
 
 .radio-wrapper input[type=radio] { 
