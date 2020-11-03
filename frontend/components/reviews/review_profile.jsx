@@ -1,5 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-router-dom';
 
 class ReviewProfile extends React.Component{
     constructor(props) {
@@ -42,7 +43,8 @@ class ReviewProfile extends React.Component{
                     <h1>{this.props.author.firstName} {this.props.author.lastName}</h1>
                     <h2>Boston, MA</h2>
                     <h3>{typeof this.props.author.reviews === 'undefined' ? "0" : this.props.author.reviews.length.toString()} Reviews</h3>
-                    <h4 style={style}>Edit this Review</h4>
+                    <Link to={`/businesses/${this.props.review.id}/review-edit`}><h4 style={style}>Edit this Review</h4></Link>
+                    
                 </div>
                 
             </div>

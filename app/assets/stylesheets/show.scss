@@ -241,6 +241,12 @@
     }
     .user-prof {
         min-height: 75px;
+        a {
+            color: $green;
+            padding: 0px;
+            border-radius: none;
+            background-color: transparent;
+        }
     }
 }
 
