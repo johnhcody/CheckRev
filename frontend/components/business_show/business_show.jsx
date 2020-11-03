@@ -45,7 +45,8 @@ class BusinessShow extends React.Component {
                             phoneNumber={this.props.business.phoneNumber}
                             webAddress={this.props.business.webAddress}
                             zipcode={this.props.business.zipcode}
-                            photoUrl={this.props.business.photoUrl}/>
+                            photoUrl={this.props.business.photoUrl}
+                            reviews={this.props.business.reviews} />
                         <HoursAndLocation />
                     <div className="hours-and-map">
                         <ShowMap 

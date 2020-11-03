@@ -41,7 +41,7 @@ bus1 = Business.create({
     zipcode: 85001, 
     lng: -70.9702, 
     lat: 41.81022, 
-    web_address: 'jhc.com', 
+    web_address: 'www.jhc.com', 
     phone_number: '684-938-4279', 
     business_type: 'Web Development', 
     business_category: 'Professional Services'})
@@ -157,12 +157,6 @@ ny_bus4 = Business.create({
 
 Review.destroy_all
 
-review_1 = Review.create({
-    business_id: Business.first.id,
-    body: "I love this place!",
-    rating: 5,
-    author_id: User.first.id
-})
             
 phx_bus = Business.create({
     name: Faker::Restaurant.name,

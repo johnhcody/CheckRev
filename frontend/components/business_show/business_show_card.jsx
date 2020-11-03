@@ -6,13 +6,14 @@ import { Link } from 'react-router-dom';
 
 const BusinessShowCard = props => {
     const star = <FontAwesomeIcon icon={['fas', 'star']} />
+    debugger
     return (
         <div className="bus-show-text">
             <h1>{props.name}</h1>
             <div>
                 <div className="bus-show-rating">
                     <a>{star} {star} {star} {star} {star} </a> 
-                    <h2>19 Reviews</h2>
+                    <h2>{props.reviews.length.toString()} Reviews</h2>
                 </div>
                 <div className="bus-show-review">
                 </div>
