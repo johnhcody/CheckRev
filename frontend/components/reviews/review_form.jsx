@@ -61,10 +61,11 @@ class ReviewForm extends React.Component {
         if (redirectToShow) {
             return <Redirect to={`/businesses/${this.props.busId}`} />
         }
-        const business = this.props.business[0]
+        const business = this.props.business.filter(bus => bus.id === this.props.busId)[0]
             if (this.props.business.length === 0) {
                 return null;
             } else {
+                debugger
                 return (
                     <div className="review-form-wrapper">
                         <div className="review-form">
