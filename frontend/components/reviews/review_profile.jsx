@@ -33,7 +33,6 @@ class ReviewProfile extends React.Component{
         const hovered = this.state.hovered;
         const style = hovered && this.props.currentUser.id === this.props.review.author_id ? { display: "block" } : { display: "none"}
         const user = <FontAwesomeIcon icon="user" />
-        debugger
         return (
             <div className="review-user-wrapper" onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}>
                 <div className="user-img">
@@ -43,7 +42,7 @@ class ReviewProfile extends React.Component{
                     <h1>{this.props.author.firstName} {this.props.author.lastName}</h1>
                     <h2>Boston, MA</h2>
                     <h3>{typeof this.props.author.reviews === 'undefined' ? "0" : this.props.author.reviews.length.toString()} Reviews</h3>
-                    <Link to={`/businesses/${this.props.review.id}/review-edit`}><h4 style={style}>Edit this Review</h4></Link>
+                    <Link to={`/businesses/${this.props.business.id}/${this.props.review.id}/review-edit`}><h4 style={style}>Edit this Review</h4></Link>
                     
                 </div>
                 

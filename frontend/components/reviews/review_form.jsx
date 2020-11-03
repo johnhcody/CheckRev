@@ -7,7 +7,7 @@ class ReviewForm extends React.Component {
         super(props);
         this.state = {
             body: this.props.body,
-            rating: "0",
+            rating: this.props.rating,
             businessId: this.props.busId,
             authorId: this.props.currentUser.id,
             ready: false,
@@ -208,11 +208,12 @@ class ReviewForm extends React.Component {
         if (redirectToShow) {
             return <Redirect to={`/businesses/${this.props.busId}`} />
         }
-        const business = this.props.business.filter(bus => bus.id === this.props.busId)[0]
-            if (this.props.business.length === 0) {
-                return null;
-            } else {
-                debugger
+        if (this.props.allBusinesses.length === 0) {
+            return null;
+        } else {
+            debugger
+            
+            const business = this.props.allBusinesses.length === 1 ? this.props.allBusinesses[0] : this.props.allBusinesses.filter(bus => bus.id === this.props.busId)[0]
                 return (
                     <div className="review-form-wrapper">
                         <div className="review-form">
@@ -224,7 +225,7 @@ class ReviewForm extends React.Component {
                                         {/* <i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i><i className="fas fa-star"></i> */}
                                     </div>
                                     <div className="textarea-wrapper">
-                                        <textarea name="" id="" onChange={this.handleChange('body')} placeholder="Love that all the staff are wearing masks and gloves, it makes me feel that they’re prioritizing health and safety. Unfortunately when I got home I noticed they gave me the wrong size. I understand things are difficult with COVID and that many businesses are short staffed, even if this means I have to go back..."></textarea>
+                                        <textarea name="" id="" onChange={this.handleChange('body')} placeholder={this.props.body.length === 0 ? "Love that all the staff are wearing masks and gloves, it makes me feel that they’re prioritizing health and safety. Unfortunately when I got home I noticed they gave me the wrong size. I understand things are difficult with COVID and that many businesses are short staffed, even if this means I have to go back..." : "" } value={this.state.body}></textarea>
                                     </div>
                                 </div>
                                 <button>Post Review</button>

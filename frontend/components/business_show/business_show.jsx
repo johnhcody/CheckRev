@@ -60,6 +60,7 @@ class BusinessShow extends React.Component {
                         reviews={this.props.business.reviews}
                         allUsers={this.props.allUsers}
                         currentUser={this.props.currentUser}
+                        business={this.props.business}
                     />
                 </div>
                 <div className="bus-show-right-wrapper">

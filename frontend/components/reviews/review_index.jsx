@@ -38,6 +38,7 @@ class ReviewIndex extends React.Component {
                     key={review.id}
                     author={this.props.allUsers[review.author_id]}
                     currentUser={this.props.currentUser}
+                    business={this.props.business}
                     />
                 })
             }

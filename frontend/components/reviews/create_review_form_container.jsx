@@ -10,10 +10,11 @@ const mSTP = (state, ownProps) => {
     const currentUser = state.entities.users[state.session.id]
     return {
         formType: 'Write a Review',
-        business: Object.values(state.entities.businesses),
+        allBusinesses: Object.values(state.entities.businesses),
         body: '',
         busId,
-        currentUser
+        currentUser,
+        rating: ''
     }
 }
 

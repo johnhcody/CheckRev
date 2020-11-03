@@ -27,7 +27,8 @@ function ReviewText(props) {
         <ReviewProfile 
         author={props.author}
         review={props.review}
-        currentUser={props.currentUser}/>
+        currentUser={props.currentUser}
+        business={props.business}/>
         <div className="review-text-wrapper">
             <div className="review-text-header">
                 {renderRating(props.review.rating)}
