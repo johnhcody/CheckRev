@@ -12,18 +12,27 @@ class ReviewIndex extends React.Component {
       //  return <ReviewProfile author={this.props.allUsers[review.authorId]} />
     //}
 
+    sortReviews(reviews) {
+        if (reviews[this.props.reviews.length - 1].created_at > reviews[0].created_at) {
+            return this.props.reviews.reverse();
+        } else {
+            return this.props.reviews;
+        }
+    }
+
     render() {
         debugger
         if (typeof this.props.allUsers === 'undefined' || typeof this.props.reviews === 'undefined') {
             return null
         } else {
+            let sortedReviews = this.sortReviews(this.props.reviews)
             return (
             <div>
             <div className="review-header">
                 <header>Recent Reviews</header>
             </div>
-            {
-                this.props.reviews.map(review => {
+            {   
+                sortedReviews.map(review => {
                     //this.renderProfile(review)
                     return <ReviewText 
                     review={review}

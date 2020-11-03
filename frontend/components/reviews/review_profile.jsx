@@ -12,7 +12,7 @@ function ReviewProfile(props) {
             <div className="user-prof">
                 <h1>{props.author.firstName} {props.author.lastName}</h1>
                 <h2>Boston, MA</h2>
-                <h3>{props.author.reviews.length.toString()} Reviews</h3>
+                <h3>{typeof props.author.reviews === 'undefined' ? "0" : props.author.reviews.length.toString()} Reviews</h3>
             </div>
             
         </div>
