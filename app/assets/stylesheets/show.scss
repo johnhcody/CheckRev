@@ -263,6 +263,7 @@
 .review-text-wrapper {
     display: flex;
     flex-direction: column;
+    min-width: 350px;
     max-width: 445px;
     p {
         font-family: sans-serif;
@@ -273,6 +274,16 @@
     }
 }
 
+.trash-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    i {
+        font-size: 13px;
+        padding: 11px;
+        border: 1px solid $gray;
+        border-radius: 6px;
+    }
+}
 .review-text-header {
     display: flex;
     align-items: center;

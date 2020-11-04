@@ -22,12 +22,7 @@ class ReviewProfile extends React.Component{
         this.setState({ hovered: false });
     };
 
-    // renderEdit() {
-    //     debugger
-    //     if (props.currentUser.id === props.review.author_id && document.getElementById('edit-link')) {
-    //         document.getElementById('edit-link').style.display = "block"
-    //     }
-    // }
+
     
     render() {
         const user = <FontAwesomeIcon icon="user" />
