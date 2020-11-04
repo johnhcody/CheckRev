@@ -19,7 +19,6 @@ class Api::ReviewsController < ApplicationController
 
     def update
         @review = Review.find(params[:id])
-        debugger
         if @review.update(review_params)
             render :show
         else
