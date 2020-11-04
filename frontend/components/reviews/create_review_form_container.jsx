@@ -14,7 +14,7 @@ const mSTP = (state, ownProps) => {
         body: '',
         busId,
         currentUser,
-        rating: ''
+        rating: '0'
     }
 }
 
