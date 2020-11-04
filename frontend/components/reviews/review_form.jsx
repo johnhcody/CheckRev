@@ -6,6 +6,7 @@ class ReviewForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            id: this.props.reviewId,
             body: this.props.body,
             rating: this.props.rating,
             businessId: this.props.busId,
@@ -21,6 +22,7 @@ class ReviewForm extends React.Component {
     componentDidMount() {
         // this.props.fetchBusiness(parseInt(window.location.href.split('/')[window.location.href.split('/').length - 2]))
         this.props.fetchBusiness(this.props.busId)
+        //this.setState({id: this.props.reviewId})
     }
 
     handleSubmit(e) {
@@ -208,13 +210,14 @@ class ReviewForm extends React.Component {
         if (redirectToShow) {
             return <Redirect to={`/businesses/${this.props.busId}`} />
         }
+        debugger
         if (this.props.allBusinesses.length === 0) {
             return null;
         } else {
-            debugger
             
-            const business = this.props.allBusinesses.length === 1 ? this.props.allBusinesses[0] : this.props.allBusinesses.filter(bus => bus.id === this.props.busId)[0]
-                return (
+            const business = this.props.allBusinesses.length === 1 ? this.props.allBusinesses[0] : this.props.allBusinesses.filter(business => business.id == this.props.busId)[0]
+            debugger   
+            return (
                     <div className="review-form-wrapper">
                         <div className="review-form">
                             <h1>{business.name}</h1>

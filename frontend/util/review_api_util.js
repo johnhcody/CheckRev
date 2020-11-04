@@ -27,21 +27,22 @@ export const createReview = review => {
 
 };
 
-export const updateReview = review => (
-    $.ajax({
+export const updateReview = review => {
+    debugger
+    return $.ajax({
         url: `/api/reviews/${review.id}`,
-        method: 'patch',
+        method: 'PATCH',
         data: {
             review: {
                 id: review.id,
                 business_id: review.businessId,
-                rating: rating,
-                author_id: authorId,
-                body: body
+                rating: review.rating,
+                author_id: review.authorId,
+                body: review.body
             }
         }
     })
-);
+};
 
 export const deleteReview = reviewId => (
     $.ajax({

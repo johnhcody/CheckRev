@@ -10,15 +10,14 @@ class BusinessShowCard extends React.Component {
             display: "none"
         };
         this.checkCurrentUser = this.checkCurrentUser.bind(this);
-        this.renderAverageRating = this.renderAverageRating.bind(this);
     }
     
     checkCurrentUser (e) {
-        debugger
+        
         if (typeof this.props.currentUser === 'undefined') {
             this.setState({ display: "block" })
         } else {
-            debugger
+            
             this.props.history.push(`/businesses/${this.props.id}/review-new`)
             //return <Redirect to={`/businesses/${this.props.id}/review-new`} />
         }
@@ -27,7 +26,7 @@ class BusinessShowCard extends React.Component {
     
     
     render() {
-        debugger
+        
         const star = <FontAwesomeIcon icon={['fas', 'star']} />
         const style = this.state
         if (!this.props) {

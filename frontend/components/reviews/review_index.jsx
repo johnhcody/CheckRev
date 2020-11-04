@@ -23,27 +23,34 @@ class ReviewIndex extends React.Component {
     render() {
         if (typeof this.props.allUsers === 'undefined' || typeof this.props.reviews === 'undefined') {
             return null
-        } else {
-            let sortedReviews = this.sortReviews(this.props.reviews)
-            return (
-            <div>
-            <div className="review-header">
-                <header>Recent Reviews</header>
-            </div>
-            {   
-                sortedReviews.map(review => {
-                    //this.renderProfile(review)
-                    return <ReviewText 
-                    review={review}
-                    key={review.id}
-                    author={this.props.allUsers[review.author_id]}
-                    currentUser={this.props.currentUser}
-                    business={this.props.business}
-                    />
-                })
+        } else if (this.props.reviews.length === 0){
+            return (<div className="review-header">
+                <header>No Reviews Yet</header>
+            </div>)
             }
-            </div>
-        )}
+            else {
+                let sortedReviews = this.sortReviews(this.props.reviews)
+                return (
+                <div>
+                <div className="review-header">
+                    <header>Recent Reviews</header>
+                </div>
+                {   
+                    sortedReviews.map(review => {
+                        //this.renderProfile(review)
+                        return <ReviewText 
+                        review={review}
+                        key={review.id}
+                        author={this.props.allUsers[review.author_id]}
+                        currentUser={this.props.currentUser}
+                        business={this.props.business}
+                        />
+                    })
+                }
+                </div>
+            )
+        }
+
         
     }
 }

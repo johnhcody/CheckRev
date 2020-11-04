@@ -35,10 +35,11 @@ export const createReview = review => dispatch => (
         .then(review => dispatch(receiveReview(review)))
 );
 
-export const updateReview = review => dispatch => (
-    ReviewApiUtil.updateReview(review)
+export const updateReview = review => dispatch => {
+    debugger
+    return ReviewApiUtil.updateReview(review)
         .then(review => dispatch(receiveReview(review)))
-);
+};
 
 export const deleteReview = reviewId => dispatch => (
     ReviewApiUtil.deleteReview(reviewId)

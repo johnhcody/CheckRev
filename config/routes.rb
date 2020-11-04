@@ -11,6 +11,8 @@
 #               api_reviews GET    /api/reviews(.:format)                                                                   api/reviews#index {:format=>:json}
 #                           POST   /api/reviews(.:format)                                                                   api/reviews#create {:format=>:json}
 #                api_review GET    /api/reviews/:id(.:format)                                                               api/reviews#show {:format=>:json}
+#                           PATCH  /api/reviews/:id(.:format)                                                               api/reviews#update {:format=>:json}
+#                           PUT    /api/reviews/:id(.:format)                                                               api/reviews#update {:format=>:json}
 #                           DELETE /api/reviews/:id(.:format)                                                               api/reviews#destroy {:format=>:json}
 #        rails_service_blob GET    /rails/active_storage/blobs/:signed_id/*filename(.:format)                               active_storage/blobs#show
 # rails_blob_representation GET    /rails/active_storage/representations/:signed_blob_id/:variation_key/*filename(.:format) active_storage/representations#show
@@ -26,7 +28,7 @@ Rails.application.routes.draw do
     resources :users, only: [:create, :index]
     resource :session, only: [:create, :destroy]
     resources :businesses, only: [:show, :index]
-    resources :reviews, only: [:show, :index, :create, :destroy]
+    resources :reviews, only: [:show, :index, :create, :destroy, :update]
   end
 
 end
