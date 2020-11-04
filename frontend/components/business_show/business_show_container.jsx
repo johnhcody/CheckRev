@@ -10,7 +10,8 @@ const mSTP = (state, ownProps) => {
         business: state.entities.businesses[ownProps.match.params.businessId],
         allUsers: state.entities.users,
         currentUser: state.entities.users[state.session.id],
-        reviews: typeof state.entities.businesses[ownProps.match.params.businessId] === 'undefined' ? [] : Object.values(state.entities.businesses[ownProps.match.params.businessId].reviews)
+        reviews: typeof state.entities.businesses[ownProps.match.params.businessId] === 'undefined' ? [] : Object.values(state.entities.businesses[ownProps.match.params.businessId].reviews),
+        history: ownProps.history
     }
 };
 
