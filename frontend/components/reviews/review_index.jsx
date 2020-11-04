@@ -1,6 +1,5 @@
 import React from 'react';
 import ReviewText from './review_text';
-import ReviewProfile from './review_profile';
 
 class ReviewIndex extends React.Component {
     constructor(props) {

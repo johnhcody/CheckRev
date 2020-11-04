@@ -7,8 +7,6 @@ import HoursAndLocation from './hours_location';
 import ShowMap from './show_map';
 import BusinessHours from './business_hours';
 import Amenities from './amenities';
-import ReviewProfile from '../reviews/review_profile';
-import ReviewText from '../reviews/review_text';
 import Footer from '../splash/footer';
 import Copyright from '../splash/copyright';
 import ReviewIndex from '../reviews/review_index';

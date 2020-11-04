@@ -3,7 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 //import ReviewProfile from './review_profile';
 import { formatDate } from '../../util/date_utils';
 import { Link } from 'react-router-dom';
-
+//import Tooltip from '@material-ui/core/Tooltip';
+//import DeleteIcon from '@material-ui/icons/Delete';
 
 class ReviewText extends React.Component {
     constructor(props) {
@@ -64,12 +65,6 @@ class ReviewText extends React.Component {
     
                     </div>
                 </div>
-    
-                {/* <ReviewProfile 
-                author={props.author}
-                review={props.review}
-                currentUser={props.currentUser}
-                business={props.business}/> */}
                 <div className="review-text-wrapper">
                     <div className="review-text-header">
                         {this.renderRating(this.props.review.rating)}
