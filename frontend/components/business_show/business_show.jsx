@@ -9,7 +9,7 @@ import BusinessHours from './business_hours';
 import Amenities from './amenities';
 import Footer from '../splash/footer';
 import Copyright from '../splash/copyright';
-import ReviewIndex from '../reviews/review_index';
+import ReviewIndex from '../reviews/review_index_container';
 
 class BusinessShow extends React.Component {
     constructor(props) {

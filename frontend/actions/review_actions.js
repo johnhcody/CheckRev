@@ -15,9 +15,9 @@ const receiveReview = review => ({
     review
 });
 
-const removeReview = reviewId => ({
-    type: RECEIVE_REVIEW,
-    reviewId
+const removeReview = review => ({
+    type: REMOVE_REVIEW,
+    review
 });
 
 export const fetchReviews = () => dispatch => (
@@ -36,12 +36,13 @@ export const createReview = review => dispatch => (
 );
 
 export const updateReview = review => dispatch => {
-    debugger
+    
     return ReviewApiUtil.updateReview(review)
         .then(review => dispatch(receiveReview(review)))
 };
 
-export const deleteReview = reviewId => dispatch => (
-    ReviewApiUtil.deleteReview(reviewId)
-        .then(() => dispatch(removeReview(reviewId)))
-);
+export const deleteReview = review => dispatch => {
+    debugger
+    ReviewApiUtil.deleteReview(review.id)
+        .then((review) => dispatch(removeReview(review)))
+};

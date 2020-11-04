@@ -28,6 +28,7 @@ class ReviewIndex extends React.Component {
             </div>)
             }
             else {
+                debugger
                 let sortedReviews = this.sortReviews(this.props.reviews)
                 return (
                 <div>
@@ -43,6 +44,7 @@ class ReviewIndex extends React.Component {
                         author={this.props.allUsers[review.author_id]}
                         currentUser={this.props.currentUser}
                         business={this.props.business}
+                        deleteReview={this.props.deleteReview}
                         />
                     })
                 }

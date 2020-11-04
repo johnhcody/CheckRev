@@ -3,7 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 //import ReviewProfile from './review_profile';
 import { formatDate } from '../../util/date_utils';
 import { Link } from 'react-router-dom';
-//import Tooltip from '@material-ui/core/Tooltip';
+// import ReactTooltip from 'react-tooltip';
+// import DeleteIcon from 'react-tooltip'; 
 //import DeleteIcon from '@material-ui/icons/Delete';
 
 class ReviewText extends React.Component {
@@ -43,6 +44,7 @@ class ReviewText extends React.Component {
         }
     }
 
+
     render() {
         if (!this.props.author) {
             return null
@@ -72,7 +74,7 @@ class ReviewText extends React.Component {
                     </div>
                     <p>{this.props.review.body}</p>
                     <div className="trash-wrapper">
-                        {this.props.author.id === this.props.currentUser.id ? <i className="far fa-trash-alt"></i> : null }
+                        {this.props.author.id === this.props.currentUser.id ? <i onClick={() => this.props.deleteReview(this.props.review)} className="far fa-trash-alt"></i> : null }
                     </div>
                 </div>
             </div>
