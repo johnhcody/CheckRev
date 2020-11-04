@@ -15,7 +15,7 @@ class AverageRating extends React.Component {
         const halfStar = window.halfStar;
         const fullStar = window.fullStar;
         const avg = (total / len).toFixed(1)
-
+        debugger
         if (avg > 0 && avg < 1) {
             return <img src={halfStar} />
         } else if (avg >= 1 && avg <= 1.4) {
@@ -36,6 +36,8 @@ class AverageRating extends React.Component {
             return <div><img src={fullStar} /> <img src={fullStar} /> <img src={fullStar} /> <img src={fullStar} /> <img src={halfStar} /></div>
         } else if (avg > 4.6) {
             return <div><img src={fullStar} /> <img src={fullStar} /> <img src={fullStar} /> <img src={fullStar} /> <img src={fullStar} /></div>
+        } else {
+            return null
         }
     }
 }

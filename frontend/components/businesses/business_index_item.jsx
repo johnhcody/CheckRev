@@ -1,13 +1,13 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Link } from 'react-router-dom'
+import AverageRating from '../business_show/average_rating';
 
 class BusinessIndexItem extends React.Component {
     constructor(props) {
         super(props)
     }
     render() {
-        debugger
         const utensils = <FontAwesomeIcon icon="utensils" />
         const star = <FontAwesomeIcon icon={['fas', 'star']} />
         return (
@@ -20,7 +20,10 @@ class BusinessIndexItem extends React.Component {
                         <div className="bus-description">
                             <div className="left-wrapper">
                                 <h1>{this.props.name}</h1>
-                                <h2>{star}{star}{star}{star}{star} 10 Reviews</h2>
+                                <div className="star-num-ratings-wrapper">
+                                    <AverageRating reviews={this.props.reviews}/>
+                                    <h2>{this.props.reviews.length.toString()} Reviews</h2>
+                                </div>
                                 <h3>amenities, amenities, amenities</h3>
                                 <h4>delivery takeout outdoor seating</h4>
                             </div>

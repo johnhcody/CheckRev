@@ -36,6 +36,7 @@ class FeaturedBusinesses extends React.Component {
                         city={business.city}
                         photoUrl={business.photoUrl}
                         state={business.state}
+                        reviews={business.reviews}
                         />
                     })}
                     </div>
