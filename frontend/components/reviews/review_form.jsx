@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect, withRouter, useHistory } from 'react-router-dom';
+import { Redirect, withRouter, Link } from 'react-router-dom';
 
 
 class ReviewForm extends React.Component {
@@ -220,7 +220,8 @@ class ReviewForm extends React.Component {
             return (
                     <div className="review-form-wrapper">
                         <div className="review-form">
-                            <h1>{business.name}</h1>
+                            <Link to={`/businesses/${business.id}`}><h1>{business.name}</h1></Link>
+                            
                             <form onSubmit={this.handleSubmit}>
                                 <div className="rating-and-text-wrapper">
                                     <div className="rating-placeholder">

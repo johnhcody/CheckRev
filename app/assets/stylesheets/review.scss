@@ -16,6 +16,7 @@
 .review-form-wrapper {
     display: flex;
     justify-content: center;
+    min-height: 700px;
 }
 
 .review-form {
@@ -27,6 +28,9 @@
         width: 650px;
         min-height: 400px;
         margin: 0px 0px 21px 0px;
+    }
+    a {
+        text-decoration: none;
     }
     .rating-placeholder {
         width: 100%;
