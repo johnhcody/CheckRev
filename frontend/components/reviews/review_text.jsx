@@ -55,7 +55,7 @@ class ReviewText extends React.Component {
     render() {
         if (!this.props.author) {
             return null
-        } else {
+        } else if (this.props.currentUser) {
             const hovered = this.state.hovered;
             const style = hovered && this.props.currentUser.id === this.props.review.author_id ? { display: "block" } : { display: "none" }
             const user = <FontAwesomeIcon icon="user" />
@@ -85,6 +85,30 @@ class ReviewText extends React.Component {
                     </div>
                 </div>
             </div>
+            )
+        } else {
+            const user = <FontAwesomeIcon icon="user" />
+
+            return (
+                <div className="review-text-and-profile-wrapper" onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave} >
+                    <div className="review-user-wrapper" >
+                        <div className="user-img">
+                            <a>{user}</a>
+                        </div>
+                        <div className="user-prof">
+                            <h1>{this.props.author.firstName} {this.props.author.lastName}</h1>
+                            <h2>Boston, MA</h2>
+                            <h3>{typeof this.props.author.reviews === 'undefined' ? "0" : this.props.author.reviews.length.toString()} Reviews</h3>
+                        </div>
+                    </div>
+                    <div className="review-text-wrapper">
+                        <div className="review-text-header">
+                            {this.renderRating(this.props.review.rating)}
+                            <h2>{formatDate(this.props.review.created_at)}</h2>
+                        </div>
+                        <p>{this.props.review.body}</p>
+                    </div>
+                </div>
             )
         }
 
