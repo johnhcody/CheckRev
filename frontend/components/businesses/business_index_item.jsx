@@ -52,7 +52,7 @@ class BusinessIndexItem extends React.Component {
                                 <h1>{this.props.name}</h1>
                                 <div className="star-num-ratings-wrapper">
                                     <AverageRating reviews={this.props.reviews}/>
-                                    <h2>{this.props.reviews.length.toString()} Reviews</h2>
+                                <h2>{this.props.reviews.length === 1 ? "1 Review" : this.props.reviews.length.toString() + " Reviews"}</h2>
                                 </div>
                                 {this.renderPriceRating(this.props.priceRating)}
                                 <h3>amenities, amenities, amenities</h3>
