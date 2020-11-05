@@ -1,6 +1,8 @@
 import React from 'react';
 import { Redirect, withRouter, Link } from 'react-router-dom';
-
+import Footer from '../splash/footer';
+import Copyright from '../splash/copyright';
+import ReviewNav from './review_nav';
 
 class ReviewForm extends React.Component {
     constructor(props) {
@@ -21,7 +23,8 @@ class ReviewForm extends React.Component {
 
     componentDidMount() {
         // this.props.fetchBusiness(parseInt(window.location.href.split('/')[window.location.href.split('/').length - 2]))
-        this.props.fetchBusiness(this.props.busId)
+        this.props.fetchBusiness(this.props.busId);
+        window.scrollTo(0,0);
         //this.setState({id: this.props.reviewId})
     }
 
@@ -218,6 +221,8 @@ class ReviewForm extends React.Component {
             const business = this.props.allBusinesses.length === 1 ? this.props.allBusinesses[0] : this.props.allBusinesses.filter(business => business.id == this.props.busId)[0]
             debugger   
             return (
+                <div>
+                    <ReviewNav />
                     <div className="review-form-wrapper">
                         <div className="review-form">
                             <Link to={`/businesses/${business.id}`}><h1>{business.name}</h1></Link>
@@ -236,6 +241,9 @@ class ReviewForm extends React.Component {
                             </form>
                         </div>
                     </div>
+                    <Footer />
+                    <Copyright />
+                </div>
                 )
             }
     }
