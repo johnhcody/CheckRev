@@ -27,7 +27,6 @@ class BusinessShow extends React.Component {
     }
 
     rerenderParent() {
-        debugger
         this.setState({value: this.state.value + 1})
     }
     
@@ -56,7 +55,8 @@ class BusinessShow extends React.Component {
                             photoUrl={this.props.business.photoUrl}
                             reviews={this.props.business.reviews} 
                             currentUser={this.props.currentUser}
-                            history={this.props.history}/>
+                            history={this.props.history}
+                            priceRating={this.props.business.priceRating}/>
                         <HoursAndLocation />
                     <div className="hours-and-map">
                         <ShowMap 

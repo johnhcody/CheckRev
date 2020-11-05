@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_05_044847) do
+ActiveRecord::Schema.define(version: 2020_11_05_055957) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 2020_11_05_044847) do
     t.string "business_category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "price_rating"
+    t.integer "price_rating", default: 1, null: false
     t.index ["city"], name: "index_businesses_on_city"
     t.index ["lat"], name: "index_businesses_on_lat"
     t.index ["lng"], name: "index_businesses_on_lng"

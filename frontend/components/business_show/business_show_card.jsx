@@ -10,6 +10,7 @@ class BusinessShowCard extends React.Component {
             display: "none"
         };
         this.checkCurrentUser = this.checkCurrentUser.bind(this);
+        this.renderPriceRating = this.renderPriceRating.bind(this);
     }
     
     checkCurrentUser (e) {
@@ -20,6 +21,22 @@ class BusinessShowCard extends React.Component {
             
             this.props.history.push(`/businesses/${this.props.id}/review-new`)
             //return <Redirect to={`/businesses/${this.props.id}/review-new`} />
+        }
+    }
+
+    renderPriceRating(rating) {
+        debugger
+        switch (rating) {
+            case 1:
+                return <h3>$</h3>
+            case 2:
+                return <h3>$$</h3>
+            case 3:
+                return <h3>$$$</h3>
+            case 4:
+                return <h3>$$$$</h3>
+            default:
+                break;
         }
     }
 
@@ -44,7 +61,7 @@ class BusinessShowCard extends React.Component {
                         <div className="bus-show-review">
                         </div>
                     </div>
-                    <h3>$$$</h3>
+                    {this.renderPriceRating(this.props.priceRating)}
                     <h4>10:00 AM - 7:00 PM</h4>
                     <button onClick={this.checkCurrentUser}> {star} Write a Review</button>
                     <p style={style}>You must be logged in!  You can sign in as a demo user above</p> 
