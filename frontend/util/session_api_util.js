@@ -20,19 +20,7 @@ export const logout = () => {
 }
 
 export const signup = (user) => {
-    // $.ajax({
-    //     method: 'GET',
-    //     url: `http://ZiptasticAPI.com/${user.zipcode}`,
-    //     dataType: 'json',
-    //     success: function (result) {
-    //         const state = result['state'];
-    //         const city = result['city'].charAt(0) + result['city'].slice(1).toLowerCase();
-    //         user['state'] = state;
-    //         user['city'] = city;
-    //     }
 
-    // })
-    debugger
     return $.ajax({
         method: "POST",
         url: "/api/users",
@@ -46,11 +34,45 @@ export const signup = (user) => {
                 zipcode: user.zipcode,
                 birthdate: user.birthdate,
                 errors: user.errors
-                // state: user.state,
-                // city: user.city
             }
         }
     })
+
+
+    // const call1 = $.ajax({
+    //     method: 'GET',
+    //     url: `http://ZiptasticAPI.com/${user.zipcode}`,
+    //     dataType: 'json',
+    //     success: function (result) {
+    //         user =  Object.assign(user, result)
+    //         debugger
+    //     }
+
+    // }).then($.ajax({
+    //     method: "POST",
+    //     url: "/api/users",
+    //     data: {
+    //         user: {
+    //             id: user.id,
+    //             first_name: user.firstName,
+    //             last_name: user.lastName,
+    //             email: user.email,
+    //             password: user.password,
+    //             zipcode: user.zipcode,
+    //             birthdate: user.birthdate,
+    //             state: user.state,
+    //             city: user.city,
+    //             errors: user.errors
+    //         }
+    //     }
+    // }))
+    // $.when(call1).done(function (response) {
+    //     console.log(response);
+    // })
+    
+    
+    
+
     // fetch(`http://ZiptasticAPI.com/${user.zipcode}`)
     //     .then(response => response.json())
     //     .then(data => user['data'] = data)

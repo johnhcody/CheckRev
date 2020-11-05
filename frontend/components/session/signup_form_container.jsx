@@ -11,7 +11,9 @@ const mSTP = state => {
             email: '',
             password: '',
             zipcode: '',
-            birthdate: ''
+            birthdate: '',
+            city: '',
+            state: ''
         },
         empty: '',
     }

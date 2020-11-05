@@ -1,11 +1,8 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-//import ReviewProfile from './review_profile';
 import { formatDate } from '../../util/date_utils';
 import { Link } from 'react-router-dom';
-// import ReactTooltip from 'react-tooltip';
-// import DeleteIcon from 'react-tooltip'; 
-//import DeleteIcon from '@material-ui/icons/Delete';
+
 
 class ReviewText extends React.Component {
     constructor(props) {
