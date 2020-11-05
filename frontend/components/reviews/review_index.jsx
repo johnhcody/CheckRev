@@ -3,13 +3,12 @@ import ReviewText from './review_text';
 
 class ReviewIndex extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
+        this.state = {
+            value: 0
+        }
+        this.rerenderCallback = this.rerenderCallback.bind(this);
     }
-
-    //renderProfile(review) {
-      //  debugger
-      //  return <ReviewProfile author={this.props.allUsers[review.authorId]} />
-    //}
 
     sortReviews(reviews) {
         if (reviews[this.props.reviews.length - 1].created_at > reviews[0].created_at) {
@@ -18,6 +17,12 @@ class ReviewIndex extends React.Component {
             return this.props.reviews;
         }
     }
+
+    rerenderCallback() {
+        //this.setState({value: this.state.value + 1})
+        this.props.rerenderParent()
+    }
+
 
     render() {
         if (typeof this.props.allUsers === 'undefined' || typeof this.props.reviews === 'undefined') {
@@ -45,6 +50,7 @@ class ReviewIndex extends React.Component {
                         currentUser={this.props.currentUser}
                         business={this.props.business}
                         deleteReview={this.props.deleteReview}
+                        rerenderCallback={this.rerenderCallback}
                         />
                     })
                 }

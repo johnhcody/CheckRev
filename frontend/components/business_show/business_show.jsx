@@ -13,12 +13,21 @@ import ReviewIndex from '../reviews/review_index_container';
 
 class BusinessShow extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
+        this.state = {
+            value: 0
+        };
+        this.rerenderParent = this.rerenderParent.bind(this);
     }
 
     componentDidMount() {
         this.props.fetchBusiness(this.props.match.params.businessId);
         this.props.fetchUsers();
+    }
+
+    rerenderParent() {
+        debugger
+        this.setState({value: this.state.value + 1})
     }
     
     render() {
@@ -61,6 +70,8 @@ class BusinessShow extends React.Component {
                         allUsers={this.props.allUsers}
                         currentUser={this.props.currentUser}
                         business={this.props.business}
+                        rerenderParent={this.rerenderParent}
+
                     />
                 </div>
                 <div className="bus-show-right-wrapper">

@@ -11,7 +11,6 @@ const mSTP = state => {
 }
 
 const mDTP = dispatch => {
-    debugger
     return {
         fetchReview: (reviewId) => dispatch(fetchReview(reviewId)),
         fetchReviews: () => dispatch(fetchReviews()),

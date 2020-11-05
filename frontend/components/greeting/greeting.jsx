@@ -29,9 +29,9 @@ class Greeting extends React.Component {
             return (
                 <div>
                     <div className="span-button">
-                        <div className="review-link">
+                        {/* <div className="review-link">
                             {window.location.href.includes('businesses') || window.location.href.includes('search') ? null : <Link to='#' ><button>Write a Review</button></Link>}
-                        </div>
+                        </div> */}
                     <div className="session-link"></div>
                         <div className="logout">
                         <GreetingDropdown logout={this.props.logout} currentUser={this.props.currentUser}/>
@@ -44,7 +44,7 @@ class Greeting extends React.Component {
                 <div >
                     <div className="span-button">
                         <div className="review-link">
-                            {window.location.href.includes('businesses') || window.location.href.includes('search') ? null : <Link to='#' ><button>Write a Review</button></Link>}
+                            {/* {window.location.href.includes('businesses') || window.location.href.includes('search') ? null : <Link to='#' ><button>Write a Review</button></Link>} */}
                         </div>
                         <div className="session-link">
                         <button onClick={this.loginDemo}>Demo</button>

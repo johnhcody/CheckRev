@@ -85,10 +85,7 @@
 
 .splash-dropdown-wrapper {
     display: flex;
-    position: absolute;
-    top: 90px;
-    right: 270px;
-    color: black;
+    position: fixed;
     height: 100px;
     width: 160px;
     flex-direction: column;
@@ -98,6 +95,7 @@
     background-color: white;
     padding-top: 5px;
     border-radius: 3px;
+    margin: 10px 0px 0px -123px;
     ul {
         display: flex;
         flex-direction: column;

@@ -28,7 +28,6 @@ export const createReview = review => {
 };
 
 export const updateReview = review => {
-    debugger
     return $.ajax({
         url: `/api/reviews/${review.id}`,
         method: 'PATCH',
@@ -45,7 +44,6 @@ export const updateReview = review => {
 };
 
 export const deleteReview = reviewId => {
-    debugger
     return $.ajax({
         url: `/api/reviews/${reviewId}/`,
         method: 'DELETE'

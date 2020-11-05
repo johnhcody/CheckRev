@@ -15,7 +15,7 @@ class ReviewText extends React.Component {
         };
         this.onMouseEnter = this.onMouseEnter.bind(this);
         this.onMouseLeave = this.onMouseLeave.bind(this);
-
+        this.handleClick = this.handleClick.bind(this);
     }
 
     onMouseEnter(e) {
@@ -42,6 +42,13 @@ class ReviewText extends React.Component {
             default:
                 break;
         }
+    }
+
+    handleClick(e) {
+        debugger
+        this.props.deleteReview(this.props.review);
+        debugger
+        this.props.rerenderCallback();
     }
 
 
@@ -74,7 +81,7 @@ class ReviewText extends React.Component {
                     </div>
                     <p>{this.props.review.body}</p>
                     <div className="trash-wrapper">
-                        {this.props.author.id === this.props.currentUser.id ? <i onClick={() => this.props.deleteReview(this.props.review)} className="far fa-trash-alt"></i> : null }
+                        {this.props.author.id === this.props.currentUser.id ? <i onClick={this.handleClick} className="far fa-trash-alt"></i> : null }
                     </div>
                 </div>
             </div>
