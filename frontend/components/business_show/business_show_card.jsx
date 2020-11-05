@@ -32,6 +32,7 @@ class BusinessShowCard extends React.Component {
         if (!this.props) {
             return null;
         } else {
+            debugger
             return (
                 <div className="bus-show-text">
                     <h1>{this.props.name}</h1>
