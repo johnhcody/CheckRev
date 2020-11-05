@@ -5,8 +5,27 @@ import AverageRating from '../business_show/average_rating';
 
 class BusinessIndexItem extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
+        this.renderPriceRating = this.renderPriceRating.bind(this);
+
     }
+
+    renderPriceRating(rating) {
+        debugger
+        switch (rating) {
+            case 1:
+                return <h3>$</h3>
+            case 2:
+                return <h3>$$</h3>
+            case 3:
+                return <h3>$$$</h3>
+            case 4:
+                return <h3>$$$$</h3>
+            default:
+                break;
+        }
+    }
+
     render() {
         const utensils = <FontAwesomeIcon icon="utensils" />
         const star = <FontAwesomeIcon icon={['fas', 'star']} />
@@ -24,6 +43,7 @@ class BusinessIndexItem extends React.Component {
                                     <AverageRating reviews={this.props.reviews}/>
                                     <h2>{this.props.reviews.length.toString()} Reviews</h2>
                                 </div>
+                                {this.renderPriceRating(this.props.priceRating)}
                                 <h3>amenities, amenities, amenities</h3>
                                 <h4>delivery takeout outdoor seating</h4>
                             </div>

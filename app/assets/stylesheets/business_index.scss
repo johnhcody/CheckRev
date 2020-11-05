@@ -461,8 +461,8 @@
     h3 {
         color: #5e5e5e;
         font-size: 15px;
-        margin: 8px 0px 0px 0px;
-        padding-top: 7px;
+        margin: 5px 0px 0px 0px;
+        padding-top: 3px;
         color: black;
     }
     .svg-inline--fa {
@@ -471,7 +471,7 @@
     h4 {
         padding-top: 9px;
         font-size: 15px;
-        padding: 20px 0px 3px 0px;
+        padding: 10px 0px 3px 0px;
         color: $gray;
     }
     img {
@@ -511,6 +511,7 @@
         font-family: sans-serif;
         margin-left: 4px;
         color: $gray;
+        padding: 0px 0px 0px 5px;
     }
 
 }

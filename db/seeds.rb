@@ -65,7 +65,7 @@ bus1.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazona
 name_bos = Faker::Restaurant.name
 bos_bus = Business.create({
     name: name_bos,
-    address_1: rand(1..999).to_s + Faker::Address.street_name, 
+    address_1: rand(1..999).to_s + ' ' + Faker::Address.street_name, 
     address_2: Faker::Address.secondary_address, 
     city: 'Boston', 
     state: 'MA', 
@@ -82,7 +82,7 @@ bos_bus = Business.create({
 name_chi = Faker::Restaurant.name
 chi_bus = Business.create({
     name: name_chi,
-    address_1: rand(1..999).to_s + Faker::Address.street_name, 
+    address_1: rand(1..999).to_s + ' ' + Faker::Address.street_name, 
     address_2: Faker::Address.secondary_address, 
     city: 'Chicago', 
     state: 'IL', 
@@ -99,7 +99,7 @@ chi_bus = Business.create({
 name_ny = Faker::Restaurant.name        
 ny_bus1 = Business.create({
     name: name_ny,
-    address_1: rand(1..999).to_s + Faker::Address.street_name, 
+    address_1: rand(1..999).to_s + ' ' + Faker::Address.street_name, 
     address_2: Faker::Address.secondary_address, 
     city: 'New York', 
     state: 'NY', 
@@ -116,7 +116,7 @@ ny_bus1 = Business.create({
 name_ny_2 = Faker::Restaurant.name
 ny_bus2 = Business.create({
     name: name_ny_2,
-    address_1: rand(1..999).to_s + Faker::Address.street_name, 
+    address_1: rand(1..999).to_s + ' ' + Faker::Address.street_name, 
     address_2: Faker::Address.secondary_address, 
     city: 'New York', 
     state: 'NY', 
@@ -133,7 +133,7 @@ ny_bus2 = Business.create({
 name_ny_3 = Faker::Restaurant.name
 ny_bus3 = Business.create({
     name: Faker::Restaurant.name,
-    address_1: rand(1..999).to_s + Faker::Address.street_name, 
+    address_1: rand(1..999).to_s + ' ' + Faker::Address.street_name, 
     address_2: Faker::Address.secondary_address, 
     city: 'New York', 
     state: 'NY', 
@@ -150,7 +150,7 @@ ny_bus3 = Business.create({
 name_ny_4 = Faker::Restaurant.name    
 ny_bus4 = Business.create({
     name: name_ny_4,
-    address_1: rand(1..999).to_s + Faker::Address.street_name, 
+    address_1: rand(1..999).to_s + ' ' + Faker::Address.street_name, 
     address_2: Faker::Address.secondary_address, 
     city: 'New York', 
     state: 'NY', 
@@ -170,7 +170,7 @@ Review.destroy_all
 name_phx = Faker::Restaurant.name            
 phx_bus = Business.create({
     name: name_phx,
-    address_1: rand(1..999).to_s + Faker::Address.street_name, 
+    address_1: rand(1..999).to_s + ' ' + Faker::Address.street_name, 
     address_2: Faker::Address.secondary_address, 
     city: 'San Francisco', 
     state: 'CA', 

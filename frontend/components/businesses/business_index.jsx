@@ -52,6 +52,7 @@ class BusinessIndex extends React.Component {
                                 photoUrl={business.photoUrl}
                                 reviews={business.reviews}
                                 key={business.id}
+                                priceRating={business.priceRating}
                                 />
                             })
                         }

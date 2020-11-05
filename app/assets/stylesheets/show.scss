@@ -263,7 +263,7 @@
 .review-text-wrapper {
     display: flex;
     flex-direction: column;
-    min-width: 350px;
+    min-width: 445px;
     max-width: 445px;
     p {
         font-family: sans-serif;
@@ -277,6 +277,7 @@
 .trash-wrapper {
     display: flex;
     justify-content: flex-end;
+    padding-top: 10px;
     i {
         font-size: 13px;
         padding: 11px;
