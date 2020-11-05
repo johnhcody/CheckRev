@@ -500,6 +500,7 @@
 .bus-review-snippet {
     display: flex;
     height: 80px;
+    width: 540px;
     padding-top: 14px;
     margin: 0px 23px 0px 22px;
     align-items: center;
@@ -510,8 +511,8 @@
         font-size: 15px;
         font-family: sans-serif;
         margin-left: 4px;
-        color: $gray;
-        padding: 0px 0px 0px 5px;
+        color: #5e5e5e;
+
     }
 
 }

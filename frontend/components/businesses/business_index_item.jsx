@@ -26,9 +26,20 @@ class BusinessIndexItem extends React.Component {
         }
     }
 
+    renderSnippet() {
+        debugger
+        if (this.props.reviews.length === 0) {
+            return <p>No reviews yet!  Check out this business and show your support.</p>
+        } else {
+            const reviewBody = this.props.reviews[this.props.reviews.length - 1].body;
+            return reviewBody.length > 220 ? <p>{reviewBody.slice(0,220) + "..."}</p> : <p>{reviewBody}</p> 
+        }
+    }
+
     render() {
         const utensils = <FontAwesomeIcon icon="utensils" />
         const star = <FontAwesomeIcon icon={['fas', 'star']} />
+        debugger
         return (
             <Link to={`/businesses/${this.props.id}`} style={{textDecoration: "none"}}><div className="bus-item-container">
                 
@@ -55,7 +66,7 @@ class BusinessIndexItem extends React.Component {
                         </div>
                         
                         <div className="bus-review-snippet">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc fermentum sed sem vel elementum. Maecenas vitae porttitor nibh. Sed ante libero, commodo vel ipsum vitae, suscipit sollicitudin felis. Duis vitae tellus in.</p>
+                            {this.renderSnippet()}
                         </div>
                     </div>
                 </div></Link>
