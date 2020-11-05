@@ -56,7 +56,7 @@ class BusinessShowCard extends React.Component {
                     <div>
                         <div className="bus-show-rating">
                             <AverageRating reviews={this.props.reviews}/>
-                            <h2>{this.props.reviews.length > 0 ? this.props.reviews.length.toString() + " " : "0 "}Reviews</h2>
+                            <h2>{this.props.reviews.length === 1 ? "1 Review" : this.props.reviews.length.toString() + " Reviews"}</h2>
                         </div>
                         <div className="bus-show-review">
                         </div>
