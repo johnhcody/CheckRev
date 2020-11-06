@@ -61,7 +61,7 @@ class ReviewText extends React.Component {
 
     componentDidUpdate() {
         const cityAndState = document.getElementById("city-and-zip").innerHTML;
-        if (cityAndState !== "") {
+        if (cityAndState !== ""  && this.props.author) {
             // const obj = {
             //     city: cityAndState.split(',')[0],
             //     state: cityAndState.split(' ')[1]
