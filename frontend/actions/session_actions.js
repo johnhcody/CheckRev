@@ -47,8 +47,8 @@ export const signup = user => dispatch => {
     debugger
     return SessionApiUtil.findCityAndState(user.zipcode).then(payload => {
         debugger
-        const completeUser = Object.assign(user, payload);
-        SessionApiUtil.signup(completeUser);
+        Object.assign(user, payload);
+        SessionApiUtil.signup(user);
         debugger
     }).then(secondPayload => {
         debugger
