@@ -82,7 +82,7 @@ class BusinessShow extends React.Component {
                         currentUser={this.props.currentUser}
                         business={this.props.business}
                         rerenderParent={this.rerenderParent}
-
+                        fetchBusiness={this.props.fetchBusiness}
                     />
                 </div>
                 <div className="bus-show-right-wrapper">

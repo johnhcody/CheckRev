@@ -47,7 +47,7 @@ class ReviewText extends React.Component {
     handleClick(e) {
         this.props.deleteReview(this.props.review);
         this.props.rerenderCallback();
-        this.setState({value: this.state.value + 1})
+        // this.setState({value: this.state.value + 1})
     }
 
     componentDidMount() {
@@ -79,10 +79,11 @@ class ReviewText extends React.Component {
         //     // debugger
         //     // this.props.updateUser(user)
         // } else if ...
-        if (this.props.review !== prevProps.review || this.state.value !== prevState.value){
+        if (this.props.review.body !== prevProps.review.body || this.props.review.rating !== prevProps.review.rating){
             debugger
             // this.forceUpdate();
-            // this.rerenderCallback();
+            this.rerenderCallback();
+            this.props.fetchBusiness(this.props.business.id)
         }
     }
 

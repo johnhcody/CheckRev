@@ -62,6 +62,7 @@ class ReviewIndex extends React.Component {
                         deleteReview={this.props.deleteReview}
                         rerenderCallback={this.rerenderCallback}
                         updateUser={this.props.updateUser}
+                        fetchBusiness={this.props.fetchBusiness}
                         />
                     })
                 }
