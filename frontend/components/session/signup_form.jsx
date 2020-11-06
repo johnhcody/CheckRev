@@ -12,7 +12,6 @@ class SessionForm extends React.Component {
     }
 
     handleSubmit(e) {
-        debugger
         e.preventDefault(e);
         this.props.processForm(this.state);
     //     const registerUser = this.props.processForm
@@ -22,23 +21,16 @@ class SessionForm extends React.Component {
     //     url: `http://ZiptasticAPI.com/${user.zipcode}`,
     //     dataType: 'json',
     //     success: function (result) {
-    //         debugger
     //         const updatedUser =  Object.assign(user, result);
     //     },
     //     complete: function (data) {
     //         console.log(data);
-    //         debugger
     //     }
     // }
     // )
 
-    // debugger
     }
     
-    registerUser(user) {
-        debugger
-        this.props.processForm(user);
-    }   
 
     componentWillUnmount() {
         this.props.clearErrors();

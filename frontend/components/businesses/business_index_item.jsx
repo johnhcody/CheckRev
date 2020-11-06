@@ -11,7 +11,6 @@ class BusinessIndexItem extends React.Component {
     }
 
     renderPriceRating(rating) {
-        debugger
         switch (rating) {
             case 1:
                 return <h3>$</h3>
@@ -27,7 +26,6 @@ class BusinessIndexItem extends React.Component {
     }
 
     renderSnippet() {
-        debugger
         if (this.props.reviews.length === 0) {
             return <p>No reviews yet!  Check out this business and show your support.</p>
         } else {
@@ -39,7 +37,6 @@ class BusinessIndexItem extends React.Component {
     render() {
         const utensils = <FontAwesomeIcon icon="utensils" />
         const star = <FontAwesomeIcon icon={['fas', 'star']} />
-        debugger
         return (
             <Link to={`/businesses/${this.props.id}`} style={{textDecoration: "none"}}><div className="bus-item-container">
                 

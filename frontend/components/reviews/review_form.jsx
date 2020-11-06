@@ -213,13 +213,11 @@ class ReviewForm extends React.Component {
         if (redirectToShow) {
             return <Redirect to={`/businesses/${this.props.busId}`} />
         }
-        debugger
         if (this.props.allBusinesses.length === 0) {
             return null;
         } else {
             
             const business = this.props.allBusinesses.length === 1 ? this.props.allBusinesses[0] : this.props.allBusinesses.filter(business => business.id == this.props.busId)[0]
-            debugger   
             return (
                 <div>
                     <ReviewNav />

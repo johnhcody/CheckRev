@@ -42,9 +42,7 @@ class ReviewText extends React.Component {
     }
 
     handleClick(e) {
-        debugger
         this.props.deleteReview(this.props.review);
-        debugger
         this.props.rerenderCallback();
     }
 

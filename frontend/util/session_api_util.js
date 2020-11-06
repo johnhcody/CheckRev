@@ -29,7 +29,6 @@ export const findCityAndState = (zipcode) => {
 
 
 export const signup = (user) => {
-    debugger
     return $.ajax({
         method: "POST",
         url: "/api/users",
@@ -56,7 +55,6 @@ export const signup = (user) => {
     //     dataType: 'json',
     //     success: function (result) {
     //         user =  Object.assign(user, result)
-    //         debugger
     //     }
 
     // }).then($.ajax({

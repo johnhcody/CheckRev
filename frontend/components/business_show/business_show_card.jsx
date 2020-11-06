@@ -25,7 +25,6 @@ class BusinessShowCard extends React.Component {
     }
 
     renderPriceRating(rating) {
-        debugger
         switch (rating) {
             case 1:
                 return <h3>$</h3>
@@ -49,7 +48,6 @@ class BusinessShowCard extends React.Component {
         if (!this.props) {
             return null;
         } else {
-            debugger
             return (
                 <div className="bus-show-text">
                     <h1>{this.props.name}</h1>

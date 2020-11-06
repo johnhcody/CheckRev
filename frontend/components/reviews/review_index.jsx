@@ -39,7 +39,6 @@ class ReviewIndex extends React.Component {
             </div>)
             }
             else {
-                debugger
                 let sortedReviews = this.sortReviews(this.props.reviews)
                 return (
                 <div>
