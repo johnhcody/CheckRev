@@ -46,6 +46,35 @@ class ReviewText extends React.Component {
         this.props.rerenderCallback();
     }
 
+    componentDidMount() {
+        if (typeof this.props.author !== 'undefined') {
+            if (this.props.author.state === "" && this.props.author.city === "") {
+        fetch(`http://ZiptasticAPI.com/${this.props.author.zipcode}`)
+            .then((resp) => resp.json()) // Transform the data into json
+            .then(function (data) {
+                document.getElementById("city-and-zip").innerHTML = data["city"].charAt(0) + data["city"].slice(1).toLowerCase() + ", " + data['state']
+            })
+        };
+        }
+
+    }
+
+    componentDidUpdate() {
+        const cityAndState = document.getElementById("city-and-zip").innerHTML;
+        if (cityAndState !== "") {
+            // const obj = {
+            //     city: cityAndState.split(',')[0],
+            //     state: cityAndState.split(' ')[1]
+            // }
+            // const user = Object.assign({}, this.props.author);
+            // Object.assign(user, obj)
+            // this.props.updateUser(user)
+        }
+        debugger
+    }
+
+
+
 
     render() {
         if (!this.props.author) {
@@ -63,7 +92,7 @@ class ReviewText extends React.Component {
                     </div>
                     <div className="user-prof">
                         <h1>{this.props.author.firstName} {this.props.author.lastName}</h1>
-                        <h2>Boston, MA</h2>
+                        <h2 id="city-and-zip"></h2>
                         <h3>{typeof this.props.author.reviews === 'undefined' ? "0" : this.props.author.reviews.length.toString()} Reviews</h3>
                         <Link to={`/businesses/${this.props.business.id}/${this.props.review.id}/review-edit`}><h4 style={style}>Edit this Review</h4></Link>
     

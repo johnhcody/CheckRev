@@ -18,7 +18,45 @@ class Splash extends React.Component {
 
     componentDidMount() {
         window.scrollTo(0, 0);
+        debugger
+        // const currentUser = Object.assign({}, this.props.currentUser);
+
+        // if (currentUser.state === "" && currentUser.city === "") {
+        //     debugger
+        //     // let response = await fetch(`http://ZiptasticAPI.com/${currentUser.zipcode}`)
+        //     // //     .then((resp) => resp.json()) // Transform the data into json
+        //     // //     .then(function (data) {
+        //     // //         debugger
+        //     // //         // Create and append the li's to the ul
+        //     // //     })
+        //     // // };
+        //     // debugger
+        //     // let commits = await response.json()
+        //     async function cityAndState() {
+        //         currentUser
+        //         let url = 'https://api.github.com/repos/javascript-tutorial/en.javascript.info/commits';
+        //         let response = await fetch(url);
+    
+        //         let commits = await response.json(); // read response body and parse as JSON
+    
+        //         alert(commits[0].author.login);
+
+        //     }
+        // }
     }
+
+    //     return $.ajax({
+    //     method: 'GET',
+    //     url: `http://ZiptasticAPI.com/${currentUser.zipcode}`,
+    //     dataType: 'json',
+    //     success: function (result) {
+    //         const updatedUser =  Object.assign(currentUser, result);
+    //     },
+    //     complete: function (data) {
+    //         console.log(data);
+    //     }
+    // }
+    // )
     
     
     render() {

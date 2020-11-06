@@ -23,9 +23,12 @@ test = User.create({
      first_name: 'Guest', 
      last_name: 'User', 
      email: 'danny@devito.com', 
-     zipcode: '94016', 
+     zipcode: '11212', 
      password: 'password', 
-     birthdate: '05/04/1990', 
+     birthdate: '05/04/1990',
+     state: 'New York',
+     city: 'New York'
+
      })
 
 Business.destroy_all
