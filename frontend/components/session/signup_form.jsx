@@ -9,13 +9,37 @@ class SessionForm extends React.Component {
         super(props);
         this.state = this.props.user;
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.registerUser = this.registerUser.bind(this);
     }
 
     handleSubmit(e) {
+        debugger
         e.preventDefault(e);
-        const user = Object.assign({}, this.state);
-        this.props.processForm(user);
+        this.props.processForm(this.state);
+    //     const registerUser = this.props.processForm
+    //     let user = Object.assign({}, this.state);
+    //     const call = $.ajax({
+    //     method: 'GET',
+    //     url: `http://ZiptasticAPI.com/${user.zipcode}`,
+    //     dataType: 'json',
+    //     success: function (result) {
+    //         debugger
+    //         const updatedUser =  Object.assign(user, result);
+    //     },
+    //     complete: function (data) {
+    //         console.log(data);
+    //         debugger
+    //     }
+    // }
+    // )
+
+    // debugger
     }
+    
+    registerUser(user) {
+        debugger
+        this.props.processForm(user);
+    }   
 
     componentWillUnmount() {
         this.props.clearErrors();

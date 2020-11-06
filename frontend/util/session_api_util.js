@@ -19,8 +19,17 @@ export const logout = () => {
     })
 }
 
-export const signup = (user) => {
+export const findCityAndState = (zipcode) => {
+    return $.ajax({
+        method: 'GET',
+        url: `http://ZiptasticAPI.com/${zipcode}`,
+        dataType: 'json'
+})
+}
 
+
+export const signup = (user) => {
+    debugger
     return $.ajax({
         method: "POST",
         url: "/api/users",
@@ -33,13 +42,15 @@ export const signup = (user) => {
                 password: user.password,
                 zipcode: user.zipcode,
                 birthdate: user.birthdate,
-                errors: user.errors
+                errors: user.errors,
+                city: user.city,
+                state: user.state
             }
         }
     })
+}
 
-
-    // const call1 = $.ajax({
+    // return $.ajax({
     //     method: 'GET',
     //     url: `http://ZiptasticAPI.com/${user.zipcode}`,
     //     dataType: 'json',
@@ -53,7 +64,6 @@ export const signup = (user) => {
     //     url: "/api/users",
     //     data: {
     //         user: {
-    //             id: user.id,
     //             first_name: user.firstName,
     //             last_name: user.lastName,
     //             email: user.email,
@@ -94,4 +104,3 @@ export const signup = (user) => {
     //             }
     //         }
     //     }))
-}

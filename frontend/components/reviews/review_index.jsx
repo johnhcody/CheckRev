@@ -23,6 +23,12 @@ class ReviewIndex extends React.Component {
         this.props.rerenderParent()
     }
 
+    componentDidUpdate() {
+        //use prev props or prev state
+        // if length of reviews is different than the length of the reviews in prev props, then set state
+        
+    }
+
 
     render() {
         if (typeof this.props.allUsers === 'undefined' || typeof this.props.reviews === 'undefined') {

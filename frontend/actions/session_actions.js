@@ -6,6 +6,7 @@ export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 export const CLEAR_ERRORS = 'CLEAR_ERRORS'
 
 const receiveCurrentUser = currentUser => {
+    debugger
     return {
         type: RECEIVE_CURRENT_USER,
         currentUser
@@ -44,9 +45,17 @@ export const logout = () => dispatch => {
 
 export const signup = user => dispatch => {
     debugger
-    return SessionApiUtil.signup(user).then(payload => (
-        dispatch(receiveCurrentUser(payload))),
-        err => (dispatch(receiveErrors(err.responseJSON))))
+    return SessionApiUtil.findCityAndState(user.zipcode).then(payload => {
+        debugger
+        const completeUser = Object.assign(user, payload);
+        SessionApiUtil.signup(completeUser);
+        debugger
+    }).then(secondPayload => {
+        debugger
+        console.log(secondPayload);
+        dispatch(receiveCurrentUser(user)),
+            err => (dispatch(receiveErrors(err.responseJSON)))
+    })
 };
 
 // payload is what is sent back from json.  

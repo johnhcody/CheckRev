@@ -8,7 +8,7 @@ const mSTP = state => {
         user: {
             firstName: '',
             lastName: '',
-            email: '',
+            email: '',  
             password: '',
             zipcode: '',
             birthdate: '',
