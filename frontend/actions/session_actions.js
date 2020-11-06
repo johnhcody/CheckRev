@@ -45,17 +45,9 @@ export const logout = () => dispatch => {
 
 export const signup = user => dispatch => {
     debugger
-    return SessionApiUtil.findCityAndState(user.zipcode).then(payload => {
-        debugger
-        Object.assign(user, payload);
-        SessionApiUtil.signup(user);
-        debugger
-    }).then(secondPayload => {
-        debugger
-        console.log(secondPayload);
-        dispatch(receiveCurrentUser(user)),
-            err => (dispatch(receiveErrors(err.responseJSON)))
-    })
+    return SessionApiUtil.signup(user).then(payload => (
+        dispatch(receiveCurrentUser(payload))),
+        err => (dispatch(receiveErrors(err.responseJSON)))) 
 };
 
 // payload is what is sent back from json.  
