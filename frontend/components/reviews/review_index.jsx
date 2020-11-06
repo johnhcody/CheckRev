@@ -19,11 +19,16 @@ class ReviewIndex extends React.Component {
     }
 
     rerenderCallback() {
+        debugger
         //this.setState({value: this.state.value + 1})
         this.props.rerenderParent()
     }
 
-    componentDidUpdate() {
+    componentDidUpdate(prevProps, prevState) {
+        if (this.props.reviews !== prevProps.reviews) {
+            debugger
+            this.setState({value: this.state.value + 1})
+        }
         //use prev props or prev state
         // if length of reviews is different than the length of the reviews in prev props, then set state
         
@@ -56,6 +61,7 @@ class ReviewIndex extends React.Component {
                         business={this.props.business}
                         deleteReview={this.props.deleteReview}
                         rerenderCallback={this.rerenderCallback}
+                        updateUser={this.props.updateUser}
                         />
                     })
                 }

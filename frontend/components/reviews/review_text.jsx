@@ -8,11 +8,14 @@ class ReviewText extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            hovered: false
+            hovered: false,
+            value: 0
         };
         this.onMouseEnter = this.onMouseEnter.bind(this);
         this.onMouseLeave = this.onMouseLeave.bind(this);
         this.handleClick = this.handleClick.bind(this);
+        this.rerenderCallback = this.rerenderCallback.bind(this);
+
     }
 
     onMouseEnter(e) {
@@ -44,36 +47,49 @@ class ReviewText extends React.Component {
     handleClick(e) {
         this.props.deleteReview(this.props.review);
         this.props.rerenderCallback();
+        this.setState({value: this.state.value + 1})
     }
 
     componentDidMount() {
-        if (typeof this.props.author !== 'undefined') {
-            if (this.props.author.state === "" && this.props.author.city === "") {
-        fetch(`http://ZiptasticAPI.com/${this.props.author.zipcode}`)
-            .then((resp) => resp.json()) // Transform the data into json
-            .then(function (data) {
-                document.getElementById("city-and-zip").innerHTML = data["city"].charAt(0) + data["city"].slice(1).toLowerCase() + ", " + data['state']
-            })
-        };
-        }
+        // below works...but need to properly send patch request
+        // if (typeof this.props.author !== 'undefined') {
+        //     if (this.props.author.state === "" && this.props.author.city === "") {
+        // fetch(`http://ZiptasticAPI.com/${this.props.author.zipcode}`)
+        //     .then((resp) => resp.json()) // Transform the data into json
+        //     .then(function (data) {
+        //         document.getElementById("city-and-zip").innerHTML = data["city"].charAt(0) + data["city"].slice(1).toLowerCase() + ", " + data['state']
+        //         })
+        //     } else {
+        //         document.getElementById("city-and-zip").innerHTML = this.props.author.city + ", " + this.props.author.state
+        //     }
+        // }
 
     }
 
-    componentDidUpdate() {
-        const cityAndState = document.getElementById("city-and-zip").innerHTML;
-        if (cityAndState !== ""  && this.props.author) {
-            // const obj = {
-            //     city: cityAndState.split(',')[0],
-            //     state: cityAndState.split(' ')[1]
-            // }
-            // const user = Object.assign({}, this.props.author);
-            // Object.assign(user, obj)
-            // this.props.updateUser(user)
+    componentDidUpdate(prevProps, prevState) {
+        // const cityAndState = document.getElementById("city-and-zip").innerHTML;
+        // if (cityAndState !== ""  && this.props.author && this.props.author.city !== "" && this.props.author.state !== "") {
+        //     const obj = {
+        //         city: cityAndState.split(',')[0],
+        //         state: cityAndState.split(' ')[1]
+        //     }
+        //     console.log(obj);
+        //     // const user = Object.assign({}, this.props.author);
+        //     // Object.assign(user, obj)
+        //     // debugger
+        //     // this.props.updateUser(user)
+        // } else if ...
+        if (this.props.review !== prevProps.review || this.state.value !== prevState.value){
+            debugger
+            // this.forceUpdate();
+            // this.rerenderCallback();
         }
+    }
+
+    rerenderCallback() {
         debugger
+        this.props.rerenderCallback();
     }
-
-
 
 
     render() {
