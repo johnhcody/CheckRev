@@ -46,7 +46,7 @@ export const signup = user => dispatch => {
     debugger
     return SessionApiUtil.signup(user).then(payload => (
         dispatch(receiveCurrentUser(payload))),
-        err => (dispatch(receiveErrors(err.responseJSON))))
+        err => (dispatch(receiveErrors(err.responseJSON)))) 
 };
 
 // payload is what is sent back from json.  
