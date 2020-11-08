@@ -84,8 +84,9 @@ class ReviewText extends React.Component {
             // this.forceUpdate();
             this.rerenderCallback();
             this.props.fetchBusiness(this.props.business.id)
+            this.setState({value: this.state.value + 1})
         }
-    }
+    } 
 
     rerenderCallback() {
         debugger
