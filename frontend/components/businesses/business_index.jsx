@@ -25,7 +25,6 @@ class BusinessIndex extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-        debugger
         if (this.props.businesses !== prevProps.businesses) {
             this.setState({businesses: this.props.businesses})
         }
@@ -33,7 +32,6 @@ class BusinessIndex extends React.Component {
 
     applyFilter(filterObj) {
         console.log(filterObj);
-        debugger
         if (filterObj.priceRating == "0") {
             this.setState({businesses: this.props.businesses})
         } else {
@@ -56,7 +54,10 @@ class BusinessIndex extends React.Component {
                                 <div className="bus-item-wrapper">
                                         <h1>Sorry, there are no businesses that match your search</h1>
                                 </div>
-                                <MainMap businesses={this.props.businesses} />
+                                <MainMap 
+                                businesses={this.props.businesses} 
+                                updateFilters={this.props.updateFilters}
+                                />
                             </div>
                         </div>
                         <BusinessIndexFooter />
@@ -64,7 +65,7 @@ class BusinessIndex extends React.Component {
                 )
             
         } else {
-            debugger
+
             return (
                 <div>
                 <BusinessSearch />
@@ -95,7 +96,8 @@ class BusinessIndex extends React.Component {
                             })
                         }
                         </div> 
-                        <MainMap businesses={this.props.businesses} />
+                        <MainMap businesses={this.props.businesses} 
+                        updateFilters={this.props.updateFilters}/>
                     </div>
             </div>
                 <BusinessIndexFooter />

@@ -80,7 +80,7 @@ class ReviewText extends React.Component {
         //     // this.props.updateUser(user)
         // } else if ...
         if (this.props.review.body !== prevProps.review.body || this.props.review.rating !== prevProps.review.rating){
-            debugger
+
             // this.forceUpdate();
             this.rerenderCallback();
             this.props.fetchBusiness(this.props.business.id)
@@ -89,7 +89,7 @@ class ReviewText extends React.Component {
     } 
 
     rerenderCallback() {
-        debugger
+
         this.props.rerenderCallback();
     }
 

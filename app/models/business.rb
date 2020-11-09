@@ -35,8 +35,32 @@ class Business < ApplicationRecord
     foreign_key: :business_id,
     class_name: :Hour
 
+
+    def self.per_page
+        8
+    end
+
+    def self.page(per_page = self.per_page)
+        pages = count / per_page.to_f
+        pages += 1 if pages % 1 > 0
+        pages.to_i
+    end
+
+    def paginate(page: 1, per_page: self.per_page)
+      page = page.to_i
+      per_page = per_page.to_i
+
+      offset = (page - 1) * per_page
+      limit(per_page).offset(offset)
+    end
+
+
     def self.in_bounds(bounds)
-        
+        #debugger
+    self.where("lat < ?", bounds[:northEast][:lat])
+      .where("lat > ?", bounds[:southWest][:lat])
+      .where("lng > ?", bounds[:southWest][:lng])
+      .where("lng < ?", bounds[:northEast][:lng])
 
     end
 

@@ -19,14 +19,14 @@ class ReviewIndex extends React.Component {
     }
 
     rerenderCallback() {
-        debugger
+
         //this.setState({value: this.state.value + 1})
         this.props.rerenderParent()
     }
 
     componentDidUpdate(prevProps, prevState) {
         if (this.props.reviews !== prevProps.reviews) {
-            debugger
+    
             this.setState({value: this.state.value + 1})
         }
         //use prev props or prev state

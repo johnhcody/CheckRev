@@ -16,11 +16,11 @@ handleChange(field) {
 
     return e => {
 
-        debugger
+
         this.props.applyFilter({ [field]: e.currentTarget.value })
         const vals = ["1", "2", "3", "4"]
         this.setState({ [field]: e.currentTarget.value })
-        debugger
+
         if (e.currentTarget.value !== '0') {
             document.getElementById(`dol${e.currentTarget.value}`).style.backgroundColor = '#f2f2f2'
             document.getElementById(`dol${e.currentTarget.value}`).style.color = '#67917A'

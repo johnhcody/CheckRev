@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { fetchBusinesses } from '../../actions/business_actions';
-import BusinessIndex from './business_index'
+import BusinessIndex from './business_index';
+import { updateFilters } from '../../actions/filter_actions';
 
 const mSTP = state => {
     return {
@@ -9,8 +10,10 @@ const mSTP = state => {
 }
 
 const mDTP = dispatch => {
+    debugger
     return {
-        fetchBusinesses: () => dispatch(fetchBusinesses())
+        fetchBusinesses: () => dispatch(fetchBusinesses()),
+        updateFilters: (filter, value) => dispatch(updateFilters(filter, value))
     }
 }
 
