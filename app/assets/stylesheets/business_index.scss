@@ -264,6 +264,18 @@
     }
 }
 
+#clear-price-filter-button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    padding: 5px 0px 0px 0px;
+    font-weight: 600;
+    color: #67917A;
+    &:hover {
+        color: black;
+    }
+}
+
 #dol1 {
     border-radius: 15px 0px 0px 15px;
     border-color: solid 1px $gray;

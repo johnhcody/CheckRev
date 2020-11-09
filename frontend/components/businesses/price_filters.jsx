@@ -6,7 +6,7 @@ class PriceFilters extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            priceRating: ""
+            priceRating: "0"
         }
         this.handleChange = this.handleChange.bind(this);
         }
@@ -20,8 +20,11 @@ handleChange(field) {
         this.props.applyFilter({ [field]: e.currentTarget.value })
         const vals = ["1", "2", "3", "4"]
         this.setState({ [field]: e.currentTarget.value })
-        document.getElementById(`dol${e.currentTarget.value}`).style.backgroundColor = '#f2f2f2'
-        document.getElementById(`dol${e.currentTarget.value}`).style.color = '#67917A'
+        debugger
+        if (e.currentTarget.value !== '0') {
+            document.getElementById(`dol${e.currentTarget.value}`).style.backgroundColor = '#f2f2f2'
+            document.getElementById(`dol${e.currentTarget.value}`).style.color = '#67917A'
+        }
         if (e.currentTarget) {
             return vals.filter(el => el !== e.currentTarget.value).forEach(val => {
         
@@ -55,6 +58,7 @@ handleChange(field) {
                         <input type="radio" name="$$$$" id="price-filter-4" value="4" onChange={this.handleChange('priceRating')} checked={this.state.price == "4"} required/>
                         $$$$</label>
                 </div>
+                <button value="0" id="clear-price-filter-button" onClick={this.handleChange('priceRating') }>Clear Price Filters</button>
                 <CategoryFilter />
                 <TypeFilter />
             </div>

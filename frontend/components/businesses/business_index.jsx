@@ -34,7 +34,11 @@ class BusinessIndex extends React.Component {
     applyFilter(filterObj) {
         console.log(filterObj);
         debugger
-        this.setState({ businesses: this.props.businesses.filter(business => business.priceRating == filterObj.priceRating)})
+        if (filterObj.priceRating == "0") {
+            this.setState({businesses: this.props.businesses})
+        } else {
+            this.setState({ businesses: this.props.businesses.filter(business => business.priceRating == filterObj.priceRating)})
+        }
     }
 
     render() {
