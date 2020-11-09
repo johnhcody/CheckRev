@@ -33,7 +33,7 @@ class TypeFilter extends React.Component {
                 </div>
                 <div className="see-more-trigger">
                     <button onClick={this.props.openModal}>
-                        See More
+                        Filter by Amenities
                     </button>
                 </div>
             </div>

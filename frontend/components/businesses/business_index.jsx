@@ -12,7 +12,11 @@ import BusinessIcons from './business_icons';
 
 class BusinessIndex extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
+        this.state = {
+            businesses: []
+        }
+        this.applyFilter = this.applyFilter.bind(this)
     }
 
     componentDidMount() {
@@ -20,24 +24,54 @@ class BusinessIndex extends React.Component {
         this.props.fetchBusinesses();            
     }
 
+    componentDidUpdate(prevProps) {
+        debugger
+        if (this.props.businesses !== prevProps.businesses) {
+            this.setState({businesses: this.props.businesses})
+        }
+    }
+
+    applyFilter(filterObj) {
+        console.log(filterObj);
+        debugger
+        this.setState({ businesses: this.props.businesses.filter(business => business.priceRating == filterObj.priceRating)})
+    }
+
     render() {
 
         const { address1, address2, businessCategory, businessType, city, name, phoneNumber, webAddress, zipcode } = this.props.businesses;
-        if (!this.props.businesses) {
+        if (this.state.businesses.length === 0) {
+            return (
+                    <div>
+                        <BusinessSearch />
+
+                        <div>
+                            <div className="bus-idx-wrapper">
+                                <PriceFilters applyFilter={this.applyFilter} />
+
+                                <div className="bus-item-wrapper">
+                                        <h1>Sorry, there are no businesses that match your search</h1>
+                                </div>
+                                <MainMap businesses={this.props.businesses} />
+                            </div>
+                        </div>
+                        <BusinessIndexFooter />
+                    </div>
+                )
             
-            return null;
         } else {
+            debugger
             return (
                 <div>
                 <BusinessSearch />
                 
             <div>
                 <div className="bus-idx-wrapper">
-                    <PriceFilters />
+                    <PriceFilters applyFilter={this.applyFilter}/>
                     
                         <div className="bus-item-wrapper">
                         {
-                            this.props.businesses.map(business => {  
+                            this.state.businesses.map(business => {  
                                 return <BusinessIndexItem 
                                 id={business.id}
                                 address1={business.address1}
