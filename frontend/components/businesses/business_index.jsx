@@ -49,8 +49,8 @@ class BusinessIndex extends React.Component {
 
                         <div>
                             <div className="bus-idx-wrapper">
-                                <PriceFilters applyFilter={this.applyFilter} />
-
+                                <PriceFilters applyFilter={this.applyFilter} 
+                                updateFilters={this.props.updateFilters} />
                                 <div className="bus-item-wrapper">
                                         <h1>Sorry, there are no businesses that match your search</h1>
                                 </div>
@@ -72,8 +72,8 @@ class BusinessIndex extends React.Component {
                 
             <div>
                 <div className="bus-idx-wrapper">
-                    <PriceFilters applyFilter={this.applyFilter}/>
-                    
+                    <PriceFilters applyFilter={this.applyFilter}
+                        updateFilters={this.props.updateFilters} />
                         <div className="bus-item-wrapper">
                         {
                             this.state.businesses.map(business => {  

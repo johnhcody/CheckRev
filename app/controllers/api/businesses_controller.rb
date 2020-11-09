@@ -23,6 +23,10 @@ class Api::BusinessesController < ApplicationController
         #debugger
         @businesses = params[:bounds] ? Business.includes(:reviews).in_bounds(params[:bounds]) : Business.all
         # debugger
+        if params[:priceRating] && params[:bounds]
+            #debugger
+            @businesses = Business.includes(:reviews).in_bounds(params[:bounds]).match_price(params[:priceRating])
+        end
         render :index
     end
 

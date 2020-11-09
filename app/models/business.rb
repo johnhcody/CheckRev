@@ -64,4 +64,10 @@ class Business < ApplicationRecord
 
     end
 
+    def self.match_price(price_rating)
+        #debugger
+        price_rating == "0" ? self.where("price_rating > 0") : self.where("price_rating = ?", price_rating)
+        
+    end
+
 end
