@@ -15,7 +15,7 @@ class CategoryFilter extends React.Component {
         debugger
         return e => {
             debugger
-            e.currentTarget.checked ? this.setState({ [field]: this.state.business_type.push(e.currentTarget.value) }) : this.setState({ [field]: this.state.business_type.filter(el => el !== (e.currentTarget.value)) })
+            e.currentTarget.checked ? this.setState({ business_type: this.state.business_type.push(e.currentTarget.value) }) : this.setState({ business_type: this.state.business_type.filter(el => el !== (e.currentTarget.value)) })
             debugger
             this.props.updateFilters(field, this.state.business_type)
             debugger
