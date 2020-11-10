@@ -883,3 +883,75 @@
 .radio__label {
     font-size: 16px;
 }
+
+
+.bus-item-wrapper {
+    h6 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 20px 0px 17px 1px;
+    color: $red;
+    }
+}
+
+.search-no-results-top {
+    header {
+            font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 8px 0px 17px 0px;
+    color: $green;
+    }
+    li {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0px 0px 4px 9px;
+    }
+    button {
+            background-color: transparent;
+    outline: none;
+    border: none;
+    padding: 15px 0px 0px 0px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #67917A;
+    border-bottom: 1px solid transparent;
+        &:hover {
+            color: $gray;
+            border-bottom: 1px solid $gray;
+        }
+    }
+
+}
+
+.search-no-results-bottom {
+    padding-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    header {
+    font-size: 17px;
+    font-weight: 600;
+    padding: 8px 0px 17px 0px;
+    }
+    span {
+    font-size: 17px;
+    font-weight: 600;
+    padding: 8px 0px 17px 0px;
+    color: $green;
+    }
+    li {
+        font-size: 14px;
+        font-weight: 600;
+        padding: 2px 0px 4px 9px;
+    }
+ 
+}
+
+#top-list-item {
+    padding-top: 8px;
+}
+
+#bottom-list-item {
+    padding-bottom: 8px;
+}

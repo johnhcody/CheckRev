@@ -44,7 +44,47 @@ class BusinessIndex extends React.Component {
                                 <PriceFilters  
                                 updateFilters={this.props.updateFilters} />
                                 <div className="bus-item-wrapper">
-                                        <h1>Sorry, there are no businesses that match your search</h1>
+                                        <h6 >Sorry, there are no businesses that match your search</h6>
+                                        <div className="search-no-results-top">
+                                            <ul >
+                                                <header>Why is that?</header>
+                                                <li>Currently, we have businesses in New York, Boston, Phoenix, St. Louis, Chicago, and San Francisco.</li>
+                                                <li>It is also possible your search was too specific...try general terms (try the caetgories listed below!)</li>
+                                                <button>Click here to clear all filters and try again</button>
+                                            </ul>
+                                        </div>
+                                    <div className="search-no-results-bottom">
+                                            <ul >
+                                                <header>Try searching by category... Here is a list of categories of current businesses</header>
+                                                <span>Restaurant Categories</span>
+                                                    <li id="top-list-item">Japanese</li>
+                                                    <li>Thai</li>
+                                                    <li>Indian</li>
+                                                    <li>Mexican</li>
+                                                    <li>Italian</li>
+                                                    <li>Home Cooking</li>
+                                                    <li>Bar</li>
+                                                    <li id="bottom-list-item">Cafe</li>
+                                                <span>Professional Services</span>
+                                                    <li id="top-list-item">Banking</li>
+                                                    <li>Legal</li>
+                                                    <li>Finance</li>
+                                                    <li>Insurance</li>
+                                                    <li>Investing</li>
+                                                    <li>Web Design</li>
+                                                    <li>Marketing</li>
+                                                    <li id="bottom-list-item">Accounting</li>
+                                                <span>Home Services</span>
+                                                    <li id="top-list-item">Cleaning</li>
+                                                    <li>Landscaping</li>
+                                                    <li>Security</li>
+                                                    <li>Real Estate</li>
+                                                    <li>Construction</li>
+                                                    <li>Interior Design</li>
+                                                    <li>Property Management</li>
+                                                    <li id="bottom-list-item">Roofing</li>
+                                            </ul>
+                                        </div>
                                 </div>
                                 <MainMap 
                                 businesses={this.props.businesses} 

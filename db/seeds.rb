@@ -13,7 +13,7 @@ CITIES = ["New York", "Boston", "San Francisco", "St. Louis", "Phoenix", "Chicag
 
 PROFESSIONAL_SERIVCES_CAT = ["accounting", "banking", "legal", "finance", "insurance", "investing", "web design", "marketing"]
 
-RESTAURANT_CAT = ["japanese", "thai", "indian", "mexican", "italian", "home coking", "southern", "cafe"]
+RESTAURANT_CAT = ["japanese", "thai", "indian", "mexican", "italian", "home coking", "bar", "cafe"]
 
 HOME_SERVICES_CAT = ["cleaning", "landscaping", "security", "real estate", "construction", "interior design", "property management", "roofing"]
 
