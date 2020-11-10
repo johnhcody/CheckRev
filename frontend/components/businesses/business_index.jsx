@@ -50,6 +50,7 @@ class BusinessIndex extends React.Component {
                                                 <header>Why is that?</header>
                                                 <li>Currently, we have businesses in New York, Boston, Phoenix, St. Louis, Chicago, and San Francisco.</li>
                                                 <li>It is also possible your search was too specific...try general terms (try the caetgories listed below!)</li>
+                                                <li>You can also try moving the map over one of the above cities</li>
                                                 <button>Click here to clear all filters and try again</button>
                                             </ul>
                                         </div>
