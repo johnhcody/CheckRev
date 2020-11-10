@@ -53,7 +53,9 @@ bos_bus = Business.create({
     web_address: 'www.' + name_bos.split(' ').join('').downcase + '.com',
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: PROFESSIONAL_SERIVCES_CAT.sample, 
-    business_category: 'Professional Services'})
+    business_category: 'Professional Services',
+    price_rating: rand(1..4)
+    })
 bos_bus.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/prof-services-200.png"), filename: "logo.png")
 
 name_bos2 = Faker::Restaurant.name
@@ -70,7 +72,8 @@ bos_bus2 = Business.create({
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Restaurant' ,
     business_category: RESTAURANT_CAT.sample,
-    price_rating: rand(1..4)})
+    price_rating: rand(1..4)
+    })
     bos_bus2.photo.attach(io: URI.open(RESTAURANT_PHOTOS.sample), filename: "logo.png")
 
 name_bos3 = Faker::Company.name
@@ -87,7 +90,8 @@ bos_bus3 = Business.create({
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Home Services' ,
     business_category: HOME_SERVICES_CAT.sample,
-    price_rating: rand(1..4)})
+    price_rating: rand(1..4)
+    })
     bos_bus3.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/home-services-200.png"), filename: "logo.png")
 
 name_chi = Faker::Restaurant.name
@@ -104,7 +108,8 @@ chi_bus = Business.create({
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Restaurant' ,
     business_category: RESTAURANT_CAT.sample,
-    price_rating: rand(1..4)})
+    price_rating: rand(1..4)
+    })
     chi_bus.photo.attach(io: URI.open(RESTAURANT_PHOTOS.sample), filename: "logo.png")
 
 name_chi2 = Faker::Company.name + Faker::Company.suffix 
@@ -121,7 +126,8 @@ chi_bus2 = Business.create({
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Professional Services' ,
     business_category: PROFESSIONAL_SERIVCES_CAT.sample,
-    price_rating: rand(1..4)})
+    price_rating: rand(1..4)
+    })
     chi_bus2.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/prof-services-200.png"), filename: "logo.png")
 
 name_chi3 = Faker::Company.name
@@ -138,7 +144,8 @@ chi_bus3 = Business.create({
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Home Services' ,
     business_category: HOME_SERVICES_CAT.sample,
-    price_rating: rand(1..4)})
+    price_rating: rand(1..4)
+    })
     chi_bus3.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/home-services-200.png"), filename: "logo.png")
         
 name_ny = Faker::Restaurant.name        
@@ -153,9 +160,10 @@ ny_bus1 = Business.create({
     lat: sprintf('%.4f', 40.7238 + rand(-0.0050..0.0050).to_f, 
     web_address: 'www.' + name_ny.split(' ').join('').downcase + '.com',
     phone_number: Faker::PhoneNumber.cell_phone, 
-    business_type: 'Restaurant' ,
+    business_type: 'Restaurant',
     business_category: RESTAURANT_CAT.sample,
-    price_rating: rand(1..4)})
+    price_rating: rand(1..4)
+    })
     ny_bus1.photo.attach(io: URI.open(RESTAURANT_PHOTOS.sample), filename: "logo.png")
 
 name_ny_2 = Faker::Company.name + Faker::Company.suffix
@@ -172,7 +180,8 @@ ny_bus2 = Business.create({
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Professional Services' ,
     business_category: PROFESSIONAL_SERIVCES_CAT.sample,
-    price_rating: rand(1..4)})
+    price_rating: rand(1..4)
+    })
     ny_bus2.photo.attach(io: URI.open(RESTAURANT_PHOTOS.sample), filename: "logo.png")
 
 name_ny_3 = Faker::Company.name
@@ -189,7 +198,8 @@ ny_bus3 = Business.create({
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Home Services' ,
     business_category: HOME_SERVICES_CAT.sample,
-    price_rating: rand(1..4)})
+    price_rating: rand(1..4)
+    })
     ny_bus3.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/home-services-200.png"), filename: "logo.png")
 
 name_ny_4 = Faker::Restaurant.name    
@@ -206,7 +216,8 @@ ny_bus4 = Business.create({
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Restaurant' ,
     business_category: RESTAURANT_CAT.sample,
-    price_rating: rand(1..4)})
+    price_rating: rand(1..4)
+    })
     ny_bus4.photo.attach(io: URI.open(RESTAURANT_PHOTOS.sample), filename: "logo.png")
             
 
@@ -226,7 +237,8 @@ phx_bus = Business.create({
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Restaurant' ,
     business_category: RESTAURANT_CAT.sample,
-    price_rating: rand(1..4)})
+    price_rating: rand(1..4)
+    })
     phx_bus.photo.attach(io: URI.open(RESTAURANT_PHOTOS.sample), filename: "logo.png")
 
 name_phx2 = Faker::Company.name + Faker::Company.suffix            
@@ -243,7 +255,8 @@ phx_bus2 = Business.create({
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Professional Services' ,
     business_category: PROFESSIONAL_SERIVCES_CAT.sample,
-    price_rating: rand(1..4)})
+    price_rating: rand(1..4)
+    })
     phx_bus2.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/prof-services-200.png"), filename: "logo.png")
 
 name_phx3 = Faker::Company.name            
@@ -260,7 +273,8 @@ phx_bus3 = Business.create({
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Home Services' ,
     business_category: HOME_SERVICES_CAT.sample,
-    price_rating: rand(1..4)})
+    price_rating: rand(1..4)
+    })
     phx_bus3.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/home-services-200.png"), filename: "logo.png")
 
 name_sf = Faker::Restaurant.name            
@@ -277,7 +291,8 @@ sf_bus = Business.create({
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Restaurant' ,
     business_category: RESTAURANT_CAT.sample,
-    price_rating: rand(1..4)})
+    price_rating: rand(1..4)
+    })
     sf_bus.photo.attach(io: URI.open(RESTAURANT_PHOTOS.sample), filename: "logo.png")
 
 name_sf2 = Faker::Company.name + Faker::Company.suffix            
@@ -311,7 +326,8 @@ sf_bus3 = Business.create({
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Home Services' ,
     business_category: HOME_SERVICES_CAT.sample,
-    price_rating: rand(1..4)})
+    price_rating: rand(1..4)
+    })
     sf_bus3.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/home-services-200.png"), filename: "logo.png")
 
 name_stl = Faker::Restaurant.name            
@@ -345,7 +361,8 @@ stl_bus2 = Business.create({
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Professional Services' ,
     business_category: PROFESSIONAL_SERIVCES_CAT.sample,
-    price_rating: rand(1..4)})
+    price_rating: rand(1..4)
+    })
     stl_bus2.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/prof-services-200.png"), filename: "logo.png")
 
 name_stl3 = Faker::Company.name            
@@ -362,7 +379,8 @@ stl_bus3 = Business.create({
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Home Services' ,
     business_category: HOME_SERVICES_CAT.sample,
-    price_rating: rand(1..4)})
+    price_rating: rand(1..4)
+    })
     stl_bus3.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/home-services-200.png"), filename: "logo.png")
                 
                     
