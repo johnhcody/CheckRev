@@ -11,16 +11,45 @@ class CategoryFilter extends React.Component {
         this.handleChange = this.handleChange.bind(this);
     }
 
+
+
     handleChange(field) {
         debugger
         return e => {
             debugger
-            e.currentTarget.checked ? this.setState({ business_type: this.state.business_type.push(e.currentTarget.value) }) : this.setState({ business_type: this.state.business_type.filter(el => el !== (e.currentTarget.value)) })
-            debugger
-            this.props.updateFilters(field, this.state.business_type)
-            debugger
+            const valArray = [e.currentTarget.value]
+            //e.currentTarget.checked ? this.setState({business_type: this.state.business_type.push(e.target.value)}) : this.setState({business_type: this.state.business_type.filter(el => el !== e.currentTarget.value)})
+            e.currentTarget.checked ? this.setState({business_type: this.state.business_type.concat(valArray)}) : this.setState({business_type: this.state.business_type.filter(el => el !== e.currentTarget.value)})
+
+            // e.persist();
+            // if (e.currentTarget.checked) {
+            //     this.setState(state => {
+            //         debugger
+            //         const business_type = state.business_type.concat(e.target.value)
+            //         return {
+            //             business_type
+            //         }
+            //     })
+            // } else {
+            //     this.setState(state => {
+            //         debugger
+            //         const business_type = state.business_type.filter(el => el !== (e.target.value))
+            //         return {
+            //             business_type
+            //         }
+            //     })
+            // }
+            //e.currentTarget.checked ? this.setState({ business_type: this.state[business_type].push(e.currentTarget.value) }) : this.setState({ business_type: this.state.business_type.filter(el => el !== (e.currentTarget.value)) })
+
         }
 
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        debugger
+        if (this.state.business_type !== prevState.business_type) {
+            this.props.updateFilters('business_type', this.state.business_type)
+        }
     }
 
     render() {

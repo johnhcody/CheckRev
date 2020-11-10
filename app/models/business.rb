@@ -73,9 +73,9 @@ class Business < ApplicationRecord
 
         if business_type.length == 1 
             self.where("business_type = ?", business_type[0])
-        elsif business_type.legnth == 2
+        elsif business_type.length == 2
             self.where("business_type = ?", business_type[0]).or(self.where("business_type = ?", business_type[1]))
-        elsif business_type.legnth == 3
+        elsif business_type.length == 3
             self.where("business_type = ?", business_type[0]).or(self.where("business_type = ?", business_type[1])).or(self.where("business_type = ?", business_type[2]))
         end
 
