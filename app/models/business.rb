@@ -71,8 +71,12 @@ class Business < ApplicationRecord
 
     def self.match_category(business_type)
 
-        business_type.each do |type|
-            self.where("business_type = ?", type)
+        if business_type.length == 1 
+            self.where("business_type = ?", business_type[0])
+        elsif business_type.legnth == 2
+            self.where("business_type = ?", business_type[0]).or(self.where("business_type = ?", business_type[1]))
+        elsif business_type.legnth == 3
+            self.where("business_type = ?", business_type[0]).or(self.where("business_type = ?", business_type[1])).or(self.where("business_type = ?", business_type[2]))
         end
 
     end

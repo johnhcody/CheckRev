@@ -16,7 +16,6 @@ class BusinessIndex extends React.Component {
         this.state = {
             businesses: []
         }
-        this.applyFilter = this.applyFilter.bind(this)
     }
 
     componentDidMount() {
