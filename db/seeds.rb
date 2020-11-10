@@ -23,6 +23,9 @@ RESTAURANT_PHOTOS = ["https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/res
 
 User.destroy_all
 
+Business.destroy_all
+
+Review.destroy_all
 
 test = User.create({ 
      first_name: 'Guest', 
@@ -35,9 +38,6 @@ test = User.create({
      city: 'New York'
 
      })
-
-Business.destroy_all
-
 
 
 name_bos = Faker::Company.name + Faker::Company.suffix 
@@ -147,54 +147,54 @@ chi_bus3 = Business.create({
     price_rating: rand(1..4)
     })
     chi_bus3.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/home-services-200.png"), filename: "logo.png")
-        
-name_ny = Faker::Restaurant.name        
-ny_bus1 = Business.create({
+
+name_ny = Faker::Restaurant.name
+ny_bus = Business.create({
     name: name_ny,
     address_1: rand(1..999).to_s + ' ' + Faker::Address.street_name, 
     address_2: Faker::Address.secondary_address, 
     city: 'New York', 
     state: 'NY', 
     zipcode: Faker::Number.number(digits: 5), 
-    lng: sprintf('%.4f', -74.0001 + rand(-0.0050..0.0050)).to_f,
-    lat: sprintf('%.4f', 40.7238 + rand(-0.0050..0.0050).to_f, 
-    web_address: 'www.' + name_ny.split(' ').join('').downcase + '.com',
+    lng: sprintf('%.4f', -74.0001 + rand(-0.100..0.100)).to_f,
+    lat: sprintf('%.4f', 40.7238 + rand(-0.050..0.0050)).to_f,
+    web_address: 'www.' + name_ny.split(' ').join('').downcase + '.com', 
     phone_number: Faker::PhoneNumber.cell_phone, 
-    business_type: 'Restaurant',
+    business_type: 'Restaurant' ,
     business_category: RESTAURANT_CAT.sample,
     price_rating: rand(1..4)
     })
-    ny_bus1.photo.attach(io: URI.open(RESTAURANT_PHOTOS.sample), filename: "logo.png")
+    ny_bus.photo.attach(io: URI.open(RESTAURANT_PHOTOS.sample), filename: "logo.png")
 
-name_ny_2 = Faker::Company.name + Faker::Company.suffix
+name_ny2 = Faker::Company.name + Faker::Company.suffix 
 ny_bus2 = Business.create({
-    name: name_ny_2,
+    name: name_ny2,
     address_1: rand(1..999).to_s + ' ' + Faker::Address.street_name, 
     address_2: Faker::Address.secondary_address, 
     city: 'New York', 
     state: 'NY', 
     zipcode: Faker::Number.number(digits: 5), 
-    lng: sprintf('%.4f', -74.0001 + rand(-0.0050..0.0050)).to_f,
-    lat: sprintf('%.4f', 40.7238 + rand(-0.0050..0.0050).to_f, 
-    web_address: 'www.' + name_ny_2.split(' ').join('').downcase + '.com',
+    lng: sprintf('%.4f', -74.0001 + rand(-0.100..0.100)).to_f,
+    lat: sprintf('%.4f', 40.7238 + rand(-0.050..0.0050)).to_f,
+    web_address: 'www.' + name_ny2.split(' ').join('').downcase + '.com', 
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Professional Services' ,
     business_category: PROFESSIONAL_SERIVCES_CAT.sample,
     price_rating: rand(1..4)
     })
-    ny_bus2.photo.attach(io: URI.open(RESTAURANT_PHOTOS.sample), filename: "logo.png")
+    ny_bus2.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/prof-services-200.png"), filename: "logo.png")
 
-name_ny_3 = Faker::Company.name
+name_ny3 = Faker::Company.name
 ny_bus3 = Business.create({
-    name: Faker::Restaurant.name,
+    name: name_ny3,
     address_1: rand(1..999).to_s + ' ' + Faker::Address.street_name, 
     address_2: Faker::Address.secondary_address, 
     city: 'New York', 
     state: 'NY', 
     zipcode: Faker::Number.number(digits: 5), 
-    lng: sprintf('%.4f', -74.0001 + rand(-0.0050..0.0050)).to_f,
-    lat: sprintf('%.4f', 40.7238 + rand(-0.0050..0.0050).to_f, 
-    web_address: 'www.' + name_ny_3.split(' ').join('').downcase + '.com',
+    lng: sprintf('%.4f', -74.0001 + rand(-0.100..0.100)).to_f,
+    lat: sprintf('%.4f', 40.7238 + rand(-0.050..0.0050)).to_f,
+    web_address: 'www.' + name_ny3.split(' ').join('').downcase + '.com', 
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Home Services' ,
     business_category: HOME_SERVICES_CAT.sample,
@@ -202,28 +202,8 @@ ny_bus3 = Business.create({
     })
     ny_bus3.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/home-services-200.png"), filename: "logo.png")
 
-name_ny_4 = Faker::Restaurant.name    
-ny_bus4 = Business.create({
-    name: name_ny_4,
-    address_1: rand(1..999).to_s + ' ' + Faker::Address.street_name, 
-    address_2: Faker::Address.secondary_address, 
-    city: 'New York', 
-    state: 'NY', 
-    zipcode: Faker::Number.number(digits: 5), 
-    lng: sprintf('%.4f', -74.0001 + rand(-0.0050..0.0050)).to_f,
-    lat: sprintf('%.4f', 40.7238 + rand(-0.0050..0.0050).to_f, 
-    web_address: 'www.' + name_ny_4.split(' ').join('').downcase + '.com',
-    phone_number: Faker::PhoneNumber.cell_phone, 
-    business_type: 'Restaurant' ,
-    business_category: RESTAURANT_CAT.sample,
-    price_rating: rand(1..4)
-    })
-    ny_bus4.photo.attach(io: URI.open(RESTAURANT_PHOTOS.sample), filename: "logo.png")
-            
 
-Review.destroy_all
-
-name_phx = Faker::Restaurant.name            
+name_phx = Faker::Restaurant.name
 phx_bus = Business.create({
     name: name_phx,
     address_1: rand(1..999).to_s + ' ' + Faker::Address.street_name, 
@@ -231,8 +211,8 @@ phx_bus = Business.create({
     city: 'Phoenix', 
     state: 'AZ', 
     zipcode: Faker::Number.number(digits: 5), 
-    lng: sprintf('%.4f', -112.0748 + rand(-0.150..0.150)).to_f,
-    lat: sprintf('%.4f', 33.4474 + rand(-0.0150..0.0150).to_f, 
+    lng: sprintf('%.4f', -112.0748 + rand(-0.100..0.100)).to_f,
+    lat: sprintf('%.4f', 33.4474 + rand(-0.050..0.0050)).to_f,
     web_address: 'www.' + name_phx.split(' ').join('').downcase + '.com', 
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Restaurant' ,
@@ -241,7 +221,7 @@ phx_bus = Business.create({
     })
     phx_bus.photo.attach(io: URI.open(RESTAURANT_PHOTOS.sample), filename: "logo.png")
 
-name_phx2 = Faker::Company.name + Faker::Company.suffix            
+name_phx2 = Faker::Company.name
 phx_bus2 = Business.create({
     name: name_phx2,
     address_1: rand(1..999).to_s + ' ' + Faker::Address.street_name, 
@@ -249,17 +229,17 @@ phx_bus2 = Business.create({
     city: 'Phoenix', 
     state: 'AZ', 
     zipcode: Faker::Number.number(digits: 5), 
-    lng: sprintf('%.4f', -112.0748 + rand(-0.150..0.150)).to_f,
-    lat: sprintf('%.4f', 33.4474 + rand(-0.0150..0.0150).to_f, 
+    lng: sprintf('%.4f', -112.0748 + rand(-0.100..0.100)).to_f,
+    lat: sprintf('%.4f', 33.4474 + rand(-0.050..0.0050)).to_f,
     web_address: 'www.' + name_phx2.split(' ').join('').downcase + '.com', 
     phone_number: Faker::PhoneNumber.cell_phone, 
-    business_type: 'Professional Services' ,
-    business_category: PROFESSIONAL_SERIVCES_CAT.sample,
+    business_type: 'Home Services' ,
+    business_category: HOME_SERVICES_CAT.sample,
     price_rating: rand(1..4)
     })
-    phx_bus2.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/prof-services-200.png"), filename: "logo.png")
+    phx_bus2.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/home-services-200.png"), filename: "logo.png")
 
-name_phx3 = Faker::Company.name            
+name_phx3 = Faker::Company.name + Faker::Company.suffix
 phx_bus3 = Business.create({
     name: name_phx3,
     address_1: rand(1..999).to_s + ' ' + Faker::Address.street_name, 
@@ -267,26 +247,26 @@ phx_bus3 = Business.create({
     city: 'Phoenix', 
     state: 'AZ', 
     zipcode: Faker::Number.number(digits: 5), 
-    lng: sprintf('%.4f', -112.0748 + rand(-0.150..0.150)).to_f,
-    lat: sprintf('%.4f', 33.4474 + rand(-0.0150..0.0150).to_f, 
+    lng: sprintf('%.4f', -112.0748 + rand(-0.100..0.100)).to_f,
+    lat: sprintf('%.4f', 33.4474 + rand(-0.050..0.0050)).to_f,
     web_address: 'www.' + name_phx3.split(' ').join('').downcase + '.com', 
     phone_number: Faker::PhoneNumber.cell_phone, 
-    business_type: 'Home Services' ,
-    business_category: HOME_SERVICES_CAT.sample,
+    business_type: 'Professional Services' ,
+    business_category: PROFESSIONAL_SERIVCES_CAT.sample,
     price_rating: rand(1..4)
     })
-    phx_bus3.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/home-services-200.png"), filename: "logo.png")
+    phx_bus3.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/prof-services-200.png"), filename: "logo.png")
 
-name_sf = Faker::Restaurant.name            
+name_sf = Faker::Restaurant.name
 sf_bus = Business.create({
     name: name_sf,
     address_1: rand(1..999).to_s + ' ' + Faker::Address.street_name, 
     address_2: Faker::Address.secondary_address, 
-    city: 'Phoenix', 
-    state: 'AZ', 
+    city: 'San Francisco', 
+    state: 'CA', 
     zipcode: Faker::Number.number(digits: 5), 
-    lng: sprintf('%.4f', -122.4398 + rand(-0.150..0.150)).to_f,
-    lat: sprintf('%.4f', 37.7555 + rand(-0.0150..0.0150).to_f, 
+    lng: sprintf('%.4f', -122.4398 + rand(-0.100..0.100)).to_f,
+    lat: sprintf('%.4f', 37.7555 + rand(-0.050..0.0050)).to_f,
     web_address: 'www.' + name_sf.split(' ').join('').downcase + '.com', 
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Restaurant' ,
@@ -295,125 +275,148 @@ sf_bus = Business.create({
     })
     sf_bus.photo.attach(io: URI.open(RESTAURANT_PHOTOS.sample), filename: "logo.png")
 
-name_sf2 = Faker::Company.name + Faker::Company.suffix            
+name_sf2 = Faker::Company.name
 sf_bus2 = Business.create({
     name: name_sf2,
     address_1: rand(1..999).to_s + ' ' + Faker::Address.street_name, 
     address_2: Faker::Address.secondary_address, 
-    city: 'Phoenix', 
-    state: 'AZ', 
+    city: 'San Francisco', 
+    state: 'CA', 
     zipcode: Faker::Number.number(digits: 5), 
-    lng: sprintf('%.4f', -122.4398 + rand(-0.150..0.150)).to_f,
-    lat: sprintf('%.4f', 37.7555 + rand(-0.0150..0.0150).to_f, 
+    lng: sprintf('%.4f', -122.4398 + rand(-0.100..0.100)).to_f,
+    lat: sprintf('%.4f', 37.7555 + rand(-0.050..0.0050)).to_f,
     web_address: 'www.' + name_sf2.split(' ').join('').downcase + '.com', 
     phone_number: Faker::PhoneNumber.cell_phone, 
-    business_type: 'Professional Services' ,
-    business_category: PROFESSIONAL_SERIVCES_CAT.sample,
-    price_rating: rand(1..4)})
-    sf_bus2.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/prof-services-200.png"), filename: "logo.png")
+    business_type: 'Home Services' ,
+    business_category: HOME_SERVICES_CAT.sample,
+    price_rating: rand(1..4)
+    })
+    sf_bus2.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/home-services-200.png"), filename: "logo.png")
 
-name_sf3 = Faker::Company.name            
+name_sf3 = Faker::Company.name + Faker::Company.suffix
 sf_bus3 = Business.create({
     name: name_sf3,
     address_1: rand(1..999).to_s + ' ' + Faker::Address.street_name, 
     address_2: Faker::Address.secondary_address, 
-    city: 'Phoenix', 
-    state: 'AZ', 
+    city: 'San Francisco', 
+    state: 'CA', 
     zipcode: Faker::Number.number(digits: 5), 
-    lng: sprintf('%.4f', -122.4398 + rand(-0.150..0.150)).to_f,
-    lat: sprintf('%.4f', 37.7555 + rand(-0.0150..0.0150).to_f, 
+    lng: sprintf('%.4f', -122.4398 + rand(-0.100..0.100)).to_f,
+    lat: sprintf('%.4f', 37.7555 + rand(-0.050..0.0050)).to_f,
     web_address: 'www.' + name_sf3.split(' ').join('').downcase + '.com', 
-    phone_number: Faker::PhoneNumber.cell_phone, 
-    business_type: 'Home Services' ,
-    business_category: HOME_SERVICES_CAT.sample,
-    price_rating: rand(1..4)
-    })
-    sf_bus3.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/home-services-200.png"), filename: "logo.png")
-
-name_stl = Faker::Restaurant.name            
-stl_bus = Business.create({
-    name: name_stl,
-    address_1: rand(1..999).to_s + ' ' + Faker::Address.street_name, 
-    address_2: Faker::Address.secondary_address, 
-    city: 'Phoenix', 
-    state: 'AZ', 
-    zipcode: Faker::Number.number(digits: 5), 
-    lng: sprintf('%.4f', -90.2087 + rand(-0.150..0.150)).to_f,
-    lat: sprintf('%.4f', 38.6270 + rand(-0.0150..0.0150).to_f, 
-    web_address: 'www.' + name_stl.split(' ').join('').downcase + '.com', 
-    phone_number: Faker::PhoneNumber.cell_phone, 
-    business_type: 'Restaurant' ,
-    business_category: RESTAURANT_CAT.sample,
-    price_rating: rand(1..4)})
-    stl_bus.photo.attach(io: URI.open(RESTAURANT_PHOTOS.sample), filename: "logo.png")
-
-name_stl2 = Faker::Company.name + Faker::Company.suffix            
-stl_bus2 = Business.create({
-    name: name_stl2,
-    address_1: rand(1..999).to_s + ' ' + Faker::Address.street_name, 
-    address_2: Faker::Address.secondary_address, 
-    city: 'Phoenix', 
-    state: 'AZ', 
-    zipcode: Faker::Number.number(digits: 5), 
-    lng: sprintf('%.4f', -90.2087 + rand(-0.150..0.150)).to_f,
-    lat: sprintf('%.4f', 38.6270 + rand(-0.0150..0.0150).to_f, 
-    web_address: 'www.' + name_stl2.split(' ').join('').downcase + '.com', 
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Professional Services' ,
     business_category: PROFESSIONAL_SERIVCES_CAT.sample,
     price_rating: rand(1..4)
     })
-    stl_bus2.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/prof-services-200.png"), filename: "logo.png")
+    sf_bus3.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/prof-services-200.png"), filename: "logo.png")
 
-name_stl3 = Faker::Company.name            
-stl_bus3 = Business.create({
-    name: name_stl3,
+name_stl = Faker::Restaurant.name
+stl_bus = Business.create({
+    name: name_stl,
     address_1: rand(1..999).to_s + ' ' + Faker::Address.street_name, 
     address_2: Faker::Address.secondary_address, 
-    city: 'Phoenix', 
-    state: 'AZ', 
+    city: 'St. Louis', 
+    state: 'MO', 
     zipcode: Faker::Number.number(digits: 5), 
-    lng: sprintf('%.4f', -90.2087 + rand(-0.150..0.150)).to_f,
-    lat: sprintf('%.4f', 38.6270 + rand(-0.0150..0.0150).to_f, 
-    web_address: 'www.' + name_stl3.split(' ').join('').downcase + '.com', 
+    lng: sprintf('%.4f', -90.2087 + rand(-0.100..0.100)).to_f,
+    lat: sprintf('%.4f', 38.6270 + rand(-0.050..0.0050)).to_f,
+    web_address: 'www.' + name_stl.split(' ').join('').downcase + '.com', 
+    phone_number: Faker::PhoneNumber.cell_phone, 
+    business_type: 'Restaurant' ,
+    business_category: RESTAURANT_CAT.sample,
+    price_rating: rand(1..4)
+    })
+    stl_bus.photo.attach(io: URI.open(RESTAURANT_PHOTOS.sample), filename: "logo.png")
+
+name_stl2 = Faker::Company.name
+stl_bus2 = Business.create({
+    name: name_stl2,
+    address_1: rand(1..999).to_s + ' ' + Faker::Address.street_name, 
+    address_2: Faker::Address.secondary_address, 
+    city: 'St. Louis', 
+    state: 'MO', 
+    zipcode: Faker::Number.number(digits: 5), 
+    lng: sprintf('%.4f', -90.2087 + rand(-0.100..0.100)).to_f,
+    lat: sprintf('%.4f', 38.6270 + rand(-0.050..0.0050)).to_f,
+    web_address: 'www.' + name_stl2.split(' ').join('').downcase + '.com', 
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Home Services' ,
     business_category: HOME_SERVICES_CAT.sample,
     price_rating: rand(1..4)
     })
-    stl_bus3.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/home-services-200.png"), filename: "logo.png")
-                
-                    
-# sf_bus = Business.create({
-#     name: Faker::Restaurant.name,
-#     address_1: rand(1..999).to_s + Faker::Address.street_name, 
-#     address_2: Faker::Address.secondary_address, 
-#     city: 'Pheonix', 
-#     state: 'AZ', 
-#     zipcode: Faker::Number.number(digits: 5), 
-#     lng: -122.4398 + rand(-2.00..2.00),
-#     lat: 37.7555 + rand(-2.00..2.00), 
-#     web_address: 'www.' + Faker::Restaurant.name.split(' ').join('') + '.com',
-#     phone_number: Faker::PhoneNumber.cell_phone, 
-#     business_type: 'Restaurant' ,
-#     business_category: BUSINESS_CAT.sample})
-#     sf_bus.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/rest7-burak.png"), filename: "logo.png")
-                    
+    stl_bus2.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/home-services-200.png"), filename: "logo.png")
+
+name_stl3 = Faker::Company.name + Faker::Company.suffix
+stl_bus3 = Business.create({
+    name: name_stl3,
+    address_1: rand(1..999).to_s + ' ' + Faker::Address.street_name, 
+    address_2: Faker::Address.secondary_address, 
+    city: 'St. Louis', 
+    state: 'MO', 
+    zipcode: Faker::Number.number(digits: 5), 
+    lng: sprintf('%.4f', -90.2087 + rand(-0.100..0.100)).to_f,
+    lat: sprintf('%.4f', 38.6270 + rand(-0.050..0.0050)).to_f,
+    web_address: 'www.' + name_stl3.split(' ').join('').downcase + '.com', 
+    phone_number: Faker::PhoneNumber.cell_phone, 
+    business_type: 'Professional Services' ,
+    business_category: PROFESSIONAL_SERIVCES_CAT.sample,
+    price_rating: rand(1..4)
+    })
+    stl_bus3.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/prof-services-200.png"), filename: "logo.png")
+
+# name_stl = Faker::Restaurant.name            
 # stl_bus = Business.create({
-#     name: Faker::Restaurant.name,
-#     address_1: rand(1..999).to_s + Faker::Address.street_name, 
+#     name: name_stl,
+#     address_1: rand(1..999).to_s + ' ' + Faker::Address.street_name, 
 #     address_2: Faker::Address.secondary_address, 
-#     city: 'Pheonix', 
+#     city: 'Phoenix', 
 #     state: 'AZ', 
 #     zipcode: Faker::Number.number(digits: 5), 
-#     lng: -90.2087 + rand(-2.00..2.00),
-#     lat: 38.6147 + rand(-2.00..2.00), 
-#     web_address: 'www.' + Faker::Restaurant.name.split(' ').join('') + '.com', 
+#     lng: sprintf('%.4f', -90.2087 + rand(-0.150..0.150)).to_f,
+#     lat: sprintf('%.4f', 38.6270 + rand(-0.0150..0.0150).to_f, 
+#     web_address: 'www.' + name_stl.split(' ').join('').downcase + '.com', 
 #     phone_number: Faker::PhoneNumber.cell_phone, 
 #     business_type: 'Restaurant' ,
-#     business_category: BUSINESS_CAT.sample})
-#     stl_bus.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/rest8-quang-nguyen-vinh.png"), filename: "logo.png")
-                        
+#     business_category: RESTAURANT_CAT.sample,
+#     price_rating: rand(1..4)
+#     })
+#     stl_bus.photo.attach(io: URI.open(RESTAURANT_PHOTOS.sample), filename: "logo.png")
+
+# name_stl2 = Faker::Company.name + Faker::Company.suffix            
+# stl_bus2 = Business.create({
+#     name: name_stl2,
+#     address_1: rand(1..999).to_s + ' ' + Faker::Address.street_name, 
+#     address_2: Faker::Address.secondary_address, 
+#     city: 'Phoenix', 
+#     state: 'AZ', 
+#     zipcode: Faker::Number.number(digits: 5), 
+#     lng: sprintf('%.4f', -90.2087 + rand(-0.150..0.150)).to_f,
+#     lat: sprintf('%.4f', 38.6270 + rand(-0.0150..0.0150).to_f, 
+#     web_address: 'www.' + name_stl2.split(' ').join('').downcase + '.com', 
+#     phone_number: Faker::PhoneNumber.cell_phone, 
+#     business_type: 'Professional Services' ,
+#     business_category: PROFESSIONAL_SERIVCES_CAT.sample,
+#     price_rating: rand(1..4)
+#     })
+#     stl_bus2.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/prof-services-200.png"), filename: "logo.png")
+
+# name_stl3 = Faker::Company.name            
+# stl_bus3 = Business.create({
+#     name: name_stl3,
+#     address_1: rand(1..999).to_s + ' ' + Faker::Address.street_name, 
+#     address_2: Faker::Address.secondary_address, 
+#     city: 'Phoenix', 
+#     state: 'AZ', 
+#     zipcode: Faker::Number.number(digits: 5), 
+#     lng: sprintf('%.4f', -90.2087 + rand(-0.150..0.150)).to_f,
+#     lat: sprintf('%.4f', 38.6270 + rand(-0.0150..0.0150).to_f, 
+#     web_address: 'www.' + name_stl3.split(' ').join('').downcase + '.com', 
+#     phone_number: Faker::PhoneNumber.cell_phone, 
+#     business_type: 'Home Services' ,
+#     business_category: HOME_SERVICES_CAT.sample,
+#     price_rating: rand(1..4)
+#     })
+#     stl_bus3.photo.attach(io: URI.open("https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/home-services-200.png"), filename: "logo.png")
                 
-
-
+         
