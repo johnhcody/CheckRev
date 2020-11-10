@@ -20,36 +20,29 @@ class BusinessIndex extends React.Component {
     }
 
     componentDidMount() {
+        debugger
         window.scrollTo(0, 0);
         this.props.fetchBusinesses();            
     }
 
     componentDidUpdate(prevProps) {
+        debugger
         if (this.props.businesses !== prevProps.businesses) {
             this.setState({businesses: this.props.businesses})
-        }
-    }
-
-    applyFilter(filterObj) {
-        console.log(filterObj);
-        if (filterObj.priceRating == "0") {
-            this.setState({businesses: this.props.businesses})
-        } else {
-            this.setState({ businesses: this.props.businesses.filter(business => business.priceRating == filterObj.priceRating)})
         }
     }
 
     render() {
 
         const { address1, address2, businessCategory, businessType, city, name, phoneNumber, webAddress, zipcode } = this.props.businesses;
-        if (this.state.businesses.length === 0) {
+        if (this.props.businesses.length === 0) {
             return (
                     <div>
                         <BusinessSearch />
 
                         <div>
                             <div className="bus-idx-wrapper">
-                                <PriceFilters applyFilter={this.applyFilter} 
+                                <PriceFilters  
                                 updateFilters={this.props.updateFilters} />
                                 <div className="bus-item-wrapper">
                                         <h1>Sorry, there are no businesses that match your search</h1>
@@ -72,11 +65,11 @@ class BusinessIndex extends React.Component {
                 
             <div>
                 <div className="bus-idx-wrapper">
-                    <PriceFilters applyFilter={this.applyFilter}
+                    <PriceFilters 
                         updateFilters={this.props.updateFilters} />
                         <div className="bus-item-wrapper">
                         {
-                            this.state.businesses.map(business => {  
+                            this.props.businesses.map(business => {  
                                 return <BusinessIndexItem 
                                 id={business.id}
                                 address1={business.address1}

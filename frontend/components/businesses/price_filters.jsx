@@ -59,7 +59,7 @@ handleChange(field) {
                         $$$$</label>
                 </div>
                 <button value="0" id="clear-price-filter-button" onClick={this.handleChange('priceRating') }>Clear Price Filters</button>
-                <CategoryFilter />
+                <CategoryFilter updateFilters={this.props.updateFilters}/>
                 <TypeFilter />
             </div>
         )

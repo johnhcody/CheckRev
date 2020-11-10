@@ -66,8 +66,15 @@ class Business < ApplicationRecord
 
     def self.match_price(price_rating)
         #debugger
-        price_rating == "0" ? self.where("price_rating > 0") : self.where("price_rating = ?", price_rating)
-        
+        price_rating == "0" ? self.where("price_rating > 0") : self.where("price_rating = ?", price_rating) 
+    end
+
+    def self.match_category(business_type)
+
+        business_type.each do |type|
+            self.where("business_type = ?", type)
+        end
+
     end
 
 end

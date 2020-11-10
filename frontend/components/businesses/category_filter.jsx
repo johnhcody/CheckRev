@@ -4,11 +4,27 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 class CategoryFilter extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
+        this.state = {
+            business_type: []
+        }
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(field) {
+        debugger
+        return e => {
+            debugger
+            e.currentTarget.checked ? this.setState({ [field]: this.state.business_type.push(e.currentTarget.value) }) : this.setState({ [field]: this.state.business_type.filter(el => el !== (e.currentTarget.value)) })
+            debugger
+            this.props.updateFilters(field, this.state.business_type)
+            debugger
+        }
+
     }
 
     render() {
-        const check = <FontAwesomeIcon icon="check"/>
+
         return (
             <div className="category-container">
                 <header>Category</header>
@@ -16,30 +32,30 @@ class CategoryFilter extends React.Component {
 
                 <label className="checkbox">
                     <span className="checkbox__input">
-                        <input type="checkbox" name="checkbox" value="cat-restaurants"/>
+                        <input type="checkbox" name="checkbox" value="Restaurant" onChange={this.handleChange('business_type')}/>
                             <span className="checkbox__control">
                                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
-                                    <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' /></svg>
+                                    <path fill='none' stroke='currentColor' strokeWidth='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' /></svg>
                             </span>
                     </span>
                         <span className="radio__label">Restaurants</span>
                 </label>
                 <label className="checkbox">
                     <span className="checkbox__input">
-                        <input type="checkbox" name="checkbox" value="cat-home-services" />
+                        <input type="checkbox" name="checkbox" value="Home Services" onChange={this.handleChange('business_type')}/>
                             <span className="checkbox__control">
                                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
-                                    <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' /></svg>
+                                <path fill='none' stroke='currentColor' strokeWidth='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' /></svg>
                             </span>
                     </span>
                         <span className="radio__label">Home Services</span>
                 </label>
                 <label className="checkbox">
                     <span className="checkbox__input">
-                        <input type="checkbox" name="checkbox" value="cat-professional-services"/>
+                        <input type="checkbox" name="checkbox" value="Professional Services" onChange={this.handleChange('business_type')}/>
                             <span className="checkbox__control">
                                 <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
-                                    <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' /></svg>
+                                <path fill='none' stroke='currentColor' strokeWidth='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' /></svg>
                             </span>
                     </span>
                         <span className="radio__label">Professional Services</span>
