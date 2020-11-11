@@ -10,7 +10,8 @@ class BusinessSearch extends React.Component {
         this.state = {
             category: '',
             city: '',
-            bounds: {}
+            bounds: {},
+            refresh: true
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.update = this.update.bind(this);
@@ -37,6 +38,9 @@ class BusinessSearch extends React.Component {
             northEast: { lat: 37.93873674004917, lng: -122.31110462819451 },
             southWest: { lat: 37.53146403390572, lng: -122.58576285227427 }};
         const chiBounds = {};
+        const noBounds = {
+            northEast: { lat: 41.098328841719976, lng: -73.67774177592024 },
+            southWest: { lat: 40.31758272571303, lng: -74.22705822407976 }}
 
         debugger
         e.preventDefault();
@@ -52,10 +56,10 @@ class BusinessSearch extends React.Component {
         } else if (this.state.city.toLowerCase().includes("francisco") || this.state.city.toLowerCase().includes("sf")) {
             this.props.updateFilters('bounds', sfBounds);
         } else {
-            this.props.updateFilters('bounds', {})
+            this.props.updateFilters('bounds', noBounds)
         }
         debugger
-        
+        this.setState({refresh: !this.state.refresh})
     }
 
     render() {

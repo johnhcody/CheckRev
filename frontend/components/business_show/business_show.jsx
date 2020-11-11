@@ -63,7 +63,8 @@ class BusinessShow extends React.Component {
                             webAddress={this.props.business.webAddress}
                             zipcode={this.props.business.zipcode}
                             photoUrl={this.props.business.photoUrl}
-                            reviews={this.props.business.reviews} 
+                            reviews={this.props.business.reviews}
+                             
                             currentUser={this.props.currentUser}
                             history={this.props.history}
                             priceRating={this.props.business.priceRating}/>
@@ -75,7 +76,8 @@ class BusinessShow extends React.Component {
                         lng={this.props.business.lng}/>
                         <BusinessHours/>
                     </div>
-                    <Amenities />
+                    <Amenities 
+                        amenities={this.props.business.amenities}/>
                     <ReviewIndex 
                         reviews={this.props.business.reviews}
                         allUsers={this.props.allUsers}

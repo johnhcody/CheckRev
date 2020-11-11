@@ -124,6 +124,7 @@ class BusinessIndex extends React.Component {
                                 businessCategory={business.businessCategory}
                                 businessType={business.businessType}
                                 city={business.city}
+                                state={business.state}
                                 name={business.name}
                                 phoneNumber={business.phoneNumber}
                                 webAddress={business.webAddress}

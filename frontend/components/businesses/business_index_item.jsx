@@ -59,6 +59,7 @@ class BusinessIndexItem extends React.Component {
                                 <h4>{this.props.phoneNumber}</h4>
                                 <h4>{this.props.address1}</h4>
                                 <h4>{this.props.address2}</h4>
+                                <h4>{this.props.city}, {this.props.state}</h4>
                             </div>
                         </div>
                         

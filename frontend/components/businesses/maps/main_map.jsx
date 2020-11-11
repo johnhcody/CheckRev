@@ -74,9 +74,12 @@ class MainMap extends React.Component {
     componentWillReceiveProps(prevProps) {
         debugger
         const { refresh, businesses } = this.props;
-        if (prevProps.refresh !== refresh) {
+        if (prevProps.refresh !== refresh || prevProps.businesses !== businesses ) {
             debugger
+            this.MarkerManager = new MarkerManager(this.map);
+            this.MarkerManager.updateMarkers(this.props.businesses);
             this.setState({value: this.state.value + 1})
+            this.registerListeners();
         }
     }
 
