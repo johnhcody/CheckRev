@@ -18,7 +18,7 @@ class Splash extends React.Component {
 
     componentDidMount() {
         window.scrollTo(0, 0);
-        debugger
+    
         // const currentUser = Object.assign({}, this.props.currentUser);
 
         // if (currentUser.state === "" && currentUser.city === "") {

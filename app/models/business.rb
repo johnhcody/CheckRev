@@ -61,7 +61,6 @@ class Business < ApplicationRecord
       .where("lat > ?", bounds[:southWest][:lat])
       .where("lng > ?", bounds[:southWest][:lng])
       .where("lng < ?", bounds[:northEast][:lng])
-
     end
 
     def self.match_price(price_rating)

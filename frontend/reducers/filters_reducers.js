@@ -9,7 +9,7 @@ const filtersReducer = (state = defaultFilters, action) => {
 
     switch (action.type) {
         case UPDATE_FILTER:
-            debugger
+
             const newFilter = {
                 [action.filter]: action.value
             };

@@ -7,8 +7,13 @@ class MainMap extends React.Component {
     constructor(props) {
         super(props);
         this.updateFilters = this.props.updateFilters.bind(this);
+        this.state = {
+            value: 0
+        }
     }
     
+
+
     componentDidMount() {
 
         const mapOptions = {
@@ -43,11 +48,22 @@ class MainMap extends React.Component {
         });
     }
     
-    componentDidUpdate() {
-
+    componentDidUpdate(prevProps) {
+        debugger
         this.MarkerManager = new MarkerManager(this.map);
         this.MarkerManager.updateMarkers(this.props.businesses);
     }
+
+
+    componentWillReceiveProps(prevProps) {
+        debugger
+        const { refresh, businesses } = this.props;
+        if (prevProps.refresh !== refresh) {
+            debugger
+
+        }
+    }
+
     render() {
         return (
             <div className="google-map-wrapper">

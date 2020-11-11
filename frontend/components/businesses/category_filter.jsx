@@ -14,9 +14,9 @@ class CategoryFilter extends React.Component {
 
 
     handleChange(field) {
-        debugger
+
         return e => {
-            debugger
+    
             const valArray = [e.currentTarget.value]
             //e.currentTarget.checked ? this.setState({business_type: this.state.business_type.push(e.target.value)}) : this.setState({business_type: this.state.business_type.filter(el => el !== e.currentTarget.value)})
             e.currentTarget.checked ? this.setState({business_type: this.state.business_type.concat(valArray)}) : this.setState({business_type: this.state.business_type.filter(el => el !== e.currentTarget.value)})
@@ -24,7 +24,7 @@ class CategoryFilter extends React.Component {
             // e.persist();
             // if (e.currentTarget.checked) {
             //     this.setState(state => {
-            //         debugger
+            // 
             //         const business_type = state.business_type.concat(e.target.value)
             //         return {
             //             business_type
@@ -46,7 +46,7 @@ class CategoryFilter extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        debugger
+
         if (this.state.business_type !== prevState.business_type) {
             this.props.updateFilters('business_type', this.state.business_type)
         }
