@@ -27,9 +27,9 @@ PROFESSIONAL_PHOTOS = ["https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/p
     "https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/prof-services-5.png", "https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/prof-services-6.png", "https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/prof-services-7.png" ]
 
 
-RESTAURANT_AMENITIES = ["Dogs Allowed", "Karaoke", "Live Music", "Free Wifi", "Has TV", "Accepts Credit Cards", "Open to All"]
+RESTAURANT_AMENITIES = ["Dogs Allowed", "Karaoke", "Live Music", "Free Wifi", "Has TV", "Accepts Credit Cards", "Open to All", "Serves Coffee", "Vegetarian Options"]
 
-OTHER_AMENITIES = ["Accepts Credit Cards", "Open to All", "Parking Lot", "Satisfaction Guaranteed", "Great Atmosphere", "Offers Insurance", "Discounts Available"]
+OTHER_AMENITIES = ["Accepts Credit Cards", "Open to All", "Parking Lot", "Satisfaction Guaranteed", "Great Atmosphere", "Offers Insurance", "Discounts Available", "Service Oriented"]
 
 User.destroy_all
 
@@ -83,7 +83,8 @@ bos_bus2 = Business.create({
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Restaurant' ,
     business_category: RESTAURANT_CAT.sample,
-    price_rating: rand(1..4)
+    price_rating: rand(1..4),
+    amenities: OTHER_AMENITIES.sample(4).join(',')
     })
     bos_bus2.photo.attach(io: URI.open(RESTAURANT_PHOTOS.sample), filename: "logo.png")
 
@@ -368,7 +369,8 @@ stl_bus2 = Business.create({
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Home Services' ,
     business_category: HOME_SERVICES_CAT.sample,
-    price_rating: rand(1..4)
+    price_rating: rand(1..4),
+    amenities: OTHER_AMENITIES.sample(4).join(',')
     })
     stl_bus2.photo.attach(io: URI.open(HOME_PHOTOS.sample), filename: "logo.png")
 

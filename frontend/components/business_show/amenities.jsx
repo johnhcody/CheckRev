@@ -15,21 +15,21 @@ function Amenities(props) {
         if (amenity == "Dogs Allowed") {
             return <FontAwesomeIcon icon={['fas', 'bone']} />
         } else if (amenity == "Karaoke") {
-            return <FontAwesomeIcon icon={['fas', 'microphone-stand']} />
+            return <FontAwesomeIcon icon={['fas', 'microphone']} />
         } else if (amenity == "Live Music") {
             return <FontAwesomeIcon icon={['fas', 'music']} />
         } else if (amenity == "Free Wifi") {
             return <FontAwesomeIcon icon={['fas', 'wifi']} />
         } else if (amenity == "Has TV") {
-            return <FontAwesomeIcon icon={['fas', 'tv-retro']} />
+            return <FontAwesomeIcon icon={['fas', 'tv']} />
         } else if (amenity == "Accepts Credit Cards") {
-            return <FontAwesomeIcon icon={['far', 'credit-card']} />
+            return <FontAwesomeIcon icon={['fas', 'credit-card']} />
         } else if (amenity == "Open to All") {
-            return <FontAwesomeIcon icon={['far', 'laugh']} />
+            return <FontAwesomeIcon icon={['fas', 'laugh']} />
         } else if (amenity == "Vegetarian Options") {
             return <FontAwesomeIcon icon={['fas', 'carrot']} />
         } else if (amenity == "Parking Lot") {
-            return <FontAwesomeIcon icon={['fas', 'parking-circle']} />
+            return <FontAwesomeIcon icon={['fas', 'parking']} />
         } else if (amenity == "Satisfaction Guaranteed") {
             return <FontAwesomeIcon icon={['fas', 'thumbs-up']} />
         } else if (amenity == "Great Atmosphere") {
@@ -40,7 +40,9 @@ function Amenities(props) {
             return <FontAwesomeIcon icon={['fas', 'tags']} />
         } else if (amenity == "Service Oriented") {
             return <FontAwesomeIcon icon="concierge-bell" />
-        } 
+        }  else {
+            return <FontAwesomeIcon icon="concierge-bell" />
+        }
     })
     debugger
     return (
@@ -48,22 +50,22 @@ function Amenities(props) {
             <h1>Amenities and More</h1>
             <div className="icon-bus-show-rating">
                 <div className="icon-bus-show-rating-left">
-                    <a>{carrot}</a>
-                    <h2>Vegetarian Options</h2>
+                    <a>{iconsArray[0]}</a>
+                    <h2>{amenitiesArray[0]}</h2>
                 </div>
                 <div className="icon-bus-show-rating-right">
-                    <a>{bone}</a>
-                    <h2>Dog Friendly</h2>
+                    <a>{iconsArray[1]}</a>
+                    <h2>{amenitiesArray[1]}</h2>
                 </div>
             </div>
             <div className="icon-bus-show-rating">
                 <div className="icon-bus-show-rating-left">
-                    <a>{music}</a>
-                    <h2>Live Music</h2>
+                    <a>{iconsArray[2]}</a>
+                    <h2>{amenitiesArray[2]}</h2>
                 </div>
                 <div className="icon-bus-show-rating-right">
-                    <a>{wifi}</a>
-                    <h2>Free Wifi</h2>
+                    <a>{iconsArray[3]}</a>
+                    <h2>{amenitiesArray[3]}</h2>
                 </div>
             </div>
         </div>

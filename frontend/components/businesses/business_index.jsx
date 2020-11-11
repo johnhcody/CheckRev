@@ -104,7 +104,7 @@ class BusinessIndex extends React.Component {
                 )
             
         } else {
-
+            debugger
             return (
                 <div>
                 <BusinessSearch
@@ -133,6 +133,7 @@ class BusinessIndex extends React.Component {
                                 reviews={business.reviews}
                                 key={business.id}
                                 priceRating={business.priceRating}
+                                amenities={business.amenities}
                                 />
                             })
                         }

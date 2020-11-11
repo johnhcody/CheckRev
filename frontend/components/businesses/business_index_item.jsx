@@ -52,8 +52,8 @@ class BusinessIndexItem extends React.Component {
                                 <h2>{this.props.reviews.length === 1 ? "1 Review" : this.props.reviews.length.toString() + " Reviews"}</h2>
                                 </div>
                                 {this.renderPriceRating(this.props.priceRating)}
-                                <h3>amenities, amenities, amenities</h3>
-                                <h4>delivery takeout outdoor seating</h4>
+                                <h3>{this.props.businessCategory}</h3>
+                                <h4>{this.props.amenities.split(',').join(', ')}</h4>
                             </div>
                             <div className="right-wrapper">
                                 <h4>{this.props.phoneNumber}</h4>

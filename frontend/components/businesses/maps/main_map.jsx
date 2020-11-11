@@ -78,7 +78,6 @@ class MainMap extends React.Component {
             debugger
             this.MarkerManager = new MarkerManager(this.map);
             this.MarkerManager.updateMarkers(this.props.businesses);
-            this.setState({value: this.state.value + 1})
             this.registerListeners();
         }
     }
