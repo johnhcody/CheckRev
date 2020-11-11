@@ -21,7 +21,7 @@ class Dropdown2 extends React.Component {
             <div>
                 <button className="drop-button" onFocus={this.whenFocusOrBlur} onBlur={this.whenFocusOrBlur}><a  className="icon-parent">Professional Services {bell}</a>
                     {this.state.show ? (
-                        <div className="dropdown-wrapper">
+                        <div className="dropdown-wrapper-2">
                             <ul className="btn-ul" onClick={e => e.stopPropagation()}>
                                 <li><a  className="icon-filter">Professional Services {bell}</a></li>
                                 <li><a  className="icon-filter">Professional Services {bell}</a></li>

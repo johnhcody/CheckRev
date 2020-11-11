@@ -13,9 +13,9 @@ import BusinessShowContainer from './business_show/business_show_container';
 import Review from './reviews/review';
 import CreateateReviewFormContainer from './reviews/create_review_form_container';
 import EditReviewFormContainer from './reviews/edit_review_form_container';
-import { faCheckSquare, faCoffee, faSearch, faUtensils, faHome, faConciergeBell, faStar, faCheck, faChevronDown, faUser, faWifi, faBone, faMusic, faCarrot, faMicrophone, faTv, faCreditCard, faThumbsUp, faHouseDamage, faGlassCheers, faTags, faParking, faLaugh  } from '@fortawesome/free-solid-svg-icons'
+import { faCheckSquare, faCoffee, faSearch, faUtensils, faHome, faConciergeBell, faStar, faCheck, faChevronDown, faUser, faWifi, faBone, faMusic, faCarrot, faMicrophone, faTv, faCreditCard, faThumbsUp, faHouseDamage, faGlassCheers, faTags, faParking, faLaugh, faLock, faBroom, faTree, faHammer, faDraftingCompass, faBuilding, faVihara, faWineGlass, faPizzaSlice, faPepperHot, faFish, faIceCream, faCalculator, faPiggyBank, faSuitcase, faMoneyBill, faDollarSign, faLaptop, faLightbulb   } from '@fortawesome/free-solid-svg-icons'
 
-library.add(fab, faCheckSquare, faCoffee, faSearch, faUtensils, faHome, faConciergeBell, faStar, faCheck, faChevronDown, faUser, faWifi, faBone, faMusic, faCarrot, faMicrophone, faTv, faCreditCard, faThumbsUp, faHouseDamage, faGlassCheers, faTags, faParking, faLaugh)
+library.add(fab, faCheckSquare, faCoffee, faSearch, faUtensils, faHome, faConciergeBell, faStar, faCheck, faChevronDown, faUser, faWifi, faBone, faMusic, faCarrot, faMicrophone, faTv, faCreditCard, faThumbsUp, faHouseDamage, faGlassCheers, faTags, faParking, faLaugh, faLock, faBroom, faTree, faHammer, faDraftingCompass, faBuilding, faVihara, faCoffee, faWineGlass, faPizzaSlice, faPepperHot, faFish, faIceCream, faCalculator, faPiggyBank, faSuitcase, faMoneyBill, faDollarSign, faLaptop, faLightbulb )
 
 //Wrap ProtectedRoute around paths that are restricted from users who are not logged in.
 

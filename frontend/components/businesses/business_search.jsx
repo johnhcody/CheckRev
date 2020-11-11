@@ -44,20 +44,56 @@ class BusinessSearch extends React.Component {
 
         debugger
         e.preventDefault();
-        if (this.state.city.toLowerCase().includes("york") || this.state.city.toLowerCase().includes("ny")) {
-            this.props.updateFilters('bounds', nyBounds);
-        } else if (this.state.city.toLowerCase().includes("boston")) {
-            debugger
-            this.props.updateFilters('bounds', bosBounds);
-        } else if (this.state.city.toLowerCase().includes("phoenix")) {
-            this.props.updateFilters('bounds', phxBounds);
-        } else if (this.state.city.toLowerCase().includes("louis") || this.state.city.toLowerCase().includes("stl")) {
-            this.props.updateFilters('bounds', stlBounds);
-        } else if (this.state.city.toLowerCase().includes("francisco") || this.state.city.toLowerCase().includes("sf")) {
-            this.props.updateFilters('bounds', sfBounds);
-        } else {
-            this.props.updateFilters('bounds', noBounds)
+
+        if (this.state.category == '' && this.state.city !== '') {
+            if (this.state.city.toLowerCase().includes("york") || this.state.city.toLowerCase().includes("ny")) {
+                this.props.updateFilters('bounds', nyBounds);
+            } else if (this.state.city.toLowerCase().includes("boston")) {
+                this.props.updateFilters('bounds', bosBounds);
+            } else if (this.state.city.toLowerCase().includes("phoenix")) {
+                this.props.updateFilters('bounds', phxBounds);
+            } else if (this.state.city.toLowerCase().includes("louis") || this.state.city.toLowerCase().includes("stl")) {
+                this.props.updateFilters('bounds', stlBounds);
+            } else if (this.state.city.toLowerCase().includes("francisco") || this.state.city.toLowerCase().includes("sf")) {
+                this.props.updateFilters('bounds', sfBounds);
+            } else {
+                this.props.updateFilters('bounds', noBounds)
+            }
+        } else if (this.state.category !== '' && this.state.city !== '') {
+            if (this.state.city.toLowerCase().includes("york") || this.state.city.toLowerCase().includes("ny")) {
+                this.props.updateFilters('bounds', nyBounds);
+                this.props.updateFilters('category', this.state.category);
+            } else if (this.state.city.toLowerCase().includes("boston")) {
+                this.props.updateFilters('bounds', bosBounds);
+                this.props.updateFilters('category', this.state.category);
+            } else if (this.state.city.toLowerCase().includes("phoenix")) {
+                this.props.updateFilters('bounds', phxBounds);
+                this.props.updateFilters('category', this.state.category);
+            } else if (this.state.city.toLowerCase().includes("louis") || this.state.city.toLowerCase().includes("stl")) {
+                this.props.updateFilters('bounds', stlBounds);
+                this.props.updateFilters('category', this.state.category);
+            } else if (this.state.city.toLowerCase().includes("francisco") || this.state.city.toLowerCase().includes("sf")) {
+                this.props.updateFilters('bounds', sfBounds);
+                this.props.updateFilters('category', this.state.category);
+            } else {
+                this.props.updateFilters('category', this.state.category);
+            }
+        } else if (this.state.category !== '' && this.state.city == '') {
+            if (this.state.city.toLowerCase().includes("york") || this.state.city.toLowerCase().includes("ny")) {
+                this.props.updateFilters('category', this.state.category);
+            } else if (this.state.city.toLowerCase().includes("boston")) {       
+                this.props.updateFilters('category', this.state.category);
+            } else if (this.state.city.toLowerCase().includes("phoenix")) {
+                this.props.updateFilters('category', this.state.category);
+            } else if (this.state.city.toLowerCase().includes("louis") || this.state.city.toLowerCase().includes("stl")) {
+                this.props.updateFilters('category', this.state.category);
+            } else if (this.state.city.toLowerCase().includes("francisco") || this.state.city.toLowerCase().includes("sf")) {
+                this.props.updateFilters('category', this.state.category);
+            } else {
+                this.props.updateFilters('category', this.state.category);
+            }
         }
+
         debugger
         this.setState({refresh: !this.state.refresh})
     }
@@ -75,10 +111,10 @@ class BusinessSearch extends React.Component {
                     <form className="bus-search-parent" onSubmit={this.handleSubmit}>
                         <div className="bus-search-child">
                             <label className="search search-type">
-                            <input id="filler" type="search" placeholder="Thai, Landscaping, Legal" />
+                            <input id="filler" type="search" placeholder="Thai, Landscaping, Legal" onChange={this.update('category')}/>
                             </label>
                             <label id="divider">|
-                            <input className="search search-location" type="search" placeholder="Times Square, NY" onChange={this.update('city')}/>
+                            <input className="search search-location" type="search" placeholder="New York, Boston, Chicago..." onChange={this.update('city')}/>
                             </label>
                         </div>
                         <button className="bus-search-button" type="submit">{magnifyingGlass}</button>
