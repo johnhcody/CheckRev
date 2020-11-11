@@ -35,7 +35,7 @@ class CategoryFilter extends React.Component {
                 <header>Category</header>
                 <label className="checkbox">
                     <span className="checkbox__input">
-                        <input type="checkbox" name="checkbox" value="Restaurant" onChange={this.handleChange('category')} />
+                        <input type="checkbox" name="checkbox" value="Japanese" onChange={this.handleChange('category')} />
                         <span className="checkbox__control">
                             <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
                                 <path fill='none' stroke='currentColor' strokeWidth='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' /></svg>
@@ -45,7 +45,7 @@ class CategoryFilter extends React.Component {
                 </label>
                 <label className="checkbox">
                     <span className="checkbox__input">
-                        <input type="checkbox" name="checkbox" value="Home Services" onChange={this.handleChange('category')} />
+                        <input type="checkbox" name="checkbox" value="Thai" onChange={this.handleChange('category')} />
                         <span className="checkbox__control">
                             <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
                                 <path fill='none' stroke='currentColor' strokeWidth='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' /></svg>
@@ -55,7 +55,7 @@ class CategoryFilter extends React.Component {
                 </label>
                 <label className="checkbox">
                     <span className="checkbox__input">
-                        <input type="checkbox" name="checkbox" value="Professional Services" onChange={this.handleChange('category')} />
+                        <input type="checkbox" name="checkbox" value="Cleaning" onChange={this.handleChange('category')} />
                         <span className="checkbox__control">
                             <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
                                 <path fill='none' stroke='currentColor' strokeWidth='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' /></svg>
@@ -65,7 +65,7 @@ class CategoryFilter extends React.Component {
                 </label>
                 <label className="checkbox">
                     <span className="checkbox__input">
-                        <input type="checkbox" name="checkbox" value="Restaurant" onChange={this.handleChange('category')} />
+                        <input type="checkbox" name="checkbox" value="Landscaping" onChange={this.handleChange('category')} />
                         <span className="checkbox__control">
                             <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
                                 <path fill='none' stroke='currentColor' strokeWidth='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' /></svg>
@@ -75,7 +75,7 @@ class CategoryFilter extends React.Component {
                 </label>
                 <label className="checkbox">
                     <span className="checkbox__input">
-                        <input type="checkbox" name="checkbox" value="Home Services" onChange={this.handleChange('category')} />
+                        <input type="checkbox" name="checkbox" value="Security" onChange={this.handleChange('category')} />
                         <span className="checkbox__control">
                             <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
                                 <path fill='none' stroke='currentColor' strokeWidth='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' /></svg>
@@ -85,7 +85,7 @@ class CategoryFilter extends React.Component {
                 </label>
                 <label className="checkbox">
                     <span className="checkbox__input">
-                        <input type="checkbox" name="checkbox" value="Professional Services" onChange={this.handleChange('category')} />
+                        <input type="checkbox" name="checkbox" value="Italian" onChange={this.handleChange('category')} />
                         <span className="checkbox__control">
                             <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
                                 <path fill='none' stroke='currentColor' strokeWidth='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' /></svg>
