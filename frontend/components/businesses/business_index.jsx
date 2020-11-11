@@ -91,7 +91,7 @@ class BusinessIndex extends React.Component {
                                             </ul>
                                         </div>
                                 </div>
-                                <MainMap key={this.props.businesses}
+                                <MainMap 
                                 businesses={this.props.businesses} 
                                 updateFilters={this.props.updateFilters}
                                 />

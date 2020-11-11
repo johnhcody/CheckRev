@@ -41,18 +41,19 @@ class BusinessSearch extends React.Component {
         debugger
         e.preventDefault();
         if (this.state.city.toLowerCase().includes("york") || this.state.city.toLowerCase().includes("ny")) {
-            this.setState({city: "New York", bounds: nyBounds});
+            this.props.updateFilters('bounds', nyBounds);
         } else if (this.state.city.toLowerCase().includes("boston")) {
-            this.setState({city: "Boston", bounds: bosBounds});
+            debugger
+            this.props.updateFilters('bounds', bosBounds);
         } else if (this.state.city.toLowerCase().includes("phoenix")) {
-            this.setState({ city: "Phoenix", bounds: phxBounds });
+            this.props.updateFilters('bounds', phxBounds);
         } else if (this.state.city.toLowerCase().includes("louis") || this.state.city.toLowerCase().includes("stl")) {
-            this.setState({ city: "St. Louis", bounds: stlBounds });
+            this.props.updateFilters('bounds', stlBounds);
         } else if (this.state.city.toLowerCase().includes("francisco") || this.state.city.toLowerCase().includes("sf")) {
-            this.setState({ city: "San Francisco", bounds: sfBounds });
+            this.props.updateFilters('bounds', sfBounds);
         } 
         debugger
-        this.props.updateFilter('bounds', this.state.bounds)
+        
     }
 
     render() {
