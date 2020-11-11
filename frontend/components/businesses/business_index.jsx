@@ -41,8 +41,8 @@ class BusinessIndex extends React.Component {
         if (this.props.businesses.length === 0) {
             return (
                     <div>
-                        <BusinessSearch />
-
+                        <BusinessSearch 
+                        updateFilters={this.props.updateFilters} />
                         <div>
                             <div className="bus-idx-wrapper">
                                 <PriceFilters  
@@ -105,7 +105,8 @@ class BusinessIndex extends React.Component {
 
             return (
                 <div>
-                <BusinessSearch />
+                <BusinessSearch
+                    updateFilters={this.props.updateFilters} />
                 
             <div>
                 <div className="bus-idx-wrapper">

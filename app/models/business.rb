@@ -68,7 +68,13 @@ class Business < ApplicationRecord
         price_rating == "0" ? self.where("price_rating > 0") : self.where("price_rating = ?", price_rating) 
     end
 
-    def self.match_category(business_type)
+    def self.match_city(city)
+        self.where("city ILIKE ?", city)
+    end
+
+
+
+    def self.match_type(business_type)
 
         if business_type.length == 1 
             self.where("business_type = ?", business_type[0])
