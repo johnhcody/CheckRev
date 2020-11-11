@@ -51,7 +51,9 @@ class BusinessSearch extends React.Component {
             this.props.updateFilters('bounds', stlBounds);
         } else if (this.state.city.toLowerCase().includes("francisco") || this.state.city.toLowerCase().includes("sf")) {
             this.props.updateFilters('bounds', sfBounds);
-        } 
+        } else {
+            this.props.updateFilters('bounds', {})
+        }
         debugger
         
     }

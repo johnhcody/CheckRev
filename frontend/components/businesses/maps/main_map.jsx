@@ -76,7 +76,7 @@ class MainMap extends React.Component {
         const { refresh, businesses } = this.props;
         if (prevProps.refresh !== refresh) {
             debugger
-
+            this.setState({value: this.state.value + 1})
         }
     }
 

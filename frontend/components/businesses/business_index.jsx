@@ -14,7 +14,8 @@ class BusinessIndex extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            businesses: []
+            businesses: [],
+            refresh: false
         }
     }
 
@@ -27,12 +28,13 @@ class BusinessIndex extends React.Component {
         debugger
         if (this.props.businesses !== prevProps.businesses) {
             // this.setState({businesses: this.props.businesses});
-            // this.refresh();
+            this.refresh();
+            // when this condition we have new businesses from the db, but map has not yet updated...need to trigger a re-render to the map
         }
     }
 
     refresh() {
-        //this.setState({refresh: !this.state.refresh})
+        this.setState({refresh: !this.state.refresh})
     }
 
     render() {
@@ -55,7 +57,7 @@ class BusinessIndex extends React.Component {
                                                 <li>Currently, we have businesses in New York, Boston, Phoenix, St. Louis, Chicago, and San Francisco.</li>
                                                 <li>It is also possible your search was too specific...try general terms (try the caetgories listed below!)</li>
                                                 <li>You can also try moving the map over one of the above cities</li>
-                                                <button>Click here to clear all filters and try again</button>
+                                        <button onClick={() => window.location.reload()}>Click here to clear all filters and try again</button>
                                             </ul>
                                         </div>
                                     <div className="search-no-results-bottom">
@@ -136,6 +138,7 @@ class BusinessIndex extends React.Component {
                         </div> 
                         <MainMap 
                                 key={this.props.businesses}
+                                refresh={this.state.refresh}
                                 businesses={this.props.businesses} 
                         updateFilters={this.props.updateFilters}/>
                     </div>
