@@ -17,22 +17,31 @@ class Dropdown3 extends React.Component {
         const utensils = <FontAwesomeIcon icon="utensils" />
         const home = <FontAwesomeIcon icon="home" />
         const bell = <FontAwesomeIcon icon="concierge-bell" />
+        const building = <FontAwesomeIcon icon={['fas', 'building']} />
+        const lock = <FontAwesomeIcon icon={['fas', 'lock']} />
+        const tree = <FontAwesomeIcon icon={['fas', 'tree']} />
+        const drafting = <FontAwesomeIcon icon={['fas', 'drafting-compass']} />
+        const roofing = <FontAwesomeIcon icon={['fas', 'vihara']} />
+        const broom = <FontAwesomeIcon icon={['fas', 'broom']} />
+        const house = <FontAwesomeIcon icon={['fas', 'home']} />
+        const hammer = <FontAwesomeIcon icon={['fas', 'hammer']} />
+
         return (
             <div>
-                <button className="drop-button" onFocus={this.whenFocusOrBlur} onBlur={this.whenFocusOrBlur}><a className="icon-parent">Home Services {bell}</a>
+                <button className="drop-button" onFocus={this.whenFocusOrBlur} onBlur={this.whenFocusOrBlur}><a className="icon-parent">Home Services {house}</a>
                     {this.state.show ? (
                         <div className="dropdown-wrapper-3">
                             <ul className="btn-ul" onClick={e => e.stopPropagation()}>
-                                <li><a className="icon-filter">Cleaning {bell}</a></li>
-                                <li><a className="icon-filter">Landscaping {bell}</a></li>
-                                <li><a className="icon-filter">Security {bell}</a></li>
-                                <li><a className="icon-filter">Real Estate {bell}</a></li>
+                                <li><a className="icon-filter">Cleaning {broom}</a></li>
+                                <li><a className="icon-filter">Landscaping {tree}</a></li>
+                                <li><a className="icon-filter">Security {lock}</a></li>
+                                <li><a className="icon-filter">Real Estate {house}</a></li>
                             </ul>
                             <ul className="btn-ul" onClick={e => e.stopPropagation()}>
-                                <li><a className="icon-filter">Construction {bell}</a></li>
-                                <li><a className="icon-filter">Interior Design {bell}</a></li>
-                                <li><a className="icon-filter">Property Management {bell}</a></li>
-                                <li><a className="icon-filter">Roofing {bell}</a></li>
+                                <li><a className="icon-filter">Construction {hammer}</a></li>
+                                <li><a className="icon-filter">Interior Design {drafting}</a></li>
+                                <li><a className="icon-filter">Property Management {building}</a></li>
+                                <li><a className="icon-filter">Roofing {roofing}</a></li>
                             </ul>
                         </div>
 

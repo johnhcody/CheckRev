@@ -29,20 +29,20 @@ class Dropdown1 extends React.Component {
         const oven = <FontAwesomeIcon icon={['fas', 'oven']} />
         return (
             <div>
-                <button className="drop-button" onFocus={this.whenFocusOrBlur} onBlur={this.whenFocusOrBlur}><a className="icon-parent">Restaurants {bell}</a>
+                <button className="drop-button" onFocus={this.whenFocusOrBlur} onBlur={this.whenFocusOrBlur}><a className="icon-parent">Restaurants {utensils}</a>
                     {this.state.show ? (
                         <div className="dropdown-wrapper-1">
                         <ul className="btn-ul" onClick={e => e.stopPropagation()}>
-                            <li><a className="icon-filter">{carrot} Vegetarian</a></li>
-                            <li><a className="icon-filter">{pepper} Thai</a></li>
-                            <li><a className="icon-filter">{fish} Seafood</a></li>
-                            <li><a className="icon-filter">{utensils} Mexican</a></li>
+                            <li><a className="icon-filter">Vegetarian {carrot}</a></li>
+                            <li><a className="icon-filter">Thai {pepper}</a></li>
+                            <li><a className="icon-filter">Seafood {fish}</a></li>
+                            <li><a className="icon-filter">Mexican {utensils}</a></li>
                         </ul>
                         <ul className="btn-ul" onClick={e => e.stopPropagation()}>
-                            <li><a className="icon-filter">{pizza} Italian</a></li>
-                            <li><a className="icon-filter">{iceCream} Dessert</a></li>
-                            <li><a className="icon-filter">{wineGlass} Bar</a></li>
-                            <li><a className="icon-filter">{coffee} Cafe</a></li>
+                            <li><a className="icon-filter">Italian {pizza}</a></li>
+                            <li><a className="icon-filter">Dessert {iceCream}</a></li>
+                            <li><a className="icon-filter">Bar {wineGlass}</a></li>
+                            <li><a className="icon-filter">Cafe {coffee}</a></li>
                         </ul>
                         </div>
 

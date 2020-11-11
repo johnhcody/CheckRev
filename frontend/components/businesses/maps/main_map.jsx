@@ -66,7 +66,8 @@ class MainMap extends React.Component {
     
     componentDidUpdate(prevProps) {
         debugger
-        if (this.props !== prevProps) {
+        // previously was if (this.props !== prevPros)... may want to add another conditional for state?
+        if (this.props.businesses !== prevProps.businesses) {
             this.MarkerManager = new MarkerManager(this.map);
             this.MarkerManager.updateMarkers(this.props.businesses);
             this.registerListeners

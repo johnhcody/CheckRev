@@ -40,7 +40,9 @@ function Amenities(props) {
             return <FontAwesomeIcon icon={['fas', 'tags']} />
         } else if (amenity == "Service Oriented") {
             return <FontAwesomeIcon icon="concierge-bell" />
-        }  else {
+        } else if (amenity == "Serves Coffee") {
+            return <FontAwesomeIcon icon={['fas', 'coffee']}  />
+        } else {
             return <FontAwesomeIcon icon="concierge-bell" />
         }
     })
