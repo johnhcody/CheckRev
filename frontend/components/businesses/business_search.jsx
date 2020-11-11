@@ -9,21 +9,50 @@ class BusinessSearch extends React.Component {
         super(props);
         this.state = {
             category: '',
-            city: ''
+            city: '',
+            bounds: {}
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.update = this.update.bind(this);
     }
-
 
     update(field) {
         return e => this.setState({[field]: e.currentTarget.value })
     }
 
     handleSubmit(e) {
+        const nyBounds = {
+            northEast: { lat: 41.11397721785646, lng: -73.72406848490463 },     
+            southWest: { lat: 40.333415677855285, lng: -74.27338493306415 }};
+        const bosBounds = {
+            northEast: { lat: 42.380949269680855, lng: -71.04117284414933 },
+            southWest: { lat: 42.33338023333157, lng: -71.0755051221593 }};
+        const phxBounds = {
+            northEast: { lat: 33.66836967925308, lng: -111.94077413618193 },
+            southWest: { lat: 33.23870320484366, lng: -112.21543236026169 }};
+        const stlBounds = {
+            northEast: { lat: 39.03194112554274, lng: -89.9213493686937 },
+            southWest: { lat: 38.22734740339782, lng: -90.47066581685321 }};
+        const sfBounds = {
+            northEast: { lat: 37.93873674004917, lng: -122.31110462819451 },
+            southWest: { lat: 37.53146403390572, lng: -122.58576285227427 }};
+        const chiBounds = {};
+
         debugger
         e.preventDefault();
-        this.props.updateFilters(this.state)
+        if (this.state.city.toLowerCase().includes("york") || this.state.city.toLowerCase().includes("ny")) {
+            this.setState({city: "New York", bounds: nyBounds});
+        } else if (this.state.city.toLowerCase().includes("boston")) {
+            this.setState({city: "Boston", bounds: bosBounds});
+        } else if (this.state.city.toLowerCase().includes("phoenix")) {
+            this.setState({ city: "Phoenix", bounds: phxBounds });
+        } else if (this.state.city.toLowerCase().includes("louis") || this.state.city.toLowerCase().includes("stl")) {
+            this.setState({ city: "St. Louis", bounds: stlBounds });
+        } else if (this.state.city.toLowerCase().includes("francisco") || this.state.city.toLowerCase().includes("sf")) {
+            this.setState({ city: "San Francisco", bounds: sfBounds });
+        } 
+        debugger
+        this.props.updateFilter('bounds', this.state.bounds)
     }
 
     render() {

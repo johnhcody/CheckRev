@@ -26,13 +26,13 @@ class BusinessIndex extends React.Component {
     componentDidUpdate(prevProps) {
         debugger
         if (this.props.businesses !== prevProps.businesses) {
-            this.setState({businesses: this.props.businesses});
-            this.refresh();
+            // this.setState({businesses: this.props.businesses});
+            // this.refresh();
         }
     }
 
     refresh() {
-        this.setState({refresh: !this.state.refresh})
+        //this.setState({refresh: !this.state.refresh})
     }
 
     render() {
@@ -134,7 +134,9 @@ class BusinessIndex extends React.Component {
                             })
                         }
                         </div> 
-                        <MainMap businesses={this.props.businesses} 
+                        <MainMap 
+                                key={this.props.businesses}
+                                businesses={this.props.businesses} 
                         updateFilters={this.props.updateFilters}/>
                     </div>
             </div>

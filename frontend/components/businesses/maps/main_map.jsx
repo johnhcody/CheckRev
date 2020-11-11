@@ -15,7 +15,7 @@ class MainMap extends React.Component {
 
 
     componentDidMount() {
-
+        debugger
         const mapOptions = {
             center: { lat: 40.7238, lng: -74.0001 },
             zoom: 10

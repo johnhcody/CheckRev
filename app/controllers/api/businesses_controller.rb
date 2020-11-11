@@ -22,10 +22,11 @@ class Api::BusinessesController < ApplicationController
 
         #debugger
         @businesses = params[:bounds] ? Business.includes(:reviews).in_bounds(params[:bounds]).limit(8) : Business.all.limit(8)
-
+        # debugger
         if params[:bounds] && params[:priceRating] && params[:business_type]
             @businesses = Business.includes(:reviews).in_bounds(params[:bounds]).match_price(params[:priceRating]).match_type(params[:business_type]).limit(8)
         elsif params[:city] && params[:bounds]
+            #debugger
             @businesses = Business.includes(:reviews).in_bounds(params[:bounds]).match_city(params[:city])
         elsif params[:priceRating] && params[:bounds]
             @businesses = Business.includes(:reviews).in_bounds(params[:bounds]).match_price(params[:priceRating]).limit(8)            
