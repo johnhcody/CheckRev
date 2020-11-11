@@ -1,6 +1,6 @@
 import React from 'react';
-import CategoryFilter from './category_filter';
-import TypeFilter from './type_filter_container';
+import TypeFilter from './type_filter';
+import CategoryFilter from './category_filter_container';
 
 class PriceFilters extends React.Component {
     constructor(props) {
@@ -59,8 +59,8 @@ handleChange(field) {
                         $$$$</label>
                 </div>
                 <button value="0" id="clear-price-filter-button" onClick={this.handleChange('priceRating') }>Clear Price Filters</button>
-                <CategoryFilter updateFilters={this.props.updateFilters}/>
-                <TypeFilter />
+                <TypeFilter updateFilters={this.props.updateFilters}/>
+                <CategoryFilter updateFilters={this.props.updateFilters} />
             </div>
         )
     }

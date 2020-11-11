@@ -53,7 +53,9 @@ class BusinessIndexItem extends React.Component {
                                 </div>
                                 {this.renderPriceRating(this.props.priceRating)}
                                 <h3>{this.props.businessCategory}</h3>
-                                <h4>{this.props.amenities.split(',').join(', ')}</h4>
+                                <div className="amenities-wrapper">
+                                    <h4>{this.props.amenities.split(',').join(', ')}</h4>
+                                </div>
                             </div>
                             <div className="right-wrapper">
                                 <h4>{this.props.phoneNumber}</h4>

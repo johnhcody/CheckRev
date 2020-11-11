@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
-import TypeFilter from './type_filter';
-import { openModal, closeModal } from '../../actions/modal_actions';
+import CategoryFilters from './price_filters'
 
 const mSTP = state => {
     return {
@@ -10,10 +9,9 @@ const mSTP = state => {
 
 const mDTP = dispatch => {
     return {
-        openModal: () => dispatch(openModal('see-more')),
-        closeModal: () => dispatch(closeModal())
+
     }
 }
 
 
-export default connect(null, mDTP)(TypeFilter);
+export default connect(null, null)(TypeFilters);

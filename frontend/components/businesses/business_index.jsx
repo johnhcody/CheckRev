@@ -5,9 +5,7 @@ import BusinessSearch from './business_search';
 import BusinessIndexItem from './business_index_item';
 import MainMap from './maps/main_map';
 import PriceFilters from './price_filters'
-import CategoryFilter from './category_filter';
 import BusinessIndexFooter from './business_index_footer';
-import TypeFilter from './type_filter';
 import BusinessIcons from './business_icons';
 
 class BusinessIndex extends React.Component {

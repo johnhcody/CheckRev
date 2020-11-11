@@ -62,8 +62,8 @@ bos_bus = Business.create({
     lat: sprintf('%.4f', 42.3613 + rand(-0.01..0.01)).to_f, 
     web_address: 'www.' + name_bos.split(' ').join('').downcase + '.com',
     phone_number: Faker::PhoneNumber.cell_phone, 
-    business_type: PROFESSIONAL_SERIVCES_CAT.sample, 
-    business_category: 'Professional Services',
+    business_type: 'Professional Services', 
+    business_category: PROFESSIONAL_SERIVCES_CAT.sample,
     price_rating: rand(1..4),
     amenities: OTHER_AMENITIES.sample(4).join(',')
     })

@@ -1,45 +1,21 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-
-
+import ModalFilter from './more_filters'
 class CategoryFilter extends React.Component {
     constructor(props) {
-        super(props);
+        super(props)
+        // this.handleClick = this.handleClick.bind(this)
+        // this.props.closeModal = this.props.closeModal.bind(this);
         this.state = {
-            business_type: []
+            category: []
         }
-        this.handleChange = this.handleChange.bind(this);
     }
-
-
-
-    handleChange(field) {
-
-        return e => {
     
-            const valArray = [e.currentTarget.value]
-            //e.currentTarget.checked ? this.setState({business_type: this.state.business_type.push(e.target.value)}) : this.setState({business_type: this.state.business_type.filter(el => el !== e.currentTarget.value)})
-            e.currentTarget.checked ? this.setState({business_type: this.state.business_type.concat(valArray)}) : this.setState({business_type: this.state.business_type.filter(el => el !== e.currentTarget.value)})
+    handleChange(field) {
+        return e => {
 
-            // e.persist();
-            // if (e.currentTarget.checked) {
-            //     this.setState(state => {
-            // 
-            //         const business_type = state.business_type.concat(e.target.value)
-            //         return {
-            //             business_type
-            //         }
-            //     })
-            // } else {
-            //     this.setState(state => {
-            //         debugger
-            //         const business_type = state.business_type.filter(el => el !== (e.target.value))
-            //         return {
-            //             business_type
-            //         }
-            //     })
-            // }
-            //e.currentTarget.checked ? this.setState({ business_type: this.state[business_type].push(e.currentTarget.value) }) : this.setState({ business_type: this.state.business_type.filter(el => el !== (e.currentTarget.value)) })
+            const valArray = [e.currentTarget.value]
+            e.currentTarget.checked ? this.setState({ category: this.state.category.concat(valArray) }) : this.setState({ category: this.state.category.filter(el => el !== e.currentTarget.value) })
 
         }
 
@@ -47,65 +23,81 @@ class CategoryFilter extends React.Component {
 
     componentDidUpdate(prevProps, prevState) {
 
-        if (this.state.business_type !== prevState.business_type) {
-            this.props.updateFilters('business_type', this.state.business_type)
+        if (this.state.category !== prevState.category) {
+            this.props.updateFilters('category', this.state.category)
         }
     }
 
     render() {
-
+                    const check = <FontAwesomeIcon icon="check" />
         return (
-            <div className="category-container">
+            <div className="type-container">
                 <header>Category</header>
-
-
                 <label className="checkbox">
                     <span className="checkbox__input">
-                        <input type="checkbox" name="checkbox" value="Restaurant" onChange={this.handleChange('business_type')}/>
-                            <span className="checkbox__control">
-                                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
-                                    <path fill='none' stroke='currentColor' strokeWidth='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' /></svg>
-                            </span>
-                    </span>
-                        <span className="radio__label">Restaurants</span>
-                </label>
-                <label className="checkbox">
-                    <span className="checkbox__input">
-                        <input type="checkbox" name="checkbox" value="Home Services" onChange={this.handleChange('business_type')}/>
-                            <span className="checkbox__control">
-                                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                        <input type="checkbox" name="checkbox" value="Restaurant" onChange={this.handleChange('category')} />
+                        <span className="checkbox__control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
                                 <path fill='none' stroke='currentColor' strokeWidth='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' /></svg>
-                            </span>
+                        </span>
                     </span>
-                        <span className="radio__label">Home Services</span>
+                    <span className="radio__label">Japanese</span>
                 </label>
                 <label className="checkbox">
                     <span className="checkbox__input">
-                        <input type="checkbox" name="checkbox" value="Professional Services" onChange={this.handleChange('business_type')}/>
-                            <span className="checkbox__control">
-                                <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                        <input type="checkbox" name="checkbox" value="Home Services" onChange={this.handleChange('category')} />
+                        <span className="checkbox__control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
                                 <path fill='none' stroke='currentColor' strokeWidth='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' /></svg>
-                            </span>
+                        </span>
                     </span>
-                        <span className="radio__label">Professional Services</span>
+                    <span className="radio__label">Thai</span>
                 </label>
-
-
-{/* 
-                    
-
-
-               <div className="cat-button-container">
-                   <input type="checkbox" name="cat-restaurant" id="" value="restaurant" />
-                   <label htmlFor="cat-restaurant">Restaurants</label>               </div>
-               <div className="cat-button-container">
-                    <input type="checkbox" name="cat-home-services" id="" value="home-services" />
-                    <label htmlFor="cat-home-services">Home Services</label>
-               </div>
-               <div className="cat-button-container">
-                    <input type="checkbox" name="cat-professional-services" id="" value="professional-services" />
-                    <label htmlFor="cat-professional-services">Professional Services</label>
-               </div> */}
+                <label className="checkbox">
+                    <span className="checkbox__input">
+                        <input type="checkbox" name="checkbox" value="Professional Services" onChange={this.handleChange('category')} />
+                        <span className="checkbox__control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' strokeWidth='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' /></svg>
+                        </span>
+                    </span>
+                    <span className="radio__label">Cleaning</span>
+                </label>
+                <label className="checkbox">
+                    <span className="checkbox__input">
+                        <input type="checkbox" name="checkbox" value="Restaurant" onChange={this.handleChange('category')} />
+                        <span className="checkbox__control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' strokeWidth='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' /></svg>
+                        </span>
+                    </span>
+                    <span className="radio__label">Landscaping</span>
+                </label>
+                <label className="checkbox">
+                    <span className="checkbox__input">
+                        <input type="checkbox" name="checkbox" value="Home Services" onChange={this.handleChange('category')} />
+                        <span className="checkbox__control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' strokeWidth='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' /></svg>
+                        </span>
+                    </span>
+                    <span className="radio__label">Security</span>
+                </label>
+                <label className="checkbox">
+                    <span className="checkbox__input">
+                        <input type="checkbox" name="checkbox" value="Professional Services" onChange={this.handleChange('category')} />
+                        <span className="checkbox__control">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
+                                <path fill='none' stroke='currentColor' strokeWidth='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' /></svg>
+                        </span>
+                    </span>
+                    <span className="radio__label">Italian</span>
+                </label>
+                <div className="see-more-trigger">
+                    <button onClick={this.props.openModal}>
+                        Filter by Amenities
+                    </button>
+                </div>
             </div>
         )
     }

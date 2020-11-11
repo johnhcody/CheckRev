@@ -66,21 +66,24 @@ class MainMap extends React.Component {
     
     componentDidUpdate(prevProps) {
         debugger
-        this.MarkerManager = new MarkerManager(this.map);
-        this.MarkerManager.updateMarkers(this.props.businesses);
-    }
-
-
-    componentWillReceiveProps(prevProps) {
-        debugger
-        const { refresh, businesses } = this.props;
-        if (prevProps.refresh !== refresh || prevProps.businesses !== businesses ) {
-            debugger
+        if (this.props !== prevProps) {
             this.MarkerManager = new MarkerManager(this.map);
             this.MarkerManager.updateMarkers(this.props.businesses);
-            this.registerListeners();
+            this.registerListeners
         }
     }
+
+
+ //   componentWillReceiveProps(prevProps) {
+ //       debugger
+ //       const { refresh, businesses } = this.props;
+ //      if (prevProps.refresh !== refresh || prevProps.businesses !== businesses ) {
+ //           debugger
+ //           this.MarkerManager = new MarkerManager(this.map);
+ //           this.MarkerManager.updateMarkers(this.props.businesses);
+ //           this.registerListeners();
+ //       }
+ //   }
 
     render() {
         return (
