@@ -88,7 +88,9 @@ class Business < ApplicationRecord
 
 
     def self.match_category(business_category)
-        if business_category.length == 1 
+        if business_category.length == 0
+            self.all
+        elsif business_category.length == 1 
             self.where("business_category = ?", business_category[0])
         elsif business_category.length == 2
             self.where("business_category = ?", business_category[0]).or(self.where("business_category = ?", business_category[1]))

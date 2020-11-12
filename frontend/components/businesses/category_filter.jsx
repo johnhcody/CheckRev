@@ -24,7 +24,7 @@ class CategoryFilter extends React.Component {
     componentDidUpdate(prevProps, prevState) {
 
         if (this.state.category !== prevState.category) {
-            this.props.updateFilters('category', this.state.category);
+            this.props.updateFilters({'category': this.state.category});
         }
     }
 

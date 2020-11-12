@@ -56,7 +56,7 @@ class MainMap extends React.Component {
             };
             console.log('bounds');
             console.log(bounds);
-            that.props.updateFilters('bounds', bounds);
+            that.props.updateFilters({'bounds': bounds});
         });
         google.maps.event.addListener(this.map, 'click', (event) => {
             const coords = getCoordsObj(event.latLng);

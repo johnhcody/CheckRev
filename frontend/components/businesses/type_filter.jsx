@@ -27,7 +27,7 @@ class TypeFilter extends React.Component {
     componentDidUpdate(prevProps, prevState) {
 
         if (this.state.business_type !== prevState.business_type) {
-            this.props.updateFilters('business_type', this.state.business_type)
+            this.props.updateFilters({'business_type': this.state.business_type})
         }
     }
 

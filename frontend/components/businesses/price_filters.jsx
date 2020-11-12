@@ -17,7 +17,7 @@ handleChange(field) {
     return e => {
 
 
-        this.props.updateFilters(field, e.currentTarget.value)
+        this.props.updateFilters({[field]: e.currentTarget.value})
         const vals = ["1", "2", "3", "4"]
         this.setState({ [field]: e.currentTarget.value })
 

@@ -49,50 +49,49 @@ class BusinessSearch extends React.Component {
 
         if (this.state.category == '' && this.state.city !== '') {
             if (this.state.city.toLowerCase().includes("york") || this.state.city.toLowerCase().includes("ny")) {
-                this.props.updateFilters('bounds', nyBounds);
+                this.props.updateFilters({'bounds': nyBounds});
             } else if (this.state.city.toLowerCase().includes("boston")) {
-                this.props.updateFilters('bounds', bosBounds);
+                this.props.updateFilters({'bounds': bosBounds});
             } else if (this.state.city.toLowerCase().includes("phoenix")) {
-                this.props.updateFilters('bounds', phxBounds);
+                this.props.updateFilters({'bounds': phxBounds});
             } else if (this.state.city.toLowerCase().includes("louis") || this.state.city.toLowerCase().includes("stl")) {
-                this.props.updateFilters('bounds', stlBounds);
+                this.props.updateFilters({'bounds': stlBounds});
             } else if (this.state.city.toLowerCase().includes("francisco") || this.state.city.toLowerCase().includes("sf")) {
-                this.props.updateFilters('bounds', sfBounds);
+                this.props.updateFilters({'bounds': sfBounds});
+            } else if (this.state.city.toLowerCase().includes("chicago")) {
+                this.props.updateFilters({'bounds': sfBounds});
             } else {
-                this.props.updateFilters('bounds', noBounds)
+                this.props.updateFilters({'bounds': noBounds})
             }
         } else if (this.state.category !== '' && this.state.city !== '') {
             if (this.state.city.toLowerCase().includes("york") || this.state.city.toLowerCase().includes("ny")) {
-                this.props.updateFilters('bounds', nyBounds);
-                this.props.updateFilters('category', this.state.category);
+                this.props.updateFilters({'bounds': nyBounds, 'category': [this.state.category]});
             } else if (this.state.city.toLowerCase().includes("boston")) {
-                this.props.updateFilters('bounds', bosBounds);
-                this.props.updateFilters('category', this.state.category);
+                this.props.updateFilters({'bounds': bosBounds, 'category': [this.state.category]});
             } else if (this.state.city.toLowerCase().includes("phoenix")) {
-                this.props.updateFilters('bounds', phxBounds);
-                this.props.updateFilters('category', this.state.category);
+                this.props.updateFilters({ 'bounds': phxBounds, 'category': [this.state.category]});
             } else if (this.state.city.toLowerCase().includes("louis") || this.state.city.toLowerCase().includes("stl")) {
-                this.props.updateFilters('bounds', stlBounds);
-                this.props.updateFilters('category', this.state.category);
+                this.props.updateFilters({'bounds': stlBounds, 'category': [this.state.category]});
             } else if (this.state.city.toLowerCase().includes("francisco") || this.state.city.toLowerCase().includes("sf")) {
-                this.props.updateFilters('bounds', sfBounds);
-                this.props.updateFilters('category', this.state.category);
+                this.props.updateFilters({'bounds': sfBounds, 'category': [this.state.category]});
+            } else if (this.state.city.toLowerCase().includes("chicago")) {
+                this.props.updateFilters({ 'bounds': chiBounds, 'category': [this.state.category] });
             } else {
-                this.props.updateFilters('category', this.state.category);
+                this.props.updateFilters('category', [this.state.category]);
             }
         } else if (this.state.category !== '' && this.state.city == '') {
             if (this.state.city.toLowerCase().includes("york") || this.state.city.toLowerCase().includes("ny")) {
-                this.props.updateFilters('category', this.state.category);
+                this.props.updateFilters({'category': [this.state.category]});
             } else if (this.state.city.toLowerCase().includes("boston")) {       
-                this.props.updateFilters('category', this.state.category);
+                this.props.updateFilters({'category': [this.state.category]});
             } else if (this.state.city.toLowerCase().includes("phoenix")) {
-                this.props.updateFilters('category', this.state.category);
+                this.props.updateFilters({'category': [this.state.category]});
             } else if (this.state.city.toLowerCase().includes("louis") || this.state.city.toLowerCase().includes("stl")) {
-                this.props.updateFilters('category', this.state.category);
+                this.props.updateFilters({'category': [this.state.category]});
             } else if (this.state.city.toLowerCase().includes("francisco") || this.state.city.toLowerCase().includes("sf")) {
-                this.props.updateFilters('category', this.state.category);
+                this.props.updateFilters({'category': [this.state.category]});
             } else {
-                this.props.updateFilters('category', this.state.category);
+                this.props.updateFilters({ 'category': [this.state.category]});
             }
         }
 
