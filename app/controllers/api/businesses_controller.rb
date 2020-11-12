@@ -28,18 +28,25 @@ class Api::BusinessesController < ApplicationController
         #debugger
         if params[:bounds] && params[:category] && params[:priceRating] && params[:business_type]
             @businesses = Business.includes(:reviews).in_bounds(params[:bounds]).match_category(params[:category]).match_price(params[:priceRating]).match_type(params[:business_type]).limit(8)
+        
         elsif params[:bounds] && params[:priceRating] && params[:business_type]
             @businesses = Business.includes(:reviews).in_bounds(params[:bounds]).match_price(params[:priceRating]).match_type(params[:business_type]).limit(8)
+        
         elsif params[:bounds] && params[:category] && params[:business_type]
-            debugger
+            #debugger
             @businesses = Business.includes(:reviews).in_bounds(params[:bounds]).match_category(params[:category]).match_type(params[:business_type]).limit(8)
+        
         elsif params[:bounds] && params[:category] && params[:priceRating]
             @businesses = Business.includes(:reviews).in_bounds(params[:bounds]).match_category(params[:category]).match_price(params[:priceRating]).limit(8)
+        
         elsif params[:bounds] && params[:category]
-            debugger
+            #debugger
             @businesses = Business.includes(:reviews).in_bounds(params[:bounds]).match_category(params[:category]).limit(8)
+        
         elsif params[:bounds] && params[:priceRating]
+            #debugger
             @businesses = Business.includes(:reviews).in_bounds(params[:bounds]).match_price(params[:priceRating]).limit(8)            
+        
         elsif params[:bounds] && params[:business_type]
             @businesses = Business.includes(:reviews).in_bounds(params[:bounds]).match_type(params[:business_type]).limit(8) 
         end
@@ -66,3 +73,7 @@ class Api::BusinessesController < ApplicationController
     end
 
 end
+
+# SF Coords
+#   lng: -83.5227,
+#   lat: 37.7088,
