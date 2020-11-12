@@ -9,10 +9,8 @@ const filtersReducer = (state = defaultFilters, action) => {
 
     switch (action.type) {
         case UPDATE_FILTER:
-
-            const newFilter = {
-                [action.filter]: action.value
-            };
+            debugger
+            const newFilter = action.filterObj;
             return Object.assign({}, state, newFilter);
         default:
             return state;

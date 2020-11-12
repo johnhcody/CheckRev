@@ -37,7 +37,9 @@ class BusinessSearch extends React.Component {
         const sfBounds = {
             northEast: { lat: 37.93873674004917, lng: -122.31110462819451 },
             southWest: { lat: 37.53146403390572, lng: -122.58576285227427 }};
-        const chiBounds = {};
+        const chiBounds = {
+            northEast: { lat: 42.58574742735645, lng: -87.28813637859241 },
+            southWest: { lat: 41.05066991851418, lng: -88.38676927491144 }};
         const noBounds = {
             northEast: { lat: 41.098328841719976, lng: -73.67774177592024 },
             southWest: { lat: 40.31758272571303, lng: -74.22705822407976 }}

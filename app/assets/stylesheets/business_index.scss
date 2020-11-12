@@ -173,12 +173,14 @@
     li {
         padding: 10px 5px 5px 5px;
         min-width: 60px;
-        &:hover {
-            color: $green;
-        }
     }
     a {
         padding-left: 3px;
+        border-bottom: 1px solid transparent;
+        &:hover {
+            color: $green;
+            border-bottom: 1px solid $green;
+        }
     }
 }
 
@@ -207,48 +209,18 @@
     li {
         padding: 10px 5px 5px 5px;
         min-width: 60px;
-        &:hover {
-            color: $green;
-        }
     }
     a {
         padding-left: 3px;
-    }
-}
-
-.dropdown-wrapper-2 {
-    display: flex;
-    position: absolute;
-    border: 1px solid black;
-    align-items: flex-start;
-    background-color: white;
-    flex-direction: row;
-    top: 35px;
-    padding-top: 5px;
-    padding-right: 12px;
-    padding-bottom: 13px;
-    left: 157px;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    border: none;
-    border-radius: 5px;
-
-    ul {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-    li {
-        padding: 10px 5px 5px 5px;
-        min-width: 60px;
+        border-bottom: 1px solid transparent;
         &:hover {
             color: $green;
+            border-bottom: 1px solid $green;
         }
     }
-    a {
-        padding-left: 3px;
-    }
 }
+
+
 
 .dropdown-wrapper-3 {
     display: flex;
@@ -275,6 +247,14 @@
     li {
         padding: 10px 5px 5px 5px;
         min-width: 60px;
+    }
+    a {
+        padding-left: 3px;
+        border-bottom: 1px solid transparent;
+        &:hover {
+            color: $green;
+            border-bottom: 1px solid $green;
+        }
     }
 }
 

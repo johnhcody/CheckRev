@@ -10,7 +10,7 @@ const mSTP = state => {
 }
 
 const mDTP = dispatch => {
- 
+    debugger
     return {
         fetchBusinesses: () => dispatch(fetchBusinesses()),
         updateFilters: (filter, value) => dispatch(updateFilters(filter, value))

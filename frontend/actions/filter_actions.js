@@ -2,14 +2,16 @@ import { fetchBusinesses } from './business_actions'
 
 export const UPDATE_FILTER = 'UPDATE_FILTER';
 
-export const changeFilter = (filter, value) => ({
-    type: UPDATE_FILTER,
-    filter,
-    value
-});
-
-export const updateFilters = (filter, value) => (dispatch, getState) => {
+export const changeFilter = (filterObj) => {
     debugger
-    dispatch(changeFilter(filter, value));
+    return {
+    type: UPDATE_FILTER,
+    filterObj
+    }
+};
+
+export const updateFilters = (filterObj) => (dispatch, getState) => {
+    debugger
+    dispatch(changeFilter(filterObj));
     return fetchBusinesses(getState().ui.filters)(dispatch);
 };
