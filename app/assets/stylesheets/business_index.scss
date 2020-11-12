@@ -796,7 +796,7 @@
     display: flex;
     justify-content: space-between;
     width: 77%;
-    padding: 37px 0px 25px 67px;
+    padding: 27px 0px 16px 67px;
     header {
         color: black;
         font-family: sans-serif;
@@ -818,17 +818,17 @@
 
 .modal-category-container-wrapper {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     width: 100%;
 }
 
 .modal-category-container {
     display: flex;
     flex-direction: column;
-    min-height: 97px;
     background-color: white;
     max-width: 192px;
     font-family: sans-serif;
+    padding-left: 30px;
     input {
     }
     label {

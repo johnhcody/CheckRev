@@ -1,15 +1,15 @@
 import React from 'react';
 
-import MoreFilters from './more_filters';
+import MoreFilters from './more_filters_container';
 
-function Modal({ modal, closeModal }) {
+function Modal({ modal, closeModal, updateFilters }) {
     if (!modal) {
         return null;
     }
     let component;
     switch (modal) {
         case 'see-more':
-            component = <MoreFilters closeModal={closeModal} /> 
+            component = <MoreFilters closeModal={closeModal} updateFilters={updateFilters} /> 
             break;
         default:
             return null;

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import SearchBar from './searchbar'
-import updateFilters from '../../actions/filter_actions';
+import { updateFilters } from '../../actions/filter_actions';
 
 const mSTP = state => {
     return {

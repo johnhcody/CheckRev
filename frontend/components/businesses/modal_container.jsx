@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import Modal from './modal';
 import { closeModal } from '../../actions/modal_actions';
+import { updateFilters } from '../../actions/filter_actions';
 
 
 const mapStateToProps = state => {
@@ -11,7 +12,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        closeModal: () => dispatch(closeModal())
+        closeModal: () => dispatch(closeModal()),
+        updateFilters: (filterObj) => dispatch(updateFilters(filterObj))
     };
 };
 
