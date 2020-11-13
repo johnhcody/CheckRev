@@ -46,6 +46,13 @@ class BusinessIndex extends React.Component {
         this.setState({refresh: !this.state.refresh})
     }
 
+    clearFilters() {
+        this.props.updateFilters({
+            bounds: {}
+        });
+        //this.setState({refresh: !this.state.refresh})
+    }
+
     render() {
         debugger
         const { address1, address2, businessCategory, businessType, city, name, phoneNumber, webAddress, zipcode } = this.props.businesses;
@@ -69,7 +76,7 @@ class BusinessIndex extends React.Component {
                                                 <li>Currently, we have businesses in New York, Boston, Phoenix, St. Louis, Chicago, and San Francisco.</li>
                                                 <li>It is also possible your search was too specific...try general terms (try the caetgories listed below!)</li>
                                                 <li>You can also try moving the map over one of the above cities</li>
-                                        <button onClick={() => window.location.reload()}>Click here to clear all filters and try again</button>
+                                        <button onClick={() => this.clearFilters()}>Click here to clear all filters and try again</button>
                                             </ul>
                                         </div>
                                     <div className="search-no-results-bottom">
@@ -106,6 +113,7 @@ class BusinessIndex extends React.Component {
                                         </div>
                                 </div>
                                 <MainMap 
+                                key={this.props.businesses}
                                 businesses={this.props.businesses} 
                                 updateFilters={this.props.updateFilters}
                                 />
@@ -117,6 +125,7 @@ class BusinessIndex extends React.Component {
             
         } else {
             debugger
+            const businessesToMap = this.state.businesses.length > 8 ? this.state.businesses.slice(0,8) : this.state.businesses
             return (
                 <div>
                 <BusinessSearch
@@ -130,7 +139,7 @@ class BusinessIndex extends React.Component {
                         updateFilters={this.props.updateFilters} />
                         <div className="bus-item-wrapper">
                         {
-                            this.state.businesses.map(business => {  
+                            businessesToMap.map(business => {  
                                 return <BusinessIndexItem 
                                 id={business.id}
                                 address1={business.address1}
@@ -155,7 +164,7 @@ class BusinessIndex extends React.Component {
                         <MainMap 
                                 key={this.props.businesses}
                                 refresh={this.state.refresh}
-                                businesses={this.state.businesses} 
+                                businesses={businessesToMap} 
                         updateFilters={this.props.updateFilters}/>
                     </div>
             </div>

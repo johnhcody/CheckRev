@@ -10,7 +10,7 @@ class FeaturedBusinesses extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchBusinesses()
+        //this.props.fetchBusinesses()
     }
 
     render() {
@@ -18,7 +18,8 @@ class FeaturedBusinesses extends React.Component {
         const regStar = <FontAwesomeIcon icon={["far", "star"]} />
         const utensils = <FontAwesomeIcon icon="utensils" />
         const numBusinesses = 3;
-        const featuredItems = this.props.businesses.slice(0, numBusinesses)
+        const randomBusinessses = this.props.businesses.sort(() => 0.5 - Math.random())
+        const featuredItems = randomBusinessses.slice(0, numBusinesses)
         return (
             <div>
                 <div className="featured-bus-title">

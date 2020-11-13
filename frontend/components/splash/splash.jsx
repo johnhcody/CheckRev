@@ -18,7 +18,9 @@ class Splash extends React.Component {
 
     componentDidMount() {
         window.scrollTo(0, 0);
-    
+        if (this.props.businesses.length == []) {
+            this.props.fetchBusinesses()
+        }
         // const currentUser = Object.assign({}, this.props.currentUser);
 
         // if (currentUser.state === "" && currentUser.city === "") {
@@ -70,13 +72,13 @@ class Splash extends React.Component {
                     </div>
                     <SearchBar />
                     <br/>
-                    <SearchIcons />
+                    <SearchIcons businesses={this.props.businesses}/>
                     </div>
                     <br/>
             </div>
                     <BusinessCategoriesContainer />
                     <BusinessByCityContainer />
-                    <FeaturedBusinessesContainer />
+                    <FeaturedBusinessesContainer businesses={this.props.businesses}/>
                     <BusinessByCategoryContainer />
                     <SocialMedia />
                     <Footer />

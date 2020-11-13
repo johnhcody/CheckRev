@@ -3,7 +3,7 @@ import SearchIcons from './searchbar'
 
 const mSTP = state => {
     return {
-
+        businesses: state.entities.businesses
     }
 }
 
@@ -14,4 +14,4 @@ const mDTP = dispatch => {
 }
 
 
-export default connect(null, null)(SearchIcons);
+export default connect(mSTP, null)(SearchIcons);

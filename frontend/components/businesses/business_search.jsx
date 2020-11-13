@@ -73,6 +73,7 @@ class BusinessSearch extends React.Component {
             } else if (this.state.city.toLowerCase().includes("louis") || this.state.city.toLowerCase().includes("stl")) {
                 this.props.updateFilters({'bounds': stlBounds, 'category': [this.state.category]});
             } else if (this.state.city.toLowerCase().includes("francisco") || this.state.city.toLowerCase().includes("sf")) {
+                debugger
                 this.props.updateFilters({'bounds': sfBounds, 'category': [this.state.category]});
             } else if (this.state.city.toLowerCase().includes("chicago")) {
                 this.props.updateFilters({ 'bounds': chiBounds, 'category': [this.state.category] });
