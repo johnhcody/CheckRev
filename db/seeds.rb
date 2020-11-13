@@ -49,7 +49,7 @@ test = User.create({
 
      })
 
-
+50.times do |business|
 name_bos = Faker::Company.name + ' ' + Faker::Company.suffix 
 bos_bus = Business.create({
     name: name_bos,
@@ -68,7 +68,9 @@ bos_bus = Business.create({
     amenities: OTHER_AMENITIES.sample(4).join(',')
     })
 bos_bus.photo.attach(io: URI.open(PROFESSIONAL_PHOTOS.sample), filename: "logo.png")
+end
 
+50.times do |business|
 name_bos2 = Faker::Restaurant.name
 bos_bus2 = Business.create({
     name: name_bos2,
@@ -87,7 +89,9 @@ bos_bus2 = Business.create({
     amenities: OTHER_AMENITIES.sample(4).join(',')
     })
     bos_bus2.photo.attach(io: URI.open(RESTAURANT_PHOTOS.sample), filename: "logo.png")
+end
 
+50.times do |business|
 name_bos3 = Faker::Company.name
 bos_bus3 = Business.create({
     name: name_bos3,
@@ -106,7 +110,9 @@ bos_bus3 = Business.create({
     amenities: OTHER_AMENITIES.sample(4).join(',')
     })
     bos_bus3.photo.attach(io: URI.open(HOME_PHOTOS.sample), filename: "logo.png")
+end
 
+50.times do |business|
 name_chi = Faker::Restaurant.name
 chi_bus = Business.create({
     name: name_chi,
@@ -125,7 +131,9 @@ chi_bus = Business.create({
     amenities: RESTAURANT_AMENITIES.sample(4).join(',')
     })
     chi_bus.photo.attach(io: URI.open(RESTAURANT_PHOTOS.sample), filename: "logo.png")
+end
 
+50.times do |business|
 name_chi2 = Faker::Company.name + ' ' + Faker::Company.suffix 
 chi_bus2 = Business.create({
     name: name_chi2,
@@ -144,7 +152,9 @@ chi_bus2 = Business.create({
     amenities: OTHER_AMENITIES.sample(4).join(',')
     })
     chi_bus2.photo.attach(io: URI.open(PROFESSIONAL_PHOTOS.sample), filename: "logo.png")
+end
 
+50.times do |business|
 name_chi3 = Faker::Company.name
 chi_bus3 = Business.create({
     name: name_chi3,
@@ -163,7 +173,9 @@ chi_bus3 = Business.create({
     amenities: OTHER_AMENITIES.sample(4).join(',')
     })
     chi_bus3.photo.attach(io: URI.open(HOME_PHOTOS.sample), filename: "logo.png")
+end
 
+50.times do |business|
 name_ny = Faker::Restaurant.name
 ny_bus = Business.create({
     name: name_ny,
@@ -182,7 +194,9 @@ ny_bus = Business.create({
     amenities: RESTAURANT_AMENITIES.sample(4).join(',')
     })
     ny_bus.photo.attach(io: URI.open(RESTAURANT_PHOTOS.sample), filename: "logo.png")
+end
 
+50.times do |business|
 name_ny2 = Faker::Company.name + ' ' + Faker::Company.suffix 
 ny_bus2 = Business.create({
     name: name_ny2,
@@ -201,7 +215,9 @@ ny_bus2 = Business.create({
     amenities: OTHER_AMENITIES.sample(4).join(',')
     })
     ny_bus2.photo.attach(io: URI.open(PROFESSIONAL_PHOTOS.sample), filename: "logo.png")
+end
 
+50.times do |business|
 name_ny3 = Faker::Company.name
 ny_bus3 = Business.create({
     name: name_ny3,
@@ -219,9 +235,10 @@ ny_bus3 = Business.create({
     price_rating: rand(1..4),
     amenities: OTHER_AMENITIES.sample(4).join(',')
     })
-    ny_bus3.photo.attach(io: URI.open(HOME_PHOTOS.sample), filename: "logo.png")
+ny_bus3.photo.attach(io: URI.open(HOME_PHOTOS.sample), filename: "logo.png")
+end
 
-
+50.times do |business|
 name_phx = Faker::Restaurant.name
 phx_bus = Business.create({
     name: name_phx,
@@ -239,8 +256,10 @@ phx_bus = Business.create({
     price_rating: rand(1..4),
     amenities: RESTAURANT_AMENITIES.sample(4).join(',')
     })
-    phx_bus.photo.attach(io: URI.open(RESTAURANT_PHOTOS.sample), filename: "logo.png")
+phx_bus.photo.attach(io: URI.open(RESTAURANT_PHOTOS.sample), filename: "logo.png")
+end
 
+50.times do |business|
 name_phx2 = Faker::Company.name
 phx_bus2 = Business.create({
     name: name_phx2,
@@ -258,8 +277,10 @@ phx_bus2 = Business.create({
     price_rating: rand(1..4),
     amenities: OTHER_AMENITIES.sample(4).join(',')
     })
-    phx_bus2.photo.attach(io: URI.open(HOME_PHOTOS.sample), filename: "logo.png")
+phx_bus2.photo.attach(io: URI.open(HOME_PHOTOS.sample), filename: "logo.png")
+end
 
+50.times do |business|
 name_phx3 = Faker::Company.name + ' ' + Faker::Company.suffix
 phx_bus3 = Business.create({
     name: name_phx3,
@@ -277,8 +298,10 @@ phx_bus3 = Business.create({
     price_rating: rand(1..4),
     amenities: OTHER_AMENITIES.sample(4).join(',')
     })
-    phx_bus3.photo.attach(io: URI.open(PROFESSIONAL_PHOTOS.sample), filename: "logo.png")
+phx_bus3.photo.attach(io: URI.open(PROFESSIONAL_PHOTOS.sample), filename: "logo.png")
+end
 
+50.times do |business|
 name_sf = Faker::Restaurant.name
 sf_bus = Business.create({
     name: name_sf,
@@ -296,8 +319,10 @@ sf_bus = Business.create({
     price_rating: rand(1..4),
     amenities: RESTAURANT_AMENITIES.sample(4).join(',')
     })
-    sf_bus.photo.attach(io: URI.open(RESTAURANT_PHOTOS.sample), filename: "logo.png")
+sf_bus.photo.attach(io: URI.open(RESTAURANT_PHOTOS.sample), filename: "logo.png")
+end
 
+50.times do |business|
 name_sf2 = Faker::Company.name
 sf_bus2 = Business.create({
     name: name_sf2,
@@ -315,8 +340,10 @@ sf_bus2 = Business.create({
     price_rating: rand(1..4),
     amenities: OTHER_AMENITIES.sample(4).join(',')
     })
-    sf_bus2.photo.attach(io: URI.open(HOME_PHOTOS.sample), filename: "logo.png")
+sf_bus2.photo.attach(io: URI.open(HOME_PHOTOS.sample), filename: "logo.png")
+end
 
+50.times do |business|
 name_sf3 = Faker::Company.name + ' ' + Faker::Company.suffix
 sf_bus3 = Business.create({
     name: name_sf3,
@@ -335,7 +362,9 @@ sf_bus3 = Business.create({
     amenities: OTHER_AMENITIES.sample(4).join(',')
     })
     sf_bus3.photo.attach(io: URI.open(PROFESSIONAL_PHOTOS.sample), filename: "logo.png")
+end
 
+50.times do |business|
 name_stl = Faker::Restaurant.name
 stl_bus = Business.create({
     name: name_stl,
@@ -353,8 +382,10 @@ stl_bus = Business.create({
     price_rating: rand(1..4),
     amenities: OTHER_AMENITIES.sample(4).join(',')
     })
-    stl_bus.photo.attach(io: URI.open(RESTAURANT_PHOTOS.sample), filename: "logo.png")
+stl_bus.photo.attach(io: URI.open(RESTAURANT_PHOTOS.sample), filename: "logo.png")
+end
 
+50.times do |business|
 name_stl2 = Faker::Company.name
 stl_bus2 = Business.create({
     name: name_stl2,
@@ -372,8 +403,10 @@ stl_bus2 = Business.create({
     price_rating: rand(1..4),
     amenities: OTHER_AMENITIES.sample(4).join(',')
     })
-    stl_bus2.photo.attach(io: URI.open(HOME_PHOTOS.sample), filename: "logo.png")
+stl_bus2.photo.attach(io: URI.open(HOME_PHOTOS.sample), filename: "logo.png")
+end
 
+50.times do |business|
 name_stl3 = Faker::Company.name + ' ' + Faker::Company.suffix
 stl_bus3 = Business.create({
     name: name_stl3,
@@ -391,4 +424,5 @@ stl_bus3 = Business.create({
     price_rating: rand(1..4),
     amenities: OTHER_AMENITIES.sample(4).join(',')
     })
-    stl_bus3.photo.attach(io: URI.open(PROFESSIONAL_PHOTOS.sample), filename: "logo.png")
+stl_bus3.photo.attach(io: URI.open(PROFESSIONAL_PHOTOS.sample), filename: "logo.png")
+end
