@@ -40,12 +40,18 @@ class BusinessCategories extends React.Component {
             <div className="business-cat-container-parent">
                 <div className="bus-cards-container">
                     <div className="bus-card">
-                        <a onClick={this.handleClick} >
-                        <img src={window.landscaping} />
-                        <div className="bus-container">
-                            <h3>Landscaping</h3>
-                        </div>
-                        </a>
+                <Link to={{
+                        pathname: "/search",
+                        state: {
+                            businesses: Object.values(this.props.businesses).filter(business => business.businessCategory == "Landscaping" && business.city == "Boston").slice(0, 8),
+                            fromSplash: true
+                        }
+                    }}>
+                    <img src={window.landscaping} />
+                    <div className="bus-container">
+                        <h3>Landscaping</h3>
+                    </div>
+                </Link>
                     </div>
                 </div>
                 <div className="bus-cards-container">
@@ -65,24 +71,37 @@ class BusinessCategories extends React.Component {
                 </Link>
                 </div>
                 <div className="bus-cards-container">
-                        <a onClick={this.handleClick} >
+                <Link to={{
+                    pathname: "/search",
+                    state: {
+                        businesses: Object.values(this.props.businesses).filter(business => business.businessCategory == "Cleaning" && business.city == "Boston").slice(0, 8),
+                        fromSplash: true
+                    }
+                }}>
                     <div className="bus-card">
                         <img src={window.cleaning} />
                         <div className="bus-container">
                             <h3>Home Cleaning</h3>
                         </div>
                     </div>
-                </a>
+                </Link>        
                 </div>
                 <div className="bus-cards-container">
-                        <a onClick={this.handleClick}>
+                <Link to={{
+                    pathname: "/search",
+                    state: {
+                        businesses: Object.values(this.props.businesses).filter(business => business.businessCategory == "Interior design" && business.city == "Boston").slice(0, 8),
+                        fromSplash: true
+                    }
+                }}>
                     <div className="bus-card">
                         <img src={window.hotel} />
                         <div className="bus-container">
                             <h3>Interior Design</h3>
                         </div>
                     </div>
-                </a>
+                </Link>
+                
                 </div>
             </div>
             </div>
