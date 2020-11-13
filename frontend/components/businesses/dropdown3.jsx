@@ -5,13 +5,26 @@ class Dropdown3 extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            show: false
+            show: false,
+            category: []
         }
         this.whenFocusOrBlur = this.whenFocusOrBlur.bind(this);
+        this.handleClick = this.handleClick.bind(this);
     }
     whenFocusOrBlur(e) {
         const newState = !this.state.show
         this.setState({ show: newState })
+    }
+    handleClick(e) {
+        const catArray = [e.currentTarget.innerText.slice(0, e.currentTarget.innerText.length - 1)];
+        this.setState({ category: catArray })
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+
+        if (this.state.category !== prevState.category) {
+            this.props.updateFilters({ 'category': this.state.category });
+        }
     }
     render() {
         const utensils = <FontAwesomeIcon icon="utensils" />
@@ -32,16 +45,16 @@ class Dropdown3 extends React.Component {
                     {this.state.show ? (
                         <div className="dropdown-wrapper-3">
                             <ul className="btn-ul" onClick={e => e.stopPropagation()}>
-                                <li><a className="icon-filter">Cleaning {broom}</a></li>
-                                <li><a className="icon-filter">Landscaping {tree}</a></li>
-                                <li><a className="icon-filter">Security {lock}</a></li>
-                                <li><a className="icon-filter">Real Estate {house}</a></li>
+                                <li><a className="icon-filter" onClick={this.handleClick} >Cleaning {broom}</a></li>
+                                <li><a className="icon-filter" onClick={this.handleClick} >Landscaping {tree}</a></li>
+                                <li><a className="icon-filter" onClick={this.handleClick} >Security {lock}</a></li>
+                                <li><a className="icon-filter" onClick={this.handleClick} >Real Estate {house}</a></li>
                             </ul>
                             <ul className="btn-ul" onClick={e => e.stopPropagation()}>
-                                <li><a className="icon-filter">Construction {hammer}</a></li>
-                                <li><a className="icon-filter">Interior Design {drafting}</a></li>
-                                <li><a className="icon-filter">Property Management {building}</a></li>
-                                <li><a className="icon-filter">Roofing {roofing}</a></li>
+                                <li><a className="icon-filter" onClick={this.handleClick} >Construction {hammer}</a></li>
+                                <li><a className="icon-filter" onClick={this.handleClick} >Interior Design {drafting}</a></li>
+                                <li><a className="icon-filter" onClick={this.handleClick} >Property Management {building}</a></li>
+                                <li><a className="icon-filter" onClick={this.handleClick} >Roofing {roofing}</a></li>
                             </ul>
                         </div>
 

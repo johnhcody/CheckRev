@@ -120,7 +120,7 @@ class BusinessSearch extends React.Component {
                         </div>
                         <button className="bus-search-button" type="submit">{magnifyingGlass}</button>
                     </form>
-                    <BusinessIcons />
+                    <BusinessIcons updateFilters={this.props.updateFilters}/>
 
                 </div>
                 <IndexGreetingContainer />

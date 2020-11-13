@@ -5,14 +5,29 @@ class Dropdown1 extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            show: false
+            show: false,
+            category: []
         }
         this.whenFocusOrBlur = this.whenFocusOrBlur.bind(this);
+        this.handleClick = this.handleClick.bind(this);
     }
     whenFocusOrBlur(e) {
         const newState = !this.state.show
         this.setState({ show: newState })
     }
+
+    handleClick(e) {
+        const catArray = [e.currentTarget.innerText.slice(0, e.currentTarget.innerText.length - 1)];
+        this.setState({category: catArray})
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+
+        if (this.state.category !== prevState.category) {
+            this.props.updateFilters({ 'category': this.state.category });
+        }
+    }
+
     render() {
         const home = <FontAwesomeIcon icon="home" />
         const bell = <FontAwesomeIcon icon="concierge-bell" />
@@ -33,16 +48,16 @@ class Dropdown1 extends React.Component {
                     {this.state.show ? (
                         <div className="dropdown-wrapper-1">
                         <ul className="btn-ul" onClick={e => e.stopPropagation()}>
-                            <li><a className="icon-filter">Vegetarian {carrot}</a></li>
-                            <li><a className="icon-filter">Thai {pepper}</a></li>
-                            <li><a className="icon-filter">Seafood {fish}</a></li>
-                            <li><a className="icon-filter">Mexican {utensils}</a></li>
+                            <li><a className="icon-filter" onClick={this.handleClick}>Vegetarian {carrot}</a></li>
+                            <li><a className="icon-filter" onClick={this.handleClick}>Thai {pepper}</a></li>
+                            <li><a className="icon-filter" onClick={this.handleClick}>Seafood {fish}</a></li>
+                            <li><a className="icon-filter" onClick={this.handleClick}>Mexican {utensils}</a></li>
                         </ul>
                         <ul className="btn-ul" onClick={e => e.stopPropagation()}>
-                            <li><a className="icon-filter">Italian {pizza}</a></li>
-                            <li><a className="icon-filter">Dessert {iceCream}</a></li>
-                            <li><a className="icon-filter">Bar {wineGlass}</a></li>
-                            <li><a className="icon-filter">Cafe {coffee}</a></li>
+                            <li><a className="icon-filter" onClick={this.handleClick}>Italian {pizza}</a></li>
+                            <li><a className="icon-filter" onClick={this.handleClick}>Dessert {iceCream}</a></li>
+                            <li><a className="icon-filter" onClick={this.handleClick}>Bar {wineGlass}</a></li>
+                            <li><a className="icon-filter" onClick={this.handleClick}>Cafe {coffee}</a></li>
                         </ul>
                         </div>
 

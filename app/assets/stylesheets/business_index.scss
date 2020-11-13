@@ -488,7 +488,8 @@
     flex-direction: column;
     width: 825px;
     background-color: white;
-    height: 2500px;
+    min-height: 1000px;
+    max-height: 2500px;
     padding: 143px 22px 5px 321px;
 }
 
