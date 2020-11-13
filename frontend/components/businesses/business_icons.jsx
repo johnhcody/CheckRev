@@ -13,9 +13,15 @@ class BusinessIcons extends React.Component {
         return (
             <div>
                 <div className="bus-icons-parent">
-                    <Dropdown1 updateFilters={this.props.updateFilters} />
-                    <Dropdown2 updateFilters={this.props.updateFilters} />
-                    <Dropdown3 updateFilters={this.props.updateFilters} />
+                    <Dropdown1 
+                        history={this.props.history}
+                        updateFilters={this.props.updateFilters} />
+                    <Dropdown2 
+                        history={this.props.history}
+                        updateFilters={this.props.updateFilters} />
+                    <Dropdown3 
+                        history={this.props.history}
+                        updateFilters={this.props.updateFilters} />
                 </div>
             </div>
         )

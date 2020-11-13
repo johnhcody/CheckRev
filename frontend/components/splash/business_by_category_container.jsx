@@ -2,8 +2,9 @@ import { connect } from 'react-redux';
 import BusinessByCategory from './business_by_category';
 
 const mSTP = state => {
+    debugger
     return {
-
+        businesses: state.entities.businesses
     }
 }
 
@@ -14,4 +15,4 @@ const mDTP = dispatch => {
 }
 
 
-export default connect(null, null)(BusinessByCategory);
+export default connect(mSTP, null)(BusinessByCategory);

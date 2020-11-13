@@ -74,14 +74,14 @@ class BusinessCategories extends React.Component {
                 <Link to={{
                     pathname: "/search",
                     state: {
-                        businesses: Object.values(this.props.businesses).filter(business => business.businessCategory == "Cleaning" && business.city == "Boston").slice(0, 8),
+                        businesses: Object.values(this.props.businesses).filter(business => business.businessCategory == "Insurance" && business.city == "Boston").slice(0, 8),
                         fromSplash: true
                     }
                 }}>
                     <div className="bus-card">
-                        <img src={window.cleaning} />
+                                <img src="https://checkrev-seeds.s3.ap-northeast-2.amazonaws.com/prof-services-5.png" />
                         <div className="bus-container">
-                            <h3>Home Cleaning</h3>
+                            <h3>insurance</h3>
                         </div>
                     </div>
                 </Link>        

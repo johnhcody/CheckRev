@@ -12,9 +12,16 @@ class BusinessIndex extends React.Component {
     constructor(props) {
         super(props);
         debugger
-        this.state = {
-            businesses: this.props.history.location.state.businesses,
-            refresh: false
+        if (!this.props.history.location.state) {
+            this.state = {
+                businesses: this.props.businesses.slice(0,8),
+                refresh: false
+            }
+        } else {
+            this.state = {
+                businesses: this.props.history.location.state.businesses,
+                refresh: false
+        }
         }
         //props.history.location.state.businesses returns 8 businesses with filter from splash page in the constructor
     }
@@ -40,7 +47,7 @@ class BusinessIndex extends React.Component {
     }
 
     render() {
-
+        debugger
         const { address1, address2, businessCategory, businessType, city, name, phoneNumber, webAddress, zipcode } = this.props.businesses;
         if (!this.props) {
             return null;
@@ -48,7 +55,8 @@ class BusinessIndex extends React.Component {
             return (
                     <div>
                         <BusinessSearch 
-                        updateFilters={this.props.updateFilters} />
+                        updateFilters={this.props.updateFilters} 
+                        history={this.props.history}/>
                         <div>
                             <div className="bus-idx-wrapper">
                                 <PriceFilters  
@@ -112,7 +120,9 @@ class BusinessIndex extends React.Component {
             return (
                 <div>
                 <BusinessSearch
-                    updateFilters={this.props.updateFilters} />
+                    updateFilters={this.props.updateFilters} 
+                    history={this.props.history}
+                    />
                 
             <div>
                 <div className="bus-idx-wrapper">

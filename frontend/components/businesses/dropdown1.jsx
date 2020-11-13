@@ -22,7 +22,7 @@ class Dropdown1 extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-
+        debugger
         if (this.state.category !== prevState.category) {
             this.props.updateFilters({ 'category': this.state.category });
         }

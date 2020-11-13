@@ -3,9 +3,10 @@ import { fetchBusinesses } from '../../actions/business_actions';
 import BusinessIndex from './business_index';
 import { updateFilters } from '../../actions/filter_actions';
 
-const mSTP = state => {
+const mSTP = (state, ownProps) => {
     return {
-        businesses: Object.values(state.entities.businesses)
+        businesses: Object.values(state.entities.businesses),
+        history: ownProps.history
     }
 }
 

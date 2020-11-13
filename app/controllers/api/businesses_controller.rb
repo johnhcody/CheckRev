@@ -20,77 +20,77 @@ class Api::BusinessesController < ApplicationController
         #     pages: @busineses.total_pages
         # }    
 
-        # debugger
+        # # debugger
 
         #bounds, category, priceRating, business_type
         # @businesses = params[:bounds] ? Business.includes(:reviews).in_bounds(params[:bounds]).limit(8) : Business.all.limit(8)
         # @businesses = params[:bounds] ? Business.includes(:reviews).in_bounds(params[:bounds]).limit(8) : Business.custom.limit(8)
-        #debugger
-        debugger
+        ## debugger
+        # debugger
         if !params[:bounds] && !params[:category] && !params[:priceRating] && !params[:business_type]
             
             @businesses = Business.custom
-            debugger
+            # debugger
         elsif params[:bounds] && !params[:category] && !params[:priceRating] && !params[:business_type]
 
             @businesses = Business.includes(:reviews).in_bounds.limit(8)
-            debugger
+            # debugger
         elsif params[:bounds] && params[:category] && params[:priceRating] && params[:business_type]
             
             @businesses = Business.includes(:reviews).in_bounds(params[:bounds]).match_category(params[:category]).match_price(params[:priceRating]).match_type(params[:business_type]).limit(8)
-            debugger
+            # debugger
         elsif params[:bounds] && params[:priceRating] && params[:business_type] && !params[:category]
             
             @businesses = Business.includes(:reviews).in_bounds(params[:bounds]).match_price(params[:priceRating]).match_type(params[:business_type]).limit(8)
-            debugger
+            # debugger
         elsif params[:bounds] && params[:category] && params[:business_type] && !params[:priceRating]
             
             @businesses = Business.includes(:reviews).in_bounds(params[:bounds]).match_category(params[:category]).match_type(params[:business_type]).limit(8)
-            debugger
+            # debugger
         elsif params[:bounds] && params[:category] && params[:priceRating] && !params[:business_type]
             
             @businesses = Business.includes(:reviews).in_bounds(params[:bounds]).match_category(params[:category]).match_price(params[:priceRating]).limit(8)
-            debugger
+            # debugger
         elsif params[:bounds] && params[:category] && !params[:priceRating] && !params[:business_type]
             
             @businesses = Business.includes(:reviews).in_bounds(params[:bounds]).match_category(params[:category]).limit(8)
-            debugger
+            # debugger
         elsif params[:bounds] && params[:priceRating] && !params[:category] && !params[:business_type]
             
             @businesses = Business.includes(:reviews).in_bounds(params[:bounds]).match_price(params[:priceRating]).limit(8)            
-            debugger
+            # debugger
         elsif params[:bounds] && params[:business_type] && !params[:category] && !params[:priceRating]
             
             @businesses = Business.includes(:reviews).in_bounds(params[:bounds]).match_type(params[:business_type]).limit(8) 
-            debugger
+            # debugger
         elsif !params[:bounds] && params[:business_type] && !params[:category] && !params[:priceRating]
             
             @businesses = Business.includes(:reviews).match_type(params[:business_type]).limit(8)
-            debugger
+            # debugger
         elsif !params[:bounds] && !params[:business_type] && params[:category] && !params[:priceRating]
             
             @businesses = Business.includes(:reviews).match_category(params[:category]).limit(8)    
-            debugger
+            # debugger
         elsif !params[:bounds] && !params[:business_type] && !params[:category] && params[:priceRating]
             
             @businesses = Business.includes(:reviews).match_price(params[:priceRating]).limit(8)
-            debugger
+            # debugger
         elsif !params[:bounds] && params[:business_type] && params[:category] && !params[:priceRating]
             
             @businesses = Business.includes(:reviews).match_type(params[:business_type]).match_category(params[:category]).limit(8)
-            debugger
+            # debugger
         elsif !params[:bounds] && !params[:business_type] && params[:category] && params[:priceRating]
             
             @businesses = Business.includes(:reviews).match_price(params[:priceRating]).match_category(params[:category]).limit(8)
-            debugger
+            # debugger
         elsif !params[:bounds] && params[:business_type] && !params[:category] && params[:priceRating]
             
             @businesses = Business.includes(:reviews).match_type(params[:business_type]).match_price(params[:priceRating]).limit(8)
-            debugger
+            # debugger
         elsif !params[:bounds] && params[:business_type] && params[:category] && params[:priceRating]
             
             @businesses = Business.includes(:reviews).match_type(params[:business_type]).match_category(params[:category]).match_price(params[:priceRating]).limit(8)
-            debugger
+            # debugger
         end
         render :index
     end
