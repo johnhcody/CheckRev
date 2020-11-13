@@ -17,9 +17,9 @@ class BusinessCategories extends React.Component {
                 <div className="bus-cards-container">
                     <div className="bus-card">
                         <a href="#" >
-                        <img src={window.autoRepair} />
+                        <img src={window.landscaping} />
                         <div className="bus-container">
-                            <h3>Auto Repair</h3>
+                            <h3>Landscaping</h3>
                         </div>
                         </a>
                     </div>
@@ -49,7 +49,7 @@ class BusinessCategories extends React.Component {
                     <div className="bus-card">
                         <img src={window.hotel} />
                         <div className="bus-container">
-                            <h3>Hotels</h3>
+                            <h3>Interior Design</h3>
                         </div>
                     </div>
                 </a>

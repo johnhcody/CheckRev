@@ -29,9 +29,6 @@ class Dropdown1 extends React.Component {
     }
 
     render() {
-        const home = <FontAwesomeIcon icon="home" />
-        const bell = <FontAwesomeIcon icon="concierge-bell" />
-        const chevron = <FontAwesomeIcon icon="fa-chevron-down" />
         const coffee = <FontAwesomeIcon icon={['fas', 'coffee']}/>
         const carrot = <FontAwesomeIcon icon={['fas', 'carrot']} />
         const fish = <FontAwesomeIcon icon={['fas', 'fish']} />
@@ -40,8 +37,6 @@ class Dropdown1 extends React.Component {
         const pizza = <FontAwesomeIcon icon={['fas', 'pizza-slice']} />
         const wineGlass = <FontAwesomeIcon icon={['fas', 'wine-glass']} />
         const utensils = <FontAwesomeIcon icon={['fas', 'utensils']} />
-        const taco = <FontAwesomeIcon icon={['fas', 'taco']} />
-        const oven = <FontAwesomeIcon icon={['fas', 'oven']} />
         return (
             <div>
                 <button className="drop-button" onFocus={this.whenFocusOrBlur} onBlur={this.whenFocusOrBlur}><a className="icon-parent">Restaurants {utensils}</a>
