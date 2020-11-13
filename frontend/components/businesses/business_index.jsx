@@ -42,7 +42,9 @@ class BusinessIndex extends React.Component {
     render() {
 
         const { address1, address2, businessCategory, businessType, city, name, phoneNumber, webAddress, zipcode } = this.props.businesses;
-        if (this.props.businesses.length === 0 || this.state.businesses.length == 0) {
+        if (!this.props) {
+            return null;
+        } else if (this.props.businesses.length === 0 || this.state.businesses.length == 0) {
             return (
                     <div>
                         <BusinessSearch 

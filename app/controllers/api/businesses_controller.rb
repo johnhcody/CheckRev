@@ -26,7 +26,7 @@ class Api::BusinessesController < ApplicationController
         # @businesses = params[:bounds] ? Business.includes(:reviews).in_bounds(params[:bounds]).limit(8) : Business.all.limit(8)
         # @businesses = params[:bounds] ? Business.includes(:reviews).in_bounds(params[:bounds]).limit(8) : Business.custom.limit(8)
         #debugger
-        #debugger
+        debugger
         if !params[:bounds] && !params[:category] && !params[:priceRating] && !params[:business_type]
             
             @businesses = Business.custom
@@ -74,6 +74,22 @@ class Api::BusinessesController < ApplicationController
         elsif !params[:bounds] && !params[:business_type] && !params[:category] && params[:priceRating]
             
             @businesses = Business.includes(:reviews).match_price(params[:priceRating]).limit(8)
+            debugger
+        elsif !params[:bounds] && params[:business_type] && params[:category] && !params[:priceRating]
+            
+            @businesses = Business.includes(:reviews).match_type(params[:business_type]).match_category(params[:category]).limit(8)
+            debugger
+        elsif !params[:bounds] && !params[:business_type] && params[:category] && params[:priceRating]
+            
+            @businesses = Business.includes(:reviews).match_price(params[:priceRating]).match_category(params[:category]).limit(8)
+            debugger
+        elsif !params[:bounds] && params[:business_type] && !params[:category] && params[:priceRating]
+            
+            @businesses = Business.includes(:reviews).match_type(params[:business_type]).match_price(params[:priceRating]).limit(8)
+            debugger
+        elsif !params[:bounds] && params[:business_type] && params[:category] && params[:priceRating]
+            
+            @businesses = Business.includes(:reviews).match_type(params[:business_type]).match_category(params[:category]).match_price(params[:priceRating]).limit(8)
             debugger
         end
         render :index
