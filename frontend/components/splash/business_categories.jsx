@@ -6,6 +6,9 @@ class BusinessCategories extends React.Component {
     constructor(props) {
         super(props)
         this.handleClick = this.handleClick.bind(this);
+        this.state = {
+            businesses: this.props.businesses
+        }
     }
 
 
@@ -47,8 +50,11 @@ class BusinessCategories extends React.Component {
                 </div>
                 <div className="bus-cards-container">
                 <Link to={{
-                    pathname: "/search"
-                    
+                    pathname: "/search",
+                    state: {
+                        businesses: Object.values(this.props.businesses).filter(business => business.businessCategory == "Cafe" && business.city == "Boston").slice(0, 8),
+                        fromSplash: true
+                    }
                 }}>
                     <div className="bus-card">
                         <img src={window.coffee} />

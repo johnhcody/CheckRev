@@ -86,6 +86,10 @@ class Business < ApplicationRecord
 
     end
 
+    def self.custom
+        self.where("business_category = ?", "Cleaning").or(self.where("business_category = ?", "Landscaping")).or(self.where("business_category = ?", "Cafe")).or(self.where("business_category = ?", "Interior design"))
+    end
+
 
     def self.match_category(business_category)
         #debugger

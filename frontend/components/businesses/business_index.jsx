@@ -11,13 +11,16 @@ import BusinessIcons from './business_icons';
 class BusinessIndex extends React.Component {
     constructor(props) {
         super(props);
+        debugger
         this.state = {
             businesses: [],
             refresh: false
         }
+        //props.history.location.state.businesses returns 8 businesses with filter from splash page in the constructor
     }
 
     componentDidMount() {
+        debugger
         window.scrollTo(0, 0);
         //this.props.fetchBusinesses();            
     }
