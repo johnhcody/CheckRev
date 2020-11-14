@@ -133,8 +133,12 @@ class BusinessIndex extends React.Component {
     }
 
     clearFilters() {
+        debugger
         this.props.updateFilters({
-            bounds: {}
+            bounds: {},
+            priceRating: "0",
+            category: [],
+            business_type: []
         });
         //this.setState({refresh: !this.state.refresh})
     }

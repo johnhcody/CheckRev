@@ -1,9 +1,16 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { Link } from "react-router-dom";
 
 class BusinessByCity extends React.Component {
     constructor(props){
-        super(props)
+        super(props);
+        this.state = {
+            businesses: [],
+            splashSearch: true,
+            city: '',
+            category: ''
+        }
     }
     render() {
         const magnifyingGlass = <FontAwesomeIcon icon="search" />
@@ -16,13 +23,61 @@ class BusinessByCity extends React.Component {
                 </div>
             </div>
                 <div className="bus-by-city-container">
-                    <a href="#" >New York</a>
-                    <a href="#" >Boston</a>
-                    <a href="#" >San Francisco</a>
-                    <a href="#" >Phoenix</a>
-                    <a href="#" >Chicago</a>
-                    <a href="#" >St. Louis</a>
-                    <a href="#" >{magnifyingGlass} More Cities</a>
+                    <Link to={{
+                        pathname: "/search",
+                        state: {
+                            businesses: [],
+                            splashSearch: true,
+                            city: "New York",
+                            category: ""
+                        }
+                    }}>New York</Link>
+                    <Link to={{
+                        pathname: "/search",
+                        state: {
+                            businesses: [],
+                            splashSearch: true,
+                            city: "Boston",
+                            category: ""
+                        }
+                    }}>Boston</Link>
+                    <Link to={{
+                        pathname: "/search",
+                        state: {
+                            businesses: [],
+                            splashSearch: true,
+                            city: "San Francisco",
+                            category: ""
+                        }
+                    }}>San Francisco</Link>
+                    <Link to={{
+                        pathname: "/search",
+                        state: {
+                            businesses: [],
+                            splashSearch: true,
+                            city: "Phoenix",
+                            category: ""
+                        }
+                    }}>Phoenix</Link>
+                    <Link to={{
+                        pathname: "/search",
+                        state: {
+                            businesses: [],
+                            splashSearch: true,
+                            city: "Chicago",
+                            category: ""
+                        }
+                    }}>Chicago</Link>
+                    <Link to={{
+                        pathname: "/search",
+                        state: {
+                            businesses: [],
+                            splashSearch: true,
+                            city: "St. Louis",
+                            category: ""
+                        }
+                    }}>St. Louis</Link>
+                    <Link to={'/search'}>{magnifyingGlass} Search</Link>
                 </div>
             </div>
 
