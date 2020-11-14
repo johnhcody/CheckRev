@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import IndexGreetingContainer from './index_greeting_container';
 import BusinessIcons from './business_icons';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 class BusinessSearch extends React.Component {
     constructor(props) {
@@ -11,7 +11,8 @@ class BusinessSearch extends React.Component {
             category: '',
             city: '',
             bounds: {},
-            refresh: true
+            refresh: true,
+            redirect: false
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.update = this.update.bind(this);
@@ -97,6 +98,10 @@ class BusinessSearch extends React.Component {
         }
 
         debugger
+        if (!window.location.href.includes("search")) {
+            debugger
+            this.setState({redirect: true})
+        }
         this.setState({refresh: !this.state.refresh})
     }
 
@@ -104,6 +109,10 @@ class BusinessSearch extends React.Component {
         const magnifyingGlass = <FontAwesomeIcon icon="search" />
         const utensils = <FontAwesomeIcon icon="utensils" />
 
+        const redirectToSearch = this.state.redirect;
+        if (redirectToSearch) {
+            return <Redirect to={'/search'} />
+        } else {
         return (
             <div className="bus-nav-searchbar">
                 <div className="bus-nav-logo">
@@ -129,6 +138,7 @@ class BusinessSearch extends React.Component {
                 <IndexGreetingContainer />
             </div>
         )
+        }
     }
 }
 

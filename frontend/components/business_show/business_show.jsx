@@ -46,7 +46,7 @@ class BusinessShow extends React.Component {
         } else {
         return (
         <div>
-            <BusinessSearch />
+            <BusinessSearch updateFilters={this.props.updateFilters} />
             <ShowImages />
             <div className="bus-show-body-wrapper">
                 <div className="bus-show-left-wrapper">

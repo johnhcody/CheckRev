@@ -1,9 +1,10 @@
 import { connect } from 'react-redux';
-import BusinessSearch from './business_index'
+import BusinessSearch from './business_search'
 
-const mSTP = state => {
+const mSTP = (state, ownProps) => {
+    debugger
     return {
-
+        history: ownProps.history
     }
 }
 
@@ -14,4 +15,4 @@ const mDTP = dispatch => {
 }
 
 
-export default connect(null, null)(BusinessSearch);
+export default connect(mSTP, null)(BusinessSearch);
