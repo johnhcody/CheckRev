@@ -19,7 +19,7 @@ class MoreFilters extends React.Component {
 
     handleChange(field) {
         return e => {
-            debugger
+      
             const valArray = [e.currentTarget.value]
             e.currentTarget.checked ? this.setState({ category: this.state.category.concat(valArray) }) : this.setState({ category: this.state.category.filter(el => el !== e.currentTarget.value) })
 
@@ -27,7 +27,7 @@ class MoreFilters extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        debugger
+  
         if (this.state.category !== prevState.category) {
             this.props.updateFilters({ 'category': this.state.category });
         }

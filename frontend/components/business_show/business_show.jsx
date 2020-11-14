@@ -33,9 +33,10 @@ class BusinessShow extends React.Component {
         this.props.fetchUsers();
     }
 
-    componentDidUpdate(prevProps) {
-        if (this.props.business !== prevProps.business) {
-
+    componentDidUpdate(prevProps, prevState) {
+        debugger
+        if (this.props !== prevProps) {
+            this.setState({value: this.state.value + 1})
             this.forceUpdate();
         }
     }

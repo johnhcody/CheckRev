@@ -1,5 +1,4 @@
 export const fetchBusinesses = (filters) => {
-    debugger
     console.log('filters');
     console.log(filters);
     return $.ajax({

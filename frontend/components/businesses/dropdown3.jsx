@@ -1,12 +1,14 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { Redirect } from "react-router-dom";
 
 class Dropdown3 extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             show: false,
-            category: []
+            category: [],
+            redirect: false
         }
         this.whenFocusOrBlur = this.whenFocusOrBlur.bind(this);
         this.handleClick = this.handleClick.bind(this);
@@ -17,7 +19,10 @@ class Dropdown3 extends React.Component {
     }
     handleClick(e) {
         const catArray = [e.currentTarget.innerText.slice(0, e.currentTarget.innerText.length - 1)];
-        this.setState({ category: catArray })
+        this.setState({ category: catArray });
+        if (!window.location.href.includes("search")) {
+            this.setState({ redirect: true });
+        }
     }
 
     componentDidUpdate(prevProps, prevState) {
@@ -38,8 +43,11 @@ class Dropdown3 extends React.Component {
         const broom = <FontAwesomeIcon icon={['fas', 'broom']} />
         const house = <FontAwesomeIcon icon={['fas', 'home']} />
         const hammer = <FontAwesomeIcon icon={['fas', 'hammer']} />
-
-        return (
+        const redirectToSearch = this.state.redirect;
+        if (redirectToSearch) {
+            return <Redirect to={'/search'} />
+        } else {
+            return (
             <div>
                 <button className="drop-button" onFocus={this.whenFocusOrBlur} onBlur={this.whenFocusOrBlur}><a className="icon-parent">Home Services {house}</a>
                     {this.state.show ? (
@@ -61,7 +69,8 @@ class Dropdown3 extends React.Component {
                     ) : null}
                 </button>
             </div>
-        )
+            )
+        }
     }
 }
 

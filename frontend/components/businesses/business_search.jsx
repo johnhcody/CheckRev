@@ -45,7 +45,6 @@ class BusinessSearch extends React.Component {
             northEast: { lat: 41.098328841719976, lng: -73.67774177592024 },
             southWest: { lat: 40.31758272571303, lng: -74.22705822407976 }}
 
-        debugger
         e.preventDefault();
 
         if (this.state.category == '' && this.state.city !== '') {
@@ -74,7 +73,6 @@ class BusinessSearch extends React.Component {
             } else if (this.state.city.toLowerCase().includes("louis") || this.state.city.toLowerCase().includes("stl")) {
                 this.props.updateFilters({'bounds': stlBounds, 'category': [this.state.category]});
             } else if (this.state.city.toLowerCase().includes("francisco") || this.state.city.toLowerCase().includes("sf")) {
-                debugger
                 this.props.updateFilters({'bounds': sfBounds, 'category': [this.state.category]});
             } else if (this.state.city.toLowerCase().includes("chicago")) {
                 this.props.updateFilters({ 'bounds': chiBounds, 'category': [this.state.category] });
@@ -97,12 +95,12 @@ class BusinessSearch extends React.Component {
             }
         }
 
-        debugger
+
         if (!window.location.href.includes("search")) {
-            debugger
+    
             this.setState({redirect: true})
         }
-        this.setState({refresh: !this.state.refresh})
+        //this.setState({refresh: !this.state.refresh})
     }
 
     render() {

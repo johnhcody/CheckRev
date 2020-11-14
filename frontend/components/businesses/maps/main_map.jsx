@@ -15,7 +15,7 @@ class MainMap extends React.Component {
 
 
     componentDidMount() {
-        debugger
+
         if (this.props.businesses.length == 0) {
             let mapOptions = {
                 center: { lat: 40.7238, lng: -74.0001 },
@@ -56,7 +56,6 @@ class MainMap extends React.Component {
             };
             console.log('bounds');
             console.log(bounds);
-            debugger
             //that.props.updateFilters({'bounds': bounds});
         });
         google.maps.event.addListener(this.map, 'click', (event) => {
@@ -65,13 +64,21 @@ class MainMap extends React.Component {
         });
     }
     
-    componentDidUpdate(prevProps) {
-        debugger
+    componentDidUpdate(prevProps, prevState) {
+
         // previously was if (this.props !== prevPros)... may want to add another conditional for state?
         if (this.props.businesses !== prevProps.businesses) {
+            let mapOptions = {
+                center: {
+                    lat: this.props.businesses[0].lat,
+                    lng: this.props.businesses[0].lng
+                },
+                zoom: 10
+            }
+            this.map = new google.maps.Map(this.mapNode, mapOptions);
             this.MarkerManager = new MarkerManager(this.map);
             this.MarkerManager.updateMarkers(this.props.businesses);
-            this.registerListeners
+            this.registerListeners();
         }
     }
 

@@ -9,7 +9,7 @@ function Amenities(props) {
     const music = <FontAwesomeIcon icon={['fas', 'music']} />
     const carrot = <FontAwesomeIcon icon={['fas', 'carrot']} />
 
-    debugger
+
     const amenitiesArray = props.amenities.split(',');
     const iconsArray = amenitiesArray.map(amenity => {
         if (amenity == "Dogs Allowed") {
@@ -46,7 +46,6 @@ function Amenities(props) {
             return <FontAwesomeIcon icon="concierge-bell" />
         }
     })
-    debugger
     return (
         <div className="amenities-title">
             <h1>Amenities and More</h1>

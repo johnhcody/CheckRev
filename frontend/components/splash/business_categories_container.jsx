@@ -3,7 +3,7 @@ import BusinessCategories from './business_categories';
 import { updateFilters } from '../../actions/filter_actions';
 
 const mSTP = (state, ownProps) => {
-    debugger
+
     return {
         businesses: state.entities.businesses
     }
