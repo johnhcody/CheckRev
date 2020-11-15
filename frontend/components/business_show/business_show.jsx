@@ -37,7 +37,7 @@ class BusinessShow extends React.Component {
         debugger
         if (this.props !== prevProps) {
             this.setState({value: this.state.value + 1})
-            this.forceUpdate();
+            //this.props.fetchBusiness(this.props.match.params.businessId)
         }
     }
     
@@ -52,6 +52,7 @@ class BusinessShow extends React.Component {
             <div className="bus-show-body-wrapper">
                 <div className="bus-show-left-wrapper">
                         <BusinessShowCard 
+                            key={this.props.business}
                             id={this.props.business.id}
                             name={this.props.business.name}
                             address1={this.props.business.address1}

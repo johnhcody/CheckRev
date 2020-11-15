@@ -12,6 +12,11 @@ class FeaturedBusinesses extends React.Component {
     componentDidMount() {
         //this.props.fetchBusinesses()
     }
+    componentDidUpdate(prevProps) {
+        if (this.props.businesses.length < 3) {
+            this.props.fetchBusinesses();
+        }
+    }
 
     render() {
         const solidStar = <FontAwesomeIcon icon={["fas", "star"]} />

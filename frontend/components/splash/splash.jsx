@@ -59,7 +59,11 @@ class Splash extends React.Component {
     //     }
     // }
     // )
-    
+    componentDidUpdate(prevProps) {
+        if (this.props.businesses.length < 3) {
+            this.props.fetchBusinesses();
+        }
+    }
     
     render() {
         return(
