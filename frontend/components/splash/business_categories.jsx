@@ -43,8 +43,10 @@ class BusinessCategories extends React.Component {
                 <Link to={{
                         pathname: "/search",
                         state: {
-                            businesses: Object.values(this.props.businesses).filter(business => business.businessCategory == "Landscaping" && business.city == "Boston").slice(0, 8),
-                            fromSplash: true
+                            businesses: [],
+                            splashSearch: true,
+                            category: "Landscaping",
+                            city: ''
                         }
                     }}>
                     <img src={window.landscaping} />
@@ -58,8 +60,10 @@ class BusinessCategories extends React.Component {
                 <Link to={{
                     pathname: "/search",
                     state: {
-                        businesses: Object.values(this.props.businesses).filter(business => business.businessCategory == "Cafe" && business.city == "Boston").slice(0, 8),
-                        fromSplash: true
+                        businesses: [],
+                        splashSearch: true,
+                        category: "Cafe",
+                        city: ''
                     }
                 }}>
                     <div className="bus-card">
@@ -74,8 +78,10 @@ class BusinessCategories extends React.Component {
                 <Link to={{
                     pathname: "/search",
                     state: {
-                        businesses: Object.values(this.props.businesses).filter(business => business.businessCategory == "Insurance" && business.city == "Boston").slice(0, 8),
-                        fromSplash: true
+                        businesses: [],
+                        splashSearch: true,
+                        category: "Insurance",
+                        city: ''
                     }
                 }}>
                     <div className="bus-card">
@@ -90,8 +96,10 @@ class BusinessCategories extends React.Component {
                 <Link to={{
                     pathname: "/search",
                     state: {
-                        businesses: Object.values(this.props.businesses).filter(business => business.businessCategory == "Interior design" && business.city == "Boston").slice(0, 8),
-                        fromSplash: true
+                        businesses: [],
+                        splashSearch: true,
+                        category: "Interior Design",
+                        city: ''
                     }
                 }}>
                     <div className="bus-card">

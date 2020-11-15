@@ -11,17 +11,19 @@ class BusinessByCategory extends React.Component {
         return (
             <div className="div-me">
                 <div className="bus-by-cat-title">
-                    <h2>See Businesses by Category</h2>
+                    <h2>See Businesses by Type</h2>
                 </div>
             <div className="bus-by-cat-container-parent">
                 <div className="bus-by-cat-card-container">
                     <div className="bus-by-cat-card">
-                        <Link to={{
-                            pathname: `/search`,
+                        <Link className="icon-prof" to={{
+                            pathname: "/search",
                             state: {
-                                businesses: Object.values(this.props.businesses).filter(business => business.businessType == "Professional Services" && business.city == "Boston").slice(0, 8),
-                                fromSplash: true
-                            }}} style={{ textDecoration: "none" }}>
+                                businesses: [],
+                                splashIcon: true,
+                                business_type: "Professional Services"
+                            }
+                            }} style={{ textDecoration: "none" }}>
                         
                             <img src={window.pro} />
                             <div className="bus-by-cat-text">
@@ -31,12 +33,14 @@ class BusinessByCategory extends React.Component {
                         </Link>
                     </div>
                     <div className="bus-by-cat-card">
-                        <Link to={{
-                            pathname: `/search`,
-                            state: {
-                                businesses: Object.values(this.props.businesses).filter(business => business.businessType == "Restaurant" && business.city == "Boston").slice(0, 8),
-                                fromSplash: true
-                            }
+                    <Link className="icon-rest" to={{
+                        pathname: "/search",
+                        state: {
+                            businesses: [],
+                            splashIcon: true,
+                            business_type: "Restaurant"
+
+                        }
                         }} style={{ textDecoration: "none" }}>
                             <img src={window.rest} />
                                 <div className="bus-by-cat-text">
@@ -46,11 +50,12 @@ class BusinessByCategory extends React.Component {
                         </Link>
                     </div>
                     <div className="bus-by-cat-card">
-                        <Link to={{
-                            pathname: `/search`,
+                        <Link className="icon-rest" to={{
+                            pathname: "/search",
                             state: {
-                                businesses: Object.values(this.props.businesses).filter(business => business.businessType == "Home Services" && business.city == "Boston").slice(0, 8),
-                                fromSplash: true
+                                businesses: [],
+                                splashIcon: true,
+                                business_type: "Home Services"
                             }
                         }} style={{ textDecoration: "none" }}>
                                 <img src={window.home} />

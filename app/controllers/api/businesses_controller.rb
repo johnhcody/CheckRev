@@ -30,7 +30,7 @@ class Api::BusinessesController < ApplicationController
         if !params[:bounds] && !params[:category] && !params[:priceRating] && !params[:business_type]
             
             # debugger
-            @businesses = Business.custom
+            @businesses = Business.custom.limit(8)
         elsif params[:bounds] && !params[:category] && !params[:priceRating] && !params[:business_type]
             
             # debugger

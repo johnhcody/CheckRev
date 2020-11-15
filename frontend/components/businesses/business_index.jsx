@@ -23,6 +23,12 @@ class BusinessIndex extends React.Component {
                 city: this.props.history.location.state.city,
                 category: this.props.history.location.state.category
             }
+
+        } else if (this.props.history.location.state.splashIcon){
+            this.state = {
+                businesses: this.props.history.location.state.businesses,
+                business_type: this.props.history.location.state.business_type
+            }
         } else {
             this.state = {
                 businesses: this.props.history.location.state.businesses,
@@ -67,6 +73,7 @@ class BusinessIndex extends React.Component {
 
 
         if (this.state.category == '' && this.state.city !== '') {
+            debugger
             if (this.state.city.toLowerCase().includes("york") || this.state.city.toLowerCase().includes("ny")) {
                 this.props.updateFilters({ 'bounds': nyBounds, 'category': [] });
             } else if (this.state.city.toLowerCase().includes("boston")) {
@@ -82,7 +89,8 @@ class BusinessIndex extends React.Component {
             } else {
                 this.props.updateFilters({ 'bounds': noBounds })
             }
-        } else if (this.state.category !== '' && this.state.city !== '') {
+        } else if (this.state.category && this.state.category !== '' && this.state.city !== '') {
+            debugger
             if (this.state.city.toLowerCase().includes("york") || this.state.city.toLowerCase().includes("ny")) {
                 this.props.updateFilters({ 'bounds': nyBounds, 'category': [this.state.category] });
             } else if (this.state.city.toLowerCase().includes("boston")) {
@@ -92,14 +100,14 @@ class BusinessIndex extends React.Component {
             } else if (this.state.city.toLowerCase().includes("louis") || this.state.city.toLowerCase().includes("stl")) {
                 this.props.updateFilters({ 'bounds': stlBounds, 'category': [this.state.category] });
             } else if (this.state.city.toLowerCase().includes("francisco") || this.state.city.toLowerCase().includes("sf")) {
-                debugger
                 this.props.updateFilters({ 'bounds': sfBounds, 'category': [this.state.category] });
             } else if (this.state.city.toLowerCase().includes("chicago")) {
                 this.props.updateFilters({ 'bounds': chiBounds, 'category': [this.state.category] });
             } else {
                 this.props.updateFilters('category', [this.state.category]);
             }
-        } else if (this.state.category !== '' && this.state.city == '') {
+        } else if (this.state.category && this.state.category !== '' && this.state.city == '') {
+            debugger
             if (this.state.city.toLowerCase().includes("york") || this.state.city.toLowerCase().includes("ny")) {
                 this.props.updateFilters({ 'category': [this.state.category] });
             } else if (this.state.city.toLowerCase().includes("boston")) {
@@ -113,6 +121,9 @@ class BusinessIndex extends React.Component {
             } else {
                 this.props.updateFilters({ 'category': [this.state.category] });
             }
+        } else if (this.state.business_type && this.state.business_type !== "") {
+            debugger
+            this.props.updateFilters({"business_type": [this.state.business_type]})
         }
 
         //this.props.fetchBusinesses();            

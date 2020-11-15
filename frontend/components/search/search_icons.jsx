@@ -19,22 +19,26 @@ class SearchIcons extends React.Component {
                     <Link className="icon-rest" to={{
                         pathname: "/search",
                         state: {
-                            businesses: this.props.businesses.filter(business => business.businessType == "Restaurant" && business.city == "Boston").slice(0, 8),
-                            fromSplash: true
+                            businesses: [],
+                            splashIcon: true,
+                            business_type: "Restaurant"
+
                         }
                     }}>{utensils} Restuarant</Link>
                     <Link className="icon-prof" to={{
                         pathname: "/search",
                         state: {
-                            businesses: this.props.businesses.filter(business => business.businessType == "Professional Services" && business.city == "Boston").slice(0, 8),
-                            fromSplash: true
+                            businesses: [],
+                            splashIcon: true,
+                            business_type: "Professional Services"
                         }
                     }}>{bell} Professional Services</Link>
                     <Link className="icon-rest" to={{
                         pathname: "/search",
                         state: {
-                            businesses: this.props.businesses.filter(business => business.businessType == "Home Services" && business.city == "Boston").slice(0, 8),
-                            fromSplash: true
+                            businesses: [],
+                            splashIcon: true,
+                            business_type: "Home Services"
                         }
                     }}>{home} Home Services</Link>
                 </div>
