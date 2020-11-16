@@ -76,7 +76,7 @@ class ReviewText extends React.Component {
         //     console.log(obj);
         //     // const user = Object.assign({}, this.props.author);
         //     // Object.assign(user, obj)
-        //     // debugger
+        //     // 
         //     // this.props.updateUser(user)
         // } else if ...
         if (this.props.review.body !== prevProps.review.body || this.props.review.rating !== prevProps.review.rating){

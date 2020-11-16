@@ -34,7 +34,7 @@ class BusinessShow extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        debugger
+        
         if (this.props !== prevProps) {
             this.setState({value: this.state.value + 1})
             //this.props.fetchBusiness(this.props.match.params.businessId)

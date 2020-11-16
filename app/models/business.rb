@@ -56,7 +56,6 @@ class Business < ApplicationRecord
 
 
     def self.in_bounds(bounds)
-        #debugger
     self.where("lat < ?", bounds[:northEast][:lat])
       .where("lat > ?", bounds[:southWest][:lat])
       .where("lng > ?", bounds[:southWest][:lng])
@@ -64,7 +63,6 @@ class Business < ApplicationRecord
     end
 
     def self.match_price(price_rating)
-        #debugger
         price_rating == "0" ? self.where("price_rating > 0") : self.where("price_rating = ?", price_rating) 
     end
 
@@ -92,7 +90,6 @@ class Business < ApplicationRecord
 
 
     def self.match_category(business_category)
-        #debugger
         if business_category.length == 0
             self.all
         elsif business_category.length == 1 

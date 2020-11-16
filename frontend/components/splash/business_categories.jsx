@@ -13,7 +13,7 @@ class BusinessCategories extends React.Component {
 
 
     handleClick(e) {
-        debugger
+        
         const bosBounds = {
             northEast: { lat: 42.380949269680855, lng: -71.04117284414933 },
             southWest: { lat: 42.33338023333157, lng: -71.0755051221593 }

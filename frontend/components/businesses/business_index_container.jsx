@@ -11,7 +11,7 @@ const mSTP = (state, ownProps) => {
 }
 
 const mDTP = dispatch => {
-    debugger
+    
     return {
         fetchBusinesses: () => dispatch(fetchBusinesses()),
         updateFilters: (filterObj) => dispatch(updateFilters(filterObj))

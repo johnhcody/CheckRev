@@ -24,15 +24,15 @@ class Splash extends React.Component {
         // const currentUser = Object.assign({}, this.props.currentUser);
 
         // if (currentUser.state === "" && currentUser.city === "") {
-        //     debugger
+        //     
         //     // let response = await fetch(`http://ZiptasticAPI.com/${currentUser.zipcode}`)
         //     // //     .then((resp) => resp.json()) // Transform the data into json
         //     // //     .then(function (data) {
-        //     // //         debugger
+        //     // //         
         //     // //         // Create and append the li's to the ul
         //     // //     })
         //     // // };
-        //     // debugger
+        //     // 
         //     // let commits = await response.json()
         //     async function cityAndState() {
         //         currentUser

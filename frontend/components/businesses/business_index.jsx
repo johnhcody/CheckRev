@@ -11,7 +11,7 @@ import BusinessIcons from './business_icons';
 class BusinessIndex extends React.Component {
     constructor(props) {
         super(props);
-        debugger
+        
         if (!this.props.history.location.state) {
             this.state = {
                 businesses: this.props.businesses.slice(0,8),
@@ -39,7 +39,7 @@ class BusinessIndex extends React.Component {
     }
 
     componentDidMount() {
-        debugger
+        
         window.scrollTo(0, 0);
         const nyBounds = {
             northEast: { lat: 41.11397721785646, lng: -73.72406848490463 },
@@ -73,7 +73,7 @@ class BusinessIndex extends React.Component {
 
 
         if (this.state.category == '' && this.state.city !== '') {
-            debugger
+            
             if (this.state.city.toLowerCase().includes("york") || this.state.city.toLowerCase().includes("ny")) {
                 this.props.updateFilters({ 'bounds': nyBounds, 'category': [] });
             } else if (this.state.city.toLowerCase().includes("boston")) {
@@ -90,7 +90,7 @@ class BusinessIndex extends React.Component {
                 this.props.updateFilters({ 'bounds': noBounds })
             }
         } else if (this.state.category && this.state.category !== '' && this.state.city !== '') {
-            debugger
+            
             if (this.state.city.toLowerCase().includes("york") || this.state.city.toLowerCase().includes("ny")) {
                 this.props.updateFilters({ 'bounds': nyBounds, 'category': [this.state.category] });
             } else if (this.state.city.toLowerCase().includes("boston")) {
@@ -107,7 +107,7 @@ class BusinessIndex extends React.Component {
                 this.props.updateFilters('category', [this.state.category]);
             }
         } else if (this.state.category && this.state.category !== '' && this.state.city == '') {
-            debugger
+            
             if (this.state.city.toLowerCase().includes("york") || this.state.city.toLowerCase().includes("ny")) {
                 this.props.updateFilters({ 'category': [this.state.category] });
             } else if (this.state.city.toLowerCase().includes("boston")) {
@@ -122,7 +122,7 @@ class BusinessIndex extends React.Component {
                 this.props.updateFilters({ 'category': [this.state.category] });
             }
         } else if (this.state.business_type && this.state.business_type !== "") {
-            debugger
+            
             this.props.updateFilters({"business_type": [this.state.business_type]})
         }
 
@@ -130,7 +130,7 @@ class BusinessIndex extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        debugger
+        
         if (this.props.businesses !== prevProps.businesses) {
             // this.setState({businesses: this.props.businesses});
             this.setState({businesses: this.props.businesses})
@@ -144,7 +144,7 @@ class BusinessIndex extends React.Component {
     }
 
     clearFilters() {
-        debugger
+        
         this.props.updateFilters({
             bounds: {},
             priceRating: "0",
@@ -155,7 +155,7 @@ class BusinessIndex extends React.Component {
     }
 
     render() {
-        debugger
+        
         const { address1, address2, businessCategory, businessType, city, name, phoneNumber, webAddress, zipcode } = this.props.businesses;
         if (!this.props) {
             return null;
@@ -225,7 +225,7 @@ class BusinessIndex extends React.Component {
                 )
             
         } else {
-            debugger
+            
             const businessesToMap = this.state.businesses.length > 8 ? this.state.businesses.slice(0,8) : this.state.businesses
             return (
                 <div>

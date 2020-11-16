@@ -27,7 +27,6 @@ export const fetchBusiness = id => dispatch => {
 
 
 export const fetchBusinesses = (data) => dispatch => {    
-    debugger
     return BusinessUtil.fetchBusinesses(data).then(businesses => {
 
         return dispatch(receiveBusinesses(businesses))
