@@ -24,7 +24,6 @@ class SessionForm extends React.Component {
     //         const updatedUser =  Object.assign(user, result);
     //     },
     //     complete: function (data) {
-    //         console.log(data);
     //     }
     // }
     // )

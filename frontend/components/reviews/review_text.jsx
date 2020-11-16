@@ -73,7 +73,6 @@ class ReviewText extends React.Component {
         //         city: cityAndState.split(',')[0],
         //         state: cityAndState.split(' ')[1]
         //     }
-        //     console.log(obj);
         //     // const user = Object.assign({}, this.props.author);
         //     // Object.assign(user, obj)
         //     // 

@@ -55,7 +55,6 @@ class Splash extends React.Component {
     //         const updatedUser =  Object.assign(currentUser, result);
     //     },
     //     complete: function (data) {
-    //         console.log(data);
     //     }
     // }
     // )

@@ -75,7 +75,6 @@ export const signup = (user) => {
     //     }
     // }))
     // $.when(call1).done(function (response) {
-    //     console.log(response);
     // })
     
     
