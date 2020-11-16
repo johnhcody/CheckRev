@@ -39,7 +39,7 @@ class BusinessShow extends React.Component {
             this.setState({value: this.state.value + 1})
             //this.props.fetchBusiness(this.props.match.params.businessId)
         }
-    }
+    } 
     
     render() {
         if (!this.props.business || !this.props.allUsers) {
