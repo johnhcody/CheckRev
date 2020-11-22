@@ -49,7 +49,7 @@ test = User.create({
 
      })
 
-50.times do |business|
+25.times do |business|
 name_bos = Faker::Company.name + ' ' + Faker::Company.suffix 
 bos_bus = Business.create({
     name: name_bos,
@@ -58,7 +58,7 @@ bos_bus = Business.create({
     city: 'Boston', 
     state: 'MA', 
     zipcode: Faker::Number.number(digits: 5), 
-    lng: sprintf('%.4f', -71.0592 + rand(-0.0005..0.0005)).to_f,
+    lng: sprintf('%.4f', -71.0592 + rand(-0.0060..0.0060)).to_f,
     lat: sprintf('%.4f', 42.3613 + rand(-0.01..0.01)).to_f, 
     web_address: 'www.' + name_bos.split(' ').join('').downcase + '.com',
     phone_number: Faker::PhoneNumber.cell_phone, 
@@ -70,7 +70,7 @@ bos_bus = Business.create({
 bos_bus.photo.attach(io: URI.open(PROFESSIONAL_PHOTOS.sample), filename: "logo.png")
 end
 
-50.times do |business|
+25.times do |business|
 name_bos2 = Faker::Restaurant.name
 bos_bus2 = Business.create({
     name: name_bos2,
@@ -79,7 +79,7 @@ bos_bus2 = Business.create({
     city: 'Boston', 
     state: 'MA', 
     zipcode: Faker::Number.number(digits: 5),
-    lng: sprintf('%.4f', -71.0592 + rand(-0.0005..0.0005)).to_f,
+    lng: sprintf('%.4f', -71.0592 + rand(-0.0060..0.0060)).to_f,
     lat: sprintf('%.4f', 42.3613 + rand(-0.01..0.01)).to_f, 
     web_address: 'www.' + name_bos2.split(' ').join('').downcase + '.com', 
     phone_number: Faker::PhoneNumber.cell_phone, 
@@ -91,7 +91,7 @@ bos_bus2 = Business.create({
     bos_bus2.photo.attach(io: URI.open(RESTAURANT_PHOTOS.sample), filename: "logo.png")
 end
 
-50.times do |business|
+25.times do |business|
 name_bos3 = Faker::Company.name
 bos_bus3 = Business.create({
     name: name_bos3,
@@ -100,7 +100,7 @@ bos_bus3 = Business.create({
     city: 'Boston', 
     state: 'MA', 
     zipcode: Faker::Number.number(digits: 5),
-    lng: sprintf('%.4f', -71.0592 + rand(-0.0005..0.0005)).to_f,
+    lng: sprintf('%.4f', -71.0592 + rand(-0.0060..0.0060)).to_f,
     lat: sprintf('%.4f', 42.3613 + rand(-0.01..0.01)).to_f, 
     web_address: 'www.' + name_bos3.split(' ').join('').downcase + '.com', 
     phone_number: Faker::PhoneNumber.cell_phone, 
@@ -112,7 +112,7 @@ bos_bus3 = Business.create({
     bos_bus3.photo.attach(io: URI.open(HOME_PHOTOS.sample), filename: "logo.png")
 end
 
-50.times do |business|
+25.times do |business|
 name_chi = Faker::Restaurant.name
 chi_bus = Business.create({
     name: name_chi,
@@ -133,7 +133,7 @@ chi_bus = Business.create({
     chi_bus.photo.attach(io: URI.open(RESTAURANT_PHOTOS.sample), filename: "logo.png")
 end
 
-50.times do |business|
+25.times do |business|
 name_chi2 = Faker::Company.name + ' ' + Faker::Company.suffix 
 chi_bus2 = Business.create({
     name: name_chi2,
@@ -154,7 +154,7 @@ chi_bus2 = Business.create({
     chi_bus2.photo.attach(io: URI.open(PROFESSIONAL_PHOTOS.sample), filename: "logo.png")
 end
 
-50.times do |business|
+25.times do |business|
 name_chi3 = Faker::Company.name
 chi_bus3 = Business.create({
     name: name_chi3,
@@ -175,7 +175,7 @@ chi_bus3 = Business.create({
     chi_bus3.photo.attach(io: URI.open(HOME_PHOTOS.sample), filename: "logo.png")
 end
 
-50.times do |business|
+25.times do |business|
 name_ny = Faker::Restaurant.name
 ny_bus = Business.create({
     name: name_ny,
@@ -196,7 +196,7 @@ ny_bus = Business.create({
     ny_bus.photo.attach(io: URI.open(RESTAURANT_PHOTOS.sample), filename: "logo.png")
 end
 
-50.times do |business|
+25.times do |business|
 name_ny2 = Faker::Company.name + ' ' + Faker::Company.suffix 
 ny_bus2 = Business.create({
     name: name_ny2,
@@ -217,7 +217,7 @@ ny_bus2 = Business.create({
     ny_bus2.photo.attach(io: URI.open(PROFESSIONAL_PHOTOS.sample), filename: "logo.png")
 end
 
-50.times do |business|
+25.times do |business|
 name_ny3 = Faker::Company.name
 ny_bus3 = Business.create({
     name: name_ny3,
@@ -238,7 +238,7 @@ ny_bus3 = Business.create({
 ny_bus3.photo.attach(io: URI.open(HOME_PHOTOS.sample), filename: "logo.png")
 end
 
-50.times do |business|
+25.times do |business|
 name_phx = Faker::Restaurant.name
 phx_bus = Business.create({
     name: name_phx,
@@ -259,7 +259,7 @@ phx_bus = Business.create({
 phx_bus.photo.attach(io: URI.open(RESTAURANT_PHOTOS.sample), filename: "logo.png")
 end
 
-50.times do |business|
+25.times do |business|
 name_phx2 = Faker::Company.name
 phx_bus2 = Business.create({
     name: name_phx2,
@@ -280,7 +280,7 @@ phx_bus2 = Business.create({
 phx_bus2.photo.attach(io: URI.open(HOME_PHOTOS.sample), filename: "logo.png")
 end
 
-50.times do |business|
+25.times do |business|
 name_phx3 = Faker::Company.name + ' ' + Faker::Company.suffix
 phx_bus3 = Business.create({
     name: name_phx3,
@@ -301,7 +301,7 @@ phx_bus3 = Business.create({
 phx_bus3.photo.attach(io: URI.open(PROFESSIONAL_PHOTOS.sample), filename: "logo.png")
 end
 
-50.times do |business|
+25.times do |business|
 name_sf = Faker::Restaurant.name
 sf_bus = Business.create({
     name: name_sf,
@@ -310,8 +310,8 @@ sf_bus = Business.create({
     city: 'San Francisco', 
     state: 'CA', 
     zipcode: Faker::Number.number(digits: 5), 
-    lng: sprintf('%.4f', -122.4000 + rand(-0.150..0.150)).to_f,
-    lat: sprintf('%.4f', 37.7350 + rand(-0.100..0.100)).to_f,
+    lng: sprintf('%.4f', -122.4000 + rand(-0.0800..0.0800)).to_f,
+    lat: sprintf('%.4f', 37.7350 + rand(-0.0800..0.0800)).to_f,
     web_address: 'www.' + name_sf.split(' ').join('').downcase + '.com', 
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Restaurant' ,
@@ -322,7 +322,7 @@ sf_bus = Business.create({
 sf_bus.photo.attach(io: URI.open(RESTAURANT_PHOTOS.sample), filename: "logo.png")
 end
 
-50.times do |business|
+25.times do |business|
 name_sf2 = Faker::Company.name
 sf_bus2 = Business.create({
     name: name_sf2,
@@ -331,8 +331,8 @@ sf_bus2 = Business.create({
     city: 'San Francisco', 
     state: 'CA', 
     zipcode: Faker::Number.number(digits: 5), 
-    lng: sprintf('%.4f', -122.4000 + rand(-0.150..0.150)).to_f,
-    lat: sprintf('%.4f', 37.7350 + rand(-0.100..0.100)).to_f,
+    lng: sprintf('%.4f', -122.4000 + rand(-0.0800..0.0800)).to_f,
+    lat: sprintf('%.4f', 37.7350 + rand(-0.0800..0.0800)).to_f,
     web_address: 'www.' + name_sf2.split(' ').join('').downcase + '.com', 
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Home Services' ,
@@ -343,7 +343,7 @@ sf_bus2 = Business.create({
 sf_bus2.photo.attach(io: URI.open(HOME_PHOTOS.sample), filename: "logo.png")
 end
 
-50.times do |business|
+25.times do |business|
 name_sf3 = Faker::Company.name + ' ' + Faker::Company.suffix
 sf_bus3 = Business.create({
     name: name_sf3,
@@ -352,8 +352,8 @@ sf_bus3 = Business.create({
     city: 'San Francisco', 
     state: 'CA', 
     zipcode: Faker::Number.number(digits: 5), 
-    lng: sprintf('%.4f', -122.4000 + rand(-0.150..0.150)).to_f,
-    lat: sprintf('%.4f', 37.7350 + rand(-0.100..0.100)).to_f,
+    lng: sprintf('%.4f', -122.4000 + rand(-0.0800..0.0800)).to_f,
+    lat: sprintf('%.4f', 37.7350 + rand(-0.0800..0.0800)).to_f,
     web_address: 'www.' + name_sf3.split(' ').join('').downcase + '.com', 
     phone_number: Faker::PhoneNumber.cell_phone, 
     business_type: 'Professional Services' ,
@@ -364,7 +364,7 @@ sf_bus3 = Business.create({
     sf_bus3.photo.attach(io: URI.open(PROFESSIONAL_PHOTOS.sample), filename: "logo.png")
 end
 
-50.times do |business|
+25.times do |business|
 name_stl = Faker::Restaurant.name
 stl_bus = Business.create({
     name: name_stl,
@@ -385,7 +385,7 @@ stl_bus = Business.create({
 stl_bus.photo.attach(io: URI.open(RESTAURANT_PHOTOS.sample), filename: "logo.png")
 end
 
-50.times do |business|
+25.times do |business|
 name_stl2 = Faker::Company.name
 stl_bus2 = Business.create({
     name: name_stl2,
@@ -406,7 +406,7 @@ stl_bus2 = Business.create({
 stl_bus2.photo.attach(io: URI.open(HOME_PHOTOS.sample), filename: "logo.png")
 end
 
-50.times do |business|
+25.times do |business|
 name_stl3 = Faker::Company.name + ' ' + Faker::Company.suffix
 stl_bus3 = Business.create({
     name: name_stl3,
