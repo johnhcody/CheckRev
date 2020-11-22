@@ -10,7 +10,6 @@ function Footer() {
             <header>Languages</header>
             <li>Javascript</li>
             <li>Ruby</li>
-            <li>Python</li>
             <li>CSS</li>
             <li>HTML</li>
         </ul>

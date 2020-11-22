@@ -19,7 +19,7 @@ class MainMap extends React.Component {
         if (this.props.businesses.length == 0) {
             let mapOptions = {
                 center: { lat: 40.7238, lng: -74.0001 },
-                zoom: 13
+                zoom: 11
             };
             this.map = new google.maps.Map(this.mapNode, mapOptions);
             this.MarkerManager = new MarkerManager(this.map);
@@ -31,7 +31,7 @@ class MainMap extends React.Component {
                     lat: this.props.businesses[0].lat,
                     lng: this.props.businesses[0].lng
                 },
-                zoom: 13
+                zoom: 11
             }
             this.map = new google.maps.Map(this.mapNode, mapOptions);
             this.MarkerManager = new MarkerManager(this.map);
@@ -65,13 +65,13 @@ class MainMap extends React.Component {
     componentDidUpdate(prevProps, prevState) {
 
         // previously was if (this.props !== prevPros)... may want to add another conditional for state?
-        if (this.props.businesses !== prevProps.businesses) {
+        if (this.props.businesses !== prevProps.businesses && this.props.businesses.length > 0) {
             let mapOptions = {
                 center: {
                     lat: this.props.businesses[0].lat,
                     lng: this.props.businesses[0].lng
                 },
-                zoom: 13
+                zoom: 11
             }
             this.map = new google.maps.Map(this.mapNode, mapOptions);
             this.MarkerManager = new MarkerManager(this.map);
