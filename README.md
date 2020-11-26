@@ -1,24 +1,23 @@
-# README
+[Live Version](https://johnhcody.github.io/)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[![Check-Rev-1.jpg](https://i.postimg.cc/LsNzvBgF/Check-Rev-1.jpg)](https://postimg.cc/5HQY2zms)
 
-Things you may want to cover:
+### CheckRev:
+ - CheckRev is a Yelp inspired application built with a Ruby on Rails API and React.js.  
+ - All businesses are seeded in a PostgreSQL database, and users can view businesses, and create, update, delete and read reviews.
+ - Implements the Google Maps API to allow users to see the location of businesses based on search results.
 
-* Ruby version
 
-* System dependencies
+### To Use this Application:
 
-* Configuration
+ - Navigate to the Live Link
+ - Take a look around
+ - To write a review either sign in as a demo user or create an account
+ - [![checkrev-gif.gif](https://i.postimg.cc/cJNDPmJK/checkrev-gif.gif)](https://postimg.cc/0zcdw7Dx)
+ 
+### Technologies Implemented:
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ - Javascript
+ - SCSS
+ - Ruby on Rails (Version 5.2.4.4)
+ - JQuery
