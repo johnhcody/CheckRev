@@ -477,7 +477,7 @@
 
 .featured-bus-card {
     width: 280px;
-    height: 301px;
+    height: 331px;
     background-color: white;
     border: 0.5px solid lightgray;
     border-radius: 5px;
@@ -535,6 +535,7 @@
     margin: 0 auto;
     a {
         font-family: sans-serif;
+        margin-top: 26px;
         font-weight: 500;
         font-size: 15px;
         color: $green;

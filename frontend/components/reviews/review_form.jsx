@@ -211,7 +211,11 @@ class ReviewForm extends React.Component {
     render() {
         const redirectToShow = this.state.ready;
         if (redirectToShow) {
-            return <Redirect to={`/businesses/${this.props.busId}`} />
+            return <Redirect to={{
+                pathname: `/businesses/${this.props.busId}`,
+                state: {
+                    reviewRefresh: true
+                }}} />
         }
         if (this.props.allBusinesses.length === 0) {
             return null;

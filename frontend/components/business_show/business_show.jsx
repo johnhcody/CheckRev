@@ -18,11 +18,13 @@ class BusinessShow extends React.Component {
             value: 0
         };
         this.rerenderParent = this.rerenderParent.bind(this);
+        this.fetchBusiness = this.props.fetchBusiness.bind(this);
     }
-
+   
     componentDidMount() {
         debugger
         window.scrollTo(0,0);
+        //setTimeout(() => { this.fetchBusiness(this.props.match.params.businessId)}, 2000)
         this.props.fetchBusiness(this.props.match.params.businessId);
         this.props.fetchUsers();
     }
@@ -38,10 +40,17 @@ class BusinessShow extends React.Component {
         debugger
         if (this.props !== prevProps) {
             this.setState({value: this.state.value + 1})
+              
             //this.props.fetchBusiness(this.props.match.params.businessId)
-        } else if (this.props.reviews !== prevProps.reviews) {
+        } else if (this.props.location.state) {
             debugger
-            window.location.reload()
+            if (this.props.location.state.reviewRefresh) {
+                window.location.reload(); 
+            }
+            //this.rerenderParent();
+            //this.props.fetchBusiness(this.props.match.params.businessId);
+            //this.props.fetchUsers();
+            //window.location.reload()
         }
     } 
     
