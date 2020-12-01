@@ -21,6 +21,7 @@ class BusinessShow extends React.Component {
     }
 
     componentDidMount() {
+        debugger
         window.scrollTo(0,0);
         this.props.fetchBusiness(this.props.match.params.businessId);
         this.props.fetchUsers();
@@ -34,10 +35,13 @@ class BusinessShow extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        
+        debugger
         if (this.props !== prevProps) {
             this.setState({value: this.state.value + 1})
             //this.props.fetchBusiness(this.props.match.params.businessId)
+        } else if (this.props.reviews !== prevProps.reviews) {
+            debugger
+            window.location.reload()
         }
     } 
     
