@@ -26,7 +26,7 @@ class User < ApplicationRecord
         message: " - Password must be at least 6 characters long",
         allow_nil: true } 
     validates :zipcode, presence: { message: " - Please input your last name" }
-    validates :birthdate, presence: { message: " - Please input your birthday (MM/DD/YYYY)" }
+    #validates :birthdate, presence: { message: " - Please input your birthday (MM/DD/YYYY)" }
     validates :password_digest, :session_token, presence: true
 
 
