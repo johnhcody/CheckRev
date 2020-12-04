@@ -105,7 +105,7 @@ class SessionForm extends React.Component {
                     <input  id="signin-bday"
                             type="datetime"
                             value={this.state.birthdate}
-                            placeholder="MM/DD/YYYY"
+                            placeholder="MM/DD/YYYY (Optional)"
                             onChange={this.update('birthdate')}
                              />
                 <button>Sign Up</button>
